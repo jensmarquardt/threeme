@@ -1,0 +1,22 @@
+# #################################################
+# Version note:
+# Copied TS and Fluid from EXT:mask 2.0.1
+# #################################################
+
+tt_content = CASE
+tt_content {
+    key.field = CType
+    default >
+    default < mask.tt_content
+    default = CASE
+    default {
+        key.field = CType
+        default = TEXT
+        default {
+            field = CType
+            wrap = <p style="background-color: yellow;"><b>MASK ERROR:</b> Content Element type "|" has no rendering definition! Have you cleared TYPO3 cache?</p>
+            prefixComment = 2 | Unknown element message:
+        }
+    }
+}
+mask >

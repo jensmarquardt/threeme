@@ -1,0 +1,67 @@
+var tx_threeme = (function() {
+    return {
+
+        /* jQuery fancyBox Lightbox
+         * http://fancyapps.com/fancybox/
+         * -------------------------------------------------------------------------------------------------
+         */
+        fancyboxLighbox : function() {
+            var fancybox = $('.lightbox').fancybox({
+                openEffect: 'fade',
+                closeEffect: 'none',
+                prevEffect: 'fade',
+                nextEffect: 'fade',
+                closeBtn: true,
+                margin: 10,
+                padding: 10,
+                helpers: {
+                    title : {
+                        type : 'inside'
+                    },
+                    media: {}
+                },
+                tpl: {
+                    closeBtn: '<a tabindex="2" class="fancybox-item fancybox-close" href="javascript:;"><span class="sr-only">Fenster schließen</span><span class="fancybox-close-icon" aria-hidden="true"></span></a>',
+                    prev: '<a title="zurück" class="fancybox-nav fancybox-prev" href="javascript:;"><span></span></a>',
+                    next: '<a title="vor" class="fancybox-nav fancybox-next" href="javascript:;"><span></span></a>'
+                },
+
+                // Get title from image
+                beforeLoad: function() {
+                    this.title = $(this.element).find('img').attr('title');
+                },
+
+                // Accessibility improvments
+                afterShow: function () {
+                    $(this.content).attr('tabindex', 1).focus();
+                },
+                afterClose: function() {
+                    $(this.element).focus();
+                }
+            });
+        },
+
+        /* Bootstrap Carousel
+         * -------------------------------------------------------------------------------------------------
+         */
+        bootstrapCarousel : function() {
+            var carousel = $('.bs-carousel').carousel({
+                interval: 8000
+            });
+        },
+
+        /* Bootstrap Accordion
+         * -------------------------------------------------------------------------------------------------
+         */
+        bootstrapAccordion : function() {
+            var accordion = $('.bs-panel').collapse();
+        }
+
+    };
+})();
+
+$(function() {
+    tx_threeme.fancyboxLighbox();
+    tx_threeme.bootstrapCarousel();
+    tx_threeme.bootstrapAccordion();
+});

@@ -1,0 +1,131 @@
+/*!
+ * Version note:
+ * Copied TS and Fluid from TYPO3 7.6.4
+ */
+.ce-textpic, .ce-nowrap .ce-bodytext, .ce-gallery, .ce-row, .ce-uploads li, .ce-uploads div {
+    overflow: hidden;
+}
+
+.ce-left .ce-gallery, .ce-column {
+    float: left;
+}
+
+.ce-center {
+    .ce-outer {
+        position: relative;
+        float: right;
+        right: 50%;
+    }
+
+    .ce-inner {
+        position: relative;
+        float: right;
+        right: -50%;
+    }
+}
+
+.ce-right .ce-gallery {
+    float: right;
+}
+
+.ce-single {
+    margin-bottom: 10px;
+}
+
+.ce-gallery {
+    figure {
+        display: table;
+        margin: 0;
+    }
+
+    figcaption {
+        display: table-caption;
+        caption-side: bottom;
+    }
+}
+
+.ce-border {
+    img,
+    iframe {
+        @include threeme-border($threeme-border-width, $threeme-border-style, $gray, 0);
+        padding: 0;
+    }
+}
+
+.ce-intext.ce-right .ce-gallery,
+.ce-intext.ce-left .ce-gallery,
+.ce-above .ce-gallery {
+    margin-bottom: 10px;
+}
+
+.ce-intext.ce-right .ce-gallery {
+    margin-left: 10px;
+}
+
+.ce-intext.ce-left .ce-gallery {
+    margin-right: 10px;
+}
+
+.ce-below .ce-gallery {
+    margin-top: 10px;
+}
+
+.ce-column {
+    margin-right: 10px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.ce-row {
+    margin-bottom: 10px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.ce-above .ce-bodytext {
+    clear: both;
+}
+
+.ce-intext.ce-left ol, .ce-intext.ce-left ul {
+    padding-left: 40px;
+    overflow: auto;
+}
+
+.ce-uploads {
+    margin: 0 0 ($padding-base-horizontal * 2) 0;
+    padding: $padding-base-horizontal 0 0 0;
+    @include threeme-border(1px 0 0 0, $threeme-border-style, $gray, 0);
+
+    li {
+        list-style: none;
+        margin: 0 0 $padding-base-horizontal 0;
+        padding: 0 0 $padding-base-horizontal 0;
+        @include threeme-border(0 0 1px 0, $threeme-border-style, $gray, 0);
+
+        .ce-uploads-description {
+            display: block;
+        }
+    }
+}
+
+
+/* Website styles
+ * -------------------------------------------------------------------------------------------------
+ */
+.link-to-top {
+    text-align: right;
+}
+
+.image-to-click {
+    position: relative;
+    float: right;
+    margin: -25px 5px 0 0;
+    padding: 2px;
+    color: $threeme-black;
+    background-color: $threeme-white;
+    @include threeme-border($threeme-border-width, $threeme-border-style, $threeme-white, $border-radius-base);
+}

@@ -1,0 +1,33 @@
+<f:layout name="Website" />
+
+<f:section name="Website">
+    <f:render partial="Header" arguments="{_all}" />
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="well well-lg">
+                    <f:cObject typoscriptObjectPath="lib.threemeDynamicContent" data="{pageUid: '{data.uid}', colPos: '200'}"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main id="main" class="container">
+        <!--TYPO3SEARCH_begin-->
+        <div class="row">
+            <div class="col-sm-4">
+                <f:cObject typoscriptObjectPath="lib.threemeDynamicContent" data="{pageUid: '{data.uid}', colPos: '1'}"/>
+            </div>
+            <div class="col-sm-4">
+                <f:cObject typoscriptObjectPath="lib.threemeDynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}"/>
+            </div>
+            <div class="col-sm-4">
+                <f:cObject typoscriptObjectPath="lib.threemeDynamicContent" data="{pageUid: '{data.uid}', colPos: '2'}"/>
+            </div>
+        </div>
+        <!--TYPO3SEARCH_end-->
+    </main>
+
+    <f:render partial="Footer" arguments="{_all}" />
+</f:section>

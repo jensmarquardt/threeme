@@ -1,0 +1,10 @@
+lib.parseFunc_RTE {
+    # Fonticons styled link classes
+    tags.link < lib.parseFunc.tags.link
+    
+    externalBlocks {
+        table.stdWrap.HTMLparser.tags.table.fixAttrib.class.default = table
+        table.stdWrap.HTMLparser.tags.table.fixAttrib.class.list = table, table-striped, table-bordered, table-hover, table-condensed
+        table.stdWrap.wrap = <div class="table-responsive">|</div>
+    }
+}

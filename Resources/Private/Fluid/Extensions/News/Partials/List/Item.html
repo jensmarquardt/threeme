@@ -1,0 +1,54 @@
+{namespace n=GeorgRinger\News\ViewHelpers}
+
+<div class="row article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
+    <n:excludeDisplayedNews newsItem="{newsItem}"/>
+
+    <f:if condition="{newsItem.falMedia}">
+        <div class="col-sm-3">
+            <f:if condition="{newsItem.falMediaPreviews}">
+                <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+                    <f:alias map="{mediaElement: newsItem.falMediaPreviews.0}">
+                        <f:if condition="{mediaElement.originalResource.type} == 2">
+                            <f:image image="{mediaElement}" class="img-responsive" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}"/>
+                        </f:if>
+                        <f:if condition="{mediaElement.originalResource.type} == 4">
+                            <f:render partial="Detail/FalMediaVideo" arguments="{mediaElement: mediaElement}"/>
+                        </f:if>
+                        <f:if condition="{mediaElement.originalResource.type} == 5">
+                            <f:image image="{mediaElement}" class="img-responsive" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}"/>
+                        </f:if>
+                    </f:alias>
+                </n:link>
+            </f:if>
+        </div>
+    </f:if>
+
+    <div class="{f:if(condition:'{newsItem.falMedia}', then:'col-sm-9', else:'col-sm-12')}">
+        <h2>
+            <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+                <span class="news-date">
+                    <time datetime="{f:format.date(date:newsItem.datetime, format:'d.m.Y')}">
+                        <f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
+                        <meta itemprop="datePublished" content="{f:format.date(date:newsItem.datetime, format:'d.m.Y')}" />
+                    </time>
+                </span>
+                <span itemprop="headline">{newsItem.title}</span>
+            </n:link>
+        </h2>
+
+        <f:if condition="{newsItem.teaser}">
+            <f:then>
+                {newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}
+            </f:then>
+            <f:else>
+                {newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}
+            </f:else>
+        </f:if>
+
+        <p>
+            <n:link newsItem="{newsItem}" settings="{settings}" class="interal-link" title="{newsItem.title}">
+                <f:translate key="more-link"/>
+            </n:link>
+        </p>
+    </div>
+</div>

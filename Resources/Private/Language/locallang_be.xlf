@@ -1,0 +1,10 @@
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2016-03-23T10:10:10Z" product-name="threeme">
+        <header/>
+        <body>
+            <trans-unit id="threeme-pagetree-sys-note">
+                <source>Threeme: Important note on page</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

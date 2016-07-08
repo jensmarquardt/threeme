@@ -1,0 +1,106 @@
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2016-03-23T10:10:10Z" product-name="threeme">
+        <header/>
+        <body>
+            <trans-unit id="BackendLayouts.home.title">
+                <source>Home</source>
+            </trans-unit>
+            <trans-unit id="BackendLayouts.default.title">
+                <source>Default</source>
+            </trans-unit>
+            <trans-unit id="BackendLayouts.404.title">
+                <source>404 Page</source>
+            </trans-unit>
+
+            <trans-unit id="tt_content.colPos.altLabels.0">
+                <source>Content (Center)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.colPos.altLabels.1">
+                <source>Content (Left)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.colPos.altLabels.2">
+                <source>Content (Right)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.colPos.altLabels.3">
+                <source>Content (Bottom)</source>
+            </trans-unit>
+            
+            <trans-unit id="tt_content.colPos.altLabels.100">
+                <source>Columns 100+ = header, 200+ = Content, 300+ = Footer</source>
+            </trans-unit>
+            <trans-unit id="tt_content.colPos.altLabels.200">
+                <source>Stage</source>
+            </trans-unit>
+            <trans-unit id="tt_content.colPos.altLabels.300">
+                <source>Footer: SEO-Sitemap (slide back up to the siteroot)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.colPos.altLabels.301">
+                <source>Footer: Contact (slide back up to the siteroot)</source>
+            </trans-unit>
+
+            <trans-unit id="translateToMessage">
+                <source>Translate to: %s</source>
+            </trans-unit>
+
+            <trans-unit id="tt_content.header_layout.altLabels.0">
+                <source>Headline 2 (Default)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.header_layout.altLabels.1">
+                <source>Headline 1 (Page header)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.header_layout.altLabels.2">
+                <source>Headline 2 (Section header)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.header_layout.altLabels.3">
+                <source>Headline 3 (Subsection header)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.header_layout.altLabels.4">
+                <source>Headline 4 (Subsection header)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.header_layout.altLabels.5">
+                <source>Headline 5 (Subsection header)</source>
+            </trans-unit>
+            
+            <trans-unit id="tt_content.layout.types.textmedia.addItems.200">
+                <source>Image shapes: Rounded</source>
+            </trans-unit>
+            <trans-unit id="tt_content.layout.types.textmedia.addItems.201">
+                <source>Image shapes: Circle</source>
+            </trans-unit>
+            <trans-unit id="tt_content.layout.types.textmedia.addItems.202">
+                <source>Image shapes: Thumbnail</source>
+            </trans-unit>
+            
+            <trans-unit id="tt_content.layout.types.table.addItems.200">
+                <source>Table: Striped rows</source>
+            </trans-unit>
+            <trans-unit id="tt_content.layout.types.table.addItems.201">
+                <source>Table: Bordered</source>
+            </trans-unit>
+            <trans-unit id="tt_content.layout.types.table.addItems.202">
+                <source>Table: Hover rows</source>
+            </trans-unit>
+            <trans-unit id="tt_content.layout.types.table.addItems.203">
+                <source>Table: Condensed</source>
+            </trans-unit>
+            
+            <trans-unit id="tt_content.layout.types.bullets.addItems.200">
+                <source>List: Unstyled</source>
+            </trans-unit>
+            <trans-unit id="tt_content.layout.types.bullets.addItems.201">
+                <source>List: Inline</source>
+            </trans-unit>
+            
+            <trans-unit id="tx_powermail_domain_model_form.css.altLabels.nolabel">
+                <source>Hide label</source>
+            </trans-unit>
+            <trans-unit id="tx_powermail_domain_model_page.css.altLabels.nolabel">
+                <source>Hide label</source>
+            </trans-unit>
+            <trans-unit id="tx_powermail_domain_model_field.css.altLabels.nolabel">
+                <source>Hide label</source>
+            </trans-unit>
+            
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,41 @@
+menu.breadcrumbs = COA
+menu.breadcrumbs {
+    wrap = <ol class="breadcrumb hidden-print">|</ol>
+
+    # Home
+    10 = TEXT
+    10 {
+        wrap = <li>|</li>
+        typolink {
+            wrap = <span class="fa fa-home" aria-hidden="true"></span><span class="sr-only">|</span>
+            parameter = {$threeme.frontend.pidHome}
+            title.data = LLL:EXT:threeme/Resources/Private/Language/locallang.xml:menu.breadcrumb.title
+            ATagBeforeWrap = 1
+        }
+    }
+
+    # Rootline
+    20 = HMENU
+    20 {
+        special = rootline
+        special.range = {$threeme.menu.breadcrumb.entry}
+        noBlur = 1
+        1 = TMENU
+        1 {
+            NO {
+                htmlSpecialChars = 1
+                allWrap = <li>|</li>
+                ATagTitle.field = subtitle // title
+                ATagTitle.noTrimWrap = | {LLL:EXT:threeme/Resources/Private/Language/locallang.xml:menu.breadcrumb.title} |
+                ATagTile.insertData = 1
+            }
+            CUR = 1
+            CUR {
+                htmlSpecialChars = 1
+                allWrap = <li class="active" title="{LLL:EXT:threeme/Resources/Private/Language/locallang.xml:menu.breadcrumb.current.title}: {field:title}">|</li>
+                allWrap.insertData = 1
+                doNotLinkIt = 1
+            }
+        }
+    }
+}

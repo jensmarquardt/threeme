@@ -1,0 +1,33 @@
+lib.link-to-top = TEXT
+lib.link-to-top {
+    wrap = <li>|</li>
+    value = <a href="#top" title="{LLL:EXT:threeme/Resources/Private/Language/locallang.xml:totop.title}"><span class="fa fa-arrow-circle-up" aria-hidden="true"></span></a>
+    insertData = 1
+}
+
+lib.print = TEXT
+lib.print {
+    wrap = <li>|</li>
+    value = <a href="javascript:print()" title="{LLL:EXT:threeme/Resources/Private/Language/locallang.xml:print.title}"><span class="fa fa-print" aria-hidden="true"></span></a>
+    insertData = 1
+}
+
+lib.sitemap = TEXT
+lib.sitemap {
+    wrap = <li>|</li>
+    typolink {
+        wrap = <span class="fa fa-sitemap" aria-hidden="true"></span><span class="hide">|</span>
+        parameter = {$theerme.website.pidSitemap}
+        title.data = LLL:EXT:threeme/Resources/Private/Language/locallang.xml:sitemap.title
+        ATagBeforeWrap = 1
+    }
+}
+
+
+menu.site-services = COA
+menu.site-services {
+    wrap = <ul class="nav nav-pills pull-right hidden-print">|</ul>
+    10 < lib.link-to-top
+    20 < lib.print
+    30 < lib.sitemap
+}

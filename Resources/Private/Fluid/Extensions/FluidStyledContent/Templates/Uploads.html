@@ -1,0 +1,63 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="HeaderContentFooter" />
+<f:section name="content">
+    <f:if condition="{files}">
+        <ul class="ce-uploads">
+            <f:for each="{files}" as="file" iteration="fileIterator">
+                <li>
+                    <div class="row">
+                        <f:if condition="{data.uploads_type} == 1">
+                            <div class="col-xs-3 col-sm-2 col-md-1">
+                                <img src="{f:uri.resource(path: 'Images/Frontend/Fileicon/{file.extension}.png', extensionName: 'threeme')}" alt="">
+                            </div>
+                        </f:if>
+
+                        <f:if condition="{data.uploads_type} == 2">
+                            <div class="col-xs-3 col-sm-2 col-md-1">
+                                <f:if condition="{f:uri.image(src: 'file:{f:if(condition: file.originalFile, then: \'file:{file.originalFile.uid}\', else: \'file:{file.uid}\')}')} != '/'">
+                                    <f:then>
+                                        <a href="{file.publicUrl}">
+                                            <f:media file="{file}" width="100" alt="{file.properties.alternative}" />
+                                        </a>
+                                    </f:then>
+                                    <f:else>
+                                        <img src="{f:uri.resource(path: 'Images/Frontend/Fileicon/{file.extension}.png', extensionName: 'threeme')}" alt="">
+                                    </f:else>
+                                </f:if>
+                            </div>
+                        </f:if>
+
+                        <div class="col-xs-9 col-sm-7 col-md-9">
+                            <a href="{file.publicUrl}">
+                                <span class="ce-uploads-fileName">
+                                    {f:if(condition:file.title, then:file.title, else:file.name)}
+                                </span>
+                            </a>
+
+                            <f:if condition="{data.filelink_size}">
+                                <span class="ce-uploads-filesize">
+                                    - <f:format.bytes value="{file.properties.size}" />
+                                </span>
+                            </f:if>
+
+                            <f:if condition="{file.properties.description}">
+                                <f:if condition="{data.uploads_description}">
+                                    <span class="ce-uploads-description">
+                                        {file.properties.description}
+                                    </span>
+                                </f:if>
+                            </f:if>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-3 col-md-2">
+                            <a href="{file.publicUrl}" class="download btn btn-primary btn-sm">
+                                <span class="fa fa-download" aria-hidden="true"></span> Download
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </f:for>
+        </ul>
+    </f:if>
+</f:section>
+</html>

@@ -1,0 +1,32 @@
+# General settings
+TCAdefaults {
+    sys_file_reference {
+        showinpreview = 1
+    }
+
+    tt_content {
+        filelink_size = 1
+        imageborder = 1
+    }
+
+    fe_users {
+        tx_extbase_type = Tx_Extbase_Domain_Model_FrontendUser
+    }
+
+    fe_groups {
+        tx_extbase_type = Tx_Extbase_Domain_Model_FrontendUserGroup
+    }
+}
+
+# Special settings for sysfolders 4 = Sonderseiten, 10 = Datensätze, 16 = Overlay-Seiten
+[PIDinRootline = 4, 10, 16]
+    TCAdefaults {
+        pages {
+            no_search = 1
+            nav_hide = 1
+        }
+        tt_content {
+            sectionIndex = 0
+        }
+    }
+[GLOBAL]

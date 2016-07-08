@@ -1,0 +1,120 @@
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2016-03-23T10:10:10Z" product-name="threeme">
+        <header/>
+        <body>
+            <trans-unit id="classesAnchor.lightboxPage">
+                <source>Opens link in lighbox</source>
+                <target>Öffnet Link in Lightbox</target>
+            </trans-unit>
+
+            <trans-unit id="class.text-left">
+                <source>Text: Left</source>
+                <target>Linksbündig</target>
+            </trans-unit>
+            <trans-unit id="class.text-right">
+                <source>Text: Right</source>
+                <target>Rechtsbündig</target>
+            </trans-unit>
+            <trans-unit id="class.text-center">
+                <source>Text: Center</source>
+                <target>Zentriert</target>
+            </trans-unit>
+            <trans-unit id="class.text-justify">
+                <source>Text: Justify</source>
+                <target>Blocksatz</target>
+            </trans-unit>
+            <trans-unit id="class.lead">
+                <source>Text: Lead</source>
+                <target>Hervorheben</target>
+            </trans-unit>
+
+            <trans-unit id="class.table">
+                <source>Table: Unstyled</source>
+                <target>Tabelle ohne Auszeichnung</target>
+            </trans-unit>
+            <trans-unit id="class.table-striped">
+                <source>Table: Striped rows</source>
+                <target>Tabelle gestreift</target>
+            </trans-unit>
+            <trans-unit id="class.table-bordered">
+                <source>Table: Bordered table</source>
+                <target>Tabelle umrandet</target>
+            </trans-unit>
+            <trans-unit id="class.table-hover">
+                <source>Table: Hover rows</source>
+                <target>Tabelle hervorgehoben</target>
+            </trans-unit>
+            <trans-unit id="class.table-condensed">
+                <source>Table: Condensed table</source>
+                <target>Tabelle kompakt</target>
+            </trans-unit>
+
+            <trans-unit id="class.list-unstyled">
+                <source>Lists: Unstyled</source>
+                <target>Liste ohne Auszeichnung</target>
+            </trans-unit>
+            <trans-unit id="class.list-inline">
+                <source>Lists: Inline</source>
+                <target>Liste in Reihe</target>
+            </trans-unit>
+
+            <trans-unit id="class.internal-link">
+                <source>Link: Internal page</source>
+                <target>Link zu interner Seite</target>
+            </trans-unit>
+            <trans-unit id="class.external-link">
+                <source>Link: External page</source>
+                <target>Link zu externer Seite</target>
+            </trans-unit>
+            <trans-unit id="class.mail">
+                <source>Link: Mail</source>
+                <target>Link zu E-Mail Adresse</target>
+            </trans-unit>
+            <trans-unit id="class.download">
+                <source>Link: Download</source>
+                <target>Link zu Download-Datei</target>
+            </trans-unit>
+            <trans-unit id="class.lightbox">
+                <source>Link: Lightbox</source>
+                <target>Link in Lightbox</target>
+            </trans-unit>
+
+            <trans-unit id="class.btn-default">
+                <source>Buttons: Default</source>
+                <target>Button</target>
+            </trans-unit>
+            <trans-unit id="class.btn-primary">
+                <source>Buttons: Primary</source>
+                <target>Button in Hauptfarbe</target>
+            </trans-unit>
+            <trans-unit id="class.btn-success">
+                <source>Buttons: Success</source>
+                <target>Button in Grün</target>
+            </trans-unit>
+            <trans-unit id="class.btn-info">
+                <source>Buttons: Info</source>
+                <target>Button in Blau</target>
+            </trans-unit>
+            <trans-unit id="class.btn-warning">
+                <source>Buttons: Warning</source>
+                <target>Button in Orange</target>
+            </trans-unit>
+            <trans-unit id="class.btn-danger">
+                <source>Buttons: Danger</source>
+                <target>Button in Rot</target>
+            </trans-unit>
+            <trans-unit id="class.btn-lg">
+                <source>Buttons: Large</source>
+                <target>Button Groß</target>
+            </trans-unit>
+            <trans-unit id="class.btn-sm">
+                <source>Buttons: Small</source>
+                <target>Button Klein</target>
+            </trans-unit>
+            <trans-unit id="class.btn-xs">
+                <source>Buttons: Extra small</source>
+                <target>Button Extraklein</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,7 @@
+# Comment in the extensions you need
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:threeme/Configuration/TypoScript/Extensions/FluidStyledContent/constants.txt">
+
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:threeme/Configuration/TypoScript/Extensions/FeLogin/constants.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:threeme/Configuration/TypoScript/Extensions/IndexedSearch/constants.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:threeme/Configuration/TypoScript/Extensions/News/constants.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:threeme/Configuration/TypoScript/Extensions/Powermail/constants.txt">

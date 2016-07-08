@@ -1,0 +1,91 @@
+page = PAGE
+page {
+    typeNum = 0
+    shortcutIcon = {$threeme.enable.publicBasePath}/Images/Frontend/Favicon/favicon.ico
+
+    # Disable global indexing, bind it to typeNum!
+    config.index_enable = {$threeme.enable.index_enable}
+    config.index_externals = {$threeme.enable.index_externals}
+    config.index_metatags = {$threeme.enable.index_metatags}
+
+    # Compile CSS on your own using tools like "Compass". Take a look into Resources/Private/Sass/config.rb.
+    includeCSS {
+        website = {$threeme.enable.publicBasePath}/Css/styles-website.css
+        website.forceOnTop = 1
+
+        print = {$threeme.enable.publicBasePath}/Css/styles-print.css
+        print.media = print
+    }
+
+    includeJSFooter {
+        jQuery = {$threeme.enable.publicBasePath}/JavaScript/Vendor/Jquery/jquery.js
+        jQuery.forceOnTop = 1
+
+        bootstrapAffix = {$threeme.enable.publicBasePath}/JavaScript/Vendor/Bootstrap/affix.js
+        bootstrapTransition = {$threeme.enable.publicBasePath}/JavaScript/Vendor/Bootstrap/transition.js
+        bootstrapCollapse = {$threeme.enable.publicBasePath}/JavaScript/Vendor/Bootstrap/collapse.js
+        bootstrapCarousel = {$threeme.enable.publicBasePath}/JavaScript/Vendor/Bootstrap/carousel.js
+
+        fancybox = {$threeme.enable.publicBasePath}/JavaScript/Vendor/Fancybox/jquery.fancybox.js
+        fancyboxMedia = {$threeme.enable.publicBasePath}/JavaScript/Vendor/Fancybox/jquery.fancybox-media.js
+
+        website = {$threeme.enable.publicBasePath}/JavaScript/Frontend/jquery.threeme.js
+    }
+    
+    20 < lib.threemeFluidTemplate
+}
+
+
+# Compile your CSS dynamically with thrid party extensions like DynCss (refer documentation of your preferred extension).
+# When you use an extension for compiling, make sure to generate the RTE.default.contentCSS, too.
+[globalVar = LIT:0 < {$threeme.enable.useSassExt}]
+    page {
+        includeCSS >
+        includeCSS {
+            website = {$threeme.enable.privateBasePath}/Sass/styles-website.scss
+            website.forceOnTop = 1
+
+            print = {$threeme.enable.privateBasePath}/Sass/styles-print.scss
+            print.media = print
+        }
+    }
+[end]
+
+
+[applicationContext = Production]
+page {
+    # Include GoogleAnalytics
+    jsInline {
+        200 = COA
+        200 {
+            # Opt-out Cookie
+            10 = TEXT
+            10.value (
+                var gaProperty = '{$threeme.meta.googleAnalytics}';
+                var disableStr = 'ga-disable-' + gaProperty;
+                if (document.cookie.indexOf(disableStr + '=true') > -1) {
+                    window[disableStr] = true;
+                }
+                function gaOptout() {
+                    document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+                    window[disableStr] = true;
+                }
+            )
+            # Tracklet
+            20 = TEXT
+            20.value (
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                ga('create', '{$threeme.meta.googleAnalytics}', 'auto');
+                ga('require', 'linkid', 'linkid.js');
+                ga('require', 'displayfeatures');
+                ga('set', 'anonymizeIp', true);
+                ga('send', 'pageview');
+            )
+        }
+    }
+}
+[GLOBAL]

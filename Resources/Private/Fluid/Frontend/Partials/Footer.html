@@ -1,0 +1,17 @@
+{namespace threeme=THREEME\Threeme\ViewHelpers}
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <f:cObject typoscriptObjectPath="lib.threemeDynamicContent" data="{pageUid: '{data.uid}', colPos: '300', contentWrap: '<div class=\"col-sm-4\">|</div>'}"/>
+            <div class="col-sm-4">
+                <f:cObject typoscriptObjectPath="lib.threemeDynamicContent" data="{pageUid: '{data.uid}', colPos: '301'}"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <f:cObject typoscriptObjectPath="menu.site-services"/>
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,15 @@
+<f:layout name="Website" />
+
+<f:section name="Website">
+    <f:render partial="Header" arguments="{_all}" />
+
+    <div class="container">
+        <div class="row">
+            <main id="main" class="col-sm-12">
+                <f:cObject typoscriptObjectPath="lib.threemeDynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}"/>
+            </main>
+        </div>
+    </div>
+
+    <f:render partial="Footer" arguments="{_all}" />
+</f:section>

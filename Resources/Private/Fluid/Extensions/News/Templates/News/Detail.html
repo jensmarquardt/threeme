@@ -1,0 +1,138 @@
+{namespace n=GeorgRinger\News\ViewHelpers}
+<f:layout name="Detail.html" />
+
+<f:section name="content">
+    <f:if condition="{newsItem}">
+        <div class="row">
+            <n:format.nothing>
+                <f:if condition="{newsItem.alternativeTitle}">
+                    <f:then>
+                        <n:titleTag>
+                            <n:format.htmlentitiesDecode>{newsItem.alternativeTitle}</n:format.htmlentitiesDecode>
+                        </n:titleTag>
+                    </f:then>
+                    <f:else>
+                        <n:titleTag>
+                            <n:format.htmlentitiesDecode>{newsItem.title}</n:format.htmlentitiesDecode>
+                        </n:titleTag>
+                    </f:else>
+                </f:if>
+                <f:render partial="Detail/Opengraph" arguments="{newsItem: newsItem, settings:settings}" />
+            </n:format.nothing>
+
+            <h2 itemprop="headline">
+                <span class="news-date">
+                    <time datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+                        <f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
+                        <meta itemprop="datePublished" content="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}" />
+                    </time>
+                </span>
+                {newsItem.title}
+            </h2>
+
+            <div class="{f:if(condition:'{newsItem.falMedia}', then:'col-sm-8', else:'col-sm-12')}">
+                <f:if condition="{newsItem.teaser}">
+                    <div class="teaser-text" itemprop="description">
+                        <f:format.html>{newsItem.teaser}</f:format.html>
+                    </div>
+                </f:if>
+
+                <div class="news-text-wrap" itemprop="articleBody">
+                    <f:format.html>{newsItem.bodytext}</f:format.html>
+                </div>
+
+                <f:if condition="{newsItem.contentElements}">
+                    <f:cObject typoscriptObjectPath="lib.tx_news.contentElementRendering">{newsItem.contentElementIdList}</f:cObject>
+                </f:if>
+
+                <f:if condition="{settings.detail.showSocialShareButtons}">
+                    <f:comment>
+                        <![CDATA[
+                        Care about the privacy of your readers?
+                        Checkout https://typo3.org/extensions/repository/view/rx_shariff
+                        and integrate it here with:
+                        <div xmlns:rx="http://typo3.org/ns/Reelworx/RxShariff/ViewHelper">
+                            <rx:shariff services="facebook,xing,twitter,twitter" enableBackend="true" />
+                        </div>
+                        ]]>
+                    </f:comment>
+                    <div class="facebook">
+                        <div class="like">
+                            <n:social.facebook.like />
+                        </div>
+                        <div class="share">
+                            <n:social.facebook.share />
+                        </div>
+                        <div class="twitter">
+                            <n:social.twitter>Twitter</n:social.twitter>
+                        </div>
+                    </div>
+                </f:if>
+
+                <f:if condition="{settings.detail.disqusShortname}">
+                    <div id="disqus_thread"></div>
+                    <n:social.disqus newsItem="{newsItem}"
+                                     shortName="{settings.detail.disqusShortname}"
+                                     link="{n:link(newsItem:newsItem, settings:settings, uriOnly:1, configuration:'{forceAbsoluteUrl:1}')}" />
+                </f:if>
+            </div>
+
+            <f:comment>fal media files</f:comment>
+            <f:render partial="Detail/FalMediaContainer" arguments="{media: newsItem.falMedia, settings:settings}" />
+        </div>
+
+        <div class="news-related-wrap">
+            <f:comment>Related news records</f:comment>
+            <f:if condition="{newsItem.allRelatedSorted}">
+
+                <div class="news-related news-related-news">
+                    <h4>
+                        <f:translate key="related-news" />
+                    </h4>
+                    <ul>
+                        <f:for each="{newsItem.allRelatedSorted}" as="related">
+                            <li>
+                                <span class="news-related-news-date"><f:format.date format="{f:translate(key:'dateFormat')}">{related.datetime}</f:format.date></span>
+                                <n:link newsItem="{related}" settings="{settings}" title="{related.title}">
+                                    {related.title}
+                                </n:link>
+                            </li>
+
+                        </f:for>
+                    </ul>
+                </div>
+            </f:if>
+
+            <f:comment>FAL related files</f:comment>
+            <f:if condition="{newsItem.falRelatedFiles}">
+                <f:render partial="Detail/FalRelatedFiles" arguments="{falRelatedFiles: newsItem.falRelatedFiles, settings:settings}" />
+            </f:if>
+
+            <f:comment>Related links</f:comment>
+            <f:if condition="{newsItem.relatedLinks}">
+                <div class="news-related news-related-links">
+                    <h4>
+                        <f:translate key="related-links" />
+                    </h4>
+                    <ul>
+                        <f:for each="{newsItem.relatedLinks}" as="relatedLink">
+                            <li>
+                                <f:link.page pageUid="{relatedLink.uri}" title="{relatedLink.title}" target="{n:targetLink(link:relatedLink.uri)}">{f:if(condition: relatedLink.title, then: relatedLink.title, else: relatedLink.uri)}</f:link.page>
+                                <f:if condition="{relatedLink.description}"><span>{relatedLink.description}</span></f:if>
+                            </li>
+                        </f:for>
+                    </ul>
+                </div>
+            </f:if>
+        </div>
+
+        <f:if condition="{settings.backPid}">
+            <p class="news-backlink-wrap">
+                <f:link.page pageUid="{settings.backPid}">
+                    <f:translate key="back-link" />
+                </f:link.page>
+            </p>
+        </f:if>
+
+    </f:if>
+</f:section>

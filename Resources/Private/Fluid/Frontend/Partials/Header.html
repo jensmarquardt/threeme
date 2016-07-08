@@ -1,0 +1,20 @@
+<f:render partial="Logo" arguments="{siteTitle: '{siteTitle}', print: 'true'}" />
+
+<header class="navbar navbar-inverse" role="banner">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <span class="sr-only">{f:translate(key: 'navbar.toggle.label', extensionName: 'threeme')}</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <f:render partial="Logo" arguments="{_all}" />
+        </div>
+
+        <nav class="collapse navbar-collapse navbar-main-collapse" role="navigation">
+            <f:cObject typoscriptObjectPath="menu.navbar" />
+            <f:render partial="Search" arguments="{_all}" />
+        </nav>
+    </div>
+</header>

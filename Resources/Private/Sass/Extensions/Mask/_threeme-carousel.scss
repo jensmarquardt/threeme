@@ -1,0 +1,74 @@
+/*!
+ * HOWTO - Working with the SASS structure
+ * -------------------------------------------------------------------------------------------------
+ *
+ * #1: Main structure
+ * ./Components/: SASS patterns intended to be used across the site. Pretty much everything in here will be devoted a section in the live style guide.
+ * ./Library/: Contains only variables and mixins SASS that does not render any actual CSS, but is used later.
+ * ./Sections/: Layouts and other page-specific stylings. Anything that is not intended to be used in multiple places in a versatile way.
+ * ./Vendor/: Vendor framework libraries.
+ *
+ *
+ * #2: Include paritals
+ * - Uncomment features as you need them, when your user stories demand the functionality.
+ * - If you need to modify a partial, create a new one in "Components" and include it after this one!
+ */
+
+
+/*!
+ * Website styles
+ * -------------------------------------------------------------------------------------------------
+ */
+
+// Fade-Effect, http://www.bootply.com/60258
+.carousel-fade .carousel-inner .item {
+    opacity: 0;
+    -webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity;
+}
+.carousel-fade .carousel-inner .active {
+    opacity: 1;
+}
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+    opacity: 1;
+}
+.carousel-fade .carousel-control {
+    z-index: 2;
+}
+
+.carousel,
+.carousel-inner,
+.carousel-inner .item {
+    height: 100%;
+}
+
+.carousel-control {
+    .threeme-icon-prev,
+    .threeme-icon-next {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 5;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin: -10px 0 0 -10px;
+        font-size: 30px;
+        line-height: 1;
+    }
+
+    .alt-icon-next {
+        left: auto;
+        right: 50%;
+        margin: -10px -10px 0 0;
+    }
+}

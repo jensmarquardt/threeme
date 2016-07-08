@@ -1,0 +1,36 @@
+<f:layout name="{fluidLayoutSection}" />
+
+<f:section name="Website">
+    <f:render partial="Header" arguments="{_all}" />
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div id="sidebar" class="hidden-print" role="complementary">
+                    <f:cObject typoscriptObjectPath="menu.navlist" />
+                </div>
+            </div>
+            <main id="main" class="col-sm-9">
+                <f:cObject typoscriptObjectPath="menu.breadcrumbs" />
+                <!--TYPO3SEARCH_begin-->
+                <f:cObject typoscriptObjectPath="lib.threemeDynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}"/>
+                <!--TYPO3SEARCH_end-->
+            </main>
+        </div>
+    </div>
+
+    <f:render partial="Footer" arguments="{_all}" />
+</f:section>
+
+
+<f:section name="Overlay">
+    <div class="container">
+        <div class="row">
+            <main id="main" class="col-sm-12">
+                <!--TYPO3SEARCH_begin-->
+                <f:cObject typoscriptObjectPath="lib.threemeDynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}"/>
+                <!--TYPO3SEARCH_end-->
+            </main>
+        </div>
+    </div>
+</f:section>

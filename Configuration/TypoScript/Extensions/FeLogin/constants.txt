@@ -1,0 +1,23 @@
+# #################################################
+# Version note:
+# Copied TS and Fluid from TYPO3 7.6.5
+# #################################################
+
+styles.content {
+    loginform {
+        # cat=content/cLogin; type=int+; label= PID of user archive: Enter the page-uid number (PID) of the folder where you keep your fe_users that are supposed to login on this site. This setting is necessary, if login is going to work!
+        pid = {$threeme.frontend.pidFeUser}
+
+        # cat=content/cLogin; type=; label= Login template: Enter the path for the HTML template to be used
+        templateFile = {$threeme.enable.privateBasePath}/Fluid/Extensions/FeLogin/Templates/FrontendLogin.html
+
+        # cat=content/cLogin; type=int+; label= PID of redirect page after login
+        redirectPageLogin =
+
+        # cat=content/cLogin; type=int+; label= PID of redirect page at login error
+        redirectPageLoginError =
+
+        # cat=content/cLogin; type=int+; label= PID of redirect page after logout
+        redirectPageLogout =
+    }
+}

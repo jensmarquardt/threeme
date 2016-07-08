@@ -1,0 +1,67 @@
+/* Gallerie bis 992px auf volle Breite */
+@media (max-width: $screen-md-min) {
+    .ce-gallery {
+        width: 100%;
+    }
+}
+
+/* Anpassungen von kleinen bis groeßeren Geraeten */
+@media (min-width: ($screen-xs-min + 1) and (max-width: $screen-md-max) {
+    .ce-gallery .ce-column {
+        margin: 0;
+        /* Abstand zwischen Bildern */
+        padding: 0 5px;
+        box-sizing: border-box;
+    }
+
+
+    /* Kein Abstand beim ersten und letzten Bild */
+    .ce-gallery .ce-column:first-child {
+        padding-left: 0;
+    }
+    .ce-gallery .ce-column:last-child {
+        margin-right: 0;
+    }
+
+    /* Fluid Image Tags */
+    .ce-gallery img,
+    .ce-gallery picture {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Spaltenbreiten je nach eingestellten Columns */
+    .ce-gallery[data-ce-columns="2"] .ce-column {
+        width: 50%;
+    }
+
+    .ce-gallery[data-ce-columns="3"] .ce-column {
+        width: 33%;
+    }
+
+    .ce-gallery[data-ce-columns="4"] .ce-column {
+        width: 25%;
+    }
+
+    .ce-gallery[data-ce-columns="5"] .ce-column {
+        width: 20%;
+    }
+}
+
+/* Anpassungen fuer kleine Geraete */
+@media (max-width: $screen-xs-min) {
+
+    /* Ein Bild pro Zeile */
+    .ce-gallery .ce-column {
+        margin: 0 0 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Fluid Image Tags */
+    .ce-gallery img,
+    .ce-gallery picture {
+        width: 100%;
+        height: auto;
+    }
+}
