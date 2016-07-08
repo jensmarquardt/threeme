@@ -10,7 +10,6 @@
       "typo3/cms-core": "~7.6.0|<8.0"
   },
   "suggest": {
-    "typo3-ter/static-info-tables": ">=6.2.0"
     "dyncss": ">=0.7.8",
     "dyncss_scss": ">=1.0.5",
     "be_secure_pw": ">=7.0.2",
