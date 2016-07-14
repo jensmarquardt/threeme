@@ -16,7 +16,7 @@ threeme {
         publicBasePath = EXT:threeme/Resources/Public
 
         # cat=Threeme/enable/130; type=string; label= useSassExt: Compile your CSS dynamically with thrid party extensions like DynCss (see TypoScript "page" for details).
-        useSassExt = 0
+        useSassExt = 1
 
         # cat=Threeme/enable/200; type=string; label= absRefPrefix: If this value is set, then all relative links in TypoScript are prepended with this string.
         absRefPrefix = auto

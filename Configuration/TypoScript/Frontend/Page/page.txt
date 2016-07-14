@@ -43,9 +43,16 @@ page {
         includeCSS >
         includeCSS {
             website = {$threeme.enable.privateBasePath}/Sass/styles-website.scss
+            website.outputdir = {$threeme.enable.publicBasePath}/Css
+            # Output format: Expanded, Nested, Compressed, Compact, Crunched
+            website.formatter = Leafo\ScssPhp\Formatter\Expanded
+            website.linenumber = true
             website.forceOnTop = 1
 
             print = {$threeme.enable.privateBasePath}/Sass/styles-print.scss
+            print.outputdir = {$threeme.enable.publicBasePath}/Css
+            print.formatter = Leafo\ScssPhp\Formatter\Expanded
+            print.linenumber = true
             print.media = print
         }
     }
@@ -54,8 +61,15 @@ page {
 
 [applicationContext = Production]
 page {
-    # Include GoogleAnalytics
+    includeCSS {
+        website.formatter = Leafo\ScssPhp\Formatter\Crunched
+        website.linenumber = false
+        print.formatter = Leafo\ScssPhp\Formatter\Crunched
+        print.linenumber = false
+    }
+    
     jsInline {
+        # Include GoogleAnalytics
         200 = COA
         200 {
             # Opt-out Cookie
