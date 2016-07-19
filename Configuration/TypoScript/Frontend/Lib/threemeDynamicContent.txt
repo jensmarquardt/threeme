@@ -31,8 +31,9 @@ lib.threemeDynamicContent {
         }
     }
 
-    20 < styles.content.get
+    20 = CONTENT
     20 {
+        table = tt_content
         select {
             where = colPos={register:colPos}
             where.insertData = 1
