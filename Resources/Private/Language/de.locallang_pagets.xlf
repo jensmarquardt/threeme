@@ -41,12 +41,16 @@
                 <target>Bühne</target>
             </trans-unit>
             <trans-unit id="tt_content.colPos.altLabels.300">
-                <source>Footer: SEO-Sitemap (slide back up to the siteroot)</source>
-                <target>Footer: SEO-Sitemap (Vererbung von übergeordneter Seite)</target>
+                <source>Footer: (Left)</source>
+                <target>Footer: (Links)</target>
             </trans-unit>
             <trans-unit id="tt_content.colPos.altLabels.301">
-                <source>Footer: Contact (slide back up to the siteroot)</source>
-                <target>Footer: Kontakt (Vererbung von übergeordneter Seite)</target>
+                <source>Footer: (Center)</source>
+                <target>Footer: (Mitte)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.colPos.altLabels.302">
+                <source>Footer: (Right)</source>
+                <target>Footer: (Rechts)</target>
             </trans-unit>
 
             <trans-unit id="translateToMessage">
