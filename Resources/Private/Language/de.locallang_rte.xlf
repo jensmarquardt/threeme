@@ -9,74 +9,74 @@
 
             <trans-unit id="class.text-left">
                 <source>Text: Left</source>
-                <target>Linksbündig</target>
+                <target>Text: Linksbündig</target>
             </trans-unit>
             <trans-unit id="class.text-right">
                 <source>Text: Right</source>
-                <target>Rechtsbündig</target>
+                <target>Text: Rechtsbündig</target>
             </trans-unit>
             <trans-unit id="class.text-center">
                 <source>Text: Center</source>
-                <target>Zentriert</target>
+                <target>Text: Zentriert</target>
             </trans-unit>
             <trans-unit id="class.text-justify">
                 <source>Text: Justify</source>
-                <target>Blocksatz</target>
+                <target>Text: Blocksatz</target>
             </trans-unit>
             <trans-unit id="class.lead">
                 <source>Text: Lead</source>
-                <target>Hervorheben</target>
+                <target>Text: Hervorheben</target>
             </trans-unit>
 
             <trans-unit id="class.table">
                 <source>Table: Unstyled</source>
-                <target>Tabelle ohne Auszeichnung</target>
+                <target>Tabelle: Ohne Auszeichnung</target>
             </trans-unit>
             <trans-unit id="class.table-striped">
                 <source>Table: Striped rows</source>
-                <target>Tabelle gestreift</target>
+                <target>Tabelle: Gestreift</target>
             </trans-unit>
             <trans-unit id="class.table-bordered">
                 <source>Table: Bordered table</source>
-                <target>Tabelle umrandet</target>
+                <target>Tabelle: Umrandet</target>
             </trans-unit>
             <trans-unit id="class.table-hover">
                 <source>Table: Hover rows</source>
-                <target>Tabelle hervorgehoben</target>
+                <target>Tabelle: Hervorgehoben</target>
             </trans-unit>
             <trans-unit id="class.table-condensed">
                 <source>Table: Condensed table</source>
-                <target>Tabelle kompakt</target>
+                <target>Tabelle: Kompakt</target>
             </trans-unit>
 
             <trans-unit id="class.list-unstyled">
                 <source>Lists: Unstyled</source>
-                <target>Liste ohne Auszeichnung</target>
+                <target>Liste: Ohne Auszeichnung</target>
             </trans-unit>
             <trans-unit id="class.list-inline">
                 <source>Lists: Inline</source>
-                <target>Liste in Reihe</target>
+                <target>Liste: In Reihe</target>
             </trans-unit>
 
             <trans-unit id="class.internal-link">
                 <source>Link: Internal page</source>
-                <target>Link zu interner Seite</target>
+                <target>Link: Interne Seite</target>
             </trans-unit>
             <trans-unit id="class.external-link">
                 <source>Link: External page</source>
-                <target>Link zu externer Seite</target>
+                <target>Link: Externe Seite</target>
             </trans-unit>
             <trans-unit id="class.mail">
                 <source>Link: Mail</source>
-                <target>Link zu E-Mail Adresse</target>
+                <target>Link: E-Mail Adresse</target>
             </trans-unit>
             <trans-unit id="class.download">
                 <source>Link: Download</source>
-                <target>Link zu Download-Datei</target>
+                <target>Link: Download-Datei</target>
             </trans-unit>
             <trans-unit id="class.lightbox">
                 <source>Link: Lightbox</source>
-                <target>Link in Lightbox</target>
+                <target>Link: Lightbox</target>
             </trans-unit>
 
             <trans-unit id="class.btn-default">
@@ -85,35 +85,35 @@
             </trans-unit>
             <trans-unit id="class.btn-primary">
                 <source>Buttons: Primary</source>
-                <target>Button in Hauptfarbe</target>
+                <target>Button: Hauptfarbe</target>
             </trans-unit>
             <trans-unit id="class.btn-success">
                 <source>Buttons: Success</source>
-                <target>Button in Grün</target>
+                <target>Button: Grün</target>
             </trans-unit>
             <trans-unit id="class.btn-info">
                 <source>Buttons: Info</source>
-                <target>Button in Blau</target>
+                <target>Button: Blau</target>
             </trans-unit>
             <trans-unit id="class.btn-warning">
                 <source>Buttons: Warning</source>
-                <target>Button in Orange</target>
+                <target>Button: Orange</target>
             </trans-unit>
             <trans-unit id="class.btn-danger">
                 <source>Buttons: Danger</source>
-                <target>Button in Rot</target>
+                <target>Button: Rot</target>
             </trans-unit>
             <trans-unit id="class.btn-lg">
                 <source>Buttons: Large</source>
-                <target>Button Groß</target>
+                <target>Button: Groß</target>
             </trans-unit>
             <trans-unit id="class.btn-sm">
                 <source>Buttons: Small</source>
-                <target>Button Klein</target>
+                <target>Button: Klein</target>
             </trans-unit>
             <trans-unit id="class.btn-xs">
                 <source>Buttons: Extra small</source>
-                <target>Button Extraklein</target>
+                <target>Button: Extraklein</target>
             </trans-unit>
         </body>
     </file>
