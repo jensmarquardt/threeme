@@ -7,6 +7,7 @@ TCAdefaults {
     tt_content {
         filelink_size = 1
         imageborder = 1
+        imagecols = 1
     }
 
     fe_users {

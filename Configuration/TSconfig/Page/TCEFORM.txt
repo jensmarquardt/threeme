@@ -11,9 +11,6 @@ TCEFORM {
     }
 
     tt_content {
-        header_link.disabled = 1
-        date.disabled = 1
-
         header_layout {
             removeItems = 5
             altLabels.0 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.header_layout.altLabels.0
@@ -22,6 +19,15 @@ TCEFORM {
             altLabels.3 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.header_layout.altLabels.3
             altLabels.4 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.header_layout.altLabels.4
             altLabels.5 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.header_layout.altLabels.5
+            
+            types {
+                mask_threeme-carousel {
+                    removeItems = 1,5
+                }
+                mask_threeme-panel {
+                    removeItems = 1,5
+                }
+            }
         }
 
         # Content layout depending on CType
