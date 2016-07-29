@@ -14,6 +14,7 @@ if (TYPO3_MODE == 'BE') {
 
     // Add uniqueInPid to eval to avoid duplicate page title on same treelevel
     $GLOBALS['TCA']['pages']['columns']['title']['config']['eval'] = 'trim,required,uniqueInPid';
+    $GLOBALS['TCA']['tt_content']['types']['gridelements_pi1']['showitem'] = str_replace(';frames,media,', ';frames,layout,media,', $GLOBALS['TCA']['tt_content']['types']['gridelements_pi1']['showitem']);
 
     // Add Threeme Logo and Background to the Backend
     if (!is_array($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['backend'])) {
