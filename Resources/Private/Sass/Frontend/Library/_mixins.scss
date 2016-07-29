@@ -47,7 +47,6 @@
              url('#{$font-path}#{$font-name}.woff') format('woff'), /* Pretty Modern Browsers */
              url('#{$font-path}#{$font-name}.ttf') format('truetype'), /* Safari, Android, iOS */
              url('#{$font-path}#{$font-name}.svg##{$font-svg-id}') format('svg'); /* Legacy iOS */
-        src: url('#{$font-path}#{$font-name}.otf') format('opentype'); // used when developing fonts
         font-weight: $font-weight;
         font-style: $font-style;
     }

@@ -30,4 +30,4 @@
 @import url(//fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic); // Droid Serif + bold + italic
 
 // Include local webfont by Threeme mixin
-//@include threeme-webfont('My Font Family', '../../Public/Fonts/Frontend/MyFont/', 'MyFont Name', 'MyFont SVG ID', 'My Font Weight', 'My Font Style');
+//@include threeme-webfont('My Font Family', '#{$threeme-public-path}Fonts/Frontend/MyFont/', 'MyFont Name', 'MyFont SVG ID', 'My Font Weight', 'My Font Style');
