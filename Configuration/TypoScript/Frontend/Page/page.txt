@@ -47,13 +47,22 @@ page {
             # Output format: Expanded, Nested, Compressed, Compact, Crunched
             website.formatter = Leafo\ScssPhp\Formatter\Expanded
             website.linenumber = true
-            website.forceOnTop = 1
 
             print = {$threeme.enable.privateBasePath}/Sass/styles-print.scss
             print.outputdir = {$threeme.enable.publicBasePath}/Css
             print.formatter = Leafo\ScssPhp\Formatter\Expanded
             print.linenumber = true
             print.media = print
+            
+            # RTE Css
+            # AST: Workarround, um eine angepasste CSS für den RTE zu rendern.
+            # Da sie im Frontend eingebunden ist, erzeugt der SASS-Parser eine entsprechende CSS.
+            # Muss nur einmalig einkommentiert werden, wenn sich hier Änderungen ergeben.
+            rte = {$threeme.enable.privateBasePath}/Sass/styles-rte.scss
+            rte.forceOnTop = 1
+            rte.outputdir = {$threeme.enable.publicBasePath}/Css
+            rte.formatter = Leafo\ScssPhp\Formatter\Compressed
+            rte >
         }
     }
 [end]
