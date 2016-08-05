@@ -17,7 +17,7 @@ lib.sitemap {
     wrap = <li>|</li>
     typolink {
         wrap = <span class="fa fa-sitemap" aria-hidden="true"></span><span class="hide">|</span>
-        parameter = {$theerme.website.pidSitemap}
+        parameter = {$threeme.frontend.pidSitemap}
         title.data = LLL:EXT:threeme/Resources/Private/Language/locallang.xml:sitemap.title
         ATagBeforeWrap = 1
     }
