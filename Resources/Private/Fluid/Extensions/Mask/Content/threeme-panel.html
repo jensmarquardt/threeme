@@ -1,34 +1,32 @@
-<f:if condition="{data.tx_mask_panel}">
-    <f:if condition="{data.header}">
-        <f:switch expression="{data.header_layout}">
-            <f:case value="2"><h2>{data.header}</h2></f:case>
-            <f:case value="3"><h3>{data.header}</h3></f:case>
-            <f:case value="4"><h4>{data.header}</h4></f:case>
-            <f:case value="0"><h2>{data.header}</h2></f:case>
-        </f:switch>
-    </f:if>
+<f:if condition="{data.header}">
+    <f:switch expression="{data.header_layout}">
+        <f:case value="2"><h2>{data.header}</h2></f:case>
+        <f:case value="3"><h3>{data.header}</h3></f:case>
+        <f:case value="4"><h4>{data.header}</h4></f:case>
+        <f:case value="0"><h2>{data.header}</h2></f:case>
+    </f:switch>
+</f:if>
 
-    <div id="accordion-uid{data.uid}" class="bs-panel panel-group" role="tablist" aria-multiselectable="true">
-
-        <f:for each="{data.tx_mask_panel}" as="dataItem" key="dataKey" iteration="dataIterator">
-            <div class="panel">
-                <div class="panel-heading" role="tab" id="heading-item{dataKey}">
-                    <h4 class="panel-title">
-                        <a role="button" data-toggle="collapse" data-parent="#accordion-uid{data.uid}" href="#collapse-item{dataKey}" aria-expanded="true" aria-controls="collapse-item{dataKey}">{dataItem.tx_mask_title}</a>
-                    </h4>
-                </div>
-                <div id="collapse-item{dataKey}" class="panel-collapse collapse {f:if(condition:'{dataIterator.isFirst}', then:'in')}" role="tabpanel" aria-labelledby="heading-item{dataKey}">
-                    <div class="panel-body">
-                        <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{dataItem.tx_mask_bodytext}</f:format.html>
-                        <f:if condition="{dataItem.tx_mask_image}">
-                            <f:for each="{dataItem.tx_mask_image}" as="file">
-                                <f:image src="{file.uid}" alt="{file.alternative}" title="{file.title}" treatIdAsReference="1" width="200" />
-                            </f:for>
-                        </f:if>
-                    </div>
+<div id="accordion{data.uid}" class="bs-panel panel-group" role="tablist" aria-multiselectable="true">
+    <f:for each="{data.tx_mask_panel}" as="dataItem" key="dataKey" iteration="dataIterator">
+        <div class="panel">
+            <div class="panel-heading" role="tab" id="heading{data.uid}-item{dataKey}">
+                <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion{data.uid}" href="#collapse{data.uid}-item{dataKey}" aria-expanded="true" aria-controls="collapse{data.uid}-item{dataKey}">
+                        {dataItem.tx_mask_title}
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse{data.uid}-item{dataKey}" class="panel-collapse collapse {f:if(condition:'{dataIterator.isFirst}', then:'in')}" role="tabpanel" aria-labelledby="heading{data.uid}-item{dataKey}">
+                <div class="panel-body">
+                    <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{dataItem.tx_mask_bodytext}</f:format.html>
+                    <f:if condition="{dataItem.tx_mask_image}">
+                        <f:for each="{dataItem.tx_mask_image}" as="file">
+                            <f:image src="{file.uid}" alt="{file.alternative}" title="{file.title}" treatIdAsReference="1" width="200" />
+                        </f:for>
+                    </f:if>
                 </div>
             </div>
-        </f:for>
-
-    </div>
-</f:if>
+        </div>
+    </f:for>
+</div>
