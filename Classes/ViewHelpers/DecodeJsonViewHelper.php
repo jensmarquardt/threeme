@@ -37,7 +37,8 @@ class DecodeJsonViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractView
      * @return string
      */
     public function render() {
-        $cleanedJson = str_replace(array(',{', ',}', '[,{', '},]'), array('{', '}', '[{', '}]'), $json);
-        return json_decode($cleanedJson, $assoc);
+#        \TYPO3\CMS\Core\Utility\DebugUtility::debug();
+        $cleanedJson = str_replace(array(',{', ',}', '[,{', '},]'), array('{', '}', '[{', '}]'), $this->arguments['json']);
+        return json_decode($cleanedJson, $this->arguments['assoc']);
     }
 }
