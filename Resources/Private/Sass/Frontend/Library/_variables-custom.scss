@@ -43,8 +43,5 @@ $threeme-public-path: "/typo3conf/ext/threeme/Resources/Public/" !default;
 // Predefine vendor variables
 $gray-dark: $threeme-border-color;
 
-$font-family-sans-serif: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family-serif: "Droid Serif", Georgia, "Times New Roman", Times, serif;
-
 // Ajust Glyphicons path - needed for JIT-Parser like "dyncss"
 $icon-font-path: "/typo3conf/ext/threeme/Resources/Public/Fonts/Vendor/Bootstrap/";
