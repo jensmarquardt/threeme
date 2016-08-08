@@ -30,25 +30,9 @@ body {
     overflow-y: scroll;
 
     &.iframe {
+        overflow-y: auto;
         background-image: none;
         background-color: transparent;
         filter: none;
-        padding: 0 20px 0 0;
     }
-
-    /*
-     * Fancybox shifts absolute/fixed positioned elements
-     * This happens if -
-     * 1) the page has vertical scrollbars
-     * 2) elements are positioned to the right side of page then the script removes scrollbars from the page
-     * and the page actually gets wider, therefore these elements shift to the right.
-     * The margin is added to the body element to compensate that width change,
-     * but that does not apply to fixed/absolute positioned elements
-     * (without this margin change, the whole contents would shift to the right).
-     */
-
-    //	&.fancybox-lock {
-    //		overflow: visible !important; // Solves moving the page to the top
-    //		margin-right: 0px !important; // Solves the shifting of my whole page to the left
-    //	}
 }

@@ -41,15 +41,22 @@
 @import "Vendor/Bootstrap/buttons";
 
 /*!
+ * Components
+ * -------------------------------------------------------------------------------------------------
+ */
+@import "Frontend/Components/type";
+
+
+/*!
  * Custom "inline" styles
  * -------------------------------------------------------------------------------------------------
  */
-a,
-a.internal-link,
-a.external-link,
-a.mail,
-a.download,
-a.lightbox {
-    color: $brand-primary;
-    text-decoration: underline;
-}
+//a,
+//a.internal-link,
+//a.external-link,
+//a.mail,
+//a.download,
+//a.lightbox {
+//    color: $brand-primary;
+//    text-decoration: underline;
+//}

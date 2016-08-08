@@ -8,7 +8,7 @@
         </f:switch>
     </f:if>
 
-    <div id="carousel-uid{data.uid}" class="carousel slide" data-ride="carousel">
+    <div id="carousel-uid{data.uid}" class="carousel carousel-fade" data-ride="carousel">
         <ol class="carousel-indicators">
             <f:for each="{data.tx_mask_carousel}" as="dataItem" key="dataKey" iteration="dataIterator">
                 <li data-target="#carousel-uid{data.uid}" data-slide-to="{dataKey}" {f:if(condition:'{dataIterator.isFirst}', then:'class="active"')}></li>
