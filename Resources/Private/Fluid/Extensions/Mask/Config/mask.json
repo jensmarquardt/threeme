@@ -9,14 +9,12 @@
                 "icon": "fa-desktop",
                 "color": "#666666",
                 "columns": [
-                    "header",
-                    "header_layout",
-                    "tx_mask_carousel"
+                    "tx_mask_carousel",
+                    "tx_mask_item"
                 ],
                 "labels": [
-                    "",
-                    "",
-                    "Karussell Inhalte"
+                    "Karussell",
+                    "Elemente"
                 ],
                 "options": {
                     "4": "rte"
@@ -30,34 +28,42 @@
                 "icon": "fa-list",
                 "color": "#666666",
                 "columns": [
+                    "tx_mask_accordion",
                     "header",
                     "header_layout",
                     "tx_mask_panel"
                 ],
                 "labels": [
+                    "Akkordeon",
                     "",
                     "",
-                    "Akkordeon Inhalte"
+                    "Elemente"
                 ],
                 "options": {
-                    "4": "rte"
+                    "6": "rte"
                 }
             }
         },
         "sql": {
-            "tx_mask_carousel": {
-                "tt_content": {
-                    "tx_mask_carousel": "int(11) unsigned DEFAULT '0' NOT NULL"
-                }
-            },
             "tx_mask_panel": {
                 "tt_content": {
                     "tx_mask_panel": "int(11) unsigned DEFAULT '0' NOT NULL"
                 }
+            },
+            "tx_mask_item": {
+                "tt_content": {
+                    "tx_mask_item": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
             }
         },
         "tca": {
-            "tx_mask_carousel": {
+            "tx_mask_accordion": {
+                "config": {
+                    "type": "tab"
+                },
+                "key": "accordion"
+            },
+            "tx_mask_panel": {
                 "config": {
                     "type": "inline",
                     "foreign_table": "--inlinetable--",
@@ -69,6 +75,7 @@
                             "dragdrop": "1"
                         },
                         "collapseAll": "1",
+                        "expandSingle": "1",
                         "newRecordLinkTitle": "",
                         "levelLinksPosition": "top",
                         "useSortable": "1",
@@ -85,9 +92,15 @@
                 "exclude": "1",
                 "inlineLabel": "",
                 "inlineIcon": "",
+                "key": "panel"
+            },
+            "tx_mask_carousel": {
+                "config": {
+                    "type": "tab"
+                },
                 "key": "carousel"
             },
-            "tx_mask_panel": {
+            "tx_mask_item": {
                 "config": {
                     "type": "inline",
                     "foreign_table": "--inlinetable--",
@@ -99,14 +112,12 @@
                             "dragdrop": "1"
                         },
                         "collapseAll": "1",
+                        "expandSingle": "1",
                         "newRecordLinkTitle": "",
                         "levelLinksPosition": "top",
-                        "useSortable": "1",
-                        "showSynchronizationLink": "1",
-                        "showPossibleLocalizationRecords": "1",
-                        "showAllLocalizationLink": "1"
+                        "useSortable": "1"
                     },
-                    "minitems": "",
+                    "minitems": "1",
                     "maxitems": "",
                     "behaviour": {
                         "localizationMode": "select"
@@ -115,7 +126,7 @@
                 "exclude": "1",
                 "inlineLabel": "",
                 "inlineIcon": "",
-                "key": "panel"
+                "key": "item"
             }
         }
     },
@@ -125,80 +136,6 @@
                 "sys_file_reference": {
                     "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
                 }
-            }
-        }
-    },
-    "tx_mask_carousel": {
-        "sql": {
-            "tx_mask_title": {
-                "tx_mask_carousel": {
-                    "tx_mask_title": "tinytext"
-                }
-            },
-            "tx_mask_caption": {
-                "tx_mask_carousel": {
-                    "tx_mask_caption": "text"
-                }
-            },
-            "tx_mask_image": {
-                "tx_mask_carousel": {
-                    "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
-                }
-            }
-        },
-        "tca": {
-            "tx_mask_title": {
-                "config": {
-                    "type": "input",
-                    "eval": "trim",
-                    "default": "",
-                    "placeholder": "",
-                    "size": "",
-                    "max": "",
-                    "is_in": ""
-                },
-                "exclude": "1",
-                "inlineParent": "tx_mask_carousel",
-                "label": "Titel",
-                "key": "title"
-            },
-            "tx_mask_caption": {
-                "config": {
-                    "type": "text",
-                    "eval": "",
-                    "cols": "",
-                    "rows": "",
-                    "default": "",
-                    "placeholder": "",
-                    "max": ""
-                },
-                "exclude": "1",
-                "defaultExtras": "richtext[]:rte_transform[mode=ts]",
-                "inlineParent": "tx_mask_carousel",
-                "label": "Text",
-                "rte": "1",
-                "key": "caption"
-            },
-            "tx_mask_image": {
-                "exclude": "1",
-                "options": "file",
-                "config": {
-                    "behaviour": {
-                        "localizationMode": "select"
-                    },
-                    "minitems": "",
-                    "maxitems": "1",
-                    "filter": [
-                        {
-                            "parameters": {
-                                "allowedFileExtensions": ""
-                            }
-                        }
-                    ]
-                },
-                "inlineParent": "tx_mask_carousel",
-                "label": "Medien",
-                "key": "image"
             }
         }
     },
@@ -221,10 +158,18 @@
             }
         },
         "tca": {
+            "tx_mask_content": {
+                "config": {
+                    "type": "tab"
+                },
+                "inlineParent": "tx_mask_panel",
+                "label": "Texte",
+                "key": "content"
+            },
             "tx_mask_title": {
                 "config": {
                     "type": "input",
-                    "eval": "required",
+                    "eval": "required,trim",
                     "default": "",
                     "placeholder": "",
                     "size": "",
@@ -253,10 +198,23 @@
                 "rte": "1",
                 "key": "bodytext"
             },
+            "tx_mask_media": {
+                "config": {
+                    "type": "tab"
+                },
+                "inlineParent": "tx_mask_panel",
+                "label": "Medien",
+                "key": "media"
+            },
             "tx_mask_image": {
                 "exclude": "1",
                 "options": "file",
                 "config": {
+                    "appearance": {
+                        "collapseAll": "1",
+                        "expandSingle": "1",
+                        "useSortable": "1"
+                    },
                     "behaviour": {
                         "localizationMode": "select"
                     },
@@ -271,6 +229,101 @@
                     ]
                 },
                 "inlineParent": "tx_mask_panel",
+                "label": "Medien",
+                "key": "image"
+            }
+        }
+    },
+    "tx_mask_item": {
+        "sql": {
+            "tx_mask_title": {
+                "tx_mask_item": {
+                    "tx_mask_title": "tinytext"
+                }
+            },
+            "tx_mask_caption": {
+                "tx_mask_item": {
+                    "tx_mask_caption": "text"
+                }
+            },
+            "tx_mask_image": {
+                "tx_mask_item": {
+                    "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_content": {
+                "config": {
+                    "type": "tab"
+                },
+                "inlineParent": "tx_mask_item",
+                "label": "Texte",
+                "key": "content"
+            },
+            "tx_mask_title": {
+                "config": {
+                    "type": "input",
+                    "eval": "trim",
+                    "default": "",
+                    "placeholder": "",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_item",
+                "label": "Titel",
+                "key": "title"
+            },
+            "tx_mask_caption": {
+                "config": {
+                    "type": "text",
+                    "eval": "",
+                    "cols": "",
+                    "rows": "",
+                    "default": "",
+                    "placeholder": "",
+                    "max": ""
+                },
+                "exclude": "1",
+                "defaultExtras": "richtext[]:rte_transform[mode=ts_css]",
+                "inlineParent": "tx_mask_item",
+                "label": "Text",
+                "rte": "1",
+                "key": "caption"
+            },
+            "tx_mask_media": {
+                "config": {
+                    "type": "tab"
+                },
+                "inlineParent": "tx_mask_item",
+                "label": "Medien",
+                "key": "media"
+            },
+            "tx_mask_image": {
+                "exclude": "1",
+                "options": "file",
+                "config": {
+                    "appearance": {
+                        "collapseAll": "1",
+                        "expandSingle": "1",
+                        "useSortable": "1"
+                    },
+                    "behaviour": {
+                        "localizationMode": "select"
+                    },
+                    "minitems": "1",
+                    "maxitems": "1",
+                    "filter": [
+                        {
+                            "parameters": {
+                                "allowedFileExtensions": ""
+                            }
+                        }
+                    ]
+                },
+                "inlineParent": "tx_mask_item",
                 "label": "Medien",
                 "key": "image"
             }
