@@ -18,7 +18,8 @@ page {
     }
 
     includeJSFooter {
-        jQuery = {$threeme.enable.publicBasePath}/JavaScript/Vendor/Jquery/jquery.js
+        jQuery = {$threeme.framework.jQuery.cdn}/{$threeme.framework.jQuery.version}/jquery.js
+        jQuery.external = 1
         jQuery.forceOnTop = 1
 
         bootstrapAffix = {$threeme.enable.publicBasePath}/JavaScript/Vendor/Bootstrap/affix.js
@@ -65,7 +66,7 @@ page {
             rte >
         }
     }
-[end]
+[global]
 
 
 [applicationContext = Production]
@@ -75,8 +76,13 @@ page {
         website.linenumber = false
         print.formatter = Leafo\ScssPhp\Formatter\Crunched
         print.linenumber = false
+        rte >
     }
-    
+
+    includeJSFooter {
+        jQuery = {$threeme.framework.jQuery.cdn}/{$threeme.framework.jQuery.version}/jquery.min.js
+    }
+
     jsInline {
         # Include GoogleAnalytics
         200 = COA
@@ -111,4 +117,4 @@ page {
         }
     }
 }
-[GLOBAL]
+[global]

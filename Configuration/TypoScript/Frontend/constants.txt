@@ -102,21 +102,33 @@ threeme {
     }
     
     framework {
-        # cat=Threeme/Framework/100; type=string; label= Grid displayer: gridGutterWidth
-        gridGutterWidth = 30px
+        # cat=Threeme/Framework/Bootstrap/100; type=string; label= Grid displayer: gridGutterWidth
+        bootstrap.gridGutterWidth = 30px
+
+        # cat=Threeme/Framework/Bootstrap/110; type=string; label= Grid displayer: gridCols
+        bootstrap.gridCols = 12
+
+        # cat=Threeme/Framework/Bootstrap/120; type=string; label= Scrollspy: target
+        bootstrap.scrollspy.target =
+
+        # cat=Threeme/Framework/Bootstrap/130; type=string; label= Scrollspy: offset
+        bootstrap.scrollspy.offset =
         
-        # cat=Threeme/Framework/110; type=string; label= Grid displayer: gridCols
-        gridCols = 12
+        # cat=Threeme/Framework/jQuery/200; type=string; label= jQuery: CDN
+        jQuery.cdn = https://ajax.googleapis.com/ajax/libs/jquery
+        
+        # cat=Threeme/Framework/jQuery/210; type=string; label= jQuery: Version
+        jQuery.version = 3.1.0
     }
 
     frontend {
         # cat=Threeme/Frontend/100; type=text; label= Logo: Website logo
         logo = EXT:threeme/Resources/Public/Images/Frontend/Logo/typo3-orange.svg
         
-        # cat=Threeme/Frontend/110; type=text; label= Logo: Logo maxWidth
+        # cat=Threeme/Frontend/Logo/10; type=text; label= Logo: Logo maxWidth
         logo.maxWidth = 200
         
-        # cat=Threeme/Frontend/120; type=text; label= Logo: Logo maxHeight
+        # cat=Threeme/Frontend/Logo/20; type=text; label= Logo: Logo maxHeight
         logo.maxHeight = 40
 
         # cat=Threeme/Frontend/200; type=int+; label= pidRoot: PID website root
