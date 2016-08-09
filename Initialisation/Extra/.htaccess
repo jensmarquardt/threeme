@@ -265,7 +265,11 @@ AddDefaultCharset utf-8
 	#RewriteRule .? - [E=TYPO3_CONTEXT:Production/Staging]
 	#RewriteCond %{HTTP_HOST} ^www\.example\.com$
 	#RewriteRule .? - [E=TYPO3_CONTEXT:Production]
-    
+
+    #  RewriteCond %{HTTP_HOST} example\.com$ [NC,OR]
+    #  RewriteCond %{HTTP_HOST} example\.com$ [NC]
+    #  RewriteRule ^(.*)$ http://www.brandgold.de%{REQUEST_URI} [R=301,L]
+
     #  RewriteCond %{HTTPS} !=on
     #  RewriteCond %{HTTP_HOST} !^www\..+$ [NC]
     #  RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
