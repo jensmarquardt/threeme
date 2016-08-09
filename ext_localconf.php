@@ -30,27 +30,6 @@ if (TYPO3_MODE === 'BE')
         'initApacheHtaccess'
     );
 
-//    $signalSlotDispatcher->connect(
-//        'TYPO3\\CMS\\Extensionmanager\\Service\\ExtensionManagementService',
-//        'hasInstalledExtensions',
-//        'THREEME\\Threeme\\Service\\InstallService',
-//        'initRealUrlConfiguration'
-//    );
-
-    $signalSlotDispatcher->connect(
-        'TYPO3\\CMS\\Extensionmanager\\Service\\ExtensionManagementService',
-        'hasInstalledExtensions',
-        'THREEME\\Threeme\\Service\\InstallService',
-        'initAdditionalConfiguration'
-    );
-
-//    $signalSlotDispatcher->connect(
-//        'TYPO3\\CMS\\Extensionmanager\\Service\\ExtensionManagementService',
-//        'hasInstalledExtensions',
-//        'THREEME\\Threeme\\Service\\InstallService',
-//        'initExtensionConfiguration'
-//    );
-
     // Register sys_note icon
     /** @var \TYPO3\CMS\Core\Imaging\IconRegistry $iconRegistry */
     $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);

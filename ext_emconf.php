@@ -23,18 +23,17 @@ $EM_CONF[$_EXTKEY] = array(
     'constraints' => array(
         'depends' => array(
             'typo3' => '7.6.0-7.6.999',
-            'sys_note' => '',
-            'scheduler' => '',
-            'recycler' => '',
-            'reports' => '',
             'fluid_styled_content' => '',
         ),
         'conflicts' => array(
         ),
         'suggests' => array(
-            'dyncss' => '',
-            'dyncss_scss' => '',
-            'be_secure_pw' => '7.0.2',
+            'sys_note' => '',
+            'scheduler' => '',
+            'recycler' => '',
+            'reports' => '',
+            'ws_scss' => '',
+            'be_secure_pw' => '7.0.6',
             'mask' => '2.0.0',
             'news' => '4.2.1',
             'powermail' => '3.3.0',
