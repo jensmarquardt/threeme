@@ -80,10 +80,10 @@ threeme {
         robots = index,follow
 
         # cat=Threeme/Meta/130; type=string; label= Author: Name of author.
-        author = Threeme Distribution
+        author = André Steiling
 
         # cat=Threeme/Meta/140; type=string; label= Keywords: List of default keywords if field page:keywords is empty.
-        keywords =
+        keywords = Threeme, Distribution, TYPO3 Kickstarter
 
         # cat=Threeme/Meta/150; type=string; label= Description: List of default description if field page:description is empty.
         description =
@@ -123,13 +123,13 @@ threeme {
 
     frontend {
         # cat=Threeme/Frontend/100; type=text; label= Logo: Website logo
-        logo = EXT:threeme/Resources/Public/Images/Frontend/Logo/typo3-orange.svg
+        logo = EXT:threeme/Resources/Public/Images/Frontend/Logo/threeme.png
         
         # cat=Threeme/Frontend/Logo/10; type=text; label= Logo: Logo maxWidth
-        logo.maxWidth = 200
+        logo.width = 172
         
         # cat=Threeme/Frontend/Logo/20; type=text; label= Logo: Logo maxHeight
-        logo.maxHeight = 40
+        logo.height = 41
 
         # cat=Threeme/Frontend/200; type=int+; label= pidRoot: PID website root
         pidRoot = 2
