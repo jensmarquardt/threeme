@@ -31,6 +31,9 @@
             <trans-unit id="tt_content.colPos.altLabels.200">
                 <source>Stage</source>
             </trans-unit>
+            <trans-unit id="tt_content.colPos.altLabels.201">
+                <source>Lead</source>
+            </trans-unit>
             <trans-unit id="tt_content.colPos.altLabels.300">
                 <source>Footer: (Left))</source>
             </trans-unit>
@@ -63,7 +66,20 @@
             <trans-unit id="tt_content.header_layout.altLabels.5">
                 <source>Headline 5 (Subsection header)</source>
             </trans-unit>
-            
+
+            <trans-unit id="tt_content.layout.types.header.addItems.200">
+                <source>Orientation: Left</source>
+            </trans-unit>
+            <trans-unit id="tt_content.layout.types.header.addItems.201">
+                <source>Orientation: Center</source>
+            </trans-unit>
+            <trans-unit id="tt_content.layout.types.header.addItems.202">
+                <source>Orientation: Right</source>
+            </trans-unit>
+            <trans-unit id="tt_content.layout.types.header.addItems.203">
+                <source>Orientation: Justify</source>
+            </trans-unit>
+
             <trans-unit id="tt_content.layout.types.textmedia.addItems.200">
                 <source>Image shapes: Rounded</source>
             </trans-unit>
@@ -73,7 +89,7 @@
             <trans-unit id="tt_content.layout.types.textmedia.addItems.202">
                 <source>Image shapes: Thumbnail</source>
             </trans-unit>
-            
+
             <trans-unit id="tt_content.layout.types.table.addItems.200">
                 <source>Table: Striped rows</source>
             </trans-unit>

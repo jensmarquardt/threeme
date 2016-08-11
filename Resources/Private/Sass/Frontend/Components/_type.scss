@@ -70,3 +70,20 @@ hr {
     border: none;
     background-color: $text-color;
 }
+
+// @NOTE: Added custom layouts to cType header for text orientation
+.header-200 {
+    @extend .text-left;
+}
+
+.header-201 {
+    @extend .text-center;
+}
+
+.header-202 {
+    @extend .text-right;
+}
+
+.header-203 {
+    @extend .text-justify;
+}

@@ -40,6 +40,10 @@
                 <source>Stage</source>
                 <target>Bühne</target>
             </trans-unit>
+            <trans-unit id="tt_content.colPos.altLabels.201">
+                <source>Lead</source>
+                <target>Einleitung</target>
+            </trans-unit>
             <trans-unit id="tt_content.colPos.altLabels.300">
                 <source>Footer: (Left)</source>
                 <target>Footer: (Links)</target>
@@ -83,6 +87,23 @@
                 <target>Überschrift 3. Ordnung (Absatzüberschrift)</target>
             </trans-unit>
 
+            <trans-unit id="tt_content.layout.types.header.addItems.200">
+                <source>Orientation: Left</source>
+                <target>Ausrichtung: Linksbündig</target>
+            </trans-unit>
+            <trans-unit id="tt_content.layout.types.header.addItems.201">
+                <source>Orientation: Center</source>
+                <target>Ausrichtung: Zentriert</target>
+            </trans-unit>
+            <trans-unit id="tt_content.layout.types.header.addItems.202">
+                <source>Orientation: Right</source>
+                <target>Ausrichtung: Rechtsbündig</target>
+            </trans-unit>
+            <trans-unit id="tt_content.layout.types.header.addItems.203">
+                <source>Orientation: Justify</source>
+                <target>Ausrichtung: Blocksatz</target>
+            </trans-unit>
+            
             <trans-unit id="tt_content.layout.types.textmedia.addItems.200">
                 <source>Image shapes: Rounded</source>
                 <target>Bilder mit runden Kanten</target>
