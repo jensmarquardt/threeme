@@ -41,7 +41,6 @@ body {
         margin: 0 auto;
         width: 100%;
         max-width: $threeme-container-width;
-//        @include threeme-border($threeme-container-border-width, $threeme-container-border-style, $threeme-container-border-color, 0);
         @include box-shadow($threeme-container-box-shadow);
     }
 }

@@ -30,3 +30,43 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-top: 0;
 }
+
+h1, .h1 {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    margin-bottom: (($line-height-computed / 2) * 3);
+}
+
+h2, .h2 {
+    font-weight: 300;
+    margin-bottom: (($line-height-computed / 2) * 3);
+}
+
+h3, .h3 {
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: $line-height-computed;
+}
+
+h4, .h4 {
+    font-weight: 600;
+}
+
+p,
+ul,
+ol {
+    margin-bottom: $line-height-computed;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    margin: (($line-height-computed / 2) * 3) 0;
+    padding: 0;
+    width: 10%;
+    left: 45%;
+    position: relative;
+    border: none;
+    background-color: $text-color;
+}
