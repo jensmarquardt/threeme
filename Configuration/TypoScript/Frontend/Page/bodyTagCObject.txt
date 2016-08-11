@@ -13,7 +13,7 @@ page {
         
         # Data attributes for Grid displayer, http://alefeuvre.github.io/foundation-grid-displayer/
         20 = TEXT
-        20.value = data-grid-framework="bo" data-grid-color="red" data-grid-opacity="0.5" data-grid-zindex="10" data-grid-gutterwidth="{$threeme.framework.bootstrap.gridGutterWidth}" data-grid-nbcols="{$threeme.framework.bootstrap.gridCols}"
+        20.value = data-grid-framework="b3" data-grid-color="red" data-grid-opacity="0.5" data-grid-zindex="10" data-grid-gutterwidth="{$threeme.framework.bootstrap.gridGutterWidth}" data-grid-nbcols="{$threeme.framework.bootstrap.gridCols}"
         20.noTrimWrap = || |
         
         # Data attributes for Bootstrap
