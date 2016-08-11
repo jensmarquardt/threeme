@@ -31,14 +31,26 @@
  *
  * -------------------------------------------------------------------------------------------------
  */
+$threeme-public-path: "/typo3conf/ext/threeme/Resources/Public/" !default;
+
 $threeme-white: #FFF !default;
 $threeme-black: #000 !default;
 
+$threeme-green: #4fc280 !default;
+$threeme-blue: #004586 !default;
+$threeme-gray: #aab4b7 !default;
+
+// Defaults for mixin "threeme-border"
 $threeme-border-width: 1px !default;
 $threeme-border-style: solid !default;
-$threeme-border-color: #707070 !default;
+$threeme-border-color: $threeme-gray !default;
 
-$threeme-public-path: "/typo3conf/ext/threeme/Resources/Public/" !default;
+// Defaults for "page/outer" wrapper "threeme-container"
+$threeme-container-width: 1280px !default;
+$threeme-container-border-width: 0 1px !default;
+$threeme-container-border-style: $threeme-border-style;
+$threeme-container-border-color: $threeme-border-color;
+$threeme-container-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 
 // Predefine vendor variables
 $gray-dark: $threeme-border-color;

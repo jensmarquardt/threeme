@@ -41,15 +41,6 @@ var tx_threeme = (function() {
             });
         },
 
-        /* Bootstrap Carousel
-         * -------------------------------------------------------------------------------------------------
-         */
-        bootstrapCarousel : function() {
-            var carousel = $('.bs-carousel').carousel({
-                interval: 8000
-            });
-        },
-
         /* Bootstrap Accordion
          * -------------------------------------------------------------------------------------------------
          */
@@ -62,6 +53,5 @@ var tx_threeme = (function() {
 
 $(function() {
     tx_threeme.fancyboxLighbox();
-    tx_threeme.bootstrapCarousel();
     tx_threeme.bootstrapAccordion();
 });

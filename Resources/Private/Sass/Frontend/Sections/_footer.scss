@@ -28,7 +28,8 @@ footer {
     margin-top: ($padding-large-vertical * 5);
     padding: ($padding-large-vertical * 2) 0;
     color: $threeme-white;
-    background-color: $brand-warning;
+
+    @include gradient-vertical($threeme-blue, $threeme-gray);
 
     ul {
         margin: 0;

@@ -9,35 +9,34 @@
 
 
 <f:section name="carousel">
-    <section role="presentation" id="carousel-uid{data.uid}" class="bs-carousel carousel carousel-fade slide">
-        <div class="container">
-            <ol class="carousel-indicators">
-                <f:for each="{data.tx_mask_item}" as="dataItem" key="dataKey" iteration="dataIterator">
-                    <li data-target="#carousel-uid{data.uid}" data-slide-to="{dataKey}" {f:if(condition:'{dataIterator.isFirst}', then:'class="active"')}></li>
-                </f:for>
-            </ol>
-
-            <div class="carousel-inner" role="listbox">
-                <f:for each="{data.tx_mask_item}" as="dataItem" key="dataKey" iteration="dataIterator">
-                    <div class="item {f:if(condition:'{dataIterator.isFirst}', then:'active')}">
-                        <f:image src="{dataItem.tx_mask_image.0.uid}" alt="{dataItem.tx_mask_image.0.alternative}" title="{dataItem.tx_mask_image.0.title}" treatIdAsReference="1" maxWidth="1280" />
-                        <div class="carousel-caption">
-                            <h2>{dataItem.tx_mask_title}</h2>
-                            <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{dataItem.tx_mask_caption}</f:format.html>
-                        </div>
+    <section role="presentation" id="carousel-uid{data.uid}" class="carousel carousel-fade slide">
+        <div class="carousel-inner" role="listbox">
+            <f:for each="{data.tx_mask_item}" as="dataItem" key="dataKey" iteration="dataIterator">
+                <div class="item {f:if(condition:'{dataIterator.isFirst}', then:'active')}">
+                    <f:image src="{dataItem.tx_mask_image.0.uid}" alt="{dataItem.tx_mask_image.0.alternative}" title="{dataItem.tx_mask_image.0.title}" treatIdAsReference="1" width="1280" />
+                    <div class="carousel-caption">
+                        <h2 class="carousel-caption-title">{dataItem.tx_mask_title}</h2>
+                        <hr class="carousel-caption-divider">
+                        <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{dataItem.tx_mask_caption}</f:format.html>
                     </div>
-                </f:for>
-            </div>
-
-            <a class="left carousel-control" href="#carousel-uid{data.uid}" role="button" data-slide="prev">
-                <span class="threeme-icon-prev fa fa-arrow-circle-left" aria-hidden="true"></span>
-                <span class="sr-only">{f:translate(key: 'carousel.prev.label', extensionName: 'threeme')}</span>
-            </a>
-            <a class="right carousel-control" href="#carousel-uid{data.uid}" role="button" data-slide="next">
-                <span class="threeme-icon-next fa fa-arrow-circle-right" aria-hidden="true"></span>
-                <span class="sr-only">{f:translate(key: 'carousel.next.label', extensionName: 'threeme')}</span>
-            </a>
+                </div>
+            </f:for>
         </div>
+
+        <a class="left carousel-control" href="#carousel-uid{data.uid}" role="button" data-slide="prev">
+            <span class="threeme-icon-prev fa fa-arrow-circle-left" aria-hidden="true"></span>
+            <span class="sr-only">{f:translate(key: 'carousel.prev.label', extensionName: 'threeme')}</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-uid{data.uid}" role="button" data-slide="next">
+            <span class="threeme-icon-next fa fa-arrow-circle-right" aria-hidden="true"></span>
+            <span class="sr-only">{f:translate(key: 'carousel.next.label', extensionName: 'threeme')}</span>
+        </a>
+
+        <ol class="carousel-indicators">
+            <f:for each="{data.tx_mask_item}" as="dataItem" key="dataKey" iteration="dataIterator">
+                <li data-target="#carousel-uid{data.uid}" data-slide-to="{dataKey}" {f:if(condition:'{dataIterator.isFirst}', then:'class="active"')}></li>
+            </f:for>
+        </ol>
     </section>
 </f:section>
 

@@ -26,7 +26,8 @@
  */
 
 // Include external webfont, e.g. Google ones ... or ...
-@import url(//fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin-ext);
+@import url(//fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=latin-ext);
+@import url(//fonts.googleapis.com/css?family=Lobster&subset=latin-ext);
 
 // Include local webfont by Threeme mixin
 //@include threeme-webfont(My-Font-Family, '#{$threeme-public-path}Fonts/Frontend/MyFont/', My-Font-Name, My-Font-SVG-ID, My-Font-Weight, My-Font-Style);

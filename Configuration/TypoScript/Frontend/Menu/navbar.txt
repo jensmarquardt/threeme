@@ -7,7 +7,7 @@ menu.navbar {
     1 {
         expAll = 0
         noBlur = 1
-        stdWrap.dataWrap = <ul class="nav navbar-nav colum-{register:count_menuItems}">|</ul>
+        stdWrap.dataWrap = <ul class="nav navbar-nav navbar-right colum-{register:count_menuItems}">|</ul>
 
         NO {
             htmlSpecialChars = 1

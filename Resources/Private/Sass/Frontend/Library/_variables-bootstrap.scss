@@ -33,17 +33,17 @@ $bootstrap-sass-asset-helper: false !default;
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$gray-base:              #333 !default;
+$gray-base:              $threeme-black !default;
 $gray-darker:            #5e5e5e !default;
 $gray-dark:              #707070 !default;
-$gray:                   #8c8c8c !default;
+$gray:                   $threeme-gray !default;
 $gray-light:             #dadada !default;
 $gray-lighter:           #eeeeee !default;
 
-$brand-primary:         #FF8700;
-$brand-success:         #5cb85c !default;
-$brand-info:            #66afe9 !default;
-$brand-warning:         lighten($brand-primary, 10%) !default;
+$brand-primary:         $threeme-blue;
+$brand-success:         $threeme-green !default;
+$brand-info:            lighten($brand-primary, 15%) !default;
+$brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
 
 
@@ -57,7 +57,7 @@ $body-bg:               $threeme-white !default;
 $text-color:            $gray-base !default;
 
 //** Global textual link color.
-$link-color:            $brand-primary !default;
+$link-color:            $threeme-green !default;
 //** Link hover color set via `darken()` function.
 $link-hover-color:      darken($link-color, 15%) !default;
 //** Link hover decoration.
@@ -68,7 +68,7 @@ $link-hover-decoration: underline !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:  'Open Sans', sans-serif !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
@@ -79,7 +79,7 @@ $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 
 $font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
-$font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h2:            floor(($font-size-base * 2.1)) !default; // ~28px
 $font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
 $font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-h5:            $font-size-base !default;
@@ -92,7 +92,7 @@ $line-height-computed:    floor(($font-size-base * $line-height-base)) !default;
 
 //** By default, this inherits from the `<body>`.
 $headings-font-family:    inherit !default;
-$headings-font-weight:    500 !default;
+$headings-font-weight:    700 !default;
 $headings-line-height:    1.2 !default;
 $headings-color:          inherit !default;
 
@@ -387,23 +387,23 @@ $container-lg:                 $container-large-desktop !default;
 //##
 
 // Basics of a navbar
-$navbar-height:                    50px !default;
+$navbar-height:                    70px !default;
 $navbar-margin-bottom:             $line-height-computed !default;
 $navbar-border-radius:             $border-radius-base !default;
 $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
 $navbar-collapse-max-height:       340px !default;
 
-$navbar-default-color:             #777 !default;
-$navbar-default-bg:                #f8f8f8 !default;
+$navbar-default-color:             $threeme-white !default;
+$navbar-default-bg:                transparent !default;
 $navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
 
 // Navbar links
-$navbar-default-link-color:                #777 !default;
-$navbar-default-link-hover-color:          #333 !default;
+$navbar-default-link-color:                $threeme-white !default;
+$navbar-default-link-hover-color:          $link-color !default;
 $navbar-default-link-hover-bg:             transparent !default;
-$navbar-default-link-active-color:         #555 !default;
-$navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
+$navbar-default-link-active-color:         $link-color !default;
+$navbar-default-link-active-bg:            transparent !default;
 $navbar-default-link-disabled-color:       #ccc !default;
 $navbar-default-link-disabled-bg:          transparent !default;
 
@@ -413,9 +413,9 @@ $navbar-default-brand-hover-color:         darken($navbar-default-brand-color, 1
 $navbar-default-brand-hover-bg:            transparent !default;
 
 // Navbar toggle
-$navbar-default-toggle-hover-bg:           #ddd !default;
-$navbar-default-toggle-icon-bar-bg:        #888 !default;
-$navbar-default-toggle-border-color:       #ddd !default;
+$navbar-default-toggle-hover-bg:           $threeme-gray !default;
+$navbar-default-toggle-icon-bar-bg:        $threeme-green !default;
+$navbar-default-toggle-border-color:       $threeme-blue !default;
 
 
 //=== Inverted navbar
@@ -833,15 +833,15 @@ $breadcrumb-separator:          "/" !default;
 //
 //##
 
-$carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6) !default;
+$carousel-text-shadow:                        none !default;
 
 $carousel-control-color:                      $threeme-white !default;
 $carousel-control-width:                      15% !default;
 $carousel-control-opacity:                    .5 !default;
 $carousel-control-font-size:                  20px !default;
 
-$carousel-indicator-active-bg:                $threeme-white !default;
-$carousel-indicator-border-color:             $threeme-white !default;
+$carousel-indicator-active-bg:                $threeme-green !default;
+$carousel-indicator-border-color:             $threeme-green !default;
 
 $carousel-caption-color:                      $threeme-white !default;
 
