@@ -46,12 +46,12 @@ page {
             website = {$threeme.enable.privateBasePath}/Sass/styles-website.scss
             website.outputdir = {$threeme.enable.publicBasePath}/Css
             # Output format: Expanded, Nested, Compressed, Compact, Crunched
-            website.formatter = Leafo\ScssPhp\Formatter\Expanded
+            website.formatter = Leafo\ScssPhp\Formatter\Nested
             website.linenumber = true
 
             print = {$threeme.enable.privateBasePath}/Sass/styles-print.scss
             print.outputdir = {$threeme.enable.publicBasePath}/Css
-            print.formatter = Leafo\ScssPhp\Formatter\Expanded
+            print.formatter = Leafo\ScssPhp\Formatter\Nested
             print.linenumber = true
             print.media = print
             
@@ -62,8 +62,8 @@ page {
             rte = {$threeme.enable.privateBasePath}/Sass/styles-rte.scss
             rte.forceOnTop = 1
             rte.outputdir = {$threeme.enable.publicBasePath}/Css
-            rte.formatter = Leafo\ScssPhp\Formatter\Compressed
-            rte >
+            rte.formatter = Leafo\ScssPhp\Formatter\Nested
+##            rte >
         }
     }
 [global]

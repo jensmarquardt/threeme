@@ -3,20 +3,31 @@
 <f:section name="Website">
     <f:render partial="Header" arguments="{_all}" />
 
+    <!--TYPO3SEARCH_begin-->
+    <div class="stage">
+        <f:cObject typoscriptObjectPath="lib.threemeDynamicContent" data="{pageUid: '{data.uid}', colPos: '200'}"/>
+    </div>
+    <!--TYPO3SEARCH_end-->
+
     <div class="container">
-        <div class="row">
-            <div class="col-sm-3">
-                <div id="sidebar" class="hidden-print" role="complementary">
-                    <f:cObject typoscriptObjectPath="menu.navlist" />
-                </div>
+        <section class="row">
+            <div class="col-sm-12">
+                <!--TYPO3SEARCH_begin-->
+                <f:cObject typoscriptObjectPath="lib.threemeDynamicContent" data="{pageUid: '{data.uid}', colPos: '201'}"/>
+                <!--TYPO3SEARCH_end-->
             </div>
+        </section>
+        <section class="row">
             <main id="main" class="col-sm-9">
                 <f:cObject typoscriptObjectPath="menu.breadcrumbs" />
                 <!--TYPO3SEARCH_begin-->
                 <f:cObject typoscriptObjectPath="lib.threemeDynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}"/>
                 <!--TYPO3SEARCH_end-->
             </main>
-        </div>
+            <div class="col-sm-3">
+                <f:cObject typoscriptObjectPath="menu.navlist" />
+            </div>
+        </section>
     </div>
 
     <f:render partial="Footer" arguments="{_all}" />

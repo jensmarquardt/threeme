@@ -24,35 +24,6 @@
  * Custom styles
  * -------------------------------------------------------------------------------------------------
  */
-.fonticon-internal-link {
-    &:before {
-        @extend .fa-link;
-    }
-}
-
-.fonticon-external-link {
-    &:before {
-        @extend .fa-external-link;
-    }
-}
-
-.fonticon-mail {
-    &:before {
-        @extend .fa-envelope-o;
-    }
-}
-
-.fonticon-download {
-    &:before {
-        @extend .fa-download;
-    }
-}
-
-.fonticon-lightbox {
-    &:before {
-        @extend .fa-picture-o;
-    }
-}
 
 .fonticon-internal-link,
 .fonticon-external-link,
@@ -60,4 +31,34 @@
 .fonticon-download,
 .fonticon-lightbox {
     margin-right: $padding-xs-horizontal;
+}
+
+.internal-link {
+    .fonticon-internal-link {
+        @extend .fa-link;
+    }
+}
+
+.external-link {
+    .fonticon-external-link {
+        @extend .fa-external-link;
+    }
+}
+
+.mail {
+    .fonticon-mail {
+        @extend .fa-envelope-o;
+    }
+}
+
+.download {
+    .fonticon-download {
+        @extend .fa-download;
+    }
+}
+
+.lightbox {
+    .fonticon-lightbox {
+        @extend .fa-picture-o;
+    }
 }

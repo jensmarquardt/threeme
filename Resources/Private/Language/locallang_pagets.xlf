@@ -34,11 +34,14 @@
             <trans-unit id="tt_content.colPos.altLabels.201">
                 <source>Lead</source>
             </trans-unit>
+            <trans-unit id="tt_content.colPos.altLabels.202">
+                <source>Banner</source>
+            </trans-unit>
             <trans-unit id="tt_content.colPos.altLabels.300">
-                <source>Footer: (Left))</source>
+                <source>Footer: (Left)</source>
             </trans-unit>
             <trans-unit id="tt_content.colPos.altLabels.301">
-                <source>Footer: (Center))</source>
+                <source>Footer: (Center)</source>
             </trans-unit>
             <trans-unit id="tt_content.colPos.altLabels.302">
                 <source>Footer: (Right)</source>

@@ -43,4 +43,10 @@ body {
         max-width: $threeme-container-width;
         @include box-shadow($threeme-container-box-shadow);
     }
+
+    .stage {
+        .carousel {
+            top: -70px;
+        }
+    }
 }

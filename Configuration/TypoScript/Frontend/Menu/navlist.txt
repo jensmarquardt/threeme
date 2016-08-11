@@ -1,5 +1,6 @@
 menu.navlist = HMENU
 menu.navlist {
+    wrap = <nav class="hidden-print">|</nav>
     entryLevel = {$threeme.menu.navlist.entry}
     excludeUidList = {$threeme.menu.navlist.excludeUidList}
 

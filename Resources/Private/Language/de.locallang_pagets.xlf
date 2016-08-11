@@ -44,6 +44,10 @@
                 <source>Lead</source>
                 <target>Einleitung</target>
             </trans-unit>
+            <trans-unit id="tt_content.colPos.altLabels.202">
+                <source>Banner</source>
+                <target>Banner</target>
+            </trans-unit>
             <trans-unit id="tt_content.colPos.altLabels.300">
                 <source>Footer: (Left)</source>
                 <target>Footer: (Links)</target>

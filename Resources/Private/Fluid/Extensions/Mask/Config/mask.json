@@ -2,10 +2,10 @@
     "tt_content": {
         "elements": {
             "threeme-carousel": {
-                "label": "Karussell",
+                "label": "Diashow & Banner",
                 "key": "threeme-carousel",
-                "shortLabel": "",
-                "description": "Diashow mit Text-\/Bildelementen",
+                "shortLabel": "Diashow & Banner mit Text-\/Bildelementen",
+                "description": "Diashow & Banner mit Text-\/Bildelementen. Automatische Unterscheidung zwischen Diashow und Banner bei Verwendung von nur einem Element.",
                 "icon": "fa-desktop",
                 "color": "#7395C0",
                 "columns": [
@@ -19,13 +19,13 @@
                     "Elemente"
                 ],
                 "options": {
-                    "5": "rte"
+                    "6": "rte"
                 }
             },
             "threeme-panel": {
                 "label": "Akkordeon",
                 "key": "threeme-panel",
-                "shortLabel": "",
+                "shortLabel": "Akkordeon mit Text-\/Bildinhalten",
                 "description": "Akkordeon mit Text-\/Bildinhalten",
                 "icon": "fa-list",
                 "color": "#7395C0",
@@ -155,6 +155,11 @@
                     "tx_mask_title": "tinytext"
                 }
             },
+            "tx_mask_hide_title": {
+                "tx_mask_item": {
+                    "tx_mask_hide_title": "int(11) DEFAULT '0' NOT NULL"
+                }
+            },
             "tx_mask_caption": {
                 "tx_mask_item": {
                     "tx_mask_caption": "text"
@@ -187,8 +192,24 @@
                 },
                 "exclude": "1",
                 "inlineParent": "tx_mask_item",
-                "label": "Titel",
+                "label": "Titel:",
                 "key": "title"
+            },
+            "tx_mask_hide_title": {
+                "config": {
+                    "type": "check",
+                    "items": [
+                        [
+                            ""
+                        ]
+                    ],
+                    "cols": "",
+                    "default": ""
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_item",
+                "label": "Titel verbergen:",
+                "key": "hide_title"
             },
             "tx_mask_caption": {
                 "config": {
@@ -203,7 +224,7 @@
                 "exclude": "1",
                 "defaultExtras": "richtext[]:rte_transform[mode=ts_css]",
                 "inlineParent": "tx_mask_item",
-                "label": "Text",
+                "label": "Text:",
                 "rte": "1",
                 "key": "caption"
             },
@@ -243,7 +264,7 @@
                     ]
                 },
                 "inlineParent": "tx_mask_item",
-                "label": "Medien",
+                "label": "Medien:",
                 "key": "image"
             }
         }
@@ -287,7 +308,7 @@
                 },
                 "exclude": "1",
                 "inlineParent": "tx_mask_panel",
-                "label": "Titel",
+                "label": "Titel:",
                 "key": "title"
             },
             "tx_mask_bodytext": {
@@ -303,7 +324,7 @@
                 "exclude": "1",
                 "defaultExtras": "richtext[]:rte_transform[mode=ts]",
                 "inlineParent": "tx_mask_panel",
-                "label": "Text",
+                "label": "Text:",
                 "rte": "1",
                 "key": "bodytext"
             },
@@ -343,7 +364,7 @@
                     ]
                 },
                 "inlineParent": "tx_mask_panel",
-                "label": "Medien",
+                "label": "Medien:",
                 "key": "image"
             }
         }
