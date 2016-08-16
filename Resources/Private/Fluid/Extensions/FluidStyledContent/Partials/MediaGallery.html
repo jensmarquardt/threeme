@@ -62,18 +62,18 @@
     <f:if condition="{column.media.link}">
         <f:then>
             <f:link.typolink parameter="{column.media.link}">
-                <f:render section="media" arguments="{_all}" /><span class="image-to-click fa fa-external-link" title="{f:translate(key: 'image.clicklink.title', extensionName: 'threeme')}"></span>
+                <f:render section="mediaImageType" arguments="{_all}" /><span class="image-to-click fa fa-external-link" title="{f:translate(key: 'image.clicklink.title', extensionName: 'threeme')}"></span>
             </f:link.typolink>
         </f:then>
         <f:else>
             <f:if condition="{data.image_zoom}">
                 <f:then>
                     <ce:link.clickEnlarge image="{column.media}" configuration="{settings.media.popup}">
-                        <f:render section="media" arguments="{_all}" /><span class="image-to-click fa fa-arrows-alt" title="{f:translate(key: 'image.clickenlarge.title', extensionName: 'threeme')}"></span>
+                        <f:render section="mediaImageType" arguments="{_all}" /><span class="image-to-click fa fa-arrows-alt" title="{f:translate(key: 'image.clickenlarge.title', extensionName: 'threeme')}"></span>
                     </ce:link.clickEnlarge>
                 </f:then>
                 <f:else>
-                    <f:render section="media" arguments="{_all}" />
+                    <f:render section="mediaImageType" arguments="{_all}" />
                 </f:else>
             </f:if>
         </f:else>
@@ -81,25 +81,31 @@
 </f:section>
 
 <f:section name="audioType">
-    <div class="embed-responsive embed-responsive-16by9">
-        <f:render section="media" arguments="{_all}" />
-    </div>
+    <f:render section="media" arguments="{_all}" />
 </f:section>
 
 <f:section name="videoType">
-    <div class="embed-responsive embed-responsive-16by9">
-        <f:render section="media" arguments="{_all}" />
-    </div>
+    <f:render section="media" arguments="{_all}" />
 </f:section>
 
 <f:section name="media">
+    <f:media
+        file="{column.media}"
+        width="{column.dimensions.width}"
+        height="{column.dimensions.height}"
+        alt="{column.media.alternative}"
+        title="{column.media.title}"
+    />
+</f:section>
+
+<f:section name="mediaImageType">
     <f:media
         file="{column.media}"
         width="{f:if(condition:'{data.imagewidth} > 0', then:'{f:if(condition:\'{data.imagewidth} == {data.imageheight}\', then:\'{data.imagewidth}c\', else:\'{column.dimensions.width}\')}', else:'{column.dimensions.width}')}"
         height="{f:if(condition:'{data.imageheight} > 0', then:'{f:if(condition:\'{data.imagewidth} == {data.imageheight}\', then:\'{data.imageheight}c\', else:\'{column.dimensions.height}\')}', else:'{column.dimensions.height}')}"
         alt="{column.media.alternative}"
         title="{column.media.title}"
-        class="img-responsive embed-responsive-item <f:switch expression=\"{data.layout}\"><f:case value=\"200\">img-rounded</f:case><f:case value=\"201\">img-circle</f:case><f:case value=\"202\">img-thumbnail</f:case></f:switch>"
+        class="img-responsive <f:switch expression=\"{data.layout}\"><f:case value=\"200\">img-rounded</f:case><f:case value=\"201\">img-circle</f:case><f:case value=\"202\">img-thumbnail</f:case></f:switch>"
     />
 
     <f:comment>
