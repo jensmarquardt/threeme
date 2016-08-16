@@ -38,7 +38,6 @@
 }
 
 @mixin threeme-webfont($font-family, $font-path, $font-name, $font-svg-id, $font-weight, $font-style) {
-    // Import the fonts
     @font-face {
         font-family: $font-family;
         src: url('#{$font-path}#{$font-name}.eot'); /* IE9 Compat Modes */
@@ -50,4 +49,12 @@
         font-weight: $font-weight;
         font-style: $font-style;
     }
+}
+
+@mixin threeme-gradient-fade-horizontal($start-color: $white, $end-color: $gray-light) {
+    background-image: -webkit-linear-gradient(left, $start-color, $end-color, $start-color);
+    background-image: -moz-linear-gradient(left, $start-color, $end-color, $start-color);
+    background-image: -ms-linear-gradient(left, $start-color, $end-color, $start-color);
+    background-image: -o-linear-gradient(left, $start-color, $end-color, $start-color);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1); // IE9 and down
 }

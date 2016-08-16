@@ -64,11 +64,11 @@ hr {
     border: 0;
     margin: (($line-height-computed / 2) * 3) 0;
     padding: 0;
-    width: 10%;
-    left: 45%;
+    width: 50%;
+    left: 25%;
     position: relative;
     border: none;
-    background-color: $text-color;
+    background-color: $threeme-gray;
 }
 
 // @NOTE: Added custom layouts to cType header for text orientation
