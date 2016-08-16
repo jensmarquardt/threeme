@@ -111,21 +111,3 @@
         }
     }
 }
-
-
-/* Website styles
- * -------------------------------------------------------------------------------------------------
- */
-.link-to-top {
-    text-align: right;
-}
-
-.image-to-click {
-    position: relative;
-    float: right;
-    margin: -25px 5px 0 0;
-    padding: 2px;
-    color: $threeme-black;
-    background-color: $threeme-white;
-    @include threeme-border($threeme-border-width, $threeme-border-style, $threeme-white, $border-radius-base);
-}

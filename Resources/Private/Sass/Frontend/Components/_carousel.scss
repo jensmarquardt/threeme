@@ -49,8 +49,8 @@
     background-color: $threeme-blue;
 
     .carousel-control {
-        .threeme-icon-prev,
-        .threeme-icon-next {
+        .threeme-ui-prev,
+        .threeme-ui-next {
             position: absolute;
             top: 50%;
             left: 20%;
@@ -63,7 +63,7 @@
             line-height: 1;
         }
 
-        .threeme-icon-next {
+        .threeme-ui-next {
             left: auto;
             right: 20%;
             margin: -10px -10px 0 0;

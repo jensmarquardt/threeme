@@ -10,7 +10,7 @@ lib.parseFunc {
                     listNum = 2
                     listNum.splitChar = 32
                     required = 1
-                    wrap = <span class="fa fonticon-|" aria-hidden="true"></span>
+                    wrap = <span class="fa threeme-ui-|" aria-hidden="true"></span>
 
                     # If more than one class is set, they are wrapped with " - we need to remove them.
                     replacement {

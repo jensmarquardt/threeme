@@ -4,14 +4,14 @@
     <f:if condition="{mediaElement.link}">
         <f:then>
             <f:link.page pageUid="{mediaElement.link}" target="{n:targetLink(link:mediaElement.link)}">
-                <f:image image="{mediaElement}" class="img-responsive" title="{mediaElement.title}" alt="{mediaElement.alternative}" maxWidth="{settings.detail.media.image.maxWidth}" maxHeight="{settings.detail.media.image.maxHeight}" /><span class="image-to-click fa fa-link" title="{f:translate(key: 'image.clicklink.title', extensionName: 'threeme')}"></span>
+                <f:image image="{mediaElement}" class="img-responsive" title="{mediaElement.title}" alt="{mediaElement.alternative}" maxWidth="{settings.detail.media.image.maxWidth}" maxHeight="{settings.detail.media.image.maxHeight}" /><span class="threeme-ui-enlarge fa fa-external-link" title="{f:translate(key: 'image.clicklink.title', extensionName: 'threeme')}"></span>
             </f:link.page>
         </f:then>
         <f:else>
             <f:if condition="{settings.detail.media.image.lightbox.enabled}">
                 <f:then>
                     <a href="{f:uri.image(image:'{mediaElement}', width:'{settings.detail.media.image.lightbox.width}', height:'{settings.detail.media.image.lightbox.height}')}" title="{mediaElement.title}" class="{settings.detail.media.image.lightbox.class}" rel="{settings.detail.media.image.lightbox.rel}">
-                        <f:image image="{mediaElement}" class="img-responsive" title="{mediaElement.title}" alt="{mediaElement.alternative}" maxWidth="{settings.detail.media.image.maxWidth}" maxHeight="{settings.detail.media.image.maxHeight}" /><span class="image-to-click fa fa-resize-full" title="{f:translate(key: 'image.clickenlarge.title', extensionName: 'threeme')}"></span>
+                        <f:image image="{mediaElement}" class="img-responsive" title="{mediaElement.title}" alt="{mediaElement.alternative}" maxWidth="{settings.detail.media.image.maxWidth}" maxHeight="{settings.detail.media.image.maxHeight}" /><span class="threeme-ui-enlarge fa fa-arrows-alt" title="{f:translate(key: 'image.clickenlarge.title', extensionName: 'threeme')}"></span>
                     </a>
                 </f:then>
                 <f:else>

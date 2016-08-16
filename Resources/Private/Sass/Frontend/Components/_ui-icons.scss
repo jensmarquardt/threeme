@@ -25,40 +25,62 @@
  * -------------------------------------------------------------------------------------------------
  */
 
-.fonticon-internal-link,
-.fonticon-external-link,
-.fonticon-mail,
-.fonticon-download,
-.fonticon-lightbox {
-    margin-right: $padding-xs-horizontal;
-}
-
+// Style RTE classes
 .internal-link {
-    .fonticon-internal-link {
+    .threeme-ui-internal-link {
         @extend .fa-link;
     }
 }
 
 .external-link {
-    .fonticon-external-link {
+    .threeme-ui-external-link {
         @extend .fa-external-link;
     }
 }
 
 .mail {
-    .fonticon-mail {
+    .threeme-ui-mail {
         @extend .fa-envelope-o;
     }
 }
 
 .download {
-    .fonticon-download {
+    .threeme-ui-download {
         @extend .fa-download;
     }
 }
 
 .lightbox {
-    .fonticon-lightbox {
+    .threeme-ui-lightbox {
         @extend .fa-picture-o;
+    }
+}
+
+.threeme-ui-internal-link,
+.threeme-ui-external-link,
+.threeme-ui-mail,
+.threeme-ui-download,
+.threeme-ui-lightbox {
+    margin-right: $padding-xs-horizontal;
+}
+
+// Style image overlayer in case of option "Enlarge on Click" or "FAL Link"
+.threeme-ui-enlarge {
+    position: relative;
+    float: right;
+    margin: -25px 5px 0 0;
+    padding: 2px;
+    color: $threeme-black;
+    background-color: $threeme-white;
+    @include threeme-border($threeme-border-width, $threeme-border-style, $threeme-white, $border-radius-base);
+}
+
+// Style option "Append with Link to Top of Page"
+.threeme-ui-totop {
+    margin: ($line-height-computed / 2) 0;
+    text-align: right;
+
+    span {
+        margin-left: $padding-xs-horizontal;
     }
 }
