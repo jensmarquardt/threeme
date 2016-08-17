@@ -32,7 +32,6 @@ setup {
     default {
         # RTE default settings
         rteWidth = 600px
-#        rteHeight = 600px
         rteResize = 1
         rteCleanPasteBehaviour = plainText
     }

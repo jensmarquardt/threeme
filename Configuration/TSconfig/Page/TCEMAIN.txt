@@ -11,7 +11,9 @@ TCEMAIN {
     }
 
     permissions {
-        groupid = 9
+        # UID of group ". Access: Website Root"
+        # @TODO: Hardcoded UID
+        groupid = 10
         user = show,edit,delete,new,editcontent
         group = show,edit,delete,new,editcontent
         everybody =
@@ -22,6 +24,7 @@ TCEMAIN {
 
 
 # Special settings for sysfolders 4 = Sonderseiten, 10 = Datensätze, 16 = Overlay-Seiten
+# @TODO: Hardcoded UID
 [PIDinRootline = 4, 10, 16]
     TCEMAIN {
         permissions {
