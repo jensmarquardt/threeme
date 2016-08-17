@@ -91,7 +91,7 @@ page {
 [global]
 
 
-# Add website analytics only in production environment and only if key is given.
+# Add website analytics only in production environment and only if it is enabled.
 [applicationContext = Production] && [globalVar = LIT:0 < {$threeme.enable.websiteAnalytics}]
     page {
         jsInline {

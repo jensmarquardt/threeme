@@ -175,7 +175,8 @@ RTE {
 
                 tags {
                     all {
-                        allowedClasses :=  addToList(btn, btn-default, btn-primary, btn-success, btn-info, btn-warning, btn-danger)
+                        allowedClasses := addToList(internal-link, external-link, download, mail, lightbox)
+                        allowedClasses := addToList(btn, btn-default, btn-primary, btn-success, btn-info, btn-warning, btn-danger)
                     }
                     span {
                         allowedClasses := addToList(text-left, text-center, text-right, text-justify)
