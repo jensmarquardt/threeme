@@ -15,8 +15,11 @@ threeme {
         # cat=Threeme/enable/120; type=string; label= publicBasePath: Lorem ipsum dolor est
         publicBasePath = EXT:threeme/Resources/Public
 
-        # cat=Threeme/enable/130; type=string; label= useSassExt: Compile your CSS dynamically with thrid party extensions like DynCss (see TypoScript "page" for details).
+        # cat=Threeme/enable/130; type=string; label= useSassExt: Compile your CSS dynamically with third party extensions like "ws_scss" (see TypoScript "page" for details).
         useSassExt = 1
+
+        # cat=Threeme/enable/140; type=string; label= generateRteCssFromSass: When compiling your CSS dynamically, only files in page.includeCSS are respected. For RTE usage there is a workarround - see TypoScript "page" for details.
+        CompileRteCssFromSass = 0
 
         # cat=Threeme/enable/200; type=string; label= absRefPrefix: If this value is set, then all relative links in TypoScript are prepended with this string.
         absRefPrefix = auto

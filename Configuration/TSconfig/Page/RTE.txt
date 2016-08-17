@@ -102,7 +102,7 @@ RTE {
 
     # Basic settings
     default {
-        contentCSS = EXT:threeme/Resources/Public/Css/styles-website.css
+        contentCSS = EXT:threeme/Resources/Public/Css/styles-rte.css
 
         # Disable buttons
         # blockstylelabel, blockstyle, textstylelabel, textstyle,formatblock, bold, italic, subscript, superscript,orderedlist, unorderedlist, outdent, indent, textindicator,insertcharacter, link, table, findreplace, chMode, removeformat, undo, redo, about
