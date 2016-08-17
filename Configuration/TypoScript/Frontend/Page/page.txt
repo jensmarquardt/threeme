@@ -39,7 +39,7 @@ page {
 
 
 # Compile your CSS dynamically with third party extensions like "ws_scss".
-Refer documentation of your preferred extension - the code below is related to EXT:ws_scss.
+# Refer documentation of your preferred extension - the code below is related to EXT:ws_scss.
 [globalVar = LIT:0 < {$threeme.enable.useSassExt}]
     page {
         includeCSS >
