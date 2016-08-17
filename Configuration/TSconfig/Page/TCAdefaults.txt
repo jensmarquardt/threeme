@@ -6,7 +6,7 @@ TCAdefaults {
 
     tt_content {
         filelink_size = 1
-        imageborder = 1
+        imageborder = 0
         imagecols = 1
     }
 
