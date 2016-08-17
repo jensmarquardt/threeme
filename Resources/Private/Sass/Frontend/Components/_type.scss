@@ -32,9 +32,15 @@ h1, h2, h3, h4, h5, h6,
 }
 
 h1, .h1 {
-    margin-bottom: 0;
     text-transform: uppercase;
     margin-bottom: (($line-height-computed / 2) * 3);
+}
+
+// Exception for Backend-Layout 'Home'
+.backend-layout-home {
+    h1, .h1 {
+        margin-bottom: (($line-height-computed / 2) * 8);
+    }
 }
 
 h2, .h2 {
@@ -71,19 +77,28 @@ hr {
     background-color: $threeme-gray;
 }
 
-// @NOTE: Added custom layouts to cType header for text orientation
-.header-200 {
-    @extend .text-left;
+// Add RTE link classes to get them visible
+.internal-link,
+.external-link,
+.download,
+.mail,
+.lightbox {
+    text-decoration: $link-hover-decoration;
 }
 
-.header-201 {
-    @extend .text-center;
+// Add custom layouts for text orientation. Used in cType "header" and "threeme-flexbox".
+.threeme-align-200 {
+    text-align: left;
 }
 
-.header-202 {
-    @extend .text-right;
+.threeme-align-201 {
+    text-align: center;
 }
 
-.header-203 {
-    @extend .text-justify;
+.threeme-align-202 {
+    text-align: right;
+}
+
+.threeme-align-203 {
+    text-align: justify;
 }
