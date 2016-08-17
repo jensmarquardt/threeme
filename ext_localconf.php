@@ -21,15 +21,6 @@ if (!is_array($TYPO3_CONF_VARS['SYS']['caching']['cacheConfigurations']['threeme
 
 if (TYPO3_MODE === 'BE')
 {
-    // Register signal slots
-    $signalSlotDispatcher = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\SignalSlot\\Dispatcher');
-    $signalSlotDispatcher->connect(
-        'TYPO3\\CMS\\Extensionmanager\\Service\\ExtensionManagementService',
-        'hasInstalledExtensions',
-        'THREEME\\Threeme\\Service\\InstallService',
-        'initApacheHtaccess'
-    );
-
     // Register sys_note icon
     /** @var \TYPO3\CMS\Core\Imaging\IconRegistry $iconRegistry */
     $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
