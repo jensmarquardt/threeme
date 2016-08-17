@@ -41,6 +41,17 @@ var tx_threeme = (function() {
             });
         },
 
+        // Page scrolling feature with easing plugin
+        jQuerySmoothScroll : function() {
+            $('.smoothScroll').bind('click', function(event) {
+                var $anchor = $(this);
+                $('html, body').stop().animate({
+                    scrollTop: ($($anchor.attr('href')).offset().top)
+                }, 1500, 'swing');
+                event.preventDefault();
+            });
+        },
+
         /* Bootstrap Accordion
          * -------------------------------------------------------------------------------------------------
          */
@@ -53,5 +64,6 @@ var tx_threeme = (function() {
 
 $(function() {
     tx_threeme.fancyboxLighbox();
+    tx_threeme.jQuerySmoothScroll();
     tx_threeme.bootstrapAccordion();
 });
