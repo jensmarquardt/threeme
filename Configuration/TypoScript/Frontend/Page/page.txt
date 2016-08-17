@@ -64,7 +64,7 @@ page {
 # When compiling your CSS dynamically, only files in page.includeCSS are respected (see above).
 # This workarround will add the RTE Sass file to page.includeCSS too, so it being compiled like any other file.
 # RTE.default.contentCSS includes the compiled Sass file from EXT:threeme/Resources/Public/Css/styles-rte.css.
-[globalVar = LIT:0 < {$threeme.enable.CompileRteCssFromSass}]
+[globalVar = LIT:0 < {$threeme.enable.compileRteCssFromSass}]
     page {
         includeCSS {
             rte = {$threeme.enable.privateBasePath}/Sass/styles-rte.scss
