@@ -1,0 +1,34 @@
+<f:if condition="{data.header}">
+    <f:switch expression="{data.header_layout}">
+        <f:case value="2"><h2>{data.header}</h2></f:case>
+        <f:case value="3"><h3>{data.header}</h3></f:case>
+        <f:case value="4"><h4>{data.header}</h4></f:case>
+        <f:case value="0"><h2>{data.header}</h2></f:case>
+    </f:switch>
+</f:if>
+
+<div class="ce-textpic ce-left ce-above">
+    <div class="ce-gallery">
+        <f:for each="{data.image}" as="file" key="fileKey" iteration="fileIterator">
+            <f:if condition="{fileIterator.isFirst}">
+                <f:then>
+                    <figure>
+                        <a href="{file.publicUrl}" class="lightbox" rel="lightbox[{data.uid}]" target="_blank">
+                            <f:image image="{file}" alt="{file.properties.alternative}" title="{file.properties.alternative}" class="img-responsive" /><span class="threeme-ui-enlarge fa fa-arrows-alt" title="{f:translate(key: 'image.clickenlarge.title', extensionName: 'threeme')}"></span>
+                        </a>
+                        <f:if condition="{file.properties.description}">
+                            <figcaption>
+                                {file.properties.description}
+                            </figcaption>
+                        </f:if>
+                    </figure>
+                </f:then>
+                <f:else>
+                    <a href="{file.publicUrl}" class="lightbox hidden" rel="lightbox[{data.uid}]" target="_blank">
+                        <f:image image="{file}" alt="{file.properties.alternative}" title="{file.properties.alternative}" width="1" height="1" />
+                    </a>
+                </f:else>
+            </f:if>
+        </f:for>
+    </div>
+</div>
