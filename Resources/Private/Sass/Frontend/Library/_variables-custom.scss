@@ -52,5 +52,9 @@ $threeme-container-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 // Predefine vendor variables
 $gray-dark: $threeme-border-color;
 
+$btn-border-radius-base:         0;
+$btn-border-radius-large:        0;
+$btn-border-radius-small:        0;
+
 // Ajust Glyphicons path - needed for JIT-Parser like "dyncss"
 $icon-font-path: "/typo3conf/ext/threeme/Resources/Public/Fonts/Vendor/Bootstrap/";

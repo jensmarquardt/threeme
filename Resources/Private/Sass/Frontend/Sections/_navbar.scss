@@ -24,30 +24,56 @@
  * Custom styles
  * -------------------------------------------------------------------------------------------------
  */
-.navbar-brand {
-    padding: 26px 0 0 0;
-}
-
 .navbar-default {
     z-index: 10;
     margin-bottom: 0;
     border: none;
 
-    .navbar-nav > li > a {
-        padding-top: 50px;
-        padding-bottom: 0;
-        font-size: $font-size-large;
-        text-transform: uppercase;
+    @media(max-width: $grid-float-breakpoint-max) {
+        .navbar-header {
+            position: relative;
+            z-index: 10;
+        }
+
+        .navbar-collapse {
+            position: absolute;
+            z-index: 9;
+            top: 0px;
+            width: 100%;
+            height: $navbar-collapse-max-height;
+            padding-top: floor(($navbar-height + $line-height-computed));
+            border: 0;
+
+            &.collapsing,
+            &.in {
+                @include opacity(0.8);
+                background-color: $threeme-blue;
+            }
+        }
     }
 
-//    .navbar-toggle {
-//        .icon-bar {
-//            width: 32px;
-//            height: 3px;
-//            border-radius: $border-radius-base;
-//        }
-//        .icon-bar + .icon-bar {
-//            margin-top: 7px;
-//        }
-//    }
+    .navbar-nav > li > a {
+        font-size: $font-size-large;
+        text-transform: uppercase;
+
+        @media(min-width: $grid-float-breakpoint) {
+            padding-top: 50px;
+            padding-bottom: 0;
+        }
+    }
+
+    .navbar-toggle {
+        margin-top: 23px;
+        margin-bottom: 0;
+        border-radius: 0;
+
+        .icon-bar {
+            width: 30px;
+            height: 3px;
+            border-radius: $border-radius-base;
+        }
+        .icon-bar + .icon-bar {
+            margin-top: 7px;
+        }
+    }
 }

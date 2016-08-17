@@ -71,20 +71,33 @@
     }
 
     .carousel-caption {
-        bottom: 20%;
+        top: 30%;
+        bottom: 0;
         padding: 0;
-        font-size: $font-size-h3;
+        font-size: $font-size-h4;
 
         .carousel-caption-title {
             font-family: 'Lobster', cursive;
-            font-size: 96px;
+            font-size: floor(($font-size-h1 * 1.5));
             text-transform: none;
         }
 
         .carousel-caption-divider {
-            width: 10%;
-            left: 45%;
+            width: 20%;
+            left: 40%;
             background-color: $threeme-white;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+
+        @media (min-width: $screen-md) {
+            font-size: $font-size-h3;
+
+            .carousel-caption-title {
+                font-size: floor(($font-size-h1 * 2.5));
+            }
         }
     }
 
@@ -113,8 +126,21 @@
     // Banner "mode" - only one item in carousel
     &.carousel-banner {
         .carousel-caption {
+            top: 0;
+            right: ($grid-gutter-width / 2);
+            bottom: 0;
+            left: ($grid-gutter-width / 2);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
             font-size: $font-size-h2;
             text-transform: uppercase;
+
+            @media(max-width: $grid-float-breakpoint-max) {
+                font-size: $font-size-h4;
+            }
         }
     }
 }
@@ -123,6 +149,7 @@
 .threeme-carousel {
     .carousel {
         top: -70px;
+        z-index: 1;
         margin-bottom: (($line-height-computed / 2) * 4);
     }
 }
