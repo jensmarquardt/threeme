@@ -45,7 +45,7 @@
 }
 
 .carousel {
-    margin-bottom: (($line-height-computed / 2) * 3);
+    margin-bottom: $line-height-computed;
     background-color: $threeme-blue;
 
     .carousel-control {
@@ -119,9 +119,17 @@
     }
 }
 
-// Exception for Backend Layout 'Home'
+// Exception for main carousel on page top
+.threeme-carousel {
+    .carousel {
+        top: -70px;
+        margin-bottom: (($line-height-computed / 2) * 4);
+    }
+}
+
+// Exception for Backend-Layout 'Home'
 .backend-layout-home {
     .carousel-banner {
-        margin-bottom: 160px;
+        margin-bottom: (($line-height-computed / 2) * 16);
     }
 }
