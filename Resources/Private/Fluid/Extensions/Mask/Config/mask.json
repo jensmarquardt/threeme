@@ -22,6 +22,47 @@
                     "6": "rte"
                 }
             },
+            "threeme-flexbox": {
+                "label": "Flexbox",
+                "key": "threeme-flexbox",
+                "shortLabel": "Flexbox mit Text-\/Bildinhalten",
+                "description": "Teaser mit Text-\/Bildinhalten. Die Anzahl der Teaser und Aufteilung in Spalten ist variabel. ",
+                "icon": "fa-th",
+                "color": "#7395C0",
+                "columns": [
+                    "tx_mask_teaser",
+                    "header",
+                    "tx_mask_columns",
+                    "tx_mask_flexbox"
+                ],
+                "labels": [
+                    "Teaserbox",
+                    "",
+                    "Spalten:",
+                    "Elemente"
+                ],
+                "options": {
+                    "7": "rte"
+                }
+            },
+            "threeme-gallery": {
+                "label": "Bildergalerie",
+                "key": "threeme-gallery",
+                "shortLabel": "Bildergalerie mit Bildelementen",
+                "description": "Bildergalerie mit Bildelementen. Das erste Bild wird als Vorschau angezeigt, alle weiteren in der Lightbox. Bildunterschriften erscheinen ebenso in der Lightbox.",
+                "icon": "fa-camera",
+                "color": "#7395C0",
+                "columns": [
+                    "header",
+                    "header_layout",
+                    "image"
+                ],
+                "labels": [
+                    "",
+                    "",
+                    ""
+                ]
+            },
             "threeme-panel": {
                 "label": "Akkordeon",
                 "key": "threeme-panel",
@@ -50,6 +91,16 @@
             "tx_mask_item": {
                 "tt_content": {
                     "tx_mask_item": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_columns": {
+                "tt_content": {
+                    "tx_mask_columns": "tinytext"
+                }
+            },
+            "tx_mask_flexbox": {
+                "tt_content": {
+                    "tx_mask_flexbox": "int(11) unsigned DEFAULT '0' NOT NULL"
                 }
             },
             "tx_mask_panel": {
@@ -97,6 +148,79 @@
                 "inlineLabel": "",
                 "inlineIcon": "",
                 "key": "item"
+            },
+            "tx_mask_teaser": {
+                "config": {
+                    "type": "tab"
+                },
+                "key": "teaser"
+            },
+            "tx_mask_columns": {
+                "config": {
+                    "type": "select",
+                    "renderType": "selectSingle",
+                    "size": "",
+                    "items": [
+                        [
+                            "1 Spalte",
+                            "1"
+                        ],
+                        [
+                            "2 Spalten",
+                            "2"
+                        ],
+                        [
+                            "3 Spalten",
+                            "3"
+                        ],
+                        [
+                            "4 Spalten",
+                            "4"
+                        ]
+                    ],
+                    "foreign_table": "",
+                    "foreign_table_where": "",
+                    "fileFolder": "",
+                    "fileFolder_extList": "",
+                    "fileFolder_recursions": "",
+                    "maxitems": "",
+                    "autoSizeMax": ""
+                },
+                "exclude": "1",
+                "key": "columns"
+            },
+            "tx_mask_flexbox": {
+                "config": {
+                    "type": "inline",
+                    "foreign_table": "--inlinetable--",
+                    "foreign_field": "parentid",
+                    "foreign_table_field": "parenttable",
+                    "foreign_sortby": "sorting",
+                    "appearance": {
+                        "enabledControls": {
+                            "dragdrop": "1"
+                        },
+                        "collapseAll": "1",
+                        "expandSingle": "1",
+                        "newRecordLinkTitle": "",
+                        "levelLinksPosition": "both",
+                        "useSortable": "1",
+                        "showSynchronizationLink": "1",
+                        "showPossibleLocalizationRecords": "1",
+                        "showAllLocalizationLink": "1",
+                        "showRemovedLocalizationRecords": "1"
+                    },
+                    "minitems": "1",
+                    "maxitems": "",
+                    "behaviour": {
+                        "localizationMode": "select",
+                        "localizeChildrenAtParentLocalization": "1"
+                    }
+                },
+                "exclude": "1",
+                "inlineLabel": "tx_mask_title",
+                "inlineIcon": "",
+                "key": "flexbox"
             },
             "tx_mask_accordion": {
                 "config": {
@@ -264,6 +388,148 @@
                     ]
                 },
                 "inlineParent": "tx_mask_item",
+                "label": "Medien:",
+                "key": "image"
+            }
+        }
+    },
+    "tx_mask_flexbox": {
+        "sql": {
+            "tx_mask_layout": {
+                "tx_mask_flexbox": {
+                    "tx_mask_layout": "tinytext"
+                }
+            },
+            "tx_mask_title": {
+                "tx_mask_flexbox": {
+                    "tx_mask_title": "tinytext"
+                }
+            },
+            "tx_mask_bodytext": {
+                "tx_mask_flexbox": {
+                    "tx_mask_bodytext": "text"
+                }
+            },
+            "tx_mask_image": {
+                "tx_mask_flexbox": {
+                    "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_content": {
+                "config": {
+                    "type": "tab"
+                },
+                "inlineParent": "tx_mask_flexbox",
+                "label": "Inhalte",
+                "key": "content"
+            },
+            "tx_mask_layout": {
+                "config": {
+                    "type": "select",
+                    "renderType": "selectSingle",
+                    "size": "",
+                    "items": [
+                        [
+                            "Ausrichtung: Linksb\u00fcndig",
+                            "200"
+                        ],
+                        [
+                            "Ausrichtung: Zentriert",
+                            "201"
+                        ],
+                        [
+                            "Ausrichtung: Rechtsb\u00fcndig",
+                            "202"
+                        ],
+                        [
+                            "Ausrichtung: Blocksatz",
+                            "203"
+                        ]
+                    ],
+                    "foreign_table": "",
+                    "foreign_table_where": "",
+                    "fileFolder": "",
+                    "fileFolder_extList": "",
+                    "fileFolder_recursions": "",
+                    "maxitems": "",
+                    "autoSizeMax": ""
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_flexbox",
+                "label": "Layout:",
+                "key": "layout"
+            },
+            "tx_mask_title": {
+                "config": {
+                    "type": "input",
+                    "eval": "trim",
+                    "default": "",
+                    "placeholder": "",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_flexbox",
+                "label": "Titel:",
+                "key": "title"
+            },
+            "tx_mask_bodytext": {
+                "config": {
+                    "type": "text",
+                    "eval": "",
+                    "cols": "",
+                    "rows": "",
+                    "default": "",
+                    "placeholder": "",
+                    "max": ""
+                },
+                "exclude": "1",
+                "defaultExtras": "richtext[]:rte_transform[mode=ts_css]",
+                "inlineParent": "tx_mask_flexbox",
+                "label": "Text:",
+                "rte": "1",
+                "key": "bodytext"
+            },
+            "tx_mask_media": {
+                "config": {
+                    "type": "tab"
+                },
+                "inlineParent": "tx_mask_flexbox",
+                "label": "Medien",
+                "key": "media"
+            },
+            "tx_mask_image": {
+                "exclude": "1",
+                "options": "file",
+                "config": {
+                    "appearance": {
+                        "collapseAll": "1",
+                        "expandSingle": "1",
+                        "useSortable": "1",
+                        "fileUploadAllowed": "1",
+                        "showSynchronizationLink": "1",
+                        "showPossibleLocalizationRecords": "1",
+                        "showAllLocalizationLink": "1",
+                        "showRemovedLocalizationRecords": "1"
+                    },
+                    "behaviour": {
+                        "localizationMode": "select",
+                        "localizeChildrenAtParentLocalization": "1"
+                    },
+                    "minitems": "",
+                    "maxitems": "1",
+                    "filter": [
+                        {
+                            "parameters": {
+                                "allowedFileExtensions": ""
+                            }
+                        }
+                    ]
+                },
+                "inlineParent": "tx_mask_flexbox",
                 "label": "Medien:",
                 "key": "image"
             }
