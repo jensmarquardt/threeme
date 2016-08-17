@@ -5,7 +5,7 @@ menu.breadcrumbs {
     # Home
     10 = TEXT
     10 {
-        wrap = <li>|</li>
+        wrap = <li class="first">|</li>
         typolink {
             wrap = <span class="fa fa-home" aria-hidden="true"></span><span class="sr-only">|</span>
             parameter = {$threeme.frontend.pidHome}
