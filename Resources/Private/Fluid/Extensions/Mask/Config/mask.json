@@ -4,7 +4,7 @@
             "threeme-carousel": {
                 "label": "Diashow & Banner",
                 "key": "threeme-carousel",
-                "shortLabel": "Diashow & Banner mit Text-\/Bildelementen",
+                "shortLabel": "",
                 "description": "Diashow & Banner mit Text-\/Bildelementen. Automatische Unterscheidung zwischen Diashow und Banner bei Verwendung von nur einem Element.",
                 "icon": "fa-desktop",
                 "color": "#7395C0",
@@ -25,7 +25,7 @@
             "threeme-flexbox": {
                 "label": "Flexbox",
                 "key": "threeme-flexbox",
-                "shortLabel": "Flexbox mit Text-\/Bildinhalten",
+                "shortLabel": "",
                 "description": "Teaser mit Text-\/Bildinhalten. Die Anzahl der Teaser und Aufteilung in Spalten ist variabel. ",
                 "icon": "fa-th",
                 "color": "#7395C0",
@@ -48,7 +48,7 @@
             "threeme-gallery": {
                 "label": "Bildergalerie",
                 "key": "threeme-gallery",
-                "shortLabel": "Bildergalerie mit Bildelementen",
+                "shortLabel": "",
                 "description": "Bildergalerie mit Bildelementen. Das erste Bild wird als Vorschau angezeigt, alle weiteren in der Lightbox. Bildunterschriften erscheinen ebenso in der Lightbox.",
                 "icon": "fa-camera",
                 "color": "#7395C0",
@@ -66,7 +66,7 @@
             "threeme-panel": {
                 "label": "Akkordeon",
                 "key": "threeme-panel",
-                "shortLabel": "Akkordeon mit Text-\/Bildinhalten",
+                "shortLabel": "",
                 "description": "Akkordeon mit Text-\/Bildinhalten",
                 "icon": "fa-list",
                 "color": "#7395C0",
@@ -88,9 +88,9 @@
             }
         },
         "sql": {
-            "tx_mask_item": {
+            "tx_mask_panel": {
                 "tt_content": {
-                    "tx_mask_item": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    "tx_mask_panel": "int(11) unsigned DEFAULT '0' NOT NULL"
                 }
             },
             "tx_mask_columns": {
@@ -103,20 +103,20 @@
                     "tx_mask_flexbox": "int(11) unsigned DEFAULT '0' NOT NULL"
                 }
             },
-            "tx_mask_panel": {
+            "tx_mask_item": {
                 "tt_content": {
-                    "tx_mask_panel": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    "tx_mask_item": "int(11) unsigned DEFAULT '0' NOT NULL"
                 }
             }
         },
         "tca": {
-            "tx_mask_carousel": {
+            "tx_mask_accordion": {
                 "config": {
                     "type": "tab"
                 },
-                "key": "carousel"
+                "key": "accordion"
             },
-            "tx_mask_item": {
+            "tx_mask_panel": {
                 "config": {
                     "type": "inline",
                     "foreign_table": "--inlinetable--",
@@ -147,7 +147,7 @@
                 "exclude": "1",
                 "inlineLabel": "",
                 "inlineIcon": "",
-                "key": "item"
+                "key": "panel"
             },
             "tx_mask_teaser": {
                 "config": {
@@ -222,13 +222,13 @@
                 "inlineIcon": "",
                 "key": "flexbox"
             },
-            "tx_mask_accordion": {
+            "tx_mask_carousel": {
                 "config": {
                     "type": "tab"
                 },
-                "key": "accordion"
+                "key": "carousel"
             },
-            "tx_mask_panel": {
+            "tx_mask_item": {
                 "config": {
                     "type": "inline",
                     "foreign_table": "--inlinetable--",
@@ -259,7 +259,7 @@
                 "exclude": "1",
                 "inlineLabel": "",
                 "inlineIcon": "",
-                "key": "panel"
+                "key": "item"
             }
         }
     },
@@ -272,25 +272,20 @@
             }
         }
     },
-    "tx_mask_item": {
+    "tx_mask_panel": {
         "sql": {
             "tx_mask_title": {
-                "tx_mask_item": {
+                "tx_mask_panel": {
                     "tx_mask_title": "tinytext"
                 }
             },
-            "tx_mask_hide_title": {
-                "tx_mask_item": {
-                    "tx_mask_hide_title": "int(11) DEFAULT '0' NOT NULL"
-                }
-            },
-            "tx_mask_caption": {
-                "tx_mask_item": {
-                    "tx_mask_caption": "text"
+            "tx_mask_bodytext": {
+                "tx_mask_panel": {
+                    "tx_mask_bodytext": "text"
                 }
             },
             "tx_mask_image": {
-                "tx_mask_item": {
+                "tx_mask_panel": {
                     "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
                 }
             }
@@ -300,14 +295,14 @@
                 "config": {
                     "type": "tab"
                 },
-                "inlineParent": "tx_mask_item",
+                "inlineParent": "tx_mask_panel",
                 "label": "Inhalte",
                 "key": "content"
             },
             "tx_mask_title": {
                 "config": {
                     "type": "input",
-                    "eval": "trim",
+                    "eval": "required,trim",
                     "default": "",
                     "placeholder": "",
                     "size": "",
@@ -315,30 +310,14 @@
                     "is_in": ""
                 },
                 "exclude": "1",
-                "inlineParent": "tx_mask_item",
+                "inlineParent": "tx_mask_panel",
                 "label": "Titel:",
                 "key": "title"
             },
-            "tx_mask_hide_title": {
-                "config": {
-                    "type": "check",
-                    "items": [
-                        [
-                            ""
-                        ]
-                    ],
-                    "cols": "",
-                    "default": ""
-                },
-                "exclude": "1",
-                "inlineParent": "tx_mask_item",
-                "label": "Titel verbergen:",
-                "key": "hide_title"
-            },
-            "tx_mask_caption": {
+            "tx_mask_bodytext": {
                 "config": {
                     "type": "text",
-                    "eval": "",
+                    "eval": "required",
                     "cols": "",
                     "rows": "",
                     "default": "",
@@ -346,17 +325,17 @@
                     "max": ""
                 },
                 "exclude": "1",
-                "defaultExtras": "richtext[]:rte_transform[mode=ts_css]",
-                "inlineParent": "tx_mask_item",
+                "defaultExtras": "richtext[]:rte_transform[mode=ts]",
+                "inlineParent": "tx_mask_panel",
                 "label": "Text:",
                 "rte": "1",
-                "key": "caption"
+                "key": "bodytext"
             },
             "tx_mask_media": {
                 "config": {
                     "type": "tab"
                 },
-                "inlineParent": "tx_mask_item",
+                "inlineParent": "tx_mask_panel",
                 "label": "Medien",
                 "key": "media"
             },
@@ -377,7 +356,7 @@
                         "localizationMode": "select",
                         "localizeChildrenAtParentLocalization": "1"
                     },
-                    "minitems": "1",
+                    "minitems": "0",
                     "maxitems": "1",
                     "filter": [
                         {
@@ -387,7 +366,7 @@
                         }
                     ]
                 },
-                "inlineParent": "tx_mask_item",
+                "inlineParent": "tx_mask_panel",
                 "label": "Medien:",
                 "key": "image"
             }
@@ -535,20 +514,25 @@
             }
         }
     },
-    "tx_mask_panel": {
+    "tx_mask_item": {
         "sql": {
             "tx_mask_title": {
-                "tx_mask_panel": {
+                "tx_mask_item": {
                     "tx_mask_title": "tinytext"
                 }
             },
-            "tx_mask_bodytext": {
-                "tx_mask_panel": {
-                    "tx_mask_bodytext": "text"
+            "tx_mask_hide_title": {
+                "tx_mask_item": {
+                    "tx_mask_hide_title": "int(11) DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_caption": {
+                "tx_mask_item": {
+                    "tx_mask_caption": "text"
                 }
             },
             "tx_mask_image": {
-                "tx_mask_panel": {
+                "tx_mask_item": {
                     "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
                 }
             }
@@ -558,14 +542,14 @@
                 "config": {
                     "type": "tab"
                 },
-                "inlineParent": "tx_mask_panel",
+                "inlineParent": "tx_mask_item",
                 "label": "Inhalte",
                 "key": "content"
             },
             "tx_mask_title": {
                 "config": {
                     "type": "input",
-                    "eval": "required,trim",
+                    "eval": "trim",
                     "default": "",
                     "placeholder": "",
                     "size": "",
@@ -573,14 +557,30 @@
                     "is_in": ""
                 },
                 "exclude": "1",
-                "inlineParent": "tx_mask_panel",
+                "inlineParent": "tx_mask_item",
                 "label": "Titel:",
                 "key": "title"
             },
-            "tx_mask_bodytext": {
+            "tx_mask_hide_title": {
+                "config": {
+                    "type": "check",
+                    "items": [
+                        [
+                            ""
+                        ]
+                    ],
+                    "cols": "",
+                    "default": ""
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_item",
+                "label": "Titel verbergen:",
+                "key": "hide_title"
+            },
+            "tx_mask_caption": {
                 "config": {
                     "type": "text",
-                    "eval": "required",
+                    "eval": "",
                     "cols": "",
                     "rows": "",
                     "default": "",
@@ -588,17 +588,17 @@
                     "max": ""
                 },
                 "exclude": "1",
-                "defaultExtras": "richtext[]:rte_transform[mode=ts]",
-                "inlineParent": "tx_mask_panel",
+                "defaultExtras": "richtext[]:rte_transform[mode=ts_css]",
+                "inlineParent": "tx_mask_item",
                 "label": "Text:",
                 "rte": "1",
-                "key": "bodytext"
+                "key": "caption"
             },
             "tx_mask_media": {
                 "config": {
                     "type": "tab"
                 },
-                "inlineParent": "tx_mask_panel",
+                "inlineParent": "tx_mask_item",
                 "label": "Medien",
                 "key": "media"
             },
@@ -619,7 +619,7 @@
                         "localizationMode": "select",
                         "localizeChildrenAtParentLocalization": "1"
                     },
-                    "minitems": "0",
+                    "minitems": "1",
                     "maxitems": "1",
                     "filter": [
                         {
@@ -629,7 +629,7 @@
                         }
                     ]
                 },
-                "inlineParent": "tx_mask_panel",
+                "inlineParent": "tx_mask_item",
                 "label": "Medien:",
                 "key": "image"
             }
