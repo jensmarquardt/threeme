@@ -132,10 +132,10 @@ threeme {
         logo = EXT:threeme/Resources/Public/Images/Frontend/Logo/threeme.png
         
         # cat=Threeme/Frontend/Logo/10; type=text; label= Logo: Logo maxWidth
-        logo.width = 172
+        logo.width = 179
         
         # cat=Threeme/Frontend/Logo/20; type=text; label= Logo: Logo maxHeight
-        logo.height = 41
+        logo.height = 70
 
         # cat=Threeme/Frontend/200; type=int+; label= pidRoot: PID website root
         pidRoot = 2
@@ -146,25 +146,28 @@ threeme {
         # cat=Threeme/Frontend/220; type=int+; label= pid404: PID 404 page
         pid404 = 5
 
-        # cat=Threeme/Frontend/260; type=int+; label= pidSearch: PID search page
+        # cat=Threeme/Frontend/230; type=int+; label= pidSearch: PID search page
         pidSearch = 6
 
-        # cat=Threeme/Frontend/250; type=string; label= pidPrivacy: PID data privacy page
+        # cat=Threeme/Frontend/240; type=string; label= pidPrivacy: PID data privacy page
         pidPrivacy = 7
 
-        # cat=Threeme/Frontend/240; type=string; label= pidImprint: PID imprint page
+        # cat=Threeme/Frontend/250; type=string; label= pidImprint: PID imprint page
         pidImprint = 8
 
-        # cat=Threeme/Frontend/230; type=int+; label= pidSitemap: PID sitemap page
+        # cat=Threeme/Frontend/260; type=int+; label= pidSitemap: PID sitemap page
         pidSitemap = 9
 
-        # cat=Threeme/Frontend/310; type=int+; label= pidOverlay: PID sysfolder for system categories
+        # cat=Threeme/Frontend/260; type=int+; label= pidSitemap: PID contact page
+        pidContact = 11
+
+        # cat=Threeme/Frontend/300; type=int+; label= pidOverlay: PID sysfolder for system categories
         pidSysCategory = 13
 
-        # cat=Threeme/Frontend/320; type=int+; label= pidFeUser: PID sysfolder for frontend user/groups
+        # cat=Threeme/Frontend/310; type=int+; label= pidFeUser: PID sysfolder for frontend user/groups
         pidFeUser = 14
 
-        # cat=Threeme/Frontend/330; type=int+; label= pidOverlay: PID sysfolder for overlay pages
+        # cat=Threeme/Frontend/320; type=int+; label= pidOverlay: PID sysfolder for overlay pages
         pidOverlay = 10
     }
 

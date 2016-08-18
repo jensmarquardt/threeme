@@ -1,0 +1,25 @@
+menu.footer = HMENU
+menu.footer {
+    special = list
+    special.value = {$threeme.frontend.pidSitemap} , {$threeme.frontend.pidImprint} , {$threeme.frontend.pidPrivacy}
+
+    1 = TMENU
+    1 {
+        expAll = 0
+        noBlur = 1
+        wrap = <ul class="list-inline">|</ul>
+
+        NO {
+            htmlSpecialChars = 1
+            wrapItemAndSub = <li>|</li>
+            ATagTitle.field = description // subtitle
+        }
+
+        ACT = 1
+        ACT {
+            htmlSpecialChars = 1
+            wrapItemAndSub = <li class="active">|</li>
+            ATagTitle.field = description // subtitle
+        }
+    }
+}

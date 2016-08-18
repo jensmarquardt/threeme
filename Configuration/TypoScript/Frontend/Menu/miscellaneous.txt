@@ -23,7 +23,7 @@ lib.sitemap {
 
 menu.site-services = COA
 menu.site-services {
-    wrap = <ul class="nav nav-pills pull-right hidden-print">|</ul>
+    wrap = <ul class="nav nav-pills pull-right">|</ul>
     
     10 < lib.link-to-top
     10.wrap = <li>|</li>
