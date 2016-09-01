@@ -7,7 +7,7 @@ plugin.tx_news {
     rss.channel {
         title = {$threeme.meta.description}
         description = {$threeme.meta.description}
-        link = http://www.demenz-partner.de
+        link =
         language = {$threeme.language.default.isoCode}
         copyright = {$threeme.meta.copyright}
         category =
@@ -15,7 +15,7 @@ plugin.tx_news {
     }
 
     opengraph {
-        site_name = Demenz Partner
+        site_name =
     }
 
     view {

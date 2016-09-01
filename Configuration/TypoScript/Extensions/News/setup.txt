@@ -1,6 +1,6 @@
 # #################################################
 # Version note:
-# Copied TS and Fluid from EXT:news 4.2.1
+# Copied TS and Fluid from EXT:news 4.3.0
 # #################################################
 
 # Include static from extenstion
@@ -48,12 +48,6 @@ plugin.tx_news {
     googlePlusLocale = {$threeme.language.default.isoCodeShort}
     disqusLocale = {$threeme.language.default.isoCodeShort}
 
-    interfaces {
-      falMedia {
-        video = embed-responsive-item
-      }
-    }
-
     detail {
       showSocialShareButtons = 0
       media {
@@ -89,7 +83,7 @@ plugin.tx_news {
     }
 
     opengraph {
-      site_name = {$plugin.tx_news.opengraph.site_name}
+      site_name =
       type = article
       admins =
       email =
