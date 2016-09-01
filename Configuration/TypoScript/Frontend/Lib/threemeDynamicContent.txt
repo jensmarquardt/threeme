@@ -1,4 +1,4 @@
-# "dynamicContent" inspirted by EXT:bootstrap_package
+# "dynamicContent" by EXT:bootstrap_package
 lib.threemeDynamicContent = COA
 lib.threemeDynamicContent {
     10 = LOAD_REGISTER
@@ -40,7 +40,6 @@ lib.threemeDynamicContent {
             pidInList.data = register:pageUid
             pidInList.override.data = register:contentFromPid
         }
-        slide = -1
         
         renderObj {
             stdWrap {
@@ -52,3 +51,7 @@ lib.threemeDynamicContent {
 
     100 = RESTORE_REGISTER
 }
+
+# "dynamicContentSlide" by EXT:bootstrap_package
+lib.threemeDynamicContentSlide =< lib.threemeDynamicContent
+lib.threemeDynamicContentSlide.20.slide = -1
