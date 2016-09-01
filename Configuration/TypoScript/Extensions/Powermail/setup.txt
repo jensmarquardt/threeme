@@ -1,6 +1,6 @@
 # #################################################
 # Version note:
-# Copied TS and Fluid from EXT:powermail 3.3.0
+# Copied TS and Fluid from EXT:powermail 3.4.0
 # #################################################
 
 # Include static from extenstion
