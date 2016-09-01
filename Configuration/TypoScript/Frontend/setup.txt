@@ -4,15 +4,6 @@
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:threeme/Configuration/TypoScript/Frontend/Page" extensions="txt,ts">
 
 
-# Custom setup for 404 page - no selectable BackendLayout, hardcoded
-[globalVar = TSFE:id = {$threeme.frontend.pid404}]
-    page.20 {
-        templateName >
-        templateName = 404
-    }
-[GLOBAL]
-
-
 # Custom setup for special pagetree "Overlays"
 [PIDinRootline = {$threeme.frontend.pidOverlay}]
     config.admPanel = 0

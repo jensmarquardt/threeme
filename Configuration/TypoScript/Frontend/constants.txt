@@ -143,19 +143,16 @@ threeme {
         # cat=Threeme/Frontend/210; type=int+; label= pidHome: PID website home
         pidHome = 49
 
-        # cat=Threeme/Frontend/220; type=int+; label= pid404: PID 404 page
-        pid404 = 5
-
-        # cat=Threeme/Frontend/230; type=int+; label= pidSearch: PID search page
+        # cat=Threeme/Frontend/220; type=int+; label= pidSearch: PID search page
         pidSearch = 6
 
-        # cat=Threeme/Frontend/240; type=string; label= pidPrivacy: PID data privacy page
+        # cat=Threeme/Frontend/230; type=string; label= pidPrivacy: PID data privacy page
         pidPrivacy = 7
 
-        # cat=Threeme/Frontend/250; type=string; label= pidImprint: PID imprint page
+        # cat=Threeme/Frontend/240; type=string; label= pidImprint: PID imprint page
         pidImprint = 8
 
-        # cat=Threeme/Frontend/260; type=int+; label= pidSitemap: PID sitemap page
+        # cat=Threeme/Frontend/250; type=int+; label= pidSitemap: PID sitemap page
         pidSitemap = 9
 
         # cat=Threeme/Frontend/260; type=int+; label= pidSitemap: PID contact page
