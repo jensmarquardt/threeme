@@ -5,9 +5,11 @@ TCAdefaults {
     }
 
     tt_content {
-        filelink_size = 1
         imageborder = 0
         imagecols = 1
+        uploads_type = 1
+        uploads_description = 1
+        filelink_size = 1
     }
 
     fe_users {
