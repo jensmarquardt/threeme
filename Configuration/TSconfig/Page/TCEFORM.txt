@@ -64,12 +64,11 @@ TCEFORM {
         # Image settings
         # If you use responsive images by "lib.threemeResponsiveImage" or a thrid party extension, you might disable some image settings like "imagewidth".
         imagecols {
-            removeItems = 4,5,6,7,8
+            removeItems = 5,6,7,8
         }
         imageorient {
             removeItems = 8,9,10
         }
-        image_noRows.disabled = 1
 #        imageheight.disabled = 1
 #        imagewidth.disabled = 1
 #        imageborder.disabled = 1
