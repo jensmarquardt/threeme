@@ -53,10 +53,24 @@ var tx_threeme = (function() {
         },
 
         /* Bootstrap Accordion
+         * Declare active state of panel
          * -------------------------------------------------------------------------------------------------
          */
         bootstrapAccordion : function() {
-            var accordion = $('.bs-panel').collapse();
+            var   $bsPanel = $('.bs-panel')
+                , $bsPanelCollapse = $bsPanel.find('.panel-collapse')
+            ;
+
+            $bsPanelCollapse
+                .on('shown.bs.collapse', function() {
+                    var $parent = $(this).parent();
+                    $parent.addClass('active');
+                })
+                .on('hidden.bs.collapse', function() {
+                    var $parent = $(this).parent();
+                    $parent.removeClass('active');
+                })
+            ;
         }
 
     };

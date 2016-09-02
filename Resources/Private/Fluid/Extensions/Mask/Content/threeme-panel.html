@@ -9,11 +9,12 @@
 
 <div id="accordion{data.uid}" class="bs-panel panel-group" role="tablist" aria-multiselectable="true">
     <f:for each="{data.tx_mask_panel}" as="dataItem" key="dataKey" iteration="dataIterator">
-        <div class="panel">
+        <div class="panel {f:if(condition:'{dataIterator.isFirst}', then:'active')}">
             <div class="panel-heading" role="tab" id="heading{data.uid}-item{dataKey}">
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion{data.uid}" href="#collapse{data.uid}-item{dataKey}" aria-expanded="true" aria-controls="collapse{data.uid}-item{dataKey}">
                         {dataItem.tx_mask_title}
+                        <span class="threeme-ui-panel-active" aria-hidden="true"></span>
                     </a>
                 </h4>
             </div>
