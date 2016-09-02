@@ -130,12 +130,6 @@ threeme {
     frontend {
         # cat=Threeme/Frontend/100; type=text; label= Logo: Website logo
         logo = EXT:threeme/Resources/Public/Images/Frontend/Logo/threeme.png
-        
-        # cat=Threeme/Frontend/Logo/10; type=text; label= Logo: Logo maxWidth
-        logo.width = 179
-        
-        # cat=Threeme/Frontend/Logo/20; type=text; label= Logo: Logo maxHeight
-        logo.height = 70
 
         # cat=Threeme/Frontend/200; type=int+; label= pidRoot: PID website root
         pidRoot = 2
