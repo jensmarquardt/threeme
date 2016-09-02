@@ -35,10 +35,10 @@ TCEFORM {
             removeItems = 1,2,3
             types {
                 header {
-                    addItems.200 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.layout.types.header.addItems.200
-                    addItems.201 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.layout.types.header.addItems.201
-                    addItems.202 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.layout.types.header.addItems.202
-                    addItems.203 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.layout.types.header.addItems.203
+                    addItems.100 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.layout.types.header.addItems.100
+                    addItems.101 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.layout.types.header.addItems.101
+                    addItems.102 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.layout.types.header.addItems.102
+                    addItems.103 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.layout.types.header.addItems.103
                 }
                 textmedia {
                     removeItems = 1,2,3

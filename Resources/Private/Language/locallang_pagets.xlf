@@ -70,16 +70,16 @@
                 <source>Headline 5 (Subsection header)</source>
             </trans-unit>
 
-            <trans-unit id="tt_content.layout.types.header.addItems.200">
+            <trans-unit id="tt_content.layout.types.header.addItems.100">
                 <source>Orientation: Left</source>
             </trans-unit>
-            <trans-unit id="tt_content.layout.types.header.addItems.201">
+            <trans-unit id="tt_content.layout.types.header.addItems.101">
                 <source>Orientation: Center</source>
             </trans-unit>
-            <trans-unit id="tt_content.layout.types.header.addItems.202">
+            <trans-unit id="tt_content.layout.types.header.addItems.102">
                 <source>Orientation: Right</source>
             </trans-unit>
-            <trans-unit id="tt_content.layout.types.header.addItems.203">
+            <trans-unit id="tt_content.layout.types.header.addItems.103">
                 <source>Orientation: Justify</source>
             </trans-unit>
 
