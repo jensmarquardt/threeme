@@ -31,7 +31,7 @@
             display: block;
             padding-right: $padding-large-horizontal;
 
-            .threeme-ui-panel-active {
+            .threeme-ui-panel {
                 @extend .fa;
                 @extend .fa-chevron-down;
 
@@ -45,7 +45,7 @@
     &.active {
         .panel-title {
             a {
-                .threeme-ui-panel-active {
+                .threeme-ui-panel {
                     @extend .fa-chevron-up;
                 }
             }
