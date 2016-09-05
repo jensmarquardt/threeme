@@ -135,31 +135,28 @@ threeme {
         pidRoot = 2
 
         # cat=Threeme/Frontend/210; type=int+; label= pidHome: PID website home
-        pidHome = 49
-
-        # cat=Threeme/Frontend/220; type=int+; label= pidSearch: PID search page
-        pidSearch = 6
-
-        # cat=Threeme/Frontend/230; type=string; label= pidPrivacy: PID data privacy page
-        pidPrivacy = 7
-
-        # cat=Threeme/Frontend/240; type=string; label= pidImprint: PID imprint page
-        pidImprint = 8
-
-        # cat=Threeme/Frontend/250; type=int+; label= pidSitemap: PID sitemap page
-        pidSitemap = 9
-
-        # cat=Threeme/Frontend/260; type=int+; label= pidSitemap: PID contact page
-        pidContact = 11
-
-        # cat=Threeme/Frontend/300; type=int+; label= pidOverlay: PID sysfolder for system categories
-        pidSysCategory = 13
-
-        # cat=Threeme/Frontend/310; type=int+; label= pidFeUser: PID sysfolder for frontend user/groups
-        pidFeUser = 14
+        pidHome = 50
 
         # cat=Threeme/Frontend/320; type=int+; label= pidOverlay: PID sysfolder for overlay pages
-        pidOverlay = 10
+        pidOverlay = 16
+
+        # cat=Threeme/Frontend/240; type=string; label= pidImprint: PID imprint page
+        pidImprint = 15
+
+        # cat=Threeme/Frontend/230; type=string; label= pidPrivacy: PID data privacy page
+        pidPrivacy = 14
+
+        # cat=Threeme/Frontend/250; type=int+; label= pidSitemap: PID sitemap page
+        pidSitemap = 13
+
+        # cat=Threeme/Frontend/220; type=int+; label= pidSearch: PID search page
+        pidSearch = 12
+
+        # cat=Threeme/Frontend/310; type=int+; label= pidFeUser: PID sysfolder for frontend user/groups
+        pidFeUser = 6
+
+        # cat=Threeme/Frontend/300; type=int+; label= pidOverlay: PID sysfolder for system categories
+        pidSysCategory = 5
     }
 
     menu {
@@ -188,8 +185,9 @@ threeme {
 
 
 # Constants for special pagetree "Overlays"
-# @TODO: Hardcoded PID, but constant {$threeme.frontend.pidOverlay} don't work?!
-[PIDinRootline = 10]
+# Define "fluidLayoutSection" and addtional body class
+# @TODO: Hardcoded PID, constant {$threeme.frontend.pidOverlay} don't work?!
+[PIDinRootline = 16]
     # Über die Konstante threeme.enable.fluidLayoutSection können FLUID-Layouts definiert werden.
     # Im FLUID Layout wird dann eine andere Section aus dem FLUID Template genutzt.
     threeme.enable.fluidLayoutSection = Overlay
