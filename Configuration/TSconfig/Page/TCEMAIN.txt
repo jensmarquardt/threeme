@@ -21,14 +21,3 @@ TCEMAIN {
     
     translateToMessage = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:translateToMessage
 }
-
-
-# Special settings for sysfolders 4 = Sonderseiten, 10 = Datensätze, 16 = Overlay-Seiten
-# @TODO: Hardcoded UID
-[PIDinRootline = 4, 10, 16]
-    TCEMAIN {
-        permissions {
-            group = show,edit,new,editcontent
-        }
-    }
-[GLOBAL]

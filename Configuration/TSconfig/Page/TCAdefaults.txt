@@ -21,9 +21,9 @@ TCAdefaults {
     }
 }
 
-# Special settings for sysfolders 4 = Sonderseiten, 10 = Datensätze, 16 = Overlay-Seiten
+# Special settings for sysfolders 16 = Overlay-Seiten, 10 = Sonderseiten, 4 = Datensätze
 # @TODO: Hardcoded UID
-[PIDinRootline = 4, 10, 16]
+[PIDinRootline = 16, 10, 4]
     TCAdefaults {
         pages {
             no_search = 1
