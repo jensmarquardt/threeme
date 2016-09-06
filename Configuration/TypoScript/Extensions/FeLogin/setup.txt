@@ -81,13 +81,13 @@ plugin.tx_felogin_pi1 {
 
     # redirect options
     redirectMode = groupLogin, userLogin, login, logout, loginError
-    redirectFirstMethod = 1
+    redirectFirstMethod = 0
     redirectPageLogin = {$styles.content.loginform.redirectPageLogin}
     redirectPageLoginError = {$styles.content.loginform.redirectPageLoginError}
     redirectPageLogout = {$styles.content.loginform.redirectPageLogout}
 
     # disable redirect with one switch
-    redirectDisable =
+    redirectDisable = 0
 
     email_from =
     email_fromName =
