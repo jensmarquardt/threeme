@@ -1,11 +1,10 @@
 {namespace threeme=THREEME\Threeme\ViewHelpers}
 
-<f:comment>@TODO: sys_language_uid in Link</f:comment>
 <f:form method="post" pageUid="{threeme:constant(constant:'threeme.frontend.pidSearch')}" class="navbar-form navbar-right">
     <div class="form-group">
-        <input type="text" class="form-control" name="tx_indexedsearch[sword]" placeholder="{f:translate(key: 'search.sword.placeholder', extensionName: 'threeme')}">
+        <input class="form-control" type="text" name="tx_indexedsearch_pi2[search][sword]" placeholder="{f:translate(key: 'search.sword.placeholder', extensionName: 'threeme')}">
     </div>
-    <button type="submit" class="btn btn-default">
+    <button class="btn btn-default" type="submit" name="tx_indexedsearch_pi2[search][submitButton]">
         <span class="fa fa-search" aria-hidden="true"></span><span class="sr-only">{f:translate(key: 'search.submit.label', extensionName: 'threeme')}</span>
     </button>
 </f:form>
