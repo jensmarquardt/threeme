@@ -1,0 +1,13 @@
+{namespace threeme=THREEME\Threeme\ViewHelpers}
+
+<div class="threeme-cookiebar">
+    <p>
+        {f:translate(key: 'cookiebar.label', extensionName: 'threeme')}
+
+        <a class="threeme-cookiebar-close btn btn-success" href>{f:translate(key: 'cookiebar.btn.ok', extensionName: 'threeme')}</a>
+
+        <f:link.page pageUid="{threeme:constant(constant:'threeme.frontend.pidPrivacy')}" class="btn btn-info">
+            {f:translate(key: 'cookiebar.btn.info', extensionName: 'threeme')}
+        </f:link.page>
+    </p>
+</div>

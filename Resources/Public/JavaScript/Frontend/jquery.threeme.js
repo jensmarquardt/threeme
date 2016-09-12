@@ -71,6 +71,19 @@ var tx_threeme = (function() {
                     $parent.removeClass('active');
                 })
             ;
+        },
+
+        /* jQuery CookieBar
+         * https://github.com/carlwoodhouse/jquery.cookieBar
+         * -------------------------------------------------------------------------------------------------
+         */
+        jQueryCookieBar : function() {
+            $('.threeme-cookiebar').cookieBar({
+                secure: false,
+                path: '/',
+//                domain: 'example.com',
+                closeButton : '.threeme-cookiebar-close'
+            });
         }
 
     };
@@ -80,4 +93,5 @@ $(function() {
     tx_threeme.fancyboxLighbox();
     tx_threeme.jQuerySmoothScroll();
     tx_threeme.bootstrapAccordion();
+    tx_threeme.jQueryCookieBar();
 });

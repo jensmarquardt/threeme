@@ -59,6 +59,16 @@
             <trans-unit id="search.submit.label">
                 <source>Search</source>
             </trans-unit>
+            
+            <trans-unit id="cookiebar.label">
+                <source>This site uses cookies to make your visit more efficient and to offer you more usability.</source>
+            </trans-unit>
+            <trans-unit id="cookiebar.btn.ok">
+                <source>OK</source>
+            </trans-unit>
+            <trans-unit id="cookiebar.btn.info">
+                <source>Info</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
