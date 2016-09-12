@@ -1,0 +1,102 @@
+/*!
+ * HOWTO - Working with the SASS structure
+ * -------------------------------------------------------------------------------------------------
+ *
+ * #1: Main structure
+ * ./Components/: SASS patterns intended to be used across the site. Pretty much everything in here will be devoted a section in the live style guide.
+ * ./Library/: Contains only variables and mixins SASS that does not render any actual CSS, but is used later.
+ * ./Sections/: Layouts and other page-specific stylings. Anything that is not intended to be used in multiple places in a versatile way.
+ * ./Vendor/: Vendor framework libraries.
+ *
+ *
+ * #2: Include paritals
+ * - Uncomment features as you need them, when your user stories demand the functionality.
+ * - If you need to modify a partial, create a new one in "Components" and include it after this one!
+ */
+
+
+/*!
+ * Website styles
+ * -------------------------------------------------------------------------------------------------
+ */
+.nav-list {
+    margin-bottom: $line-height-computed;
+    @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $threeme-blue, 0);
+
+    .level-1 {
+        @include threeme-border(0 0 $threeme-border-width 0, $threeme-border-style, $threeme-blue, 0);
+
+        > a {
+            padding-left: $padding-base-horizontal;
+            color: $brand-primary;
+
+            &:focus,
+            &:hover {
+                color: $threeme-white;
+            }
+        }
+
+        &.active {
+            border: none;
+
+            > a {
+                color: $threeme-white;
+            }
+        }
+    }
+
+    .level-2 {
+        > a {
+            margin-bottom: $padding-xs-vertical;
+            padding: $padding-base-horizontal $padding-small-vertical;
+            color: $brand-primary;
+
+            @include threeme-border(0 0 $threeme-border-width $padding-base-horizontal, $threeme-border-style, $threeme-blue-light, 0);
+            background-color: $threeme-white;
+
+            &:focus,
+            &:hover {
+                color: $threeme-white;
+                background-color: $threeme-blue-light;
+            }
+        }
+
+        &.active {
+            > a {
+                color: $threeme-white;
+                background-color: $threeme-blue-light;
+            }
+        }
+    }
+
+    .level-3 {
+        > a {
+            color: $brand-primary;
+            margin-bottom: $padding-xs-vertical;
+            padding-left: ($padding-base-horizontal * 3);
+            @include threeme-border(0 0 0 $padding-base-horizontal, $threeme-border-style, lighten($threeme-blue-light, 10%), 0);
+
+            &:focus,
+            &:hover {
+                color: $threeme-white;
+                background-color: lighten($threeme-blue-light, 10%);
+            }
+        }
+
+
+        &.last {
+            @include threeme-border(0 0 $threeme-border-width 0, $threeme-border-style, $threeme-blue-light, 0);
+
+            > a {
+                margin-bottom: $padding-xs-vertical;
+            }
+        }
+
+        &.active {
+            > a {
+                color: $threeme-white;
+                background-color: lighten($threeme-blue-light, 10%);
+            }
+        }
+    }
+}

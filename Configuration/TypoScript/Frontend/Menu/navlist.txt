@@ -8,7 +8,7 @@ menu.navlist {
     1 {
         expAll = 0
         noBlur = 1
-        wrap = <ul class="nav nav-pills nav-stacked">|</ul>
+        wrap = <ul class="nav nav-pills nav-stacked nav-list">|</ul>
 
         NO {
             htmlSpecialChars = 1

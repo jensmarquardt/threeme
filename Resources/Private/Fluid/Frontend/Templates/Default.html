@@ -17,16 +17,18 @@
                 <!--TYPO3SEARCH_end-->
             </div>
         </section>
+
+        <f:cObject typoscriptObjectPath="menu.breadcrumbs" />
+
         <section class="row">
+            <div class="col-sm-3">
+                <f:cObject typoscriptObjectPath="menu.navlist" />
+            </div>
             <main id="threeme-main" class="col-sm-9">
-                <f:cObject typoscriptObjectPath="menu.breadcrumbs" />
                 <!--TYPO3SEARCH_begin-->
                 <f:cObject typoscriptObjectPath="lib.threemeDynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}"/>
                 <!--TYPO3SEARCH_end-->
             </main>
-            <div class="col-sm-3">
-                <f:cObject typoscriptObjectPath="menu.navlist" />
-            </div>
         </section>
     </div>
 
