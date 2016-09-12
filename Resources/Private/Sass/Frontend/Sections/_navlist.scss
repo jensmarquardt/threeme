@@ -20,7 +20,7 @@
  * -------------------------------------------------------------------------------------------------
  */
 .nav-list {
-    margin-bottom: $line-height-computed;
+    margin-bottom: ($line-height-computed * 2);
     @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $threeme-blue, 0);
 
     .level-1 {

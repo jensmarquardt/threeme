@@ -44,13 +44,11 @@
             z-index: 9;
             top: 0px;
             width: 100%;
-            height: $navbar-collapse-max-height;
             padding-top: floor(($navbar-height + $line-height-computed));
             border: 0;
 
             &.collapsing,
             &.in {
-                @include opacity(0.8);
                 background-color: $threeme-blue;
             }
         }
