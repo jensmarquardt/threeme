@@ -14,7 +14,7 @@
             <f:for each="{data.tx_mask_item}" as="dataItem" key="dataKey" iteration="dataIterator">
 
                 <figure class="item {f:if(condition:'{dataIterator.isFirst}', then:'active')}">
-                    <f:image src="{dataItem.tx_mask_image.0.uid}" alt="{dataItem.tx_mask_image.0.alternative}" title="{dataItem.tx_mask_image.0.title}" treatIdAsReference="1" width="1280" />
+                    <f:image class="carousel-image" src="{dataItem.tx_mask_image.0.uid}" alt="{dataItem.tx_mask_image.0.alternative}" title="{dataItem.tx_mask_image.0.title}" treatIdAsReference="1" width="1280" />
 
                     <figcaption class="carousel-caption">
                         <f:if condition="{dataItem.tx_mask_hide_title} == 0">
@@ -53,7 +53,7 @@
         <section role="presentation" class="carousel carousel-banner">
 
             <figure class="item {f:if(condition:'{dataIterator.isFirst}', then:'active')}">
-                <f:image src="{dataItem.tx_mask_image.0.uid}" alt="{dataItem.tx_mask_image.0.alternative}" title="{dataItem.tx_mask_image.0.title}" treatIdAsReference="1" width="1280" class="img-responsive" />
+                <f:image class="img-responsive carousel-image" src="{dataItem.tx_mask_image.0.uid}" alt="{dataItem.tx_mask_image.0.alternative}" title="{dataItem.tx_mask_image.0.title}" treatIdAsReference="1" width="1280" />
 
                 <figcaption class="carousel-caption">
                     <f:if condition="{dataItem.tx_mask_hide_title} == 0">

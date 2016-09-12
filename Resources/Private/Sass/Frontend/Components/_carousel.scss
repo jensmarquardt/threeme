@@ -48,7 +48,22 @@
     margin-bottom: $line-height-computed;
     background-color: $threeme-blue;
 
+    // HARD override of BS annoying path selection (.carousel-inner > .item > img)
+    @media(max-width: $screen-xs-min) {
+        .carousel-image {
+            width: 100%;
+            height: 300px !important;
+        }
+    }
+
     .carousel-control {
+        width: 10%;
+        text-shadow: none;
+
+        @media(min-width: $grid-float-breakpoint) {
+            width: 15%;
+        }
+
         .threeme-ui-prev,
         .threeme-ui-next {
             position: absolute;
@@ -67,37 +82,6 @@
             left: auto;
             right: 20%;
             margin: -10px -10px 0 0;
-        }
-    }
-
-    .carousel-caption {
-        top: 30%;
-        bottom: 0;
-        padding: 0;
-        font-size: $font-size-h4;
-
-        .carousel-caption-title {
-            font-family: 'Lobster', cursive;
-            font-size: floor(($font-size-h1 * 1.5));
-            text-transform: none;
-        }
-
-        .carousel-caption-divider {
-            width: 20%;
-            left: 40%;
-            background-color: $threeme-white;
-        }
-
-        p {
-            margin-bottom: 0;
-        }
-
-        @media (min-width: $screen-md) {
-            font-size: $font-size-h3;
-
-            .carousel-caption-title {
-                font-size: floor(($font-size-h1 * 2.5));
-            }
         }
     }
 
@@ -123,6 +107,58 @@
         }
     }
 
+    .carousel-caption {
+        left: 10%;
+        right: 10%;
+        bottom: 10%;
+        padding: 0;
+        font-size: $font-size-large;
+        text-shadow: none;
+
+        .carousel-caption-title {
+            font-family: 'Lobster', cursive;
+            font-size: $font-size-h1;
+            text-transform: none;
+        }
+
+        .carousel-caption-divider {
+            width: 20%;
+            left: 40%;
+            background-color: $threeme-white;
+        }
+
+        p {
+            margin-bottom: 0;
+            text-shadow: $carousel-text-shadow;
+        }
+
+        @media(max-width: $screen-xs-min) {
+            bottom: 20px;
+            font-size: $font-size-base;
+
+            .carousel-caption-title {
+                font-size: $font-size-h3;
+            }
+        }
+
+        @media(min-width: $grid-float-breakpoint) {
+            left: 15%;
+            right: 15%;
+
+            .carousel-caption-title {
+                font-size: floor(($font-size-h1 * 1.5));
+            }
+        }
+
+        @media (min-width: $screen-md) {
+            font-size: $font-size-h3;
+
+            .carousel-caption-title {
+                font-size: floor(($font-size-h1 * 2));
+            }
+        }
+    }
+
     // Banner "mode" - only one item in carousel
     &.carousel-banner {
         .carousel-caption {
@@ -135,14 +171,15 @@
             justify-content: center;
             align-items: center;
 
-            font-size: $font-size-h2;
+            font-size: $font-size-large;
             text-transform: uppercase;
 
-            @media(max-width: $grid-float-breakpoint-max) {
-                font-size: $font-size-h4;
+            @media(min-width: $grid-float-breakpoint) {
+                font-size: $font-size-h2;
             }
         }
     }
+
 }
 
 // Exception for main carousel on page top
@@ -151,6 +188,10 @@
         top: -70px;
         z-index: 1;
         margin-bottom: (($line-height-computed / 2) * 4);
+
+        @media(max-width: $grid-float-breakpoint-max) {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -158,5 +199,9 @@
 .backend-layout-home {
     .carousel-banner {
         margin-bottom: (($line-height-computed / 2) * 16);
+
+        @media(max-width: $grid-float-breakpoint-max) {
+            margin-bottom: (($line-height-computed / 2) * 8);
+        }
     }
 }
