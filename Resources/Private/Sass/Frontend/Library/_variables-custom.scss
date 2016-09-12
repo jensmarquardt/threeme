@@ -38,6 +38,7 @@ $threeme-black: #000 !default;
 
 $threeme-green: #4fc280 !default;
 $threeme-blue: #004586 !default;
+$threeme-blue-light: #7395C0 !default;
 $threeme-gray: #aab4b7 !default;
 
 // Defaults for mixin "threeme-border"
@@ -48,13 +49,3 @@ $threeme-border-color: $threeme-gray !default;
 // Defaults for "page/outer" wrapper "threeme-container"
 $threeme-container-width: 1280px !default;
 $threeme-container-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-
-// Predefine vendor variables
-$gray-dark: $threeme-border-color;
-
-$btn-border-radius-base:         0;
-$btn-border-radius-large:        0;
-$btn-border-radius-small:        0;
-
-// Ajust Glyphicons path - needed for JIT-Parser like "dyncss"
-$icon-font-path: "/typo3conf/ext/threeme/Resources/Public/Fonts/Vendor/Bootstrap/";

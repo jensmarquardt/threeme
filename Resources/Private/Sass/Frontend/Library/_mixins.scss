@@ -51,7 +51,7 @@
     }
 }
 
-@mixin threeme-gradient-fade-horizontal($start-color: $white, $end-color: $gray-light) {
+@mixin threeme-gradient-fade-horizontal($start-color: $threeme-white, $end-color: $gray-light) {
     background-image: -webkit-linear-gradient(left, $start-color, $end-color, $start-color);
     background-image: -moz-linear-gradient(left, $start-color, $end-color, $start-color);
     background-image: -ms-linear-gradient(left, $start-color, $end-color, $start-color);

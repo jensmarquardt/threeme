@@ -29,6 +29,10 @@
     margin-bottom: 0;
     border: none;
 
+    .navbar-brand {
+        padding: 19px 15px;
+    }
+
     @media(max-width: $grid-float-breakpoint-max) {
         .navbar-header {
             position: relative;
@@ -63,7 +67,7 @@
     }
 
     .navbar-toggle {
-        margin-top: 23px;
+        margin-top: 25px;
         margin-bottom: 0;
         border-radius: 0;
 
