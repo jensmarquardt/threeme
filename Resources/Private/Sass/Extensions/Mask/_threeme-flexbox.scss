@@ -47,6 +47,15 @@
             margin-bottom: $line-height-computed;
             display: inline-block;
         }
+
+        a {
+            color: $text-color;
+
+            &:hover,
+            &:focus {
+                color: $link-hover-color;
+            }
+        }
     }
 }
 
