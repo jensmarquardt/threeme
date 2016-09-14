@@ -74,12 +74,12 @@
             color: $brand-primary;
             margin-bottom: $padding-xs-vertical;
             padding-left: ($padding-base-horizontal * 3);
-            @include threeme-border(0 0 0 $padding-base-horizontal, $threeme-border-style, lighten($threeme-blue-light, 10%), 0);
+            @include threeme-border(0 0 0 $padding-base-horizontal, $threeme-border-style, $threeme-blue-lighter, 0);
 
             &:focus,
             &:hover {
                 color: $threeme-white;
-                background-color: lighten($threeme-blue-light, 10%);
+                background-color: $threeme-blue-lighter;
             }
         }
 
@@ -95,7 +95,7 @@
         &.active {
             > a {
                 color: $threeme-white;
-                background-color: lighten($threeme-blue-light, 10%);
+                background-color: $threeme-blue-lighter;
             }
         }
     }

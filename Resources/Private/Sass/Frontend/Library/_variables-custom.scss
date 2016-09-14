@@ -39,6 +39,7 @@ $threeme-black: #000 !default;
 $threeme-green: #4fc280 !default;
 $threeme-blue: #004586 !default;
 $threeme-blue-light: #7395C0 !default;
+$threeme-blue-lighter: lighten($threeme-blue-light, 10%) !default;
 $threeme-gray: #aab4b7 !default;
 
 // Defaults for mixin "threeme-border"
