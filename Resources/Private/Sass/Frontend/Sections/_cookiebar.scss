@@ -15,6 +15,7 @@
     padding: ($padding-large-vertical * 3) ($padding-large-horizontal * 2);
     color: $threeme-white;
     background-color: $threeme-gray;
+    @include opacity(.9);
 
     p {
         margin: 0;
