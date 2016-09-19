@@ -56,7 +56,7 @@
                 <f:image class="img-responsive" src="{dataItem.tx_mask_image.0.uid}" alt="{dataItem.tx_mask_image.0.alternative}" title="{dataItem.tx_mask_image.0.title}" treatIdAsReference="1" width="1280" />
 
                 <figcaption class="carousel-caption">
-                    <f:if condition="{dataItem.tx_mask_hide_title} == 0">
+                    <f:if condition="{dataItem.tx_mask_title}">
                         <h3 class="carousel-caption-title">{dataItem.tx_mask_title}</h3>
                         <f:if condition="{dataItem.tx_mask_caption}">
                             <hr class="carousel-caption-divider">
