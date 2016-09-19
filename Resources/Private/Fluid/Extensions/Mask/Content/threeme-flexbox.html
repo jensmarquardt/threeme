@@ -9,12 +9,14 @@
                 </f:link.page>
             </f:if>
             <f:if condition="{dataItem.tx_mask_title}">
-                <h3>
+                <h3 class="tfb-title">
                     <f:link.page pageUid="{dataItem.tx_mask_link}">{dataItem.tx_mask_title}</f:link.page>
                 </h3>
             </f:if>
             <f:if condition="{dataItem.tx_mask_bodytext}">
-                <f:format.html parseFuncTSPath="lib.parseFunc_RTE"><f:link.page pageUid="{dataItem.tx_mask_link}">{dataItem.tx_mask_bodytext}</f:link.page></f:format.html>
+                <div class="tfb-body">
+                    <f:format.html parseFuncTSPath="lib.parseFunc_RTE"><f:link.page pageUid="{dataItem.tx_mask_link}">{dataItem.tx_mask_bodytext}</f:link.page></f:format.html>
+                </div>
             </f:if>
         </div>
 
