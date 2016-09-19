@@ -36,6 +36,32 @@ h1, .h1 {
     margin-bottom: (($line-height-computed / 2) * 3);
 }
 
+h2, .h2 {
+    margin-bottom: (($line-height-computed / 2) * 3);
+}
+
+h3, .h3 {
+    margin-bottom: $line-height-computed;
+    font-family: $threeme-custom-font;
+    letter-spacing: 0.05em;
+}
+
+h4, .h4 {
+    font-weight: 400;
+}
+
+em, strong {
+    font-family: $font-family-serif;
+}
+
+figcaption {
+    margin-bottom: $line-height-computed;
+    padding-top: $padding-small-vertical;
+    font-family: $font-family-serif;
+    font-weight: 600;
+    font-size: $font-size-small;
+}
+
 // Exception for Backend-Layout 'Home'
 @media(min-width: $grid-float-breakpoint) {
     .backend-layout-home {
@@ -45,27 +71,27 @@ h1, .h1 {
     }
 }
 
-h2, .h2 {
-    font-weight: 300;
-    margin-bottom: (($line-height-computed / 2) * 3);
+// Execption for cType 'Header'
+.threeme-header {
+    > :first-child {
+        margin-bottom: ($line-height-computed / 2);
+    }
+
+    > :last-child {
+        margin-bottom: (($line-height-computed / 2) * 3);
+    }
 }
 
-h3, .h3 {
-    font-weight: 400;
-    margin-bottom: $line-height-computed;
-}
-
-h4, .h4 {
-    font-weight: 400;
-}
-
+// Reduce header sizes for small devices
 @media(max-width: $screen-xs-min) {
     h1, .h1 {
         font-size: ($font-size-h1 - 4);
+        margin-bottom: $line-height-computed;
     }
 
     h2, .h2 {
         font-size: ($font-size-h2 - 4);
+        margin-bottom: $line-height-computed;
     }
 
     h3, .h3 {
@@ -77,7 +103,14 @@ h4, .h4 {
     }
 }
 
-p,
+p {
+    margin-bottom: $line-height-computed;
+
+    &.lead {
+        font-weight: 500;
+    }
+}
+
 ul,
 ol {
     margin-bottom: $line-height-computed;
