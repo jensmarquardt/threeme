@@ -124,7 +124,7 @@ RTE {
         buttons {
             # Remove html tags that are not suitable for an editor
             formatblock {
-                removeItems = address, article, aside, div, header, footer, section, h5, h6, nav, pre, blockquote
+                removeItems = address, article, aside, div, header, footer, section, h5, h6, nav
             }
 
             link {

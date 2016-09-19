@@ -1,7 +1,21 @@
 lib.parseFunc_RTE {
-    # Fonticons styled link classes
-    tags.link < lib.parseFunc.tags.link
-    
+    tags {
+        # Remap b,i to em,strong
+        b = TEXT
+        b {
+            current = 1
+            wrap= <strong>|</strong>
+        }
+        i = TEXT
+        i {
+            current = 1
+            wrap= <em>|</em>
+        }
+        
+        # Fonticons styled link classes
+        link < lib.parseFunc.tags.link
+    }
+
     externalBlocks {
         table.stdWrap.HTMLparser.tags.table.fixAttrib.class.default = table
         table.stdWrap.HTMLparser.tags.table.fixAttrib.class.list = table, table-striped, table-bordered, table-hover, table-condensed
