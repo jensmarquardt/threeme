@@ -1,11 +1,13 @@
-<f:if condition="{data.tx_mask_item -> f:count()} > 1">
-    <f:then>
-        <f:render section="carousel" arguments="{_all}" />
-    </f:then>
-    <f:else>
-        <f:render section="banner" arguments="{_all}" />
-    </f:else>
-</f:if>
+<div id="c{data.uid}">
+    <f:if condition="{data.tx_mask_item -> f:count()} > 1">
+        <f:then>
+            <f:render section="carousel" arguments="{_all}" />
+        </f:then>
+        <f:else>
+            <f:render section="banner" arguments="{_all}" />
+        </f:else>
+    </f:if>
+</div>
 
 
 <f:section name="carousel">
