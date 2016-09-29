@@ -27,7 +27,7 @@ menu.breadcrumbs {
                 allWrap = <li>|</li>
                 ATagTitle.field = subtitle // title
                 ATagTitle.noTrimWrap = | {LLL:EXT:threeme/Resources/Private/Language/locallang.xml:menu.breadcrumb.title} |
-                ATagTile.insertData = 1
+                ATagTitle.insertData = 1
             }
             CUR = 1
             CUR {
