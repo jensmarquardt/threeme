@@ -1,6 +1,6 @@
 # #################################################
 # Version note:
-# Copied TS and Fluid from TYPO3 7.6.4
+# Copied TS and Fluid from TYPO3 7.6.11
 # #################################################
 
 plugin.tx_indexedsearch {
