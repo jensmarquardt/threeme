@@ -48,3 +48,12 @@
  */
 @import "Frontend/Components/type";
 @import "Frontend/Components/ui-icons";
+
+// Add RTE link classes to get them visible
+.internal-link,
+.external-link,
+.download,
+.mail,
+.lightbox {
+    color: $link-color;
+}

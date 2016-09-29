@@ -42,6 +42,7 @@ h2, .h2 {
 
 h3, .h3 {
     margin-bottom: $line-height-computed;
+    font-weight: 400;
 }
 
 h4, .h4 {
@@ -125,15 +126,6 @@ hr {
     position: relative;
     border: none;
     background-color: $threeme-gray;
-}
-
-// Add RTE link classes to get them visible
-.internal-link,
-.external-link,
-.download,
-.mail,
-.lightbox {
-    text-decoration: $link-hover-decoration;
 }
 
 // Add custom layouts for text orientation. Used in cType "header" and "threeme-flexbox".
