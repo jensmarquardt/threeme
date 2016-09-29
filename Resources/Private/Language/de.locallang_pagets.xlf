@@ -42,7 +42,7 @@
             </trans-unit>
             <trans-unit id="tt_content.colPos.altLabels.201">
                 <source>Lead</source>
-                <target>Einleitung</target>
+                <target>Hervorhebung</target>
             </trans-unit>
             <trans-unit id="tt_content.colPos.altLabels.202">
                 <source>Banner</source>
@@ -88,7 +88,7 @@
             </trans-unit>
             <trans-unit id="tt_content.header_layout.altLabels.5">
                 <source>Headline 5 (Subsection header)</source>
-                <target>Überschrift 3. Ordnung (Absatzüberschrift)</target>
+                <target>Überschrift 5. Ordnung (Absatzüberschrift)</target>
             </trans-unit>
 
             <trans-unit id="tt_content.layout.types.header.addItems.100">
