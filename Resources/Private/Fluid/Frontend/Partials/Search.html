@@ -1,10 +1,10 @@
 {namespace threeme=THREEME\Threeme\ViewHelpers}
 
-<f:form method="post" pageUid="{threeme:constant(constant:'threeme.frontend.pidSearch')}" class="navbar-form navbar-right">
+<f:form class="search" method="post" extensionName="indexedsearch" pluginName="pi2" controller="Search" action="search" pageUid="{threeme:constant(constant:'threeme.frontend.pidSearch')}">
     <div class="form-group">
-        <input class="form-control" type="text" name="tx_indexedsearch_pi2[search][sword]" placeholder="{f:translate(key: 'search.sword.placeholder', extensionName: 'threeme')}">
+        <f:form.textfield class="form-control" name="search[sword]" placeholder="{f:translate(key: 'search.sword.placeholder', extensionName: 'threeme')}" />
     </div>
-    <button class="btn btn-default" type="submit" name="tx_indexedsearch_pi2[search][submitButton]">
+    <f:form.button class="btn btn-default" type="submit" name="search[submitButton]">
         <span class="fa fa-search" aria-hidden="true"></span><span class="sr-only">{f:translate(key: 'search.submit.label', extensionName: 'threeme')}</span>
-    </button>
+    </f:form.button>
 </f:form>
