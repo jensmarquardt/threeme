@@ -58,3 +58,17 @@
     background-image: -o-linear-gradient(left, $start-color, $end-color, $start-color);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1); // IE9 and down
 }
+
+// https://css-tricks.com/almanac/properties/w/word-break/
+@mixin threeme-hyphenate() {
+    -ms-word-break: break-all;
+//     word-break: break-all;
+
+     // Non standard for webkit
+    word-break: break-word;
+
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
