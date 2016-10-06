@@ -1,0 +1,31 @@
+{namespace threeme=THREEME\Threeme\ViewHelpers}
+
+<div class="row">
+    <threeme:be.editLink element="{data}">
+        <f:for each="{data.tx_mask_item}" as="dataItem" key="dataKey" iteration="dataIterator">
+            <div class="col-sm-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <f:if condition="{data.tx_mask_item -> f:count()} > 1">
+                            <f:then>
+                                <span class="badge">Dia {dataIterator.cycle}</span>
+                            </f:then>
+                            <f:else>
+                                <span class="badge">Banner</span>
+                            </f:else>
+                        </f:if>
+                    </div>
+                    <div class="panel-body">
+                        <f:image image="{dataItem.tx_mask_image.0}" alt="{data.image.0.alternative}" title="{data.image.0.title}" class="img-responsive" />
+                    </div>
+                    <div class="panel-footer">
+                        <f:if condition="{dataItem.tx_mask_title}">
+                            <h4>{dataItem.tx_mask_title}</h4>
+                        </f:if>
+                        {dataItem.tx_mask_caption}
+                    </div>
+                </div>
+            </div>
+        </f:for>
+    </threeme:be.editLink>
+</div>
