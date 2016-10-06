@@ -11,7 +11,7 @@
 
 
 <f:section name="carousel">
-    <section role="presentation" id="carousel-uid{data.uid}" class="carousel carousel-fade slide"> <f:comment> data-ride="carousel"</f:comment>
+    <section role="complementary" id="carousel-uid{data.uid}" class="carousel carousel-fade slide"> <f:comment> data-ride="carousel"</f:comment>
         <div class="carousel-inner" role="listbox">
             <f:for each="{data.tx_mask_item}" as="dataItem" key="dataKey" iteration="dataIterator">
 
@@ -52,7 +52,7 @@
 
 <f:section name="banner">
     <f:alias map="{dataItem: data.tx_mask_item.0}">
-        <section role="presentation" class="carousel carousel-banner">
+        <section role="complementary" class="carousel carousel-banner">
 
             <figure class="item {f:if(condition:'{dataIterator.isFirst}', then:'active')}">
                 <f:image class="img-responsive" src="{dataItem.tx_mask_image.0.uid}" alt="{dataItem.tx_mask_image.0.alternative}" title="{dataItem.tx_mask_image.0.title}" treatIdAsReference="1" width="1280" />

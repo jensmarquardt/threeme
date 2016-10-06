@@ -3,11 +3,11 @@
     <f:if condition="{data.header}">
         <f:if condition="{data.subheader}">
             <f:then>
-                <section role="heading" class="threeme-header{f:if(condition:'{data.layout}', then:' threeme-align-{data.layout}')}">
+                <header class="threeme-header{f:if(condition:'{data.layout}', then:' threeme-align-{data.layout}')}">
             </f:then>
             <f:else>
                 <f:if condition="{data.date}">
-                    <section role="heading" class="threeme-header{f:if(condition:'{data.layout}', then:' threeme-align-{data.layout}')}">
+                    <header class="threeme-header{f:if(condition:'{data.layout}', then:' threeme-align-{data.layout}')}">
                 </f:if>
             </f:else>
         </f:if>
@@ -30,11 +30,11 @@
 
         <f:if condition="{data.subheader}">
             <f:then>
-                </section>
+                </header>
             </f:then>
             <f:else>
                 <f:if condition="{data.date}">
-                    </section>
+                    </header>
                 </f:if>
             </f:else>
         </f:if>
