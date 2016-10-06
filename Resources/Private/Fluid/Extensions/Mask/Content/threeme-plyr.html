@@ -1,0 +1,41 @@
+<div id="c{data.uid}">
+    <f:render section="{data.tx_mask_type}Type" arguments="{_all}" />
+</div>
+
+<f:section name="videoType">
+    <f:for each="{data.assets}" as="asset" iteration="assetIterator">
+        <f:if condition="{assetIterator.isFirst}">
+            <video {f:if(condition:'{data.image.0}', then:'poster="{f:uri.image(image:\'{data.image.0}\')}"')}
+                controls crossorigin
+<f:comment>
+                data-plyr='{
+                    <f:if condition="{asset.properties.autoplay}">autoplay: "true"</f:if>
+                }'
+</f:comment>
+            >
+        </f:if>
+
+        <source src="{f:uri.image(image:'{asset}')}" type="{asset.mimeType}" />
+
+        <f:if condition="{asset.extension} == 'mp4'">
+            <a href="{f:uri.image(image:'{asset}')}" class="btn btn-primary" download>Download</a>
+        </f:if>
+    </f:for>
+
+        <f:if condition="{data.media}">
+            <track kind="captions" label="{data.media.0.description}" srclang="{data.media.0.title}" src="{f:uri.image(image:'{data.media.0}')}" default>
+        </f:if>
+    </video>
+</f:section>
+
+<f:section name="audioType">
+    <audio controls>
+        <f:for each="{data.assets}" as="asset">
+            <source src="{f:uri.image(image:'{asset}')}" type="{asset.mimeType}">
+        </f:for>
+    </audio>
+</f:section>
+
+<f:section name="embedType">
+    <div data-type="{data.assets.0.extension}" data-video-id="{data.assets.0.name}"></div>
+</f:section>

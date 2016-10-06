@@ -85,6 +85,30 @@
                 "options": {
                     "6": "rte"
                 }
+            },
+            "threeme-plyr": {
+                "label": "Medien-Player",
+                "key": "threeme-plyr",
+                "shortLabel": "",
+                "description": "Medien-Player mit Vorschaubild und Untertitel",
+                "icon": "fa-film",
+                "color": "#7395C0",
+                "labels": [
+                    "Allgemein",
+                    "Medienart:",
+                    "Medien",
+                    "Vorschau:",
+                    "Medien:",
+                    "Untertitel:"
+                ],
+                "columns": [
+                    "tx_mask_general",
+                    "tx_mask_type",
+                    "tx_mask_media",
+                    "image",
+                    "assets",
+                    "media"
+                ]
             }
         },
         "sql": {
@@ -106,6 +130,11 @@
             "tx_mask_flexbox": {
                 "tt_content": {
                     "tx_mask_flexbox": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_type": {
+                "tt_content": {
+                    "tx_mask_type": "tinytext"
                 }
             }
         },
@@ -260,6 +289,48 @@
                 "inlineLabel": "tx_mask_title",
                 "inlineIcon": "",
                 "key": "flexbox"
+            },
+            "tx_mask_general": {
+                "config": {
+                    "type": "tab"
+                },
+                "key": "general"
+            },
+            "tx_mask_type": {
+                "config": {
+                    "type": "select",
+                    "renderType": "selectSingle",
+                    "size": "",
+                    "items": [
+                        [
+                            "Lokales Video",
+                            "video"
+                        ],
+                        [
+                            "Lokales Audio",
+                            "audio"
+                        ],
+                        [
+                            "Eingebundenes Video",
+                            "embed"
+                        ]
+                    ],
+                    "foreign_table": "",
+                    "foreign_table_where": "",
+                    "fileFolder": "",
+                    "fileFolder_extList": "",
+                    "fileFolder_recursions": "",
+                    "maxitems": "",
+                    "autoSizeMax": ""
+                },
+                "exclude": "1",
+                "key": "type"
+            },
+            "tx_mask_media": {
+                "config": {
+                    "type": "tab"
+                },
+                "key": "media"
             }
         }
     },

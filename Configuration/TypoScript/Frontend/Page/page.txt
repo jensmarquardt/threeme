@@ -30,7 +30,7 @@ page {
 
         fancybox = {$threeme.enable.publicBasePath}/JavaScript/Vendor/Fancybox/jquery.fancybox.js
         fancyboxMedia = {$threeme.enable.publicBasePath}/JavaScript/Vendor/Fancybox/jquery.fancybox-media.js
-        
+        plyr = {$threeme.enable.publicBasePath}/JavaScript/Vendor/Plyr/plyr.js
         cookiebar = {$threeme.enable.publicBasePath}/JavaScript/Vendor/Cookiebar/jquery.cookieBar.js
 
         website = {$threeme.enable.publicBasePath}/JavaScript/Frontend/jquery.threeme.js
