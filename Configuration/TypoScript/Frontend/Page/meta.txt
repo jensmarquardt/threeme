@@ -20,7 +20,7 @@ page {
         # OpenGraph Tags
         og:title {
             attribute = property
-            field = subtitle
+            field = navtitle
             ifEmpty.field = title
         }
 
@@ -74,7 +74,7 @@ page {
 
         twitter:title  {
             attribute = property
-            field = subtitle
+            field = navtitle
             ifEmpty.field = title
         }
 
