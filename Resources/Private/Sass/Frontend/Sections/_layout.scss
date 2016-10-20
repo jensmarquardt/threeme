@@ -36,11 +36,22 @@ body {
         filter: none;
     }
 
-    .threeme-container {
-        position: relative;
-        margin: 0 auto;
-        width: 100%;
-        max-width: $threeme-container-width;
-        @include box-shadow($threeme-container-box-shadow);
+    font-weight: 300;
+}
+
+.threeme-container {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: $threeme-container-width;
+    @include box-shadow($threeme-container-box-shadow);
+}
+
+.threeme-lead {
+    margin-bottom: ($padding-large-vertical * 4);
+
+    p {
+        font-size: $font-size-large;
+        text-align: justify;
     }
 }
