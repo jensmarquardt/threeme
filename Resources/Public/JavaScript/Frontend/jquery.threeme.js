@@ -21,7 +21,7 @@ var tx_threeme = (function() {
                     media: {}
                 },
                 tpl: {
-                    closeBtn: '<a tabindex="2" class="fancybox-item fancybox-close" href="javascript:;"><span class="sr-only">Fenster schließen</span><span class="fancybox-close-icon" aria-hidden="true"></span></a>',
+                    closeBtn: '<a tabindex="2" class="fancybox-item fancybox-close" href="javascript:;"><span class="sr-only">Fenster schließen</span><i class="fancybox-close-icon" aria-hidden="true"></i></a>',
                     prev: '<a title="zurück" class="fancybox-nav fancybox-prev" href="javascript:;"><span></span></a>',
                     next: '<a title="vor" class="fancybox-nav fancybox-next" href="javascript:;"><span></span></a>'
                 },

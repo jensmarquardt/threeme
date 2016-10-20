@@ -1,19 +1,19 @@
 lib.link-to-top = TEXT
 lib.link-to-top {
-    value = <a href="#threeme-top" class="smoothScroll" title="{LLL:EXT:threeme/Resources/Private/Language/locallang.xml:totop.title}"><span class="fa fa-arrow-circle-up" aria-hidden="true"></span></a>
+    value = <a href="#threeme-top" class="smoothScroll" title="{LLL:EXT:threeme/Resources/Private/Language/locallang.xml:totop.title}"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></a>
     insertData = 1
 }
 
 lib.print = TEXT
 lib.print {
-    value = <a href="javascript:print()" title="{LLL:EXT:threeme/Resources/Private/Language/locallang.xml:print.title}"><span class="fa fa-print" aria-hidden="true"></span></a>
+    value = <a href="javascript:print()" title="{LLL:EXT:threeme/Resources/Private/Language/locallang.xml:print.title}"><i class="fa fa-print" aria-hidden="true"></i></a>
     insertData = 1
 }
 
 lib.sitemap = TEXT
 lib.sitemap {
     typolink {
-        wrap = <span class="fa fa-sitemap" aria-hidden="true"></span><span class="hide">|</span>
+        wrap = <i class="fa fa-sitemap" aria-hidden="true"></i><span class="hide">|</span>
         parameter = {$threeme.frontend.pidSitemap}
         title.data = LLL:EXT:threeme/Resources/Private/Language/locallang.xml:sitemap.title
         ATagBeforeWrap = 1

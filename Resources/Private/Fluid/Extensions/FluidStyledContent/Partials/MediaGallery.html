@@ -62,14 +62,14 @@
     <f:if condition="{column.media.link}">
         <f:then>
             <f:link.typolink parameter="{column.media.link}">
-                <f:render section="mediaImageType" arguments="{_all}" /><span class="threeme-ui-enlarge fa fa-external-link" title="{f:translate(key: 'image.clicklink.title', extensionName: 'threeme')}"></span>
+                <f:render section="mediaImageType" arguments="{_all}" /><i class="threeme-ui-enlarge fa fa-external-link" title="{f:translate(key: 'image.clicklink.title', extensionName: 'threeme')}"></i>
             </f:link.typolink>
         </f:then>
         <f:else>
             <f:if condition="{data.image_zoom}">
                 <f:then>
                     <ce:link.clickEnlarge image="{column.media}" configuration="{settings.media.popup}">
-                        <f:render section="mediaImageType" arguments="{_all}" /><span class="threeme-ui-enlarge fa fa-arrows-alt" title="{f:translate(key: 'image.clickenlarge.title', extensionName: 'threeme')}"></span>
+                        <f:render section="mediaImageType" arguments="{_all}" /><i class="threeme-ui-enlarge fa fa-arrows-alt" title="{f:translate(key: 'image.clickenlarge.title', extensionName: 'threeme')}"></i>
                     </ce:link.clickEnlarge>
                 </f:then>
                 <f:else>
