@@ -20,9 +20,11 @@
  * -------------------------------------------------------------------------------------------------
  */
 .breadcrumb {
+    margin-bottom: ($padding-large-vertical * 4);
+
     li {
         &.first {
-            padding-right: 5px;
+            padding-right: $padding-xs-horizontal;
         }
 
         a {

@@ -33,67 +33,53 @@ h1, h2, h3, h4, h5, h6,
 
 h1, .h1 {
     text-transform: uppercase;
-    margin-bottom: (($line-height-computed / 2) * 3);
+    margin-bottom: ($padding-large-vertical *2);
 }
 
 h2, .h2 {
-    margin-bottom: (($line-height-computed / 2) * 3);
+    margin-bottom: ($padding-large-vertical *2);
 }
 
 h3, .h3 {
-    margin-bottom: $line-height-computed;
+    margin-bottom: $padding-large-vertical;
     font-weight: 400;
 }
 
 h4, .h4 {
+    margin-bottom: $padding-base-vertical;
     font-weight: 400;
-}
-
-em, strong {
-    font-family: $font-family-serif;
-}
-
-figcaption {
-    margin-bottom: $line-height-computed;
-    padding-top: $padding-small-vertical;
-    font-family: $font-family-serif;
-    font-weight: 600;
-    font-size: $font-size-small;
-}
-
-// Exception for Backend-Layout 'Home'
-@media(min-width: $grid-float-breakpoint) {
-    .backend-layout-home {
-        h1, .h1 {
-            margin-bottom: (($line-height-computed / 2) * 8);
-        }
-    }
 }
 
 // Execption for cType 'Header'
 .threeme-header {
-    > :first-child {
-        margin-bottom: ($line-height-computed / 2);
+    .dateheader {
+        margin-bottom: $padding-small-vertical;
     }
 
-    > :last-child {
-        margin-bottom: (($line-height-computed / 2) * 3);
+    .header {
+        margin-bottom: ($padding-large-vertical * 2);
+
+        small {
+            display: block;
+            margin-bottom: $padding-small-vertical;
+        }
     }
 }
 
 // Reduce header sizes for small devices
 @media(max-width: $screen-xs-min) {
     h1, .h1 {
+        margin-bottom: $padding-large-vertical;
         font-size: ($font-size-h1 - 4);
-        margin-bottom: $line-height-computed;
     }
 
     h2, .h2 {
+        margin-bottom: $padding-large-vertical;
         font-size: ($font-size-h2 - 4);
-        margin-bottom: $line-height-computed;
     }
 
     h3, .h3 {
+        margin-bottom: $padding-base-vertical;
         font-size: ($font-size-h3 - 4);
     }
 
@@ -103,16 +89,33 @@ figcaption {
 }
 
 p {
-    margin-bottom: $line-height-computed;
+    margin-bottom: ($padding-large-vertical * 2);
 
     &.lead {
-        font-weight: 500;
+        font-weight: 600;
+        color: $threeme-blue;
+    }
+
+    &.small {
+        font-size: $font-size-small;
     }
 }
 
 ul,
 ol {
-    margin-bottom: $line-height-computed;
+    margin-bottom: ($padding-large-vertical * 2);
+}
+
+em, strong {
+    font-family: $font-family-serif;
+}
+
+figcaption {
+    margin-bottom: ($padding-large-vertical * 2);
+    padding-top: $padding-small-vertical;
+    font-family: $font-family-serif;
+    font-weight: 600;
+    font-size: $font-size-small;
 }
 
 hr {
@@ -143,4 +146,14 @@ hr {
 
 .threeme-align-103 {
     text-align: justify;
+}
+
+
+// Exception for Backend-Layout 'Home'
+@media(min-width: $grid-float-breakpoint) {
+    .backend-layout-home {
+        h1, .h1 {
+            margin-bottom: ($padding-large-vertical * 8);
+        }
+    }
 }
