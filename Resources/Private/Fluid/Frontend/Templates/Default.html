@@ -10,24 +10,26 @@
     <!--TYPO3SEARCH_end-->
 
     <div class="container">
-        <section class="row">
+        <div class="row">
             <div class="col-sm-9 col-sm-offset-3">
                 <f:cObject typoscriptObjectPath="menu.breadcrumbs" />
             </div>
-        </section>
+        </div>
 
-        <section class="row">
+        <div class="row">
             <div class="col-sm-3">
                 <f:cObject typoscriptObjectPath="menu.navlist" />
             </div>
             <main id="threeme-main" class="col-sm-9">
                 <!--TYPO3SEARCH_begin-->
-                <f:cObject typoscriptObjectPath="lib.threemeDynamicContent" data="{pageUid: '{data.uid}', colPos: '201'}"/>
+                <div class="threeme-lead">
+                    <f:cObject typoscriptObjectPath="lib.threemeDynamicContent" data="{pageUid: '{data.uid}', colPos: '201'}"/>
+                </div>
 
                 <f:cObject typoscriptObjectPath="lib.threemeDynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}"/>
                 <!--TYPO3SEARCH_end-->
             </main>
-        </section>
+        </div>
     </div>
 
     <f:render partial="Footer" arguments="{_all}" />
