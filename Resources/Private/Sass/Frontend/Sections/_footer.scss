@@ -29,7 +29,7 @@ footer {
     margin-top: 80px;
     padding: (($line-height-computed / 2) * 3) 0;
     color: $threeme-white;
-    @include gradient-vertical($threeme-blue, $threeme-gray);
+    @include gradient-vertical($threeme-blue, $gray);
 
     a {
         color: $threeme-white;

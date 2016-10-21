@@ -72,7 +72,7 @@
     padding: 2px;
     color: $threeme-black;
     background-color: $threeme-white;
-    @include threeme-border($threeme-border-width, $threeme-border-style, $threeme-white, $border-radius-base);
+    @include threeme-border($threeme-border-width, $threeme-border-style, $threeme-white, $border-radius-small);
 }
 
 // Style option "Append with Link to Top of Page"

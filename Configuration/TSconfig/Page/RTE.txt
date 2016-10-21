@@ -15,6 +15,12 @@ RTE {
         lead {
             name = LLL:EXT:threeme/Resources/Private/Language/locallang_rte.xlf:class.lead
         }
+        threeme-text-small {
+            name = LLL:EXT:threeme/Resources/Private/Language/locallang_rte.xlf:class.threeme-text-small
+        }
+        threeme-text-note {
+            name = LLL:EXT:threeme/Resources/Private/Language/locallang_rte.xlf:class.threeme-text-note
+        }
 
         table {
             name = LLL:EXT:threeme/Resources/Private/Language/locallang_rte.xlf:class.table
@@ -154,7 +160,7 @@ RTE {
 
                 tags {
                     all {
-                        allowedClasses := addToList(text-left, text-center, text-right, text-justify, lead)
+                        allowedClasses := addToList(text-left, text-center, text-right, text-justify, lead, threeme-text-small, threeme-text-note)
                         allowedClasses := addToList(list-unstyled, list-inline)
                         allowedClasses := addToList(table, table-striped, table-bordered, table-hover, table-condensed)
                     }
@@ -162,7 +168,7 @@ RTE {
                         allowedClasses := addToList(table, table-striped, table-bordered, table-hover, table-condensed)
                     }
                     td {
-                        allowedClasses := addToList(text-left, text-center, text-right, text-justify)
+                        allowedClasses := addToList(text-left, text-center, text-right)
                     }
                     ul {
                         allowedClasses := addToList(list-unstyled, list-inline)
@@ -179,7 +185,7 @@ RTE {
                         allowedClasses := addToList(btn, btn-default, btn-primary, btn-success, btn-info, btn-warning, btn-danger)
                     }
                     span {
-                        allowedClasses := addToList(text-left, text-center, text-right, text-justify)
+                        allowedClasses := addToList(text-left, text-center, text-right, text-justify, lead, threeme-text-small)
                     }
                 }
             }
@@ -208,11 +214,19 @@ RTE {
             allowedClasses := addToList(btn, btn-default, btn-primary, btn-success, btn-info, btn-warning, btn-danger)
             allowedClasses := addToList(lightbox fancybox.iframe, lightbox fancybox.media)
             allowedClasses := addToList(table, table-striped, table-bordered, table-hover, table-condensed)
-            allowedClasses := addToList(text-left, text-center, text-right, text-justify, lead)
+            allowedClasses := addToList(text-left, text-center, text-right, text-justify, lead, threeme-text-small, threeme-text-note)
             allowedClasses := addToList(list-unstyled, list-inline)
+
+            # Remap bold and italics to strong and emphasis and vice versa
+            transformBoldAndItalicTags = 1
+
+            # Remap bold and italics to strong and emphasis
+            exitHTMLparser_db = 1
+            exitHTMLparser_db {
+                tags.b.remap = strong
+                tags.i.remap = em
+            }
         }
-
-
     }
 
     # deprecated?

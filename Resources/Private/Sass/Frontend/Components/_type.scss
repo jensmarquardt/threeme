@@ -90,15 +90,6 @@ h4, .h4 {
 
 p {
     margin-bottom: ($padding-large-vertical * 2);
-
-    &.lead {
-        font-weight: 600;
-        color: $threeme-blue;
-    }
-
-    &.small {
-        font-size: $font-size-small;
-    }
 }
 
 ul,
@@ -114,24 +105,42 @@ figcaption {
     margin-bottom: ($padding-large-vertical * 2);
     padding-top: $padding-small-vertical;
     font-family: $font-family-serif;
-    font-weight: 600;
+    font-weight: 400;
     font-size: $font-size-small;
+    color: $gray-dark;
 }
 
 hr {
     display: block;
     height: 1px;
     border: 0;
-    margin: (($line-height-computed / 2) * 3) 0;
+    margin: ($padding-large-vertical * 3) 0;
     padding: 0;
-    width: 50%;
-    left: 25%;
+    width: 75%;
+    left: 12.5%;
     position: relative;
     border: none;
-    background-color: $threeme-gray;
+    background-color: $gray;
 }
 
-// Add custom layouts for text orientation. Used in cType "header" and "threeme-flexbox".
+.lead {
+    font-size: $font-size-large;
+    font-weight: 600;
+    color: $gray-dark;
+}
+
+.threeme-text-note {
+    padding: $padding-base-vertical $padding-small-horizontal;
+    font-size: $font-size-large;
+    color: $threeme-white;
+    background-color: $threeme-blue-light;
+}
+
+.threeme-text-small {
+    font-size: $font-size-small;
+    font-weight: 300;
+}
+
 .threeme-align-100 {
     text-align: left;
 }
@@ -147,7 +156,6 @@ hr {
 .threeme-align-103 {
     text-align: justify;
 }
-
 
 // Exception for Backend-Layout 'Home'
 @media(min-width: $grid-float-breakpoint) {

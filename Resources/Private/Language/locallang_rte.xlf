@@ -21,6 +21,12 @@
             <trans-unit id="class.lead">
                 <source>Text: Lead</source>
             </trans-unit>
+            <trans-unit id="class.threeme-text-small">
+                <source>Text: Small</source>
+            </trans-unit>
+            <trans-unit id="class.threeme-text-note">
+                <source>Text: Note</source>
+            </trans-unit>
 
             
             <trans-unit id="class.table">

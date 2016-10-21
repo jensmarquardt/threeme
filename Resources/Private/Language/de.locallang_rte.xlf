@@ -27,6 +27,14 @@
                 <source>Text: Lead</source>
                 <target>Text: Hervorhebung</target>
             </trans-unit>
+            <trans-unit id="class.threeme-text-small">
+                <source>Text: Small</source>
+                <target>Text: Klein</target>
+            </trans-unit>
+            <trans-unit id="class.threeme-text-note">
+                <source>Text: Note</source>
+                <target>Text: Anmerkung</target>
+            </trans-unit>
 
             <trans-unit id="class.table">
                 <source>Table: Unstyled</source>
