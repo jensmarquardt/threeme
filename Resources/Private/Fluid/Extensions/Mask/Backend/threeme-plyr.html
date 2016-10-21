@@ -6,14 +6,22 @@
 </threeme:be.editLink>
 
 <f:section name="videoType">
-    <video {f:if(condition:'{data.image.0}', then:'poster="{f:uri.image(image:\'{data.image.0}\')}"')} controls crossorigin>
+    <video {f:if(condition:'{data.image.0}', then:'poster="{data.image.0.publicUrl}"')}
+                controls crossorigin
+                data-plyr='{
+                    <f:if condition="{asset.properties.autoplay}">autoplay: "true"</f:if>
+                }'
+    >
+        <f:for each="{data.assets}" as="asset" iteration="assetIterator">
+            <source src="{asset.publicUrl}" type="{asset.extension}" />
 
-    <f:for each="{data.assets}" as="asset" iteration="assetIterator">
-        <source src="{f:uri.image(image:'{asset}')}" type="{asset.mimeType}" />
-    </f:for>
+            <f:if condition="{asset.extension} == 'mp4'">
+                <a href="{asset.publicUrl}" class="btn btn-primary" download>Download</a>
+            </f:if>
+        </f:for>
 
         <f:if condition="{data.media}">
-            <track kind="captions" label="{data.media.0.description}" srclang="{data.media.0.title}" src="{f:uri.image(image:'{data.media.0}')}" default>
+            <track src="{data.media.0.publicUrl}" kind="captions" srclang="{data.media.0.title}" label="{data.media.0.description}" default>
         </f:if>
     </video>
 </f:section>
@@ -21,11 +29,18 @@
 <f:section name="audioType">
     <audio controls>
         <f:for each="{data.assets}" as="asset">
-            <source src="{f:uri.image(image:'{asset}')}" type="{asset.mimeType}">
+            <source src="{asset.publicUrl}" type="{asset.extension}">
         </f:for>
     </audio>
 </f:section>
 
 <f:section name="embedType">
-    <div data-type="{data.assets.0.extension}" data-video-id="{data.assets.0.name}"></div>
+    <f:if condition="{data.assets.0.extension} == 'youtube'">
+        <f:then>
+            <div data-type="{data.assets.0.extension}" data-video-id="{threeme:strrchr(string:'{data.assets.0.publicUrl}', needle:'=')}"></div>
+        </f:then>
+        <f:else>
+            <div data-type="{data.assets.0.extension}" data-video-id="{threeme:strrchr(string:'{data.assets.0.publicUrl}', needle:'/')}"></div>
+        </f:else>
+    </f:if>
 </f:section>
