@@ -28,3 +28,7 @@
 //@import "Plyr/variables";
 @import "Plyr/mixins";
 @import "Plyr/plyr";
+
+.plyr {
+    margin-bottom: ($padding-large-vertical * 2);
+}

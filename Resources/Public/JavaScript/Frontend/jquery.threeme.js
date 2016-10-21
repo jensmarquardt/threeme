@@ -84,6 +84,14 @@ var tx_threeme = (function() {
 //                domain: 'example.com',
                 closeButton : '.threeme-cookiebar-close'
             });
+        },
+
+        /* Plyr media player
+         * https://github.com/selz/plyr
+         * -------------------------------------------------------------------------------------------------
+         */
+        plyr : function() {
+            plyr.setup();
         }
 
     };
@@ -94,4 +102,5 @@ $(function() {
     tx_threeme.jQuerySmoothScroll();
     tx_threeme.bootstrapAccordion();
     tx_threeme.jQueryCookieBar();
+    tx_threeme.plyr();
 });

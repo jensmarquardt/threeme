@@ -1,13 +1,12 @@
 {namespace threeme=THREEME\Threeme\ViewHelpers}
 
 <threeme:be.editLink element="{data}">
-    <div class="embed-responsive embed-responsive-16by9">
-        <f:render section="{data.tx_mask_type}Type" arguments="{_all}" />
-    </div>
+    <h3>{data.header}</h3>
+    <f:render section="{data.tx_mask_type}Type" arguments="{_all}" />
 </threeme:be.editLink>
 
 <f:section name="videoType">
-    <video class="embed-responsive-item" {f:if(condition:'{data.image.0}', then:'poster="{f:uri.image(image:\'{data.image.0}\')}"')} controls crossorigin>
+    <video {f:if(condition:'{data.image.0}', then:'poster="{f:uri.image(image:\'{data.image.0}\')}"')} controls crossorigin>
 
     <f:for each="{data.assets}" as="asset" iteration="assetIterator">
         <source src="{f:uri.image(image:'{asset}')}" type="{asset.mimeType}" />
@@ -20,7 +19,7 @@
 </f:section>
 
 <f:section name="audioType">
-    <audio class="embed-responsive-item" controls>
+    <audio controls>
         <f:for each="{data.assets}" as="asset">
             <source src="{f:uri.image(image:'{asset}')}" type="{asset.mimeType}">
         </f:for>
@@ -28,5 +27,5 @@
 </f:section>
 
 <f:section name="embedType">
-    <div class="embed-responsive-item" data-type="{data.assets.0.extension}" data-video-id="{data.assets.0.name}"></div>
+    <div data-type="{data.assets.0.extension}" data-video-id="{data.assets.0.name}"></div>
 </f:section>
