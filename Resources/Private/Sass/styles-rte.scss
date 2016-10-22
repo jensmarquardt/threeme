@@ -51,10 +51,15 @@
 @import "Frontend/Components/buttons";
 
 // Add RTE link classes to get them visible
+a,
 .internal-link,
 .external-link,
 .download,
 .mail,
-.lightbox {
+.lightbox,
+.lightbox-iframe,
+.lightbox-media,
+.fancybox.iframe,
+.fancybox.media {
     color: $link-color;
 }

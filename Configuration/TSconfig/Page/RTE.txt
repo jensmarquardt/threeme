@@ -61,8 +61,17 @@ RTE {
         download {
             name = LLL:EXT:threeme/Resources/Private/Language/locallang_rte.xlf:class.download
         }
+        
         lightbox {
-            name = LLL:EXT:threeme/Resources/Private/Language/locallang_rte.xlf:class.lightbox
+            selectable = 0
+        }
+        lightbox-iframe {
+            name = LLL:EXT:threeme/Resources/Private/Language/locallang_rte.xlf:class.lightbox.iframe
+            requires = lightbox fancybox.iframe
+        }
+        lightbox-media {
+            name = LLL:EXT:threeme/Resources/Private/Language/locallang_rte.xlf:class.lightbox.media
+            requires = lightbox fancybox.media
         }
 
         btn {
@@ -141,7 +150,7 @@ RTE {
 
                 properties {
                     class {
-                        allowedClasses := addToList(lightbox fancybox.iframe, lightbox fancybox.media)
+                        allowedClasses := addToList(lightbox-iframe, lightbox-media)
                         allowedClasses := removeFromList(internal-link-new-window, external-link-new-window)
                     }
                 }
@@ -181,7 +190,8 @@ RTE {
 
                 tags {
                     all {
-                        allowedClasses := addToList(internal-link, external-link, download, mail, lightbox)
+                        allowedClasses := addToList(internal-link, external-link, download, mail)
+                        allowedClasses := addToList(lightbox-iframe, lightbox-media)
                         allowedClasses := addToList(btn, btn-default, btn-primary, btn-success, btn-info, btn-warning, btn-danger)
                     }
                     span {
@@ -212,7 +222,7 @@ RTE {
 
             # List of allowed classes in the RTE
             allowedClasses := addToList(btn, btn-default, btn-primary, btn-success, btn-info, btn-warning, btn-danger)
-            allowedClasses := addToList(lightbox fancybox.iframe, lightbox fancybox.media)
+            allowedClasses := addToList(lightbox, lightbox-iframe, fancybox.iframe, lightbox-media, fancybox.media)
             allowedClasses := addToList(table, table-striped, table-bordered, table-hover, table-condensed)
             allowedClasses := addToList(text-left, text-center, text-right, text-justify, lead, threeme-text-small, threeme-text-note)
             allowedClasses := addToList(list-unstyled, list-inline)
@@ -240,21 +250,21 @@ RTE {
         externalLinkInNewWindow >
 
         lightboxPage {
-            class = lightbox fancybox.iframe
+            class = lightbox-iframe
             type = page
         }
         # Fancybox settings for external links as iFrame
         lightboxUrlIframe {
-            class = lightbox fancybox.iframe
+            class = lightbox-iframe
             type = url
         }
-        # Fancybox settings for external media (plattforms)
+        # Fancybox settings for external media
         lightboxUrlMedia {
-            class = lightbox fancybox.media
+            class = lightbox-media
             type = url
         }
         lightboxFile {
-            class = lightbox fancybox.media
+            class = lightbox-media
             type = file
         }
     }

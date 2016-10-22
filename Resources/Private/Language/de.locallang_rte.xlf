@@ -2,11 +2,6 @@
     <file source-language="en" datatype="plaintext" original="messages" date="2016-03-23T10:10:10Z" product-name="threeme">
         <header/>
         <body>
-            <trans-unit id="classesAnchor.lightboxPage">
-                <source>Opens link in lighbox</source>
-                <target>Öffnet Link in Lightbox</target>
-            </trans-unit>
-
             <trans-unit id="class.text-left">
                 <source>Text: Left</source>
                 <target>Text: Linksbündig</target>
@@ -80,11 +75,15 @@
             </trans-unit>
             <trans-unit id="class.download">
                 <source>Link: Download</source>
-                <target>Link: Download-Datei</target>
+                <target>Link: Download</target>
             </trans-unit>
-            <trans-unit id="class.lightbox">
-                <source>Link: Lightbox</source>
-                <target>Link: Lightbox</target>
+            <trans-unit id="class.lightbox.iframe">
+                <source>Link: Lightbox Page</source>
+                <target>Link: Lightbox Seite</target>
+            </trans-unit>
+            <trans-unit id="class.lightbox.media">
+                <source>Link: Lightbox Media</source>
+                <target>Link: Lightbox Medien</target>
             </trans-unit>
 
             <trans-unit id="class.btn-default">
