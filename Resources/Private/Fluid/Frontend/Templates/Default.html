@@ -41,6 +41,10 @@
         <div class="row">
             <main id="threeme-main" class="col-sm-12">
                 <!--TYPO3SEARCH_begin-->
+                <div class="threeme-lead">
+                    <f:cObject typoscriptObjectPath="lib.threemeDynamicContent" data="{pageUid: '{data.uid}', colPos: '201'}"/>
+                </div>
+
                 <f:cObject typoscriptObjectPath="lib.threemeDynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}"/>
                 <!--TYPO3SEARCH_end-->
             </main>
