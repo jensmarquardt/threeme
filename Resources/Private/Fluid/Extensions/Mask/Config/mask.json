@@ -2,24 +2,28 @@
     "tt_content": {
         "elements": {
             "threeme-carousel": {
-                "label": "Diashow & Banner",
+                "label": "Karussell & Banner",
                 "key": "threeme-carousel",
                 "shortLabel": "",
-                "description": "Diashow & Banner mit Text-\/Bildelementen. Automatische Unterscheidung zwischen Diashow und Banner bei Verwendung von nur einem Element.",
+                "description": "Karussell & Banner mit Text-\/Bildelementen. Automatische Unterscheidung zwischen Slider und Banner bei Verwendung von nur einem Element.",
                 "icon": "fa-desktop",
                 "color": "#7395C0",
                 "columns": [
                     "tx_mask_carousel",
                     "header",
+                    "header_layout",
+                    "tx_mask_interval",
                     "tx_mask_item"
                 ],
                 "labels": [
                     "Karussell",
                     "",
-                    "Elemente"
+                    "",
+                    "Intervall (null = kein automatischer Wechsel):",
+                    "Slides"
                 ],
                 "options": {
-                    "5": "rte"
+                    "7": "rte"
                 }
             },
             "threeme-flexbox": {
@@ -46,18 +50,20 @@
                 }
             },
             "threeme-gallery": {
-                "label": "Bildergalerie",
+                "label": "Mediengalerie",
                 "key": "threeme-gallery",
                 "shortLabel": "",
-                "description": "Bildergalerie mit Bildelementen. Das erste Bild wird als Vorschau angezeigt, alle weiteren in der Lightbox. Bildunterschriften erscheinen ebenso in der Lightbox.",
+                "description": "Mediengalerie mit Lightbox. Das erste Bild wird als Vorschau angezeigt, alle weiteren in der Lightbox. Bildunterschriften erscheinen ebenso in der Lightbox.",
                 "icon": "fa-camera",
                 "color": "#7395C0",
                 "columns": [
+                    "tx_mask_gallery",
                     "header",
                     "header_layout",
-                    "image"
+                    "media"
                 ],
                 "labels": [
+                    "Mediengalerie",
                     "",
                     "",
                     ""
@@ -87,20 +93,12 @@
                 }
             },
             "threeme-plyr": {
-                "label": "Medien-Player",
+                "label": "Medienspieler",
                 "key": "threeme-plyr",
                 "shortLabel": "",
-                "description": "Medien-Player mit Vorschaubild und Untertitel",
+                "description": "Video- und Audio-Player mit optionalen Vorschaubild und Untertitel",
                 "icon": "fa-film",
                 "color": "#7395C0",
-                "labels": [
-                    "Allgemein",
-                    "Medienart:",
-                    "Medien",
-                    "Vorschau:",
-                    "Medien:",
-                    "Untertitel:"
-                ],
                 "columns": [
                     "tx_mask_general",
                     "tx_mask_type",
@@ -108,20 +106,18 @@
                     "image",
                     "assets",
                     "media"
+                ],
+                "labels": [
+                    "Allgemein",
+                    "Medienart:",
+                    "Medien",
+                    "Vorschau:",
+                    "Medien:",
+                    "Untertitel:"
                 ]
             }
         },
         "sql": {
-            "tx_mask_panel": {
-                "tt_content": {
-                    "tx_mask_panel": "int(11) unsigned DEFAULT '0' NOT NULL"
-                }
-            },
-            "tx_mask_item": {
-                "tt_content": {
-                    "tx_mask_item": "int(11) unsigned DEFAULT '0' NOT NULL"
-                }
-            },
             "tx_mask_columns": {
                 "tt_content": {
                     "tx_mask_columns": "tinytext"
@@ -136,87 +132,24 @@
                 "tt_content": {
                     "tx_mask_type": "tinytext"
                 }
+            },
+            "tx_mask_interval": {
+                "tt_content": {
+                    "tx_mask_interval": "tinytext"
+                }
+            },
+            "tx_mask_item": {
+                "tt_content": {
+                    "tx_mask_item": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_panel": {
+                "tt_content": {
+                    "tx_mask_panel": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
             }
         },
         "tca": {
-            "tx_mask_accordion": {
-                "config": {
-                    "type": "tab"
-                },
-                "key": "accordion"
-            },
-            "tx_mask_panel": {
-                "config": {
-                    "type": "inline",
-                    "foreign_table": "--inlinetable--",
-                    "foreign_field": "parentid",
-                    "foreign_table_field": "parenttable",
-                    "foreign_sortby": "sorting",
-                    "appearance": {
-                        "enabledControls": {
-                            "dragdrop": "1"
-                        },
-                        "collapseAll": "1",
-                        "expandSingle": "1",
-                        "newRecordLinkTitle": "",
-                        "levelLinksPosition": "both",
-                        "useSortable": "1",
-                        "showSynchronizationLink": "1",
-                        "showPossibleLocalizationRecords": "1",
-                        "showAllLocalizationLink": "1",
-                        "showRemovedLocalizationRecords": "1"
-                    },
-                    "minitems": "1",
-                    "maxitems": "",
-                    "behaviour": {
-                        "localizationMode": "select",
-                        "localizeChildrenAtParentLocalization": "1"
-                    }
-                },
-                "exclude": "1",
-                "inlineLabel": "",
-                "inlineIcon": "",
-                "key": "panel"
-            },
-            "tx_mask_carousel": {
-                "config": {
-                    "type": "tab"
-                },
-                "key": "carousel"
-            },
-            "tx_mask_item": {
-                "config": {
-                    "type": "inline",
-                    "foreign_table": "--inlinetable--",
-                    "foreign_field": "parentid",
-                    "foreign_table_field": "parenttable",
-                    "foreign_sortby": "sorting",
-                    "appearance": {
-                        "enabledControls": {
-                            "dragdrop": "1"
-                        },
-                        "collapseAll": "1",
-                        "expandSingle": "1",
-                        "newRecordLinkTitle": "",
-                        "levelLinksPosition": "both",
-                        "useSortable": "1",
-                        "showSynchronizationLink": "1",
-                        "showPossibleLocalizationRecords": "1",
-                        "showAllLocalizationLink": "1",
-                        "showRemovedLocalizationRecords": "1"
-                    },
-                    "minitems": "1",
-                    "maxitems": "",
-                    "behaviour": {
-                        "localizationMode": "select",
-                        "localizeChildrenAtParentLocalization": "1"
-                    }
-                },
-                "exclude": "1",
-                "inlineLabel": "",
-                "inlineIcon": "",
-                "key": "item"
-            },
             "tx_mask_teaser": {
                 "config": {
                     "type": "tab"
@@ -331,6 +264,106 @@
                     "type": "tab"
                 },
                 "key": "media"
+            },
+            "tx_mask_carousel": {
+                "config": {
+                    "type": "tab"
+                },
+                "key": "carousel"
+            },
+            "tx_mask_interval": {
+                "config": {
+                    "type": "input",
+                    "eval": "int",
+                    "default": "0",
+                    "placeholder": "",
+                    "size": "5",
+                    "max": "5",
+                    "range": {
+                        "lower": "0",
+                        "upper": "99999"
+                    }
+                },
+                "exclude": "1",
+                "key": "interval"
+            },
+            "tx_mask_item": {
+                "config": {
+                    "type": "inline",
+                    "foreign_table": "--inlinetable--",
+                    "foreign_field": "parentid",
+                    "foreign_table_field": "parenttable",
+                    "foreign_sortby": "sorting",
+                    "appearance": {
+                        "enabledControls": {
+                            "dragdrop": "1"
+                        },
+                        "collapseAll": "1",
+                        "expandSingle": "1",
+                        "newRecordLinkTitle": "",
+                        "levelLinksPosition": "bottom",
+                        "useSortable": "1",
+                        "showSynchronizationLink": "1",
+                        "showPossibleLocalizationRecords": "1",
+                        "showAllLocalizationLink": "1",
+                        "showRemovedLocalizationRecords": "1"
+                    },
+                    "minitems": "1",
+                    "maxitems": "",
+                    "behaviour": {
+                        "localizationMode": "select",
+                        "localizeChildrenAtParentLocalization": "1"
+                    }
+                },
+                "exclude": "1",
+                "inlineLabel": "",
+                "inlineIcon": "",
+                "key": "item"
+            },
+            "tx_mask_gallery": {
+                "config": {
+                    "type": "tab"
+                },
+                "key": "gallery"
+            },
+            "tx_mask_accordion": {
+                "config": {
+                    "type": "tab"
+                },
+                "key": "accordion"
+            },
+            "tx_mask_panel": {
+                "config": {
+                    "type": "inline",
+                    "foreign_table": "--inlinetable--",
+                    "foreign_field": "parentid",
+                    "foreign_table_field": "parenttable",
+                    "foreign_sortby": "sorting",
+                    "appearance": {
+                        "enabledControls": {
+                            "dragdrop": "1"
+                        },
+                        "collapseAll": "1",
+                        "expandSingle": "1",
+                        "newRecordLinkTitle": "",
+                        "levelLinksPosition": "bottom",
+                        "useSortable": "1",
+                        "showSynchronizationLink": "1",
+                        "showPossibleLocalizationRecords": "1",
+                        "showAllLocalizationLink": "1",
+                        "showRemovedLocalizationRecords": "1"
+                    },
+                    "minitems": "2",
+                    "maxitems": "20",
+                    "behaviour": {
+                        "localizationMode": "select",
+                        "localizeChildrenAtParentLocalization": "1"
+                    }
+                },
+                "exclude": "1",
+                "inlineLabel": "",
+                "inlineIcon": "",
+                "key": "panel"
             }
         }
     },
@@ -340,206 +373,6 @@
                 "sys_file_reference": {
                     "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
                 }
-            }
-        }
-    },
-    "tx_mask_panel": {
-        "sql": {
-            "tx_mask_title": {
-                "tx_mask_panel": {
-                    "tx_mask_title": "tinytext"
-                }
-            },
-            "tx_mask_bodytext": {
-                "tx_mask_panel": {
-                    "tx_mask_bodytext": "text"
-                }
-            },
-            "tx_mask_image": {
-                "tx_mask_panel": {
-                    "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
-                }
-            }
-        },
-        "tca": {
-            "tx_mask_content": {
-                "config": {
-                    "type": "tab"
-                },
-                "inlineParent": "tx_mask_panel",
-                "label": "Inhalte",
-                "key": "content"
-            },
-            "tx_mask_title": {
-                "config": {
-                    "type": "input",
-                    "eval": "trim",
-                    "default": "",
-                    "placeholder": "",
-                    "size": "",
-                    "max": "",
-                    "is_in": ""
-                },
-                "exclude": "1",
-                "inlineParent": "tx_mask_panel",
-                "label": "Titel:",
-                "key": "title"
-            },
-            "tx_mask_bodytext": {
-                "config": {
-                    "type": "text",
-                    "eval": "",
-                    "cols": "",
-                    "rows": "",
-                    "default": "",
-                    "placeholder": "",
-                    "max": ""
-                },
-                "exclude": "1",
-                "defaultExtras": "richtext[]:rte_transform[mode=ts]",
-                "inlineParent": "tx_mask_panel",
-                "label": "Text:",
-                "rte": "1",
-                "key": "bodytext"
-            },
-            "tx_mask_media": {
-                "config": {
-                    "type": "tab"
-                },
-                "inlineParent": "tx_mask_panel",
-                "label": "Medien",
-                "key": "media"
-            },
-            "tx_mask_image": {
-                "exclude": "1",
-                "options": "file",
-                "config": {
-                    "appearance": {
-                        "collapseAll": "1",
-                        "expandSingle": "1",
-                        "useSortable": "1",
-                        "showSynchronizationLink": "1",
-                        "showPossibleLocalizationRecords": "1",
-                        "showAllLocalizationLink": "1",
-                        "showRemovedLocalizationRecords": "1"
-                    },
-                    "behaviour": {
-                        "localizationMode": "select",
-                        "localizeChildrenAtParentLocalization": "1"
-                    },
-                    "minitems": "0",
-                    "maxitems": "1",
-                    "filter": [
-                        {
-                            "parameters": {
-                                "allowedFileExtensions": ""
-                            }
-                        }
-                    ]
-                },
-                "inlineParent": "tx_mask_panel",
-                "label": "Medien:",
-                "key": "image"
-            }
-        }
-    },
-    "tx_mask_item": {
-        "sql": {
-            "tx_mask_title": {
-                "tx_mask_item": {
-                    "tx_mask_title": "tinytext"
-                }
-            },
-            "tx_mask_caption": {
-                "tx_mask_item": {
-                    "tx_mask_caption": "text"
-                }
-            },
-            "tx_mask_image": {
-                "tx_mask_item": {
-                    "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
-                }
-            }
-        },
-        "tca": {
-            "tx_mask_content": {
-                "config": {
-                    "type": "tab"
-                },
-                "inlineParent": "tx_mask_item",
-                "label": "Inhalte",
-                "key": "content"
-            },
-            "tx_mask_title": {
-                "config": {
-                    "type": "input",
-                    "eval": "trim",
-                    "default": "",
-                    "placeholder": "",
-                    "size": "",
-                    "max": "",
-                    "is_in": ""
-                },
-                "exclude": "1",
-                "inlineParent": "tx_mask_item",
-                "label": "Titel:",
-                "key": "title"
-            },
-            "tx_mask_caption": {
-                "config": {
-                    "type": "text",
-                    "eval": "",
-                    "cols": "",
-                    "rows": "",
-                    "default": "",
-                    "placeholder": "",
-                    "max": ""
-                },
-                "exclude": "1",
-                "defaultExtras": "richtext[]:rte_transform[mode=ts_css]",
-                "inlineParent": "tx_mask_item",
-                "label": "Text:",
-                "rte": "1",
-                "key": "caption"
-            },
-            "tx_mask_media": {
-                "config": {
-                    "type": "tab"
-                },
-                "inlineParent": "tx_mask_item",
-                "label": "Medien",
-                "key": "media"
-            },
-            "tx_mask_image": {
-                "exclude": "1",
-                "options": "file",
-                "config": {
-                    "appearance": {
-                        "collapseAll": "1",
-                        "expandSingle": "1",
-                        "useSortable": "1",
-                        "showSynchronizationLink": "1",
-                        "showPossibleLocalizationRecords": "1",
-                        "showAllLocalizationLink": "1",
-                        "showRemovedLocalizationRecords": "1"
-                    },
-                    "behaviour": {
-                        "localizationMode": "select",
-                        "localizeChildrenAtParentLocalization": "1"
-                    },
-                    "minitems": "1",
-                    "maxitems": "1",
-                    "filter": [
-                        {
-                            "parameters": {
-                                "allowedFileExtensions": ""
-                            }
-                        }
-                    ]
-                },
-                "inlineParent": "tx_mask_item",
-                "label": "Medien:",
-                "key": "image"
             }
         }
     },
@@ -717,6 +550,206 @@
                     ]
                 },
                 "inlineParent": "tx_mask_flexbox",
+                "label": "Medien:",
+                "key": "image"
+            }
+        }
+    },
+    "tx_mask_item": {
+        "sql": {
+            "tx_mask_title": {
+                "tx_mask_item": {
+                    "tx_mask_title": "tinytext"
+                }
+            },
+            "tx_mask_caption": {
+                "tx_mask_item": {
+                    "tx_mask_caption": "text"
+                }
+            },
+            "tx_mask_image": {
+                "tx_mask_item": {
+                    "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_content": {
+                "config": {
+                    "type": "tab"
+                },
+                "inlineParent": "tx_mask_item",
+                "label": "undefined",
+                "key": "content"
+            },
+            "tx_mask_title": {
+                "config": {
+                    "type": "input",
+                    "eval": "trim",
+                    "default": "",
+                    "placeholder": "",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_item",
+                "label": "undefined",
+                "key": "title"
+            },
+            "tx_mask_caption": {
+                "config": {
+                    "type": "text",
+                    "eval": "",
+                    "cols": "",
+                    "rows": "",
+                    "default": "",
+                    "placeholder": "",
+                    "max": ""
+                },
+                "exclude": "1",
+                "defaultExtras": "richtext[]:rte_transform[mode=ts_css]",
+                "inlineParent": "tx_mask_item",
+                "label": "undefined",
+                "rte": "1",
+                "key": "caption"
+            },
+            "tx_mask_media": {
+                "config": {
+                    "type": "tab"
+                },
+                "inlineParent": "tx_mask_item",
+                "label": "undefined",
+                "key": "media"
+            },
+            "tx_mask_image": {
+                "exclude": "1",
+                "options": "file",
+                "config": {
+                    "appearance": {
+                        "collapseAll": "1",
+                        "expandSingle": "1",
+                        "useSortable": "1",
+                        "showSynchronizationLink": "1",
+                        "showPossibleLocalizationRecords": "1",
+                        "showAllLocalizationLink": "1",
+                        "showRemovedLocalizationRecords": "1"
+                    },
+                    "behaviour": {
+                        "localizationMode": "select",
+                        "localizeChildrenAtParentLocalization": "1"
+                    },
+                    "minitems": "1",
+                    "maxitems": "1",
+                    "filter": [
+                        {
+                            "parameters": {
+                                "allowedFileExtensions": ""
+                            }
+                        }
+                    ]
+                },
+                "inlineParent": "tx_mask_item",
+                "label": "undefined",
+                "key": "image"
+            }
+        }
+    },
+    "tx_mask_panel": {
+        "sql": {
+            "tx_mask_title": {
+                "tx_mask_panel": {
+                    "tx_mask_title": "tinytext"
+                }
+            },
+            "tx_mask_bodytext": {
+                "tx_mask_panel": {
+                    "tx_mask_bodytext": "text"
+                }
+            },
+            "tx_mask_image": {
+                "tx_mask_panel": {
+                    "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_content": {
+                "config": {
+                    "type": "tab"
+                },
+                "inlineParent": "tx_mask_panel",
+                "label": "Inhalte",
+                "key": "content"
+            },
+            "tx_mask_title": {
+                "config": {
+                    "type": "input",
+                    "eval": "trim",
+                    "default": "",
+                    "placeholder": "",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_panel",
+                "label": "Titel:",
+                "key": "title"
+            },
+            "tx_mask_bodytext": {
+                "config": {
+                    "type": "text",
+                    "eval": "",
+                    "cols": "",
+                    "rows": "",
+                    "default": "",
+                    "placeholder": "",
+                    "max": ""
+                },
+                "exclude": "1",
+                "defaultExtras": "richtext[]:rte_transform[mode=ts]",
+                "inlineParent": "tx_mask_panel",
+                "label": "Text:",
+                "rte": "1",
+                "key": "bodytext"
+            },
+            "tx_mask_media": {
+                "config": {
+                    "type": "tab"
+                },
+                "inlineParent": "tx_mask_panel",
+                "label": "Medien",
+                "key": "media"
+            },
+            "tx_mask_image": {
+                "exclude": "1",
+                "options": "file",
+                "config": {
+                    "appearance": {
+                        "collapseAll": "1",
+                        "expandSingle": "1",
+                        "useSortable": "1",
+                        "showSynchronizationLink": "1",
+                        "showPossibleLocalizationRecords": "1",
+                        "showAllLocalizationLink": "1",
+                        "showRemovedLocalizationRecords": "1"
+                    },
+                    "behaviour": {
+                        "localizationMode": "select",
+                        "localizeChildrenAtParentLocalization": "1"
+                    },
+                    "minitems": "0",
+                    "maxitems": "1",
+                    "filter": [
+                        {
+                            "parameters": {
+                                "allowedFileExtensions": ""
+                            }
+                        }
+                    ]
+                },
+                "inlineParent": "tx_mask_panel",
                 "label": "Medien:",
                 "key": "image"
             }
