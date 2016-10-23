@@ -11,10 +11,10 @@
   "suggest": {
     "ws_scss": ">=1.1.1",
     "be_secure_pw": ">=7.0.6",
-    "mask": ">=2.0.0",
+    "mask": ">=2.1.1",
     "news": ">=4.3.0",
     "powermail": ">=3.4.0",
-    "realurl": ">=2.0.0"
+    "realurl": ">=2.0.15"
   },
   "support": {
     "issues": "https://github.com/AstCommodore/threeme/issues"
