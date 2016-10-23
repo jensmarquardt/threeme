@@ -31,11 +31,11 @@
             <f:if condition="{data.properties.autoplay}">autoplay: "true"</f:if>
         }'
     >
-        <f:for each="{data.media}" as="media">
-            <source src="{media.publicUrl}" type="{media.extension}" />
+        <f:for each="{data.assets}" as="file">
+            <source src="{file.publicUrl}" type="{file.extension}" />
 
-            <f:if condition="{media.extension} == 'mp4'">
-                <a href="{media.publicUrl}" class="btn btn-primary" download>Download</a>
+            <f:if condition="{file.extension} == 'mp4'">
+                <a href="{file.publicUrl}" class="btn btn-primary" download>Download</a>
             </f:if>
         </f:for>
 
@@ -48,19 +48,19 @@
 
 <f:section name="audioType">
     <audio controls>
-        <f:for each="{data.media}" as="media">
-            <source src="{media.publicUrl}" type="{media.extension}">
+        <f:for each="{data.assets}" as="file">
+            <source src="{file.publicUrl}" type="{file.extension}">
         </f:for>
     </audio>
 </f:section>
 
 <f:section name="embedType">
-    <f:if condition="{data.media.0.extension} == 'youtube'">
+    <f:if condition="{data.assets.0.extension} == 'youtube'">
         <f:then>
-            <div data-type="{data.media.0.extension}" data-video-id="{threeme:strrchr(string:'{data.media.0.publicUrl}', needle:'=')}"></div>
+            <div data-type="{data.assets.0.extension}" data-video-id="{threeme:strrchr(string:'{data.assets.0.publicUrl}', needle:'=')}"></div>
         </f:then>
         <f:else>
-            <div data-type="{data.media.0.extension}" data-video-id="{threeme:strrchr(string:'{data.media.0.publicUrl}', needle:'/')}"></div>
+            <div data-type="{data.assets.0.extension}" data-video-id="{threeme:strrchr(string:'{data.assets.0.publicUrl}', needle:'/')}"></div>
         </f:else>
     </f:if>
 </f:section>
