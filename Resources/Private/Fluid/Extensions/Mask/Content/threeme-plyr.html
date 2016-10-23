@@ -25,40 +25,42 @@
 
 <f:section name="videoType">
     <video {f:if(condition:'{data.image.0}', then:'poster="{data.image.0.publicUrl}"')}
-                controls crossorigin
-                data-plyr='{
-                    <f:if condition="{asset.properties.autoplay}">autoplay: "true"</f:if>
-                }'
+        controls
+        crossorigin
+        data-plyr='{
+            <f:if condition="{data.properties.autoplay}">autoplay: "true"</f:if>
+        }'
     >
-        <f:for each="{data.assets}" as="asset" iteration="assetIterator">
-            <source src="{asset.publicUrl}" type="{asset.extension}" />
+        <f:for each="{data.media}" as="media">
+            <source src="{media.publicUrl}" type="{media.extension}" />
 
-            <f:if condition="{asset.extension} == 'mp4'">
-                <a href="{asset.publicUrl}" class="btn btn-primary" download>Download</a>
+            <f:if condition="{media.extension} == 'mp4'">
+                <a href="{media.publicUrl}" class="btn btn-primary" download>Download</a>
             </f:if>
         </f:for>
 
-        <f:if condition="{data.media}">
-            <track src="{data.media.0.publicUrl}" kind="captions" srclang="{data.media.0.title}" label="{data.media.0.description}" default>
+        <f:if condition="{data.header_link}">
+            <f:comment>@Todo: Resolve sys_language_uid to shortIsoCode</f:comment>
+            <track src="{f:uri.page(pageUid:'{data.header_link}')}" kind="captions" srclang="{data.sys_language_uid}" label="{data.accessibility_title}" default>
         </f:if>
     </video>
 </f:section>
 
 <f:section name="audioType">
     <audio controls>
-        <f:for each="{data.assets}" as="asset">
-            <source src="{asset.publicUrl}" type="{asset.extension}">
+        <f:for each="{data.media}" as="media">
+            <source src="{media.publicUrl}" type="{media.extension}">
         </f:for>
     </audio>
 </f:section>
 
 <f:section name="embedType">
-    <f:if condition="{data.assets.0.extension} == 'youtube'">
+    <f:if condition="{data.media.0.extension} == 'youtube'">
         <f:then>
-            <div data-type="{data.assets.0.extension}" data-video-id="{threeme:strrchr(string:'{data.assets.0.publicUrl}', needle:'=')}"></div>
+            <div data-type="{data.media.0.extension}" data-video-id="{threeme:strrchr(string:'{data.media.0.publicUrl}', needle:'=')}"></div>
         </f:then>
         <f:else>
-            <div data-type="{data.assets.0.extension}" data-video-id="{threeme:strrchr(string:'{data.assets.0.publicUrl}', needle:'/')}"></div>
+            <div data-type="{data.media.0.extension}" data-video-id="{threeme:strrchr(string:'{data.media.0.publicUrl}', needle:'/')}"></div>
         </f:else>
     </f:if>
 </f:section>

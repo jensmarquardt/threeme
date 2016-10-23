@@ -104,8 +104,11 @@
                     "tx_mask_type",
                     "tx_mask_media",
                     "image",
-                    "assets",
-                    "media"
+                    "media",
+                    "tx_mask_subscription",
+                    "header_link",
+                    "sys_language_uid",
+                    "accessibility_title"
                 ],
                 "labels": [
                     "Allgemein",
@@ -113,7 +116,10 @@
                     "Medien",
                     "Vorschau:",
                     "Medien:",
-                    "Untertitel:"
+                    "Untertitel",
+                    "Video Text Track (WebVTT):",
+                    "",
+                    "Bezeichung:"
                 ]
             }
         },
@@ -126,11 +132,6 @@
             "tx_mask_flexbox": {
                 "tt_content": {
                     "tx_mask_flexbox": "int(11) unsigned DEFAULT '0' NOT NULL"
-                }
-            },
-            "tx_mask_type": {
-                "tt_content": {
-                    "tx_mask_type": "tinytext"
                 }
             },
             "tx_mask_interval": {
@@ -146,6 +147,11 @@
             "tx_mask_panel": {
                 "tt_content": {
                     "tx_mask_panel": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_type": {
+                "tt_content": {
+                    "tx_mask_type": "tinytext"
                 }
             }
         },
@@ -222,48 +228,6 @@
                 "inlineLabel": "tx_mask_title",
                 "inlineIcon": "",
                 "key": "flexbox"
-            },
-            "tx_mask_general": {
-                "config": {
-                    "type": "tab"
-                },
-                "key": "general"
-            },
-            "tx_mask_type": {
-                "config": {
-                    "type": "select",
-                    "renderType": "selectSingle",
-                    "size": "",
-                    "items": [
-                        [
-                            "Lokales Video",
-                            "video"
-                        ],
-                        [
-                            "Lokales Audio",
-                            "audio"
-                        ],
-                        [
-                            "Eingebundenes Video",
-                            "embed"
-                        ]
-                    ],
-                    "foreign_table": "",
-                    "foreign_table_where": "",
-                    "fileFolder": "",
-                    "fileFolder_extList": "",
-                    "fileFolder_recursions": "",
-                    "maxitems": "",
-                    "autoSizeMax": ""
-                },
-                "exclude": "1",
-                "key": "type"
-            },
-            "tx_mask_media": {
-                "config": {
-                    "type": "tab"
-                },
-                "key": "media"
             },
             "tx_mask_carousel": {
                 "config": {
@@ -364,6 +328,54 @@
                 "inlineLabel": "",
                 "inlineIcon": "",
                 "key": "panel"
+            },
+            "tx_mask_general": {
+                "config": {
+                    "type": "tab"
+                },
+                "key": "general"
+            },
+            "tx_mask_type": {
+                "config": {
+                    "type": "select",
+                    "renderType": "selectSingle",
+                    "size": "",
+                    "items": [
+                        [
+                            "Lokales Video",
+                            "video"
+                        ],
+                        [
+                            "Lokales Audio",
+                            "audio"
+                        ],
+                        [
+                            "Eingebundenes Video",
+                            "embed"
+                        ]
+                    ],
+                    "foreign_table": "",
+                    "foreign_table_where": "",
+                    "fileFolder": "",
+                    "fileFolder_extList": "",
+                    "fileFolder_recursions": "",
+                    "maxitems": "",
+                    "autoSizeMax": ""
+                },
+                "exclude": "1",
+                "key": "type"
+            },
+            "tx_mask_media": {
+                "config": {
+                    "type": "tab"
+                },
+                "key": "media"
+            },
+            "tx_mask_subscription": {
+                "config": {
+                    "type": "tab"
+                },
+                "key": "subscription"
             }
         }
     },
