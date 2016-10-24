@@ -20,14 +20,13 @@
  * -------------------------------------------------------------------------------------------------
  */
 .nav-list {
-    margin-bottom: ($line-height-computed * 2);
+    margin-bottom: ($padding-large-vertical * 2);
     @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $threeme-blue, 0);
 
     .level-1 {
         @include threeme-border(0 0 $threeme-border-width 0, $threeme-border-style, $threeme-blue, 0);
 
         > a {
-            padding-left: $padding-base-horizontal;
             color: $brand-primary;
 
             &:focus,
@@ -48,7 +47,6 @@
     .level-2 {
         > a {
             margin-bottom: $padding-xs-vertical;
-            padding: $padding-base-horizontal $padding-small-vertical;
             color: $brand-primary;
 
             @include threeme-border(0 0 $threeme-border-width $padding-base-horizontal, $threeme-border-style, $threeme-blue-light, 0);

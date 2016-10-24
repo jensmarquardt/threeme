@@ -37,7 +37,7 @@
         width: 100%;
         color: $text-color;
         text-align: center;
-        padding: $padding-base-vertical $padding-small-horizontal;
+        padding: $padding-base-vertical $padding-base-horizontal;
         background-color: $threeme-white;
 
         @media(max-width: $screen-xs-min) {
