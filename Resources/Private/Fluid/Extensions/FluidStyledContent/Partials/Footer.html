@@ -1,7 +1,9 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:ce="http://typo3.org/ns/TYPO3/CMS/FluidStyledContent/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:if condition="{data.linkToTop}">
-    <p class="threeme-ui-totop">
-        <ce:link.section name="top"><f:translate key="toTop" extensionName="fluid_styled_content" /><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></ce:link.section>
+    <p class="text-right">
+        <ce:link.section name="threeme-top" class="threeme-ui-totop" title="{f:translate(key:'totop.title', extensionName:'threeme')}">
+            <i class="icon fa" aria-hidden="true"></i>
+        </ce:link.section>
     </p>
 </f:if>
 </html>

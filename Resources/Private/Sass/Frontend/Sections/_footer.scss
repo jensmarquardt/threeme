@@ -33,5 +33,14 @@ footer {
 
     a {
         color: $threeme-white;
+
+        &:hover,
+        &:focus {
+            color: $threeme-white;
+        }
+    }
+
+    .threeme-ui-totop {
+        border-color: $threeme-white;
     }
 }

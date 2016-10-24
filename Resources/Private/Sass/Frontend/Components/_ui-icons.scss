@@ -64,23 +64,60 @@
     margin-right: $padding-xs-horizontal;
 }
 
-// Style image overlayer in case of option "Enlarge on Click" or "FAL Link"
 .threeme-ui-enlarge {
     position: relative;
     float: right;
-    margin: -25px 5px 0 0;
-    padding: 2px;
-    color: $threeme-black;
+    margin: -25px $padding-small-horizontal 0 0;
+    padding: $padding-small-vertical $padding-xs-horizontal;
+    color: $text-color;
     background-color: $threeme-white;
-    @include threeme-border($threeme-border-width, $threeme-border-style, $threeme-white, $border-radius-small);
+    @include threeme-border($threeme-border-width, $threeme-border-style, $threeme-white, $border-radius-base);
 }
 
-// Style option "Append with Link to Top of Page"
 .threeme-ui-totop {
-    margin: ($line-height-computed / 2) 0;
-    text-align: right;
+    padding: $padding-small-vertical $padding-small-horizontal;
+    text-align: center;
+    @include threeme-border($threeme-border-width, $threeme-border-style, $link-color, $border-radius-base);
 
-    span {
-        margin-left: $padding-xs-horizontal;
+    .icon {
+        @extend .fa-chevron-up;
+    }
+
+    &:hover,
+    &:focus {
+        color: $threeme-white;
+        background-color: $link-color;
+    }
+}
+
+.threeme-ui-print {
+    padding: $padding-small-vertical $padding-small-horizontal;
+    text-align: center;
+    @include threeme-border($threeme-border-width, $threeme-border-style, $link-color, $border-radius-base);
+
+    .icon {
+        @extend .fa-print;
+    }
+
+    &:hover,
+    &:focus {
+        color: $threeme-white;
+        background-color: $link-color;
+    }
+}
+
+.threeme-ui-sitemap {
+    padding: $padding-small-vertical $padding-small-horizontal;
+    text-align: center;
+    @include threeme-border($threeme-border-width, $threeme-border-style, $link-color, $border-radius-base);
+
+    .icon {
+        @extend .fa-sitemap;
+    }
+
+    &:hover,
+    &:focus {
+        color: $threeme-white;
+        background-color: $link-color;
     }
 }
