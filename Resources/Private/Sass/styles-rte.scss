@@ -51,7 +51,6 @@
 @import "Frontend/Components/buttons";
 
 // Add RTE link classes to get them visible
-a,
 .internal-link,
 .external-link,
 .download,
@@ -62,4 +61,8 @@ a,
 .fancybox.iframe,
 .fancybox.media {
     color: $link-color;
+}
+
+.btn {
+    color: $threeme-white !important;
 }

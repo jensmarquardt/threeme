@@ -25,11 +25,10 @@
  * -------------------------------------------------------------------------------------------------
  */
 footer {
-    min-height: 300px;
-    margin-top: 80px;
-    padding: (($line-height-computed / 2) * 3) 0;
+    margin-top: ($padding-large-vertical * 4);
+    padding: ($padding-large-vertical * 3) 0;
     color: $threeme-white;
-    @include gradient-vertical($threeme-blue, $gray);
+    @include gradient-vertical($threeme-blue, $gray-light);
 
     a {
         color: $threeme-white;

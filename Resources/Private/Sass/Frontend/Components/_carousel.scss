@@ -45,7 +45,7 @@
 }
 
 .carousel {
-    margin-bottom: $line-height-computed;
+    margin-bottom: ($padding-large-vertical * 2);
     background-color: $threeme-blue;
 
     @media(max-width: $screen-xs-min) {
@@ -109,6 +109,7 @@
         left: 10%;
         right: 10%;
         bottom: 10%;
+        margin: 0;
         padding: 0;
         font-size: $font-size-large;
         text-shadow: none;
@@ -188,7 +189,7 @@
     .carousel {
         top: -70px;
         z-index: 1;
-        margin-bottom: (($line-height-computed / 2) * 4);
+        margin-bottom: ($padding-large-vertical * 4);
 
         @media(max-width: $grid-float-breakpoint-max) {
             margin-bottom: 0;
@@ -196,17 +197,6 @@
 
         &.carousel-banner {
             margin-bottom: 0;
-        }
-    }
-}
-
-// Exception for Backend-Layout 'Home'
-.backend-layout-home {
-    .carousel-banner {
-        margin-bottom: (($line-height-computed / 2) * 16);
-
-        @media(max-width: $grid-float-breakpoint-max) {
-            margin-bottom: (($line-height-computed / 2) * 8);
         }
     }
 }

@@ -28,7 +28,7 @@
 .color-palette {
     position: relative;
     height: 200px;
-    margin-bottom: $line-height-computed;
+    margin-bottom: ($padding-large-vertical * 2);
 
     .desc {
         position: absolute;

@@ -55,3 +55,21 @@ body {
         text-align: justify;
     }
 }
+
+
+// Exception for Backend-Layout 'Home'
+@media (min-width: $screen-md-min) {
+    .backend-layout-home {
+        h1, .h1 {
+            margin-bottom: ($padding-large-vertical * 8);
+        }
+
+        .carousel-banner {
+            margin-bottom: ($padding-large-vertical * 12);
+        }
+
+        .threeme-flexbox {
+            margin-bottom: ($padding-large-vertical * 8);
+        }
+    }
+}

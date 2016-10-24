@@ -44,12 +44,15 @@
             z-index: 9;
             top: 0px;
             width: 100%;
-            padding-top: floor(($navbar-height + $line-height-computed));
             border: 0;
 
             &.collapsing,
             &.in {
                 background-color: $threeme-blue;
+
+                .navbar-nav {
+                    margin-top: floor(($navbar-height + ($padding-large-vertical * 3)));
+                }
             }
         }
     }
