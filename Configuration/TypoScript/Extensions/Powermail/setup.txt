@@ -1,10 +1,10 @@
 # #################################################
 # Version note:
-# Copied TS and Fluid from EXT:powermail 3.4.0
+# Copied TS and Fluid from EXT:powermail 3.7.0
 # #################################################
 
 # Include static from extenstion
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:powermail/Configuration/TypoScript/Main/setup.txt">
 
 # Don't include static "BootstrapClassesAndLayout", use Bootstrap from Threeme instead.
-#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:powermail/Configuration/TypoScript/BootstrapClassesAndLayout/constants.txt">
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:powermail/Configuration/TypoScript/BootstrapClassesAndLayout/setup.txt">

@@ -1,8 +1,6 @@
-{namespace n=GeorgRinger\News\ViewHelpers}
-
-<div class="mediaelement mediaelement-video">
-    <div class="embed-responsive embed-responsive-4by3">
-        <n:falMediaFactory classes="{settings.interfaces.falMedia.video}" element="{mediaElement}" width="{settings.detail.media.video.width}" height="{settings.detail.media.video.height}" />
+<div class="mediaelement" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+    <div class="mediaelement-video">
+        <f:media file="{mediaElement}" width="{settings.detail.media.video.width}" height="{settings.detail.media.video.height}" />
     </div>
 
     <f:if condition="{mediaElement.description}">

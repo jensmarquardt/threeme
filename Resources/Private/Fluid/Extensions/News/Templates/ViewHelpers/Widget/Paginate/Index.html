@@ -1,13 +1,15 @@
-{namespace n=GeorgRinger\News\ViewHelpers}
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+  data-namespace-typo3-fluid="true">
 
 <f:if condition="{configuration.insertAbove}">
-  <f:render section="paginator" arguments="{pagination: pagination,configuration:configuration}" />
+    <f:render section="paginator" arguments="{pagination: pagination,configuration:configuration}" />
 </f:if>
 
 <f:renderChildren arguments="{contentArguments}" />
 
 <f:if condition="{configuration.insertBelow}">
-  <f:render section="paginator" arguments="{pagination: pagination,configuration:configuration}" />
+    <f:render section="paginator" arguments="{pagination: pagination,configuration:configuration}" />
 </f:if>
 
 <f:section name="paginator">
@@ -43,13 +45,13 @@
                   <f:then>
                     <f:widget.link addQueryStringMethod="GET" arguments="{currentPage: pagination.previousPage}">
                       <span aria-hidden="true">&laquo;</span>
-                      <span class="sr-only"><f:translate key="paginate_previous"/></span>
+                      <span class="sr-only"><f:translate key="paginate_previous" /></span>
                     </f:widget.link>
                   </f:then>
                   <f:else>
                     <f:widget.link addQueryStringMethod="GET">
                       <span aria-hidden="true">&laquo;</span>
-                      <span class="sr-only"><f:translate key="paginate_previous"/></span>
+                      <span class="sr-only"><f:translate key="paginate_previous" /></span>
                     </f:widget.link>
                   </f:else>
                 </f:if>
@@ -100,7 +102,7 @@
           <li class="last next">
             <f:widget.link addQueryStringMethod="GET" arguments="{currentPage: pagination.nextPage}">
               <span aria-hidden="true">&raquo;</span>
-              <span class="sr-only"><f:translate key="paginate_next"/></span>
+              <span class="sr-only"><f:translate key="paginate_next" /></span>
             </f:widget.link>
           </li>
         </f:if>
@@ -109,3 +111,4 @@
     </nav>
   </f:if>
 </f:section>
+</html>

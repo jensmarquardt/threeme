@@ -1,101 +1,106 @@
 # #################################################
 # Version note:
-# Copied TS and Fluid from EXT:news 4.3.0
+# Copied TS and Fluid from EXT:news 5.2.0
 # #################################################
 
 # Include static from extenstion
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:news/Configuration/TypoScript/setup.txt">
 
 plugin.tx_news {
-  _LOCAL_LANG {
-    de {
-      related-files = Weiterführende Downloads
-      paginate_next = Nächste Seite
-      paginate_previous = Vorherige Seite
+    view {
+        widget.GeorgRinger\News\ViewHelpers\Widget\PaginateViewHelper.templateRootPath = {$plugin.tx_news.view.templateRootPath}
     }
-  }
-
-  view {
-    widget.GeorgRinger\News\ViewHelpers\Widget\PaginateViewHelper.templateRootPath = {$plugin.tx_news.view.templateRootPath}
-  }
-
-  settings {
-    displayDummyIfNoMedia = 0
-
-    analytics {
-      social {
-        facebookLike = 0
-        facebookShare = 0
-        twitter = 0
-      }
-    }
-
-    link {
-      hrDate = 1
-      hrDate {
-        day = j
-        month = n
-        year = Y
-      }
-    }
-
-    cropMaxCharacters = 300
-    orderBy = datetime
-    orderDirection = desc
-    topNewsFirst = 1
-
-    facebookLocale = {$threeme.language.default.isoCode}
-    googlePlusLocale = {$threeme.language.default.isoCodeShort}
-    disqusLocale = {$threeme.language.default.isoCodeShort}
-
-    detail {
-      showSocialShareButtons = 0
-      media {
-        image {
-          maxWidth = 370
-          maxHeight =
+    
+    _LOCAL_LANG {
+        de {
+            related-files = Weiterführende Downloads
+            paginate_next = Nächste Seite
+            paginate_previous = Vorherige Seite
         }
-        video {
-          width = 400
-          height = 300
+    }
+
+    settings {
+        displayDummyIfNoMedia = 0
+
+        analytics {
+            social {
+                facebookLike = 0
+                facebookShare = 0
+                twitter = 0
+            }
         }
-      }
-    }
 
-    list {
-      media {
-        image {
-          maxWidth = 275
-          maxHeight = 150
+        link {
+            hrDate = 1
+            hrDate {
+                day = j
+                month = n
+                year = Y
+            }
         }
-        dummyImage = typo3conf/ext/news/Resources/Public/Images/dummy-preview-image.png
-      }
 
-      paginate {
-        itemsPerPage = 10
-        insertAbove = 0
-        insertBelow = 1
-        templatePath =
-        prevNextHeaderTags = 1
-        maximumNumberOfLinks = 3
-        overall = 0
-      }
-    }
+        cropMaxCharacters = 300
+        orderBy = datetime
+        orderDirection = desc
+        topNewsFirst = 1
 
-    opengraph {
-      site_name =
-      type = article
-      admins =
-      email =
-      phone_number =
-      fax_number =
-      latitude =
-      longitude =
-      street-address =
-      locality =
-      region =
-      postal-code =
-      country-name =
+        facebookLocale = {$threeme.language.default.isoCode}
+        googlePlusLocale = {$threeme.language.default.isoCodeShort}
+        disqusLocale = {$threeme.language.default.isoCodeShort}
+
+        detail {
+            showSocialShareButtons = 0
+            media {
+                image {
+                    maxWidth = 370
+                    maxHeight =
+                }
+                video {
+                    width = 400
+                    height = 300
+                }
+            }
+        }
+
+        list {
+            media {
+                image {
+                    maxWidth = 275
+                    maxHeight = 150
+                }
+            }
+
+            paginate {
+                itemsPerPage = 10
+                insertAbove = 0
+                insertBelow = 1
+                templatePath =
+                prevNextHeaderTags = 1
+                maximumNumberOfLinks = 3
+                overall = 0
+            }
+        }
+
+        opengraph {
+            site_name = {$plugin.tx_news.opengraph.site_name}
+            type = article
+            admins =
+            email =
+            phone_number =
+            fax_number =
+            latitude =
+            longitude =
+            street-address =
+            locality =
+            region =
+            postal-code =
+            country-name =
+
+            twitter {
+                card = {$plugin.tx_news.opengraph.twitter.card}
+                site = {$plugin.tx_news.opengraph.twitter.site}
+                creator = {$plugin.tx_news.opengraph.twitter.creator}
+            }
+        }
     }
-  }
 }
