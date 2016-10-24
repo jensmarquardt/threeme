@@ -1,5 +1,4 @@
-{namespace n=GeorgRinger\News\ViewHelpers}
-
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <div class="news-related news-related-files">
     <h4>
         <f:translate key="related-files" />
@@ -9,7 +8,7 @@
             <li>
                 <div class="row">
                     <div class="col-xs-3 col-sm-2 col-md-1">
-                        <img src="{f:uri.resource(path: 'Images/Frontend/Fileicon/{file.originalResource.originalFile.properties.extension}.png', extensionName: 'threeme')}" alt="">
+                        <img src="{f:uri.resource(path: 'Images/Frontend/Fileicon/{file.originalResource.originalFile.properties.extension}.svg', extensionName: 'threeme')}" alt="">
                     </div>
 
                     <div class="col-xs-9 col-sm-7 col-md-9">
@@ -31,7 +30,7 @@
                     </div>
 
                     <div class="col-xs-12 col-sm-3 col-md-2">
-                        <a href="{file.originalResource.publicUrl -> f:format.htmlspecialchars()}" class="download btn btn-primary btn-sm" target="_blank">
+                        <a href="{file.originalResource.publicUrl -> f:format.htmlspecialchars()}" class="download btn btn-primary" target="_blank">
                             <i class="fa fa-download" aria-hidden="true"></i> Download
                         </a>
                     </div>
@@ -40,3 +39,4 @@
         </f:for>
     </ul>
 </div>
+</html>

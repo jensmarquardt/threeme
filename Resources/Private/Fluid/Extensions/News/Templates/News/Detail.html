@@ -8,57 +8,57 @@
     <f:if condition="{newsItem}">
         <f:then>
             <div class="row">
-                <n:format.nothing>
-                    <n:excludeDisplayedNews newsItem="{newsItem}" />
-                    <f:if condition="{newsItem.alternativeTitle}">
-                        <f:then>
-                            <n:titleTag>
-                                <f:format.htmlentitiesDecode>{newsItem.alternativeTitle}</f:format.htmlentitiesDecode>
-                            </n:titleTag>
-                        </f:then>
-                        <f:else>
-                            <n:titleTag>
-                                <f:format.htmlentitiesDecode>{newsItem.title}</f:format.htmlentitiesDecode>
-                            </n:titleTag>
-                        </f:else>
-                    </f:if>
-                    <f:render partial="Detail/Opengraph" arguments="{newsItem: newsItem, settings:settings}" />
-                </n:format.nothing>
-
-                <f:if condition="{settings.detail.showPrevNext}">
-                    <n:simplePrevNext pidList="{newsItem.pid}" news="{newsItem}" as="paginated" sortField="datetime">
-                        <f:if condition="{paginated}">
-                            <ul class="pager">
-                                <f:if condition="{paginated.prev}">
-                                    <li class="previous">
-                                        <n:link newsItem="{paginated.prev}" settings="{settings}">
-                                            <span aria-hidden="true">&larr; </span>{paginated.prev.title}
-                                        </n:link>
-                                    </li>
-                                </f:if>
-                                <f:if condition="{paginated.next}">
-                                    <li class="next">
-                                        <n:link newsItem="{paginated.next}" settings="{settings}" class="next">
-                                            {paginated.next.title} <span aria-hidden="true"> &rarr;</span>
-                                        </n:link>
-                                    </li>
-                                </f:if>
-                            </ul>
-                        </f:if>
-                    </n:simplePrevNext>
-                </f:if>
-
-                <h2 itemprop="headline">
-                    <span class="news-date">
-                        <time datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
-                            <f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
-                            <meta itemprop="datePublished" content="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}" />
-                        </time>
-                    </span>
-                    {newsItem.title}
-                </h2>
-
                 <div class="{f:if(condition:'{newsItem.falMedia}', then:'col-sm-8', else:'col-sm-12')}">
+                    <n:format.nothing>
+                        <n:excludeDisplayedNews newsItem="{newsItem}" />
+                        <f:if condition="{newsItem.alternativeTitle}">
+                            <f:then>
+                                <n:titleTag>
+                                    <f:format.htmlentitiesDecode>{newsItem.alternativeTitle}</f:format.htmlentitiesDecode>
+                                </n:titleTag>
+                            </f:then>
+                            <f:else>
+                                <n:titleTag>
+                                    <f:format.htmlentitiesDecode>{newsItem.title}</f:format.htmlentitiesDecode>
+                                </n:titleTag>
+                            </f:else>
+                        </f:if>
+                        <f:render partial="Detail/Opengraph" arguments="{newsItem: newsItem, settings:settings}" />
+                    </n:format.nothing>
+
+                    <f:if condition="{settings.detail.showPrevNext}">
+                        <n:simplePrevNext pidList="{newsItem.pid}" news="{newsItem}" as="paginated" sortField="datetime">
+                            <f:if condition="{paginated}">
+                                <ul class="pager">
+                                    <f:if condition="{paginated.prev}">
+                                        <li class="previous">
+                                            <n:link newsItem="{paginated.prev}" settings="{settings}">
+                                                <span aria-hidden="true">&larr; </span>{paginated.prev.title}
+                                            </n:link>
+                                        </li>
+                                    </f:if>
+                                    <f:if condition="{paginated.next}">
+                                        <li class="next">
+                                            <n:link newsItem="{paginated.next}" settings="{settings}" class="next">
+                                                {paginated.next.title} <span aria-hidden="true"> &rarr;</span>
+                                            </n:link>
+                                        </li>
+                                    </f:if>
+                                </ul>
+                            </f:if>
+                        </n:simplePrevNext>
+                    </f:if>
+
+                    <h2 itemprop="headline">
+                        <span class="news-date">
+                            <time datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+                                <f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
+                                <meta itemprop="datePublished" content="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}" />
+                            </time>
+                        </span>
+                        {newsItem.title}
+                    </h2>
+
                     <f:if condition="{newsItem.teaser}">
                         <div class="teaser-text" itemprop="description">
                             <f:format.html>{newsItem.teaser}</f:format.html>
@@ -66,7 +66,6 @@
                     </f:if>
 
                     <f:if condition="{newsItem.contentElements}">
-                        <!-- content elements -->
                         <f:cObject typoscriptObjectPath="lib.tx_news.contentElementRendering">{newsItem.contentElementIdList}</f:cObject>
                     </f:if>
 
@@ -134,25 +133,7 @@
 
                 <f:comment>FAL related files</f:comment>
                 <f:if condition="{newsItem.falRelatedFiles}">
-                    <div class="news-related news-related-files">
-                        <h4>
-                            <f:translate key="related-files" />
-                        </h4>
-                        <ul>
-                            <f:for each="{newsItem.falRelatedFiles}" as="relatedFile">
-                                <li>
-                                    <span class="news-related-files-link">
-                                        <a href="{relatedFile.originalResource.publicUrl -> f:format.htmlspecialchars()}" target="_blank">
-                                            {f:if(condition:relatedFile.originalResource.title, then:relatedFile.originalResource.title, else:relatedFile.originalResource.name)}
-                                        </a>
-                                    </span>
-                                    <span class="news-related-files-size">
-                                        {relatedFile.originalResource.size -> f:format.bytes()}
-                                    </span>
-                                </li>
-                            </f:for>
-                        </ul>
-                    </div>
+                    <f:render partial="Detail/FalRelatedFiles" arguments="{falRelatedFiles:newsItem.falRelatedFiles, settings:settings}" />
                 </f:if>
 
                 <f:comment>Related links</f:comment>
