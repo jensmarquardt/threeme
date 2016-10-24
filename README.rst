@@ -3,7 +3,7 @@ Threeme Distribution
 ========================================================================================================================
 
 
-About the Threeme Distribution
+About the distribution
 ------------------------------
 
 Threeme is free and our contribution to the TYPO3 community.
@@ -16,6 +16,11 @@ but offers strong defaults in a flexible structure in order to efficiently imple
 
 Threeme works standalone to minimize security risks and dependencies to third-party extensions.
 However, it provides configurations and examples for the extensions Mask, News, Powermail and RealUrl.
+
+Hint
+------------------------------
+**The version 3.0.0 will be the first for public usage**
+All versions **below** 3.0.0 are beta and strongly in development!
 
 
 ========================================================================================================================
@@ -30,7 +35,7 @@ to the design of website and content as well as the configuration of TYPO3.
 
 If possible, only Fluid and SASS will be used, TypoScript will be avoided by a Constants set.
 Templates for "standard" extensions and examples for the integration of new elements and content complete the picture.
-These "strong defaults" avoid constantly reinventing the wheel, so that more time for the implementation of complex requirements remains.
+These strong defaults avoid constantly reinventing the wheel, so that more time for the implementation of complex requirements remains.
 
 Aim: The developer should be able to concentrate on the implementation of the design and not on TYPO3.
 
@@ -62,6 +67,8 @@ Also for RealURL there is a minimal configuration, which can be used.
 The distribution works with SASS instead of pure CSS, so the SCSS can be compiled directly on the server using the extension WS_SCSS.
 If you prefer to keep the full control, a config.rb can be used for compiling via SASS or Compass.
 
+**Read about preparation first, then simply install Threeme by the Extension Manager**
+
 Preparation
 ------------------------------
 
@@ -88,7 +95,6 @@ Activate first, then install Threeme.
 Extension Mask
 ------------------------------
 
-**If the Extension Mask is to be used:**
 Before Threeme is installed, the paths to its Mask configuration must be known.
 This could be done in the Extension Manager or directly via the Backend module of Mask.
 The following paths have to be set:
@@ -105,10 +111,6 @@ If you want to get your RealURL configuration from Threeme,
 you can add the following in the Extension Manager to RealURL:
 
 * Configuration path: typo3conf/ext/threeme/Resources/Private/Php/Extensions/Realurl/Configuration.php
-
-Installation
-------------------------------
-**Simply install Threeme by the Extension Manager**
 
 
 ========================================================================================================================
