@@ -36,21 +36,35 @@
     >
         <div class="carousel-inner" role="listbox">
             <f:for each="{data.tx_mask_item}" as="dataItem" key="dataKey" iteration="dataIterator">
-
                 <figure class="item {f:if(condition:'{dataIterator.isFirst}', then:'active')}">
                     <f:image src="{dataItem.tx_mask_image.0.uid}" alt="{dataItem.tx_mask_image.0.alternative}" title="{dataItem.tx_mask_image.0.title}" treatIdAsReference="1" width="1280" />
-
                     <figcaption class="carousel-caption">
                         <f:if condition="{dataItem.tx_mask_title}">
-                            <h3 class="carousel-caption-title">{dataItem.tx_mask_title}</h3>
+                            <h3 class="carousel-caption-title">
+                                <f:if condition="{dataItem.tx_mask_link}">
+                                    <f:then>
+                                            <f:link.page pageUid="{dataItem.tx_mask_link}">{dataItem.tx_mask_title}</f:link.page>
+                                    </f:then>
+                                    <f:else>
+                                        {dataItem.tx_mask_title}
+                                    </f:else>
+                                </f:if>
+                            </h3>
                             <f:if condition="{dataItem.tx_mask_caption}">
                                 <hr class="carousel-caption-divider hidden-xs">
                             </f:if>
                         </f:if>
-                        <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{dataItem.tx_mask_caption}</f:format.html>
+
+                        <f:if condition="{dataItem.tx_mask_link}">
+                            <f:then>
+                                    <f:link.page pageUid="{dataItem.tx_mask_link}">{dataItem.tx_mask_caption}</f:link.page>
+                            </f:then>
+                            <f:else>
+                                {dataItem.tx_mask_caption}
+                            </f:else>
+                        </f:if>
                     </figcaption>
                 </figure>
-
             </f:for>
         </div>
 
@@ -75,21 +89,35 @@
 <f:section name="banner">
     <f:alias map="{dataItem: data.tx_mask_item.0}">
         <section role="complementary" class="carousel carousel-banner">
-
             <figure class="item {f:if(condition:'{dataIterator.isFirst}', then:'active')}">
                 <f:image class="img-responsive" src="{dataItem.tx_mask_image.0.uid}" alt="{dataItem.tx_mask_image.0.alternative}" title="{dataItem.tx_mask_image.0.title}" treatIdAsReference="1" width="1280" />
-
                 <figcaption class="carousel-caption">
                     <f:if condition="{dataItem.tx_mask_title}">
-                        <h3 class="carousel-caption-title">{dataItem.tx_mask_title}</h3>
+                        <h3 class="carousel-caption-title">
+                            <f:if condition="{dataItem.tx_mask_link}">
+                                <f:then>
+                                        <f:link.page pageUid="{dataItem.tx_mask_link}">{dataItem.tx_mask_title}</f:link.page>
+                                </f:then>
+                                <f:else>
+                                    {dataItem.tx_mask_title}
+                                </f:else>
+                            </f:if>
+                        </h3>
                         <f:if condition="{dataItem.tx_mask_caption}">
                             <hr class="carousel-caption-divider">
                         </f:if>
                     </f:if>
-                    <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{dataItem.tx_mask_caption}</f:format.html>
+
+                    <f:if condition="{dataItem.tx_mask_link}">
+                        <f:then>
+                                <f:link.page pageUid="{dataItem.tx_mask_link}">{dataItem.tx_mask_caption}</f:link.page>
+                        </f:then>
+                        <f:else>
+                            {dataItem.tx_mask_caption}
+                        </f:else>
+                    </f:if>
                 </figcaption>
             </figure>
-
         </section>
     </f:alias>
 </f:section>

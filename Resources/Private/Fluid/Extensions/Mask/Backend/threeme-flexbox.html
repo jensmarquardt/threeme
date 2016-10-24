@@ -1,0 +1,27 @@
+{namespace threeme=THREEME\Threeme\ViewHelpers}
+
+<threeme:be.editLink element="{data}">
+    <div class="row">
+        <div class="col-sm-12">
+            <f:if condition="{data.header}">
+                <h4>{data.header}</h4>
+            </f:if>
+        </div>
+
+        <f:for each="{data.tx_mask_flexbox}" as="dataItem" key="dataKey" iteration="dataIterator">
+            <div class="col-sm-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        {dataItem.tx_mask_title}
+                    </div>
+                    <div class="panel-body">
+                        <f:image image="{dataItem.tx_mask_image.0}" class="img-responsive" />
+                    </div>
+                    <div class="panel-footer">
+                        {dataItem.tx_mask_bodytext}
+                    </div>
+                </div>
+            </div>
+        </f:for>
+    </div>
+</threeme:be.editLink>

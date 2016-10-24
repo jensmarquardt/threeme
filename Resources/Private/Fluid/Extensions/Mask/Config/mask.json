@@ -23,7 +23,7 @@
                     "Elemente"
                 ],
                 "options": {
-                    "7": "rte"
+                    "8": "rte"
                 }
             },
             "threeme-flexbox": {
@@ -676,6 +676,11 @@
                     "tx_mask_title": "tinytext"
                 }
             },
+            "tx_mask_link": {
+                "tx_mask_item": {
+                    "tx_mask_link": "tinytext"
+                }
+            },
             "tx_mask_caption": {
                 "tx_mask_item": {
                     "tx_mask_caption": "text"
@@ -710,6 +715,38 @@
                 "inlineParent": "tx_mask_item",
                 "label": "Titel:",
                 "key": "title"
+            },
+            "tx_mask_link": {
+                "config": {
+                    "type": "input",
+                    "wizards": {
+                        "_PADDING": "2",
+                        "link": {
+                            "type": "popup",
+                            "title": "Link",
+                            "icon": "EXT:backend\/Resources\/Public\/Images\/FormFieldWizard\/wizard_link.gif",
+                            "module": {
+                                "name": "wizard_link",
+                                "urlParameters": {
+                                    "mode": "wizard"
+                                }
+                            },
+                            "JSopenParams": "height=300,width=500,status=0,menubar=0,scrollbars=1",
+                            "params": {
+                                "blindLinkOptions": "",
+                                "allowedExtensions": ""
+                            }
+                        }
+                    },
+                    "eval": "",
+                    "default": "",
+                    "placeholder": "",
+                    "size": ""
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_item",
+                "label": "Link:",
+                "key": "link"
             },
             "tx_mask_caption": {
                 "config": {
