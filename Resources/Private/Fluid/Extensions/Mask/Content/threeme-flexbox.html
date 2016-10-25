@@ -3,19 +3,19 @@
 
         <f:for each="{data.tx_mask_flexbox}" as="dataItem" key="dataKey" iteration="dataIterator">
 
-            <div class="threeme-flexbox-item threeme-align-{dataItem.tx_mask_layout}">
+            <div class="tfb-item tfb-column-{data.tx_mask_columns} threeme-align-{dataItem.tx_mask_layout}">
                 <f:if condition="{dataItem.tx_mask_image}">
                     <f:link.page pageUid="{dataItem.tx_mask_link}">
-                        <f:image image="{dataItem.tx_mask_image.0}" alt="{dataItem.tx_mask_image.0.alternative}" title="{dataItem.tx_mask_image.0.title}" class="img-responsive" />
+                        <f:image image="{dataItem.tx_mask_image.0}" alt="{dataItem.tx_mask_image.0.alternative}" title="{dataItem.tx_mask_image.0.title}" class="tfb-image img-responsive" />
                     </f:link.page>
                 </f:if>
                 <f:if condition="{dataItem.tx_mask_title}">
-                    <h3 class="tfb-title">
+                    <h3 class="tfb-header">
                         <f:link.page pageUid="{dataItem.tx_mask_link}">{dataItem.tx_mask_title}</f:link.page>
                     </h3>
                 </f:if>
                 <f:if condition="{dataItem.tx_mask_bodytext}">
-                    <div class="tfb-body threeme-align-103">
+                    <div class="tfb-bodytext threeme-align-103">
                         <f:format.html parseFuncTSPath="lib.parseFunc_RTE"><f:link.page pageUid="{dataItem.tx_mask_link}">{dataItem.tx_mask_bodytext}</f:link.page></f:format.html>
                     </div>
                 </f:if>

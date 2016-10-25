@@ -45,11 +45,11 @@ class ConstantViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHe
      * = Examples =
      *
      * <code title="Example">
-     * <threeme:constant constant="threeme.configuration.baseurl" />
+     * <threeme:constant constant="threeme.frontend.pidHome" />
      * </code>
      * <output>
-     * http://yourdomain.tld/
-     * (depending on your domain)
+     * 50
+     * (depending on your constant)
      * </output>
      */
     public function render($constant = '')
