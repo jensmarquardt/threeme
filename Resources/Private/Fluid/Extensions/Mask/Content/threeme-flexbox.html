@@ -3,7 +3,7 @@
 
         <f:for each="{data.tx_mask_flexbox}" as="dataItem" key="dataKey" iteration="dataIterator">
 
-            <div class="tfb-item tfb-column-{data.tx_mask_columns} threeme-align-{dataItem.tx_mask_layout}">
+            <div class="tfb-item tfb-column-{data.tx_mask_columns} tfb-layout-{dataItem.tx_mask_layout}">
                 <f:if condition="{dataItem.tx_mask_image}">
                     <f:link.page pageUid="{dataItem.tx_mask_link}">
                         <f:image image="{dataItem.tx_mask_image.0}" alt="{dataItem.tx_mask_image.0.alternative}" title="{dataItem.tx_mask_image.0.title}" class="tfb-image img-responsive" />
@@ -15,12 +15,13 @@
                     </h3>
                 </f:if>
                 <f:if condition="{dataItem.tx_mask_bodytext}">
-                    <div class="tfb-bodytext threeme-align-103">
+                    <div class="tfb-bodytext">
                         <f:format.html parseFuncTSPath="lib.parseFunc_RTE"><f:link.page pageUid="{dataItem.tx_mask_link}">{dataItem.tx_mask_bodytext}</f:link.page></f:format.html>
                     </div>
                 </f:if>
             </div>
 
+<f:comment>
             <f:if condition="{dataIterator.cycle} % {data.tx_mask_columns}">
                 <f:then>
                 </f:then>
@@ -35,7 +36,7 @@
                     </f:if>
                 </f:else>
             </f:if>
-
+</f:comment>
         </f:for>
     </div>
 </div>
