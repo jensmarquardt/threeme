@@ -32,7 +32,7 @@
         }'
     >
         <f:for each="{data.assets}" as="file">
-            <source src="{file.publicUrl}" type="{file.extension}" />
+            <source src="{file.publicUrl}" type="{file.mimeType}" />
 
             <f:if condition="{file.extension} == 'mp4'">
                 <a href="{file.publicUrl}" class="btn btn-primary" download>Download</a>
@@ -49,7 +49,7 @@
 <f:section name="audioType">
     <audio controls>
         <f:for each="{data.assets}" as="file">
-            <source src="{file.publicUrl}" type="{file.extension}">
+            <source src="{file.publicUrl}" type="{file.mimeType}">
         </f:for>
     </audio>
 </f:section>
