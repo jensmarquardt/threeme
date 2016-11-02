@@ -183,20 +183,3 @@
     }
 
 }
-
-// Exception for main carousel on page top
-.threeme-carousel {
-    .carousel {
-        top: -70px;
-        z-index: 1;
-        margin-bottom: ($padding-large-vertical * 4);
-
-        @media(max-width: $grid-float-breakpoint-max) {
-            margin-bottom: 0;
-        }
-
-        &.carousel-banner {
-            margin-bottom: 0;
-        }
-    }
-}

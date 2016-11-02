@@ -73,3 +73,22 @@ body {
         }
     }
 }
+
+
+// Exception for main carousel on page top
+.threeme-carousel {
+    .carousel {
+        top: -70px;
+        z-index: 1;
+        margin-bottom: ($padding-large-vertical * 4);
+
+        @media(max-width: $grid-float-breakpoint-max) {
+            margin-bottom: 0;
+        }
+
+        &.carousel-banner {
+            margin-bottom: 0;
+            @include threeme-border(0 0 $threeme-border-width 0, $threeme-border-style, $gray, 0);
+        }
+    }
+}

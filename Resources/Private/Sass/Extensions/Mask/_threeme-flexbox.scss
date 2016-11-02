@@ -63,12 +63,17 @@
         }
 
         .tfb-image {
-            display: inline-block; // Set to inline-block for alignment
             margin-bottom: $padding-large-vertical;
+            text-align: center;
+
+            img {
+                display: inline-block; // Set to inline-block for alignment
+            }
         }
 
-//        .tfb-header {
-//        }
+        .tfb-header {
+            text-align: center;
+        }
 
         .tfb-bodytext {
             @include threeme-hyphenate();

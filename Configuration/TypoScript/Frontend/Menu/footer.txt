@@ -1,7 +1,7 @@
 menu.footer = HMENU
 menu.footer {
     special = list
-    special.value = {$threeme.frontend.pidSitemap} , {$threeme.frontend.pidImprint} , {$threeme.frontend.pidPrivacy}
+    special.value = {$threeme.frontend.pidImprint} , {$threeme.frontend.pidPrivacy} , {$threeme.frontend.pidSitemap}
 
     1 = TMENU
     1 {
