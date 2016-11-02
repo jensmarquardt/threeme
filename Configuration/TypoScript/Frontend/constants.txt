@@ -1,7 +1,7 @@
 # customcategory=Threeme=Threeme Distribution
 # customsubcategory=Meta=Meta tags specific constants
 # customsubcategory=Framework=CSS framework specific constants
-# customsubcategory=Website=Frontend specific constants
+# customsubcategory=Frontend=Website specific constants
 # customsubcategory=Menu=Menu specific constants
 
 threeme {
