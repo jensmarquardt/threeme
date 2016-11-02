@@ -39,7 +39,13 @@ footer {
         }
     }
 
-    .threeme-ui-totop {
-        border-color: $threeme-white;
+    .container {
+        position: relative;
+
+        .threeme-ui-totop {
+            position: absolute;
+            right: ($grid-gutter-width / 2);
+            border-color: $threeme-white;
+        }
     }
 }

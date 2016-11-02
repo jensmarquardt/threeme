@@ -6,7 +6,7 @@
             <f:for each="{files}" as="file" iteration="fileIterator">
                 <li>
                     <div class="row">
-                        <div class="col-xs-3 col-sm-2 col-md-1">
+                        <div class="col-xs-2 col-sm-2 col-md-1">
                             <f:if condition="{data.uploads_type} == 1">
                                 <f:render section="fileicon" arguments="{extension: file.extension}" />
                             </f:if>
@@ -25,7 +25,7 @@
                             </f:if>
                         </div>
 
-                        <div class="col-xs-9 col-sm-7 col-md-9">
+                        <div class="col-xs-10 col-sm-7 col-md-9">
                             <a href="{file.publicUrl}">
                                 <span class="ce-uploads-fileName">
                                     {f:if(condition:file.title, then:file.title, else:file.name)}
@@ -47,7 +47,7 @@
                             </f:if>
                         </div>
 
-                        <div class="col-xs-12 col-sm-3 col-md-2">
+                        <div class="col-xs-offset-2 col-xs-10 col-sm-offset-0 col-sm-3 col-md-2">
                             <a href="{file.publicUrl}" class="download btn btn-primary">
                                 <i class="fa fa-download" aria-hidden="true"></i> Download
                             </a>
