@@ -6,14 +6,12 @@
             <f:for each="{files}" as="file" iteration="fileIterator">
                 <li>
                     <div class="row">
-                        <f:if condition="{data.uploads_type} == 1">
-                            <div class="col-xs-3 col-sm-2 col-md-1">
-                                <img src="{f:uri.resource(path: 'Images/Frontend/Fileicon/{file.extension}.svg', extensionName: 'threeme')}" width="25" alt="">
-                            </div>
-                        </f:if>
+                        <div class="col-xs-3 col-sm-2 col-md-1">
+                            <f:if condition="{data.uploads_type} == 1">
+                                <f:render section="fileicon" arguments="{extension: file.extension}" />
+                            </f:if>
 
-                        <f:if condition="{data.uploads_type} == 2">
-                            <div class="col-xs-3 col-sm-2 col-md-1">
+                            <f:if condition="{data.uploads_type} == 2">
                                 <f:if condition="{f:uri.image(src: 'file:{f:if(condition: file.originalFile, then: \'file:{file.originalFile.uid}\', else: \'file:{file.uid}\')}')} != '/'">
                                     <f:then>
                                         <a href="{file.publicUrl}">
@@ -21,11 +19,11 @@
                                         </a>
                                     </f:then>
                                     <f:else>
-                                        <img src="{f:uri.resource(path: 'Images/Frontend/Fileicon/{file.extension}.svg', extensionName: 'threeme')}" width="25" alt="">
+                                        <f:render section="fileicon" arguments="{extension: file.extension}" />
                                     </f:else>
                                 </f:if>
-                            </div>
-                        </f:if>
+                            </f:if>
+                        </div>
 
                         <div class="col-xs-9 col-sm-7 col-md-9">
                             <a href="{file.publicUrl}">
@@ -59,5 +57,91 @@
             </f:for>
         </ul>
     </f:if>
+</f:section>
+
+<f:section name="fileicon">
+    <f:switch expression="{extension}">
+        <f:case value="xls">
+            <i class="fa fa-3x fa-file-excel-o" aria-hidden="true"></i>
+        </f:case>
+        <f:case value="xlsx">
+            <i class="fa fa-3x fa-file-excel-o" aria-hidden="true"></i>
+        </f:case>
+        <f:case value="doc">
+            <i class="fa fa-3x fa-file-word-o" aria-hidden="true"></i>
+        </f:case>
+        <f:case value="docx">
+            <i class="fa fa-3x fa-file-word-o" aria-hidden="true"></i>
+        </f:case>
+        <f:case value="ppt">
+            <i class="fa fa-3x fa-file-word-o" aria-hidden="true"></i>
+        </f:case>
+        <f:case value="pptx">
+            <i class="fa fa-3x fa-file-powerpoint-o" aria-hidden="true"></i>
+        </f:case>
+
+        <f:case value="pdf">
+            <i class="fa fa-3x fa-file-pdf-o" aria-hidden="true"></i>
+        </f:case>
+        <f:case value="zip">
+            <i class="fa fa-3x fa-file-zip-o" aria-hidden="true"></i>
+        </f:case>
+
+        <f:case value="png">
+            <i class="fa fa-3x fa-file-image-o" aria-hidden="true"></i>
+        </f:case>
+        <f:case value="gif">
+            <i class="fa fa-3x fa-file-image-o" aria-hidden="true"></i>
+        </f:case>
+        <f:case value="jpg">
+            <i class="fa fa-3x fa-file-image-o" aria-hidden="true"></i>
+        </f:case>
+        <f:case value="jpeg">
+            <i class="fa fa-3x fa-file-image-o" aria-hidden="true"></i>
+        </f:case>
+        <f:case value="svg">
+            <i class="fa fa-3x fa-file-image-o" aria-hidden="true"></i>
+        </f:case>
+
+        <f:case value="html">
+            <i class="fa fa-3x fa-file-code-o" aria-hidden="true"></i>
+        </f:case>
+        <f:case value="htm">
+            <i class="fa fa-3x fa-file-code-o" aria-hidden="true"></i>
+        </f:case>
+        <f:case value="css">
+            <i class="fa fa-3x fa-file-code-o" aria-hidden="true"></i>
+        </f:case>
+        <f:case value="js">
+            <i class="fa fa-3x fa-file-code-o" aria-hidden="true"></i>
+        </f:case>
+        <f:case value="xml">
+            <i class="fa fa-3x fa-file-code-o" aria-hidden="true"></i>
+        </f:case>
+
+        <f:case value="txt">
+            <i class="fa fa-3x fa-file-text-o" aria-hidden="true"></i>
+        </f:case>
+        <f:case value="ts">
+            <i class="fa fa-3x fa-file-text-o" aria-hidden="true"></i>
+        </f:case>
+        <f:case value="csv">
+            <i class="fa fa-3x fa-file-text-o" aria-hidden="true"></i>
+        </f:case>
+
+        <f:case value="mp3">
+            <i class="fa fa-3x fa-file-audio-o" aria-hidden="true"></i>
+        </f:case>
+        <f:case value="mp4">
+            <i class="fa fa-3x fa-file-video-o" aria-hidden="true"></i>
+        </f:case>
+        <f:case value="webm">
+            <i class="fa fa-3x fa-file-video-o" aria-hidden="true"></i>
+        </f:case>
+
+        <f:case default="true">
+            <i class="fa fa-3x fa-file-o" aria-hidden="true"></i>
+        </f:case>
+    </f:switch>
 </f:section>
 </html>
