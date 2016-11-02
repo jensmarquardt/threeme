@@ -1,8 +1,8 @@
 <?php
 if (!defined('TYPO3_MODE')) { die('Access denied.'); }
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Frontend', 'Threeme - Enable Threeme Distribution');
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Extensions', 'Threeme - Enable 3rd-Party Extension Configuration');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Frontend', 'Threeme - Enable Distribution');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Extensions', 'Threeme - Enable 3rd-Party Extensions');
 
 if (TYPO3_MODE == 'BE') {
     // Override page icon
