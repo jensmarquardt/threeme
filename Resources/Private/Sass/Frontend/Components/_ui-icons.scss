@@ -28,13 +28,13 @@
 // Style RTE classes
 .internal-link {
     .threeme-ui-internal-link {
-        @extend .fa-link;
+        @extend .fa-chevron-right;
     }
 }
 
 .external-link {
     .threeme-ui-external-link {
-        @extend .fa-external-link;
+        @extend .fa-external-link-square;
     }
 }
 
