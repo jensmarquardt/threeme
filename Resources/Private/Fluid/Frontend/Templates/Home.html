@@ -1,8 +1,6 @@
 <f:layout name="Website" />
 
 <f:section name="Website">
-    <f:render partial="Header" arguments="{_all}" />
-
     <!--TYPO3SEARCH_begin-->
     <div class="threeme-carousel">
         <f:cObject typoscriptObjectPath="lib.threemeDynamicContent" data="{pageUid: '{data.uid}', colPos: '200'}"/>
@@ -34,6 +32,4 @@
         </div>
     </main>
     <!--TYPO3SEARCH_end-->
-
-    <f:render partial="Footer" arguments="{_all}" />
 </f:section>

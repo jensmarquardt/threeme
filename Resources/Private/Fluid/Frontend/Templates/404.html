@@ -1,7 +1,9 @@
 <f:layout name="Website" />
 
 <f:section name="Website">
-    <f:render partial="Header" arguments="{_all}" />
+    <div class="threeme-carousel">
+        <f:cObject typoscriptObjectPath="lib.threemeDynamicContentSlide" data="{pageUid: '{data.uid}', colPos: '200'}"/>
+    </div>
 
     <div class="container">
         <div class="row">
@@ -10,6 +12,4 @@
             </main>
         </div>
     </div>
-
-    <f:render partial="Footer" arguments="{_all}" />
 </f:section>
