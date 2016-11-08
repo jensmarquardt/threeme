@@ -48,7 +48,7 @@ mod.web_layout.BackendLayouts {
                                 name = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.colPos.altLabels.302
                                 # Columns 100+ = header, 200+ = Content, 300+ = Footer
                                 colPos = 302
-                                colspan = 2
+                                colspan = 1
                             }
                         }
                     }
