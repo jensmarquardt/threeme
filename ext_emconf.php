@@ -1,10 +1,10 @@
 <?php
-$EM_CONF[$_EXTKEY] = array(
+$EM_CONF['threeme'] = array(
     'title' => 'Threeme Distribution',
     'description' => 'Kickstart your TYPO3 project with Threeme. The distribution focus on rapid Frontend development and preconfigurated Backend with low entrylevel for editors.',
     'category' => 'distribution',
     'shy' => 0,
-    'version' => '2.3.0',
+    'version' => '3.0.0pre',
     'dependencies' => '',
     'conflicts' => '',
     'priority' => '',
