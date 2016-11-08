@@ -1,8 +1,8 @@
 # Comment in the extensions you need
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:threeme/Configuration/TypoScript/Extensions/FluidStyledContent/setup.txt">
 
-#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:threeme/Configuration/TypoScript/Extensions/FeLogin/setup.txt">
-#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:threeme/Configuration/TypoScript/Extensions/IndexedSearch/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:threeme/Configuration/TypoScript/Extensions/FeLogin/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:threeme/Configuration/TypoScript/Extensions/IndexedSearch/setup.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:threeme/Configuration/TypoScript/Extensions/Mask/setup.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:threeme/Configuration/TypoScript/Extensions/News/setup.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:threeme/Configuration/TypoScript/Extensions/Powermail/setup.txt">
