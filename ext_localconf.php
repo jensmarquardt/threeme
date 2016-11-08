@@ -2,13 +2,13 @@
 if (!defined('TYPO3_MODE')) { die('Access denied.'); }
 
 // Add BackendLayout container
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="DIR:EXT:' . $_EXTKEY . '/Configuration/TSconfig/BackendLayout" extensions="txt,ts">');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="DIR:EXT:threeme/Configuration/TSconfig/BackendLayout" extensions="txt,ts">');
 
 // Add PageTs container
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="DIR:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Page" extensions="txt,ts">');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="DIR:EXT:threeme/Configuration/TSconfig/Page" extensions="txt,ts">');
 
 // Add UserTs container
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('<INCLUDE_TYPOSCRIPT: source="DIR:EXT:' . $_EXTKEY . '/Configuration/TSconfig/User" extensions="txt,ts">');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('<INCLUDE_TYPOSCRIPT: source="DIR:EXT:threeme/Configuration/TSconfig/User" extensions="txt,ts">');
 
 // Register cache
 if (!is_array($TYPO3_CONF_VARS['SYS']['caching']['cacheConfigurations']['threeme_cache']))
