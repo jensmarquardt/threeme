@@ -32,7 +32,7 @@
                         <f:image image="{dataItem.tx_mask_image.0}" class="img-responsive" />
                     </div>
                     <div class="panel-footer">
-                        {dataItem.tx_mask_caption}
+                        <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{dataItem.tx_mask_caption}</f:format.html>
                     </div>
                 </div>
             </div>

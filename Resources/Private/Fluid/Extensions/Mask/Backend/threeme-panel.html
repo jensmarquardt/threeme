@@ -15,7 +15,7 @@
                         {dataItem.tx_mask_title}
                     </div>
                     <div class="panel-body">
-                        {dataItem.tx_mask_bodytext}
+                        <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{dataItem.tx_mask_bodytext}</f:format.html>
                     </div>
                     <div class="panel-footer">
                         <f:if condition="{dataItem.tx_mask_image}">
