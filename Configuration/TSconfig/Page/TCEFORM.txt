@@ -8,6 +8,10 @@ TCEFORM {
         backend_layout_next_level {
             removeItems = -1
         }
+        
+        layout {
+            removeItems = 1,2,3
+        }
     }
 
     tt_content {
