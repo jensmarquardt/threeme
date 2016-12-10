@@ -26,13 +26,13 @@
                     <h4 class="panel-title">
                         <a role="button" data-toggle="collapse" data-parent="#accordion{data.uid}" href="#collapse{data.uid}-item{dataKey}" aria-expanded="true" aria-controls="collapse{data.uid}-item{dataKey}">
                             {dataItem.tx_mask_title}
-                            <span class="threeme-ui-panel" aria-hidden="true"></span>
+                            <i class="threeme-ui-panel" aria-hidden="true"></i>
                         </a>
                     </h4>
                 </div>
                 <div id="collapse{data.uid}-item{dataKey}" class="panel-collapse collapse {f:if(condition:'{dataIterator.isFirst}', then:'in')}" role="tabpanel" aria-labelledby="heading{data.uid}-item{dataKey}">
                     <div class="panel-body">
-                        <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{dataItem.tx_mask_bodytext}</f:format.html>
+                        <f:format.html>{dataItem.tx_mask_bodytext}</f:format.html>
                         <f:if condition="{dataItem.tx_mask_image}">
                             <f:for each="{dataItem.tx_mask_image}" as="file">
                                 <f:image src="{file.uid}" alt="{file.alternative}" title="{file.title}" treatIdAsReference="1" width="200" />
