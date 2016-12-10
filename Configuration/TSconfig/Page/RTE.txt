@@ -12,6 +12,9 @@ RTE {
         text-justify {
             name = LLL:EXT:threeme/Resources/Private/Language/locallang_rte.xlf:class.text-justify
         }
+        text-uppercase {
+            name = LLL:EXT:threeme/Resources/Private/Language/locallang_rte.xlf:class.text-uppercase
+        }
         lead {
             name = LLL:EXT:threeme/Resources/Private/Language/locallang_rte.xlf:class.lead
         }
@@ -169,7 +172,8 @@ RTE {
 
                 tags {
                     all {
-                        allowedClasses := addToList(text-left, text-center, text-right, text-justify, lead, threeme-text-small, threeme-text-note)
+                        allowedClasses := addToList(text-left, text-center, text-right, text-justify, text-uppercase)
+                        allowedClasses := addToList(lead, threeme-text-small, threeme-text-note)
                         allowedClasses := addToList(list-unstyled, list-inline)
                         allowedClasses := addToList(table, table-striped, table-bordered, table-hover, table-condensed)
                     }
@@ -195,7 +199,8 @@ RTE {
                         allowedClasses := addToList(btn, btn-default, btn-primary, btn-success, btn-info, btn-warning, btn-danger)
                     }
                     span {
-                        allowedClasses := addToList(text-left, text-center, text-right, text-justify, lead, threeme-text-small)
+                        allowedClasses := addToList(text-left, text-center, text-right, text-justify, text-uppercase)
+                        allowedClasses := addToList(lead, threeme-text-small, threeme-text-note)
                     }
                 }
             }
@@ -224,7 +229,8 @@ RTE {
             allowedClasses := addToList(btn, btn-default, btn-primary, btn-success, btn-info, btn-warning, btn-danger)
             allowedClasses := addToList(lightbox, lightbox-iframe, fancybox.iframe, lightbox-media, fancybox.media)
             allowedClasses := addToList(table, table-striped, table-bordered, table-hover, table-condensed)
-            allowedClasses := addToList(text-left, text-center, text-right, text-justify, lead, threeme-text-small, threeme-text-note)
+            allowedClasses := addToList(text-left, text-center, text-right, text-justify, text-uppercase)
+            allowedClasses := addToList(lead, threeme-text-small, threeme-text-note)
             allowedClasses := addToList(list-unstyled, list-inline)
 
             # Remap bold and italics to strong and emphasis and vice versa
