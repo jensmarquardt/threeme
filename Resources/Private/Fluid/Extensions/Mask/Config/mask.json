@@ -19,7 +19,7 @@
                     "Karussell",
                     "",
                     "",
-                    "Intervall (null = kein automatischer Wechsel):",
+                    "Intervall: (null = kein automatischer Wechsel)",
                     "Elemente"
                 ],
                 "options": {
@@ -30,7 +30,7 @@
                 "label": "Flexbox",
                 "key": "threeme-flexbox",
                 "shortLabel": "",
-                "description": "Teaser mit Text-\/Bildinhalten. Die Anzahl der Teaser und Aufteilung in Spalten ist variabel. ",
+                "description": "Flexible Layout-Boxen mit Text-\/Bildinhalten. Die Anzahl der Boxen und Aufteilung in Spalten ist variabel.",
                 "icon": "fa-th",
                 "color": "#7395C0",
                 "columns": [
@@ -41,7 +41,7 @@
                     "tx_mask_flexbox"
                 ],
                 "labels": [
-                    "Teaserbox",
+                    "Flexbox",
                     "",
                     "",
                     "Spalten:",
