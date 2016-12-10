@@ -14,6 +14,9 @@
             <trans-unit id="class.text-justify">
                 <source>Text: Justify</source>
             </trans-unit>
+            <trans-unit id="class.text-uppercase">
+                <source>Text: Uppercase</source>
+            </trans-unit>
             <trans-unit id="class.lead">
                 <source>Text: Lead</source>
             </trans-unit>

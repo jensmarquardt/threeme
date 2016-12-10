@@ -18,6 +18,10 @@
                 <source>Text: Justify</source>
                 <target>Text: Blocksatz</target>
             </trans-unit>
+            <trans-unit id="class.text-uppercase">
+                <source>Text: Uppercase</source>
+                <target>Text: Versalien</target>
+            </trans-unit>
             <trans-unit id="class.lead">
                 <source>Text: Lead</source>
                 <target>Text: Hervorhebung</target>
