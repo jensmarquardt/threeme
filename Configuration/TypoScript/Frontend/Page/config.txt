@@ -113,8 +113,6 @@ config {
 
 [applicationContext = Production]
 config {
-    admPanel = 0
-
     compressJs = 1
     compressCss = 1
     concatenateJs = 1
