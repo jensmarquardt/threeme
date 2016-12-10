@@ -1,7 +1,10 @@
-# General settings
 TCAdefaults {
     sys_file_reference {
         showinpreview = 1
+    }
+
+    pages {
+#        url_scheme = 2
     }
 
     tt_content {
