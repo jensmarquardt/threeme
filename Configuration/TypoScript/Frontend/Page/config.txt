@@ -83,14 +83,14 @@ config {
             temp.current = 1
 
             # IE8
-            30 < .temp
-            30.addParams.class = no-js ie ie8
-            30.wrap = <!--[if IE 8]>|<![endif]-->
+#            30 < .temp
+#            30.addParams.class = no-js ie ie8
+#            30.wrap = <!--[if IE 8]>|<![endif]-->
 
             # IE9
-            40 < .temp
-            40.addParams.class = no-js ie ie9
-            40.wrap = <!--[if IE 9]>|<![endif]-->
+#            40 < .temp
+#            40.addParams.class = no-js ie ie9
+#            40.wrap = <!--[if IE 9]>|<![endif]-->
 
             # No IE or > IE9
             60 < .temp

@@ -37,8 +37,8 @@
         flex-shrink: 1;
         flex-basis: auto;
 
-        -webkit-align-self: stretch;
-        align-self: stretch;
+//        -webkit-align-self: stretch;
+//        align-self: stretch;
 
         @media (min-width: $screen-sm-min) {
             &.tfb-column-2 {
@@ -80,13 +80,13 @@
             text-align: justify;
         }
 
-        a {
-            color: $text-color;
-
-            &:hover,
-            &:focus {
-                color: $link-hover-color;
-            }
-        }
+//        a {
+//            color: $text-color;
+//
+//            &:hover,
+//            &:focus {
+//                color: $link-hover-color;
+//            }
+//        }
     }
 }

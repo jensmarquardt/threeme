@@ -25,10 +25,9 @@
  * -------------------------------------------------------------------------------------------------
  */
 footer {
-    margin-top: ($padding-large-vertical * 4);
     padding: ($padding-large-vertical * 3) 0;
     color: $threeme-white;
-    @include gradient-vertical($threeme-blue, $gray-light);
+    background-color: $brand-primary;
 
     a {
         color: $threeme-white;

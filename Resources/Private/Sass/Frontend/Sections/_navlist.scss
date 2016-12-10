@@ -19,81 +19,96 @@
  * Website styles
  * -------------------------------------------------------------------------------------------------
  */
-.nav-list {
-    margin-bottom: ($padding-large-vertical * 2);
-    @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $threeme-blue, 0);
+.nav-list-container {
+    margin-bottom: ($padding-large-vertical * 5);
+    padding: ($padding-large-vertical * 3) 0 ($padding-large-vertical * 5) 0;
+    background-color: $gray-lighter;
 
-    .level-1 {
-        @include threeme-border(0 0 $threeme-border-width 0, $threeme-border-style, $threeme-blue, 0);
-
-        > a {
-            color: $brand-primary;
-
-            &:focus,
-            &:hover {
-                color: $threeme-white;
-            }
-        }
-
-        &.active {
-            border: none;
-
+    .nav-list {
+        .level-1 {
             > a {
-                color: $threeme-white;
+                margin-right: $grid-gutter-width;
+                padding: $padding-large-vertical 0;
+                text-align: left;
+                color: $text-color;
+                background-color: $gray-lighter;
+                @include threeme-border(0 0 $threeme-border-width 0, $threeme-border-style, $gray, 0);
+
+                &:focus,
+                &:hover {
+                    color: $link-color;
+                }
+            }
+
+            &.active {
+                > a {
+                    color: $link-color;
+                }
+            }
+
+            .nav {
+                margin-left: ($padding-base-horizontal * 2);
+                margin-right: $grid-gutter-width;
+            }
+
+            &.last {
+                > a {
+                    margin-right: 0;
+                }
+
+                .nav {
+                    margin-right: 0;
+                }
             }
         }
-    }
 
-    .level-2 {
-        > a {
-            margin-bottom: $padding-xs-vertical;
-            color: $brand-primary;
-
-            @include threeme-border(0 0 $threeme-border-width $padding-base-horizontal, $threeme-border-style, $threeme-blue-light, 0);
-            background-color: $threeme-white;
-
-            &:focus,
-            &:hover {
-                color: $threeme-white;
-                background-color: $threeme-blue-light;
-            }
-        }
-
-        &.active {
+        .level-2 {
             > a {
-                color: $threeme-white;
-                background-color: $threeme-blue-light;
+                padding: $padding-large-vertical $padding-xs-horizontal;
+                text-align: left;
+                color: darken($gray, 10%);
+                background-color: $gray-lighter;
+                @include threeme-border(0 0 $threeme-border-width 0, $threeme-border-style, $gray, 0);
+
+                &:focus,
+                &:hover {
+                    color: $text-color;
+                    background-color: $gray-light;
+                }
+            }
+
+            &.active {
+                > a {
+                    color: $text-color;
+                    background-color: $gray-light;
+                }
+            }
+
+            .nav {
+                margin-left: $padding-base-horizontal;
+                margin-right: 0;
             }
         }
-    }
 
-    .level-3 {
-        > a {
-            color: $brand-primary;
-            margin-bottom: $padding-xs-vertical;
-            padding-left: ($padding-base-horizontal * 3);
-            @include threeme-border(0 0 0 $padding-base-horizontal, $threeme-border-style, $threeme-blue-lighter, 0);
-
-            &:focus,
-            &:hover {
-                color: $threeme-white;
-                background-color: $threeme-blue-lighter;
-            }
-        }
-
-
-        &.last {
-            @include threeme-border(0 0 $threeme-border-width 0, $threeme-border-style, $threeme-blue-light, 0);
-
+        .level-3 {
             > a {
-                margin-bottom: $padding-xs-vertical;
-            }
-        }
+                padding: $padding-large-vertical $padding-xs-horizontal;
+                color: darken($gray, 10%);
+                background-color: $gray-lighter;
+                @include threeme-border(0 0 $threeme-border-width 0, $threeme-border-style, $gray, 0);
 
-        &.active {
-            > a {
-                color: $threeme-white;
-                background-color: $threeme-blue-lighter;
+                &:focus,
+                &:hover {
+                    color: $text-color;
+                    background-color: $gray-light;
+                }
+            }
+
+            &.active {
+                > a {
+                    color: $text-color;
+                    background-color: $gray-light;
+                }
             }
         }
     }

@@ -24,61 +24,23 @@
  * Custom styles
  * -------------------------------------------------------------------------------------------------
  */
-.navbar-default {
+.navbar {
     z-index: 10;
     margin-bottom: 0;
     border: none;
 
     .navbar-brand {
-        padding: 19px 15px;
-    }
+        padding-top: 8px;
+        padding-bottom: 6px;
 
-    @media(max-width: $grid-float-breakpoint-max) {
-        .navbar-header {
-            position: relative;
-            z-index: 10;
-        }
-
-        .navbar-collapse {
-            position: absolute;
-            z-index: 9;
-            top: 0px;
-            width: 100%;
-            border: 0;
-
-            &.collapsing,
-            &.in {
-                background-color: $threeme-blue;
-
-                .navbar-nav {
-                    margin-top: floor(($navbar-height + ($padding-large-vertical * 3)));
-                }
-            }
+        .threeme-navbar-logo {
+            width: auto;
+            height: 56px;
         }
     }
 
     .navbar-nav > li > a {
         font-size: $font-size-large;
         text-transform: uppercase;
-
-        @media(min-width: $grid-float-breakpoint) {
-            padding-top: 50px;
-            padding-bottom: 0;
-        }
-    }
-
-    .navbar-toggle {
-        margin-top: 25px;
-        margin-bottom: 0;
-        border-radius: 0;
-
-        .icon-bar {
-            width: 30px;
-            height: 3px;
-            border-radius: $border-radius-base;
-        }
-        .icon-bar + .icon-bar {
-            margin-top: 7px;
-        }
     }
 }

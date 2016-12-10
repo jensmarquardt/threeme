@@ -41,6 +41,10 @@
     figcaption {
         display: table-caption;
         caption-side: bottom;
+        margin-bottom: ($padding-large-vertical * 2);
+        padding-top: $padding-small-vertical;
+        font-size: $font-size-small;
+        color: $gray-dark;
     }
 }
 

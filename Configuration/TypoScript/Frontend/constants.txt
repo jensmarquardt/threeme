@@ -129,10 +129,13 @@ threeme {
 
     frontend {
         # cat=Threeme/Frontend/100; type=text; label= Logo: Website logo
-        logo = EXT:threeme/Resources/Public/Images/Frontend/Logo/threeme.png
+        logo = EXT:threeme/Resources/Public/Images/Frontend/Logo/threeme.svg
         
-        # cat=Threeme/Frontend/100; type=text; label= enableCookiebar: Enable notification bar for the new EU cookielaw.
+        # cat=Threeme/Frontend/110; type=text; label= enableCookiebar: Enable notification bar for the new EU cookielaw.
         enableCookiebar = 0
+
+        # cat=Threeme/Frontend/120; type=text; label= enableMetaNavigation: Enable meta navigation bar as part of the footer.
+        enableMetaNavigation = 0
 
         # cat=Threeme/Frontend/200; type=int+; label= pidRoot: PID website root.
         pidRoot = 2
@@ -140,22 +143,22 @@ threeme {
         # cat=Threeme/Frontend/210; type=int+; label= pidHome: PID website home.
         pidHome = 57
 
-        # cat=Threeme/Frontend/320; type=int+; label= pidLightbox: PID sysfolder for lightbox pages.
+        # cat=Threeme/Frontend/220; type=int+; label= pidLightbox: PID sysfolder for lightbox pages.
         pidLightbox = 16
 
-        # cat=Threeme/Frontend/240; type=string; label= pidImprint: PID imprint page.
+        # cat=Threeme/Frontend/230; type=string; label= pidImprint: PID imprint page.
         pidImprint = 15
 
-        # cat=Threeme/Frontend/230; type=string; label= pidPrivacy: PID data privacy page.
+        # cat=Threeme/Frontend/240; type=string; label= pidPrivacy: PID data privacy page.
         pidPrivacy = 14
 
         # cat=Threeme/Frontend/250; type=int+; label= pidSitemap: PID sitemap page.
         pidSitemap = 13
 
-        # cat=Threeme/Frontend/220; type=int+; label= pidSearch: PID search page.
+        # cat=Threeme/Frontend/260; type=int+; label= pidSearch: PID search page.
         pidSearch = 12
 
-        # cat=Threeme/Frontend/310; type=int+; label= pidFeUser: PID sysfolder for frontend user and groups.
+        # cat=Threeme/Frontend/300; type=int+; label= pidFeUser: PID sysfolder for frontend user and groups.
         pidFeUser = 6
 
         # cat=Threeme/Frontend/300; type=int+; label= pidSysCategory: PID sysfolder for system categories.

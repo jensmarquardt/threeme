@@ -26,8 +26,7 @@
  */
 body {
     position: relative;
-    // Force scrollbar to avoid page shifting
-    overflow-y: scroll;
+    overflow-y: scroll; // Force scrollbar to avoid page shifting
 
     &.iframe {
         overflow-y: auto;
@@ -35,8 +34,6 @@ body {
         background-color: transparent;
         filter: none;
     }
-
-    font-weight: 300;
 }
 
 .threeme-container {
@@ -44,51 +41,61 @@ body {
     margin: 0 auto;
     width: 100%;
     max-width: $threeme-container-width;
-    @include box-shadow($threeme-container-box-shadow);
+    background-color: $threeme-white;
+
+    main {
+        padding-top: ($padding-large-vertical * 2);
+        padding-bottom: ($padding-large-vertical * 5);
+    }
 }
 
-.threeme-lead {
-    margin-bottom: ($padding-large-vertical * 4);
 
-    p {
-        font-size: $font-size-large;
-        text-align: justify;
+// Exception for main carousel/banner on page top
+@media (min-width: $grid-float-breakpoint) {
+    .threeme-carousel {
+        position: relative;
+        margin-top: -$navbar-height;
+        z-index: 1;
     }
 }
 
 
 // Exception for Backend-Layout 'Home'
-@media (min-width: $screen-md-min) {
-    .backend-layout-home {
-        h1, .h1 {
-            margin-bottom: ($padding-large-vertical * 8);
-        }
-
-        .carousel-banner {
-            margin-bottom: ($padding-large-vertical * 16);
-        }
-
-        .threeme-flexbox {
-            margin-bottom: ($padding-large-vertical * 8);
-        }
+.backend-layout-home {
+    .navbar-inverse {
+        background-color: $gray-dark;
     }
-}
 
+    h1 {
+        margin-bottom: ($padding-large-vertical * 8);
+        @extend .h2;
+    }
 
-// Exception for main carousel on page top
-.threeme-carousel {
-    .carousel {
-        top: -70px;
-        z-index: 1;
-        margin-bottom: ($padding-large-vertical * 4);
+    .carousel-banner {
+        margin-bottom: ($padding-large-vertical * 8);
+    }
 
-        @media(max-width: $grid-float-breakpoint-max) {
-            margin-bottom: 0;
-        }
+    .threeme-flexbox {
+        margin-bottom: ($padding-large-vertical * 8);
+    }
 
-        &.carousel-banner {
-            margin-bottom: 0;
-            @include threeme-border(0 0 $threeme-border-width 0, $threeme-border-style, $gray, 0);
+    @media (min-width: $grid-float-breakpoint) {
+        .navbar-inverse {
+            background-color: transparent;
+
+            .navbar-brand {
+                padding-top: 23px;
+
+                .threeme-navbar-logo {
+                    width: auto;
+                    height: 70px;
+                }
+            }
+
+            .navbar-nav > li > a {
+                padding-top: ($navbar-padding-vertical + 20px);
+                padding-bottom: ($navbar-padding-vertical - 20px);
+            }
         }
     }
 }

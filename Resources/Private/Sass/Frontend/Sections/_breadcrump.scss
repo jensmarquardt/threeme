@@ -20,15 +20,25 @@
  * -------------------------------------------------------------------------------------------------
  */
 .breadcrumb {
-    margin-bottom: ($padding-large-vertical * 4);
+    margin-bottom: ($padding-large-vertical * 5);
 
     li {
+        font-size: $font-size-small;
+
         &.first {
             padding-right: $padding-xs-horizontal;
         }
 
+        + li:before {
+            content: '';
+        }
+
         a {
-            color: $gray;
+            color: $breadcrumb-color;
+
+            &.active {
+                color: $breadcrumb-active-color;
+            }
         }
     }
 }

@@ -46,42 +46,60 @@
     }
 
     &.primary-1 {
-        background-color: $threeme-blue;
-        @include threeme-border($threeme-border-width, $threeme-border-style, $threeme-blue, 0);
+        background-color: $brand-primary;
+        @include threeme-border($threeme-border-width, $threeme-border-style, $brand-primary, 0);
 
         .desc {
-            @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $threeme-blue, 0);
+            @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $brand-primary, 0);
         }
     }
 
     &.primary-2 {
-        background-color: $threeme-blue-light;
-        @include threeme-border($threeme-border-width, $threeme-border-style, $threeme-blue-light, 0);
+        background-color: $brand-success;
+        @include threeme-border($threeme-border-width, $threeme-border-style, $brand-success, 0);
 
         .desc {
-            @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $threeme-blue-light, 0);
+            @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $brand-success, 0);
         }
     }
 
     &.primary-3 {
-        background-color: $threeme-blue-lighter;
-        @include threeme-border($threeme-border-width, $threeme-border-style, $threeme-blue-lighter, 0);
+        background-color: $brand-info;
+        @include threeme-border($threeme-border-width, $threeme-border-style, $brand-info, 0);
 
         .desc {
-            @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $threeme-blue-lighter, 0);
+            @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $brand-info, 0);
         }
     }
 
     &.primary-4 {
-        background-color: $threeme-green;
-        @include threeme-border($threeme-border-width, $threeme-border-style, $threeme-green, 0);
+        background-color: $brand-warning;
+        @include threeme-border($threeme-border-width, $threeme-border-style, $brand-warning, 0);
 
         .desc {
-            @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $threeme-green, 0);
+            @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $brand-warning, 0);
+        }
+    }
+
+    &.primary-5 {
+        background-color: $brand-danger;
+        @include threeme-border($threeme-border-width, $threeme-border-style, $brand-danger, 0);
+
+        .desc {
+            @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $brand-danger, 0);
         }
     }
 
     &.secondary-1 {
+        background-color: $gray-darker;
+        @include threeme-border($threeme-border-width, $threeme-border-style, $gray-darker, 0);
+
+        .desc {
+            @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $gray-darker, 0);
+        }
+    }
+
+    &.secondary-2 {
         background-color: $gray-dark;
         @include threeme-border($threeme-border-width, $threeme-border-style, $gray-dark, 0);
 
@@ -90,7 +108,7 @@
         }
     }
 
-    &.secondary-2 {
+    &.secondary-3 {
         background-color: $gray;
         @include threeme-border($threeme-border-width, $threeme-border-style, $gray, 0);
 
@@ -99,7 +117,7 @@
         }
     }
 
-    &.secondary-3 {
+    &.secondary-4 {
         background-color: $gray-light;
         @include threeme-border($threeme-border-width, $threeme-border-style, $gray-light, 0);
 
@@ -108,7 +126,7 @@
         }
     }
 
-    &.secondary-4 {
+    &.secondary-5 {
         background-color: $gray-lighter;
         @include threeme-border($threeme-border-width, $threeme-border-style, $gray-lighter, 0);
 
@@ -137,19 +155,19 @@
 
     &.background-1 {
         background-color: $body-bg;
-        @include threeme-border($threeme-border-width, $threeme-border-style, $threeme-black, 0);
+        @include threeme-border($threeme-border-width, $threeme-border-style, $gray-base, 0);
 
         .desc {
-            @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $threeme-black, 0);
+            @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $gray-base, 0);
         }
     }
 
     &.background-2 {
-        background-color: $body-bg;
-        @include threeme-border($threeme-border-width, $threeme-border-style, $threeme-black, 0);
+        background-color: $threeme-white;
+        @include threeme-border($threeme-border-width, $threeme-border-style, $gray-base, 0);
 
         .desc {
-            @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $threeme-black, 0);
+            @include threeme-border($threeme-border-width 0 0 0, $threeme-border-style, $gray-base, 0);
         }
     }
 }

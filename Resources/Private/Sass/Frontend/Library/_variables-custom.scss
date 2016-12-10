@@ -33,22 +33,23 @@
  */
 $threeme-public-path: "/typo3conf/ext/threeme/Resources/Public/" !default;
 
+//== Threeme typography
+$threeme-custom-font: 'Lobster', cursive;
+//** Default margin-bottom for any kind of elements, ($padding-large-vertical * 2)
+$threeme-margin-bottom: 20px !default;
+
+//== Threeme gutters
+$threeme-container-width: 1600px !default;
+
+//== Threeme colors
 $threeme-white: #FFF !default;
 $threeme-black: #000 !default;
 
-$threeme-green: #4fc280 !default;
-$threeme-blue: #004586 !default;
-$threeme-blue-light: #7395C0 !default;
-$threeme-blue-lighter: lighten($threeme-blue-light, 10%) !default;
-$threeme-gray: #aab4b7 !default;
+$threeme-green: rgb(79, 194, 128) !default;
+$threeme-blue:  rgb(22, 98, 153) !default;
+$threeme-gray:  rgb(180, 180, 180) !default;
 
-// Defaults for mixin "threeme-border"
+//== Threeme border
 $threeme-border-width: 1px !default;
 $threeme-border-style: solid !default;
 $threeme-border-color: $threeme-gray !default;
-
-// Defaults for "page/outer" wrapper "threeme-container"
-$threeme-container-width: 1280px !default;
-$threeme-container-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-
-$threeme-custom-font: 'Lobster', cursive;

@@ -34,15 +34,15 @@ $bootstrap-sass-asset-helper: false !default;
 //## Gray and brand colors for use across Bootstrap.
 
 $gray-base:              $threeme-black !default;
-$gray-darker:            #5e5e5e !default;
-$gray-dark:              #707070 !default;
+$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:              lighten($gray-base, 20%) !default;   // #333
 $gray:                   $threeme-gray !default;
-$gray-light:             #dadada !default;
-$gray-lighter:           #eeeeee !default;
+$gray-light:             rgb(217, 217, 217) !default;
+$gray-lighter:           rgb(230, 230, 230) !default; // #eee
 
-$brand-primary:         $threeme-blue;
+$brand-primary:         $threeme-blue !default;
 $brand-success:         $threeme-green !default;
-$brand-info:            lighten($brand-primary, 15%) !default;
+$brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
 
@@ -52,7 +52,7 @@ $brand-danger:          #d9534f !default;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               $threeme-white !default;
+$body-bg:               lighten($gray-lighter, 5%) !default;
 //** Global text color on `<body>`.
 $text-color:            $gray-base !default;
 
@@ -78,11 +78,11 @@ $font-size-base:          14px !default;
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 
-$font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
-$font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~28px
-$font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
-$font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
-$font-size-h5:            $font-size-base !default;
+$font-size-h1:            60px !default; // ~36px
+$font-size-h2:            36px !default; // ~30px
+$font-size-h3:            30px !default; // ~24px
+$font-size-h4:            24px !default; // ~18px
+$font-size-h5:            $font-size-large !default;
 $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
 
 //** Unit-less `line-height` for use in components like buttons.
@@ -138,7 +138,7 @@ $border-radius-large:       6px !default;
 $border-radius-small:       3px !default;
 
 //** Global color for active items (e.g., navs or dropdowns).
-$component-active-color:    $gray-lighter !default;
+$component-active-color:    $threeme-white !default;
 //** Global background color for active items (e.g., navs or dropdowns).
 $component-active-bg:       $brand-primary !default;
 
@@ -378,7 +378,7 @@ $container-desktop:            (940px + $grid-gutter-width) !default;
 $container-md:                 $container-desktop !default;
 
 // Large screen / wide desktop
-$container-large-desktop:      (1140px + $grid-gutter-width) !default;
+$container-large-desktop:      (940px + $grid-gutter-width) !default;
 //** For `$screen-lg-min` and up.
 $container-lg:                 $container-large-desktop !default;
 
@@ -393,18 +393,18 @@ $navbar-margin-bottom:             $line-height-computed !default;
 $navbar-border-radius:             $border-radius-base !default;
 $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
-$navbar-collapse-max-height:       300px !default;
+$navbar-collapse-max-height:       340px !default;
 
-$navbar-default-color:             $threeme-white !default;
-$navbar-default-bg:                transparent !default;
+$navbar-default-color:             #777 !default;
+$navbar-default-bg:                #f8f8f8 !default;
 $navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
 
 // Navbar links
-$navbar-default-link-color:                $threeme-white !default;
-$navbar-default-link-hover-color:          $link-color !default;
+$navbar-default-link-color:                #777 !default;
+$navbar-default-link-hover-color:          #333 !default;
 $navbar-default-link-hover-bg:             transparent !default;
-$navbar-default-link-active-color:         $link-color !default;
-$navbar-default-link-active-bg:            transparent !default;
+$navbar-default-link-active-color:         #555 !default;
+$navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
 $navbar-default-link-disabled-color:       #ccc !default;
 $navbar-default-link-disabled-bg:          transparent !default;
 
@@ -414,35 +414,35 @@ $navbar-default-brand-hover-color:         darken($navbar-default-brand-color, 1
 $navbar-default-brand-hover-bg:            transparent !default;
 
 // Navbar toggle
-$navbar-default-toggle-hover-bg:           $threeme-green !default;
-$navbar-default-toggle-icon-bar-bg:        $threeme-white !default;
-$navbar-default-toggle-border-color:       $threeme-white !default;
+$navbar-default-toggle-hover-bg:           #ddd !default;
+$navbar-default-toggle-icon-bar-bg:        #888 !default;
+$navbar-default-toggle-border-color:       #ddd !default;
 
 
 //=== Inverted navbar
 // Reset inverted navbar basics
-$navbar-inverse-color:                      lighten($gray-light, 15%) !default;
-$navbar-inverse-bg:                         $gray-base !default;
-$navbar-inverse-border:                     darken($navbar-inverse-bg, 10%) !default;
+$navbar-inverse-color:                      $threeme-white !default;
+$navbar-inverse-bg:                         rgba(0, 0, 0, 0.5) !default;
+$navbar-inverse-border:                     $threeme-black !default;
 
 // Inverted navbar links
-$navbar-inverse-link-color:                 lighten($gray-light, 15%) !default;
-$navbar-inverse-link-hover-color:           $threeme-white !default;
+$navbar-inverse-link-color:                 $threeme-white !default;
+$navbar-inverse-link-hover-color:           $link-color !default;
 $navbar-inverse-link-hover-bg:              transparent !default;
 $navbar-inverse-link-active-color:          $navbar-inverse-link-hover-color !default;
-$navbar-inverse-link-active-bg:             darken($navbar-inverse-bg, 10%) !default;
-$navbar-inverse-link-disabled-color:        #444 !default;
+$navbar-inverse-link-active-bg:             transparent !default;
+$navbar-inverse-link-disabled-color:        $gray !default;
 $navbar-inverse-link-disabled-bg:           transparent !default;
 
 // Inverted navbar brand label
 $navbar-inverse-brand-color:                $navbar-inverse-link-color !default;
-$navbar-inverse-brand-hover-color:          $threeme-white !default;
+$navbar-inverse-brand-hover-color:          $navbar-inverse-link-hover-color !default;
 $navbar-inverse-brand-hover-bg:             transparent !default;
 
 // Inverted navbar toggle
 $navbar-inverse-toggle-hover-bg:            #333 !default;
 $navbar-inverse-toggle-icon-bar-bg:         $threeme-white !default;
-$navbar-inverse-toggle-border-color:        #333 !default;
+$navbar-inverse-toggle-border-color:        $threeme-white !default;
 
 
 //== Navs
@@ -451,7 +451,7 @@ $navbar-inverse-toggle-border-color:        #333 !default;
 
 //=== Shared nav styles
 $nav-link-padding:                          10px 15px !default;
-$nav-link-hover-bg:                         $threeme-blue !default;
+$nav-link-hover-bg:                         $gray-lighter !default;
 
 $nav-disabled-link-color:                   $gray-light !default;
 $nav-disabled-link-hover-color:             $gray-light !default;
@@ -459,7 +459,7 @@ $nav-disabled-link-hover-color:             $gray-light !default;
 //== Tabs
 $nav-tabs-border-color:                     $gray-dark !default;
 
-$nav-tabs-link-hover-border-color:          $gray-light !default;
+$nav-tabs-link-hover-border-color:          $gray-lighter !default;
 
 $nav-tabs-active-link-hover-bg:             $body-bg !default;
 $nav-tabs-active-link-hover-color:          $gray !default;
@@ -823,9 +823,9 @@ $breadcrumb-padding-horizontal: 0 !default;
 //** Breadcrumb background color
 $breadcrumb-bg:                 transparent !default;
 //** Breadcrumb text color
-$breadcrumb-color:              $gray !default;
+$breadcrumb-color:              $text-color !default;
 //** Text color of current page in the breadcrumb
-$breadcrumb-active-color:       $threeme-green !default;
+$breadcrumb-active-color:       $link-color !default;
 //** Textual separator for between breadcrumb elements
 $breadcrumb-separator:          ":" !default;
 
@@ -834,15 +834,15 @@ $breadcrumb-separator:          ":" !default;
 //
 //##
 
-$carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6) !default;
+$carousel-text-shadow:                        none !default;
 
 $carousel-control-color:                      $threeme-white !default;
-$carousel-control-width:                      15% !default;
+$carousel-control-width:                      10% !default;
 $carousel-control-opacity:                    .5 !default;
 $carousel-control-font-size:                  20px !default;
 
 $carousel-indicator-active-bg:                $threeme-green !default;
-$carousel-indicator-border-color:             $threeme-green !default;
+$carousel-indicator-border-color:             $gray !default;
 
 $carousel-caption-color:                      $threeme-white !default;
 
