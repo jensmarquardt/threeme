@@ -1,4 +1,24 @@
 <div id="c{data.uid}">
+    <f:if condition="{data.header}">
+        <f:switch expression="{data.header_layout}">
+            <f:case value="2">
+                <h2>{data.header}</h2>
+            </f:case>
+            <f:case value="3">
+                <h3>{data.header}</h3>
+            </f:case>
+            <f:case value="4">
+                <h4>{data.header}</h4>
+            </f:case>
+            <f:case value="100">
+                <f:comment> -- do not show header -- </f:comment>
+            </f:case>
+            <f:case default="true">
+                <h2>{data.header}</h2>
+            </f:case>
+        </f:switch>
+    </f:if>
+
     <div class="threeme-flexbox">
         <f:for each="{data.tx_mask_flexbox}" as="dataItem" key="dataKey" iteration="dataIterator">
 
