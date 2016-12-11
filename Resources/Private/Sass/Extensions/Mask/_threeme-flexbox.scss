@@ -62,5 +62,14 @@
         .tfb-image {
             margin-bottom: $padding-large-vertical;
         }
+
+        a {
+            color: $text-color;
+
+            &:hover,
+            &:focus {
+                color: $link-hover-color;
+            }
+        }
     }
 }
