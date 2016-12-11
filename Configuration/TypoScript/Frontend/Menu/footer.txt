@@ -2,6 +2,7 @@ menu.footer = HMENU
 menu.footer {
     special = list
     special.value = {$threeme.frontend.pidImprint} , {$threeme.frontend.pidPrivacy} , {$threeme.frontend.pidSitemap}
+    includeNotInMenu = 1
 
     1 = TMENU
     1 {
