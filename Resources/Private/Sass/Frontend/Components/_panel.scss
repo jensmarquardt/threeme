@@ -33,7 +33,7 @@
 
             .threeme-ui-panel {
                 @extend .fa;
-                @extend .fa-chevron-down;
+                @extend .fa-angle-down;
 
                 position: absolute;
                 top: 0;
@@ -46,7 +46,7 @@
         .panel-title {
             a {
                 .threeme-ui-panel {
-                    @extend .fa-chevron-up;
+                    @extend .fa-angle-up;
                 }
             }
         }

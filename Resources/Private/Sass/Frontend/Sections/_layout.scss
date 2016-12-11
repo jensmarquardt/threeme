@@ -64,23 +64,8 @@ body {
 .backend-layout-home {
     .navbar-inverse {
         background-color: $gray-dark;
-    }
 
-    h1 {
-        margin-bottom: ($padding-large-vertical * 8);
-        @extend .h2;
-    }
-
-    .carousel-banner {
-        margin-bottom: ($padding-large-vertical * 8);
-    }
-
-    .threeme-flexbox {
-        margin-bottom: ($padding-large-vertical * 8);
-    }
-
-    @media (min-width: $grid-float-breakpoint) {
-        .navbar-inverse {
+        @media (min-width: $grid-float-breakpoint) {
             background-color: transparent;
 
             .navbar-brand {
@@ -95,6 +80,46 @@ body {
             .navbar-nav > li > a {
                 padding-top: ($navbar-padding-vertical + 20px);
                 padding-bottom: ($navbar-padding-vertical - 20px);
+            }
+        }
+    }
+
+    h1 {
+        margin-bottom: ($padding-large-vertical * 8);
+        @extend .h2;
+    }
+
+    h3 {
+        @extend .h5;
+        text-transform: uppercase;
+    }
+
+    .threeme-carousel {
+        margin-bottom: ($padding-large-vertical * 8);
+    }
+
+    .threeme-banner {
+        margin-bottom: ($padding-large-vertical * 16);
+    }
+
+    .threeme-flexbox {
+        margin-bottom: ($padding-large-vertical * 8);
+
+        .tfb-item {
+            .tfb-image {
+                text-align: center;
+
+                img {
+                    display: inline-block; // Set to inline-block for alignment
+                }
+            }
+
+            .tfb-header {
+                text-align: center;
+            }
+
+            .tfb-bodytext {
+                text-align: center;
             }
         }
     }

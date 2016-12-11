@@ -37,9 +37,6 @@
         flex-shrink: 1;
         flex-basis: auto;
 
-//        -webkit-align-self: stretch;
-//        align-self: stretch;
-
         @media (min-width: $screen-sm-min) {
             &.tfb-column-2 {
                 -webkit-flex: 1 1 calc(50% - #{$grid-gutter-width});
@@ -64,29 +61,6 @@
 
         .tfb-image {
             margin-bottom: $padding-large-vertical;
-            text-align: center;
-
-            img {
-                display: inline-block; // Set to inline-block for alignment
-            }
         }
-
-        .tfb-header {
-            text-align: center;
-        }
-
-        .tfb-bodytext {
-            @include threeme-hyphenate();
-            text-align: justify;
-        }
-
-//        a {
-//            color: $text-color;
-//
-//            &:hover,
-//            &:focus {
-//                color: $link-hover-color;
-//            }
-//        }
     }
 }
