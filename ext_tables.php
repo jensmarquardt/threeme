@@ -22,9 +22,9 @@ if (TYPO3_MODE == 'BE') {
     if (empty(trim($backendExtConf['loginLogo']))) {
         $extConfBackend['loginLogo'] = 'EXT:threeme/Resources/Public/Images/Backend/LoginLogo.png';
     }
-//    if (empty(trim($backendExtConf['loginBackgroundImage']))) {
-//        $extConfBackend['loginHighlightColor'] = '#004586';
-//    }
+    if (empty(trim($backendExtConf['loginBackgroundImage']))) {
+        $extConfBackend['loginHighlightColor'] = '#00629c';
+    }
     if (empty(trim($backendExtConf['loginBackgroundImage']))) {
         $extConfBackend['loginBackgroundImage'] = 'EXT:threeme/Resources/Public/Images/Backend/LoginBackgroundImage.jpg';
     }
