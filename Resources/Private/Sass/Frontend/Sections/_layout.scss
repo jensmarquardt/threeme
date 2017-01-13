@@ -54,8 +54,12 @@ body {
 @media (min-width: $grid-float-breakpoint) {
     .threeme-carousel {
         position: relative;
-        margin-top: -$navbar-height;
+        top: -$navbar-height;
         z-index: 1;
+    }
+    
+    #threeme-main {
+        margin-top: -$navbar-height;
     }
 }
 

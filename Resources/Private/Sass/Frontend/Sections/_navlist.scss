@@ -20,7 +20,7 @@
  * -------------------------------------------------------------------------------------------------
  */
 .nav-list-container {
-    margin-bottom: ($padding-large-vertical * 5);
+    margin-bottom: ($padding-large-vertical * 10);
     padding: ($padding-large-vertical * 3) 0 ($padding-large-vertical * 5) 0;
     background-color: $gray-lighter;
 
@@ -64,7 +64,7 @@
 
         .level-2 {
             > a {
-                padding: $padding-large-vertical $padding-xs-horizontal;
+                padding: $padding-large-vertical $padding-small-horizontal;
                 text-align: left;
                 color: darken($gray, 10%);
                 background-color: $gray-lighter;
