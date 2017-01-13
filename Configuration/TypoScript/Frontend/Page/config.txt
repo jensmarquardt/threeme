@@ -1,10 +1,10 @@
 config {
     doctype = html5
     metaCharset = UTF-8
-    
+
     admPanel = {$threeme.enable.adminPanel}
     debug = {$threeme.enable.debug}
-    
+
     absRefPrefix = {$threeme.enable.absRefPrefix}
     headerComment = {$threeme.enable.headerComment}
 
@@ -44,6 +44,7 @@ config {
     inlineStyle2TempFile = 1
     removeDefaultCss = {$threeme.enable.removeDefaultCss}
     removeDefaultJS = {$threeme.enable.removeDefaultJS}
+    moveJsFromHeaderToFooter = {$threeme.enable.moveJsFromHeaderToFooter}
     prefixLocalAnchors = all
 
     # SEO minimal settings
@@ -56,7 +57,7 @@ config {
     index_enable = 0
     index_externals = 0
     index_metatags = 0
-    
+
     # Enable RealURL
     tx_realurl_enable = {$threeme.enable.realurlEnable}
 

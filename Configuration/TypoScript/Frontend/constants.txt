@@ -8,10 +8,10 @@ threeme {
     enable {
         # cat=Threeme/enable/100; type=string; label= fluidLayoutSection: Fluid section to render, posible values: Website | Lightbox (see documentation for details).
         fluidLayoutSection = Website
-        
+
         # cat=Threeme/enable/110; type=string; label= privateBasePath: Path to the private resources of Threeme (usually you don't have to change it).
         privateBasePath = EXT:threeme/Resources/Private
-        
+
         # cat=Threeme/enable/120; type=string; label= publicBasePath: Path to the public resources of Threeme (usually you don't have to change it).
         publicBasePath = EXT:threeme/Resources/Public
 
@@ -39,7 +39,10 @@ threeme {
         # cat=Threeme/enable/250; type=string; label= removeDefaultJS: If set, the default JavaScript in the header will be removed.
         removeDefaultJS = external
 
-        # cat=Threeme/enable/260; type=string; label= additionalBodyClass: Add a custom css class to the body tag.
+        # cat=Threeme/enable/260; type=string; label= moveJsFromHeaderToFooter: If set, all JavaScript (includes and inline) will be moved to the bottom of the HTML document.
+        moveJsFromHeaderToFooter = 1
+
+        # cat=Threeme/enable/270; type=string; label= additionalBodyClass: Add a custom css class to the body tag.
         additionalBodyClass =
 
         # cat=Threeme/enable/300; type=boolean; label= realurlEnable: Enable extension reaurl.
@@ -53,10 +56,10 @@ threeme {
 
         # cat=Threeme/enable/330; type=boolean; label= index_metatags: Enable indexing meta tags.
         index_metatags = 1
-        
+
         # cat=Threeme/enable/400; type=boolean; label= websiteAnalytics: Enable website tracker/analytics service like Google Analytics (see page.ts for example).
         websiteAnalytics = 0
-        
+
         # cat=Threeme/enable/410; type=string; label= websiteAnalyticsCode: Website analytics account identification code.
         websiteAnalyticsCode =
     }
@@ -106,7 +109,7 @@ threeme {
         # cat=Threeme/Meta/300; type=string; label= formatDetection: Determines whether or not telephone numbers in the HTML content will appear as hypertext links.
         formatDetection = telephone=no
     }
-    
+
     framework {
         # cat=Threeme/Framework/Bootstrap/100; type=string; label= Grid displayer: gridGutterWidth - http://alefeuvre.github.io/foundation-grid-displayer
         bootstrap.gridGutterWidth = 30px
@@ -119,10 +122,10 @@ threeme {
 
         # cat=Threeme/Framework/Bootstrap/130; type=string; label= Scrollspy: offset - http://getbootstrap.com/javascript/#scrollspy
         bootstrap.scrollspy.offset =
-        
+
         # cat=Threeme/Framework/jQuery/200; type=string; label= jQuery CDN: CDN to use.
         jQuery.cdn = https://ajax.googleapis.com/ajax/libs/jquery
-        
+
         # cat=Threeme/Framework/jQuery/210; type=string; label= jQuery CDN: Version to use.
         jQuery.version = 3.1.0
     }
@@ -130,7 +133,7 @@ threeme {
     frontend {
         # cat=Threeme/Frontend/100; type=text; label= Logo: Website logo
         logo = EXT:threeme/Resources/Public/Images/Frontend/Logo/threeme.svg
-        
+
         # cat=Threeme/Frontend/110; type=text; label= enableCookiebar: Enable notification bar for the new EU cookielaw.
         enableCookiebar = 0
 
@@ -141,7 +144,7 @@ threeme {
         pidRoot = 2
 
         # cat=Threeme/Frontend/210; type=int+; label= pidHome: PID website home.
-        pidHome = 56
+        pidHome = 53
 
         # cat=Threeme/Frontend/220; type=int+; label= pidLightbox: PID sysfolder for lightbox pages.
         pidLightbox = 16
