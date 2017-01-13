@@ -1,3 +1,6 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
 <f:layout name="{fluidLayoutSection}" />
 
 <f:section name="Website">
@@ -9,7 +12,7 @@
 
     <main id="threeme-main" class="container">
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-10">
                 <f:cObject typoscriptObjectPath="menu.breadcrumb" />
                 <!--TYPO3SEARCH_begin-->
                 <f:cObject typoscriptObjectPath="lib.threemeDynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}"/>
@@ -43,3 +46,4 @@
         </div>
     </main>
 </f:section>
+</html>
