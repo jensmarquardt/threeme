@@ -4,7 +4,7 @@ Threeme Distribution
 
 
 About the distribution
-------------------------------
+----------------------
 
 Threeme is free and our contribution to the TYPO3 community.
 The distribution is not supposed to compete with other template concepts and
@@ -18,7 +18,7 @@ Threeme works standalone to minimize security risks and dependencies to third-pa
 However, it provides configurations and examples for the extensions Mask, News, Powermail and RealUrl.
 
 Hint
-------------------------------
+----
 **The version 3.0.0 will be the first for public usage**
 All versions **below** 3.0.0 are beta and strongly in development!
 
@@ -28,7 +28,7 @@ Target groups
 ========================================================================================================================
 
 Front-end developer
-------------------------------
+-------------------
 
 The front-end developer gets a unified, clear structure that provides orientation and quick access
 to the design of website and content as well as the configuration of TYPO3.
@@ -40,7 +40,7 @@ These strong defaults avoid constantly reinventing the wheel, so that more time 
 Aim: The developer should be able to concentrate on the implementation of the design and not on TYPO3.
 
 TYPO3 (certified) Integrator
-------------------------------
+----------------------------
 
 The Backend is optimized according to a well thought-out scheme: It is reduced to essential features and options.
 Instructions and examples for integrators, as well as a customer or editor, enable individual adaptations and targeted editorial work.
@@ -48,7 +48,7 @@ Instructions and examples for integrators, as well as a customer or editor, enab
 Aim: The integrator always retains full control over the backend and provides work facilities for his client and editors.
 
 Editors
-------------------------------
+-------
 
 The functions provided by the integrator focus on the daily work of the (chief) editors and their handling of TYPO3:
 Entry barriers are reduced, the learning curve flattened, the user experience with the CMS TYPO3 increased.
@@ -70,7 +70,7 @@ If you prefer to keep the full control, a config.rb can be used for compiling vi
 **Read about preparation first, then simply install Threeme by the Extension Manager**
 
 Preparation
-------------------------------
+-----------
 
 You should have a fresh TYPO3 installation available. It is enough, if you created an Admin account and threeme loaded from the TER.
 
@@ -78,10 +78,10 @@ As described above, Threeme also creates user and user groups, as well as the re
 along with the pagetree and the necessary files under fileadmin/threeme. If you want to install the pre-built content of the optional extensions,
 you should have these extensions loaded and installed via the TER:
 
-* RealURL v2.0.15
-* News v5.2.0
-* Mask v2.1.1
-* Powermail v3.7.0
+* RealURL
+* News
+* Mask
+* Powermail
 
 For the following system extensions, Threeme also provides TypoScript, Fluid, and SASS configurations.
 Activate first, then install Threeme.
@@ -93,7 +93,7 @@ Activate first, then install Threeme.
 * Indexed Search
 
 Extension Mask
-------------------------------
+--------------
 
 Before Threeme is installed, the paths to its Mask configuration must be known.
 This could be done in the Extension Manager or directly via the Backend module of Mask.
@@ -105,7 +105,7 @@ The following paths have to be set:
 * Frontend: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Content/
 
 Extension RealURL
-------------------------------
+-----------------
 
 If you want to get your RealURL configuration from Threeme,
 you can add the following in the Extension Manager to RealURL:
@@ -118,7 +118,7 @@ Installation successful? I have a Threeme
 ========================================================================================================================
 
 threeme.de
----------
+----------
 
 More resources and a complete documentation in german language under www.threeme.de
 
