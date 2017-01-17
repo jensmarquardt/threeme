@@ -38,6 +38,17 @@ footer {
         }
     }
 
+    .navfooter {
+        @extend .list-inline;
+        text-align: right;
+
+        > li {
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+
     .container {
         position: relative;
 
