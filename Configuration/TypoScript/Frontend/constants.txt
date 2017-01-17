@@ -194,7 +194,7 @@ threeme {
 
 
 # Constants for special pagetree "Lightbox"
-# Override "fluidLayoutSection" and "addtional body class".
+# Override "fluidLayoutSection" and "additional body class".
 # @TODO: Hardcoded PID, constant {$threeme.frontend.pidLightbox} don't work?!
 [PIDinRootline = 16]
     threeme.enable.fluidLayoutSection = Lightbox
