@@ -16,3 +16,9 @@
         }
     }
 }
+
+.tx-indexedsearch-browsebox {
+    ul {
+        @extend .list-inline;
+    }
+}
