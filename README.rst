@@ -2,15 +2,14 @@
 Threeme Distribution
 ========================================================================================================================
 
-
 About the distribution
 ----------------------
 
 Threeme is free and our contribution to the TYPO3 community.
-The distribution is not supposed to compete with other template concepts and
+The distribution is not supposed to compete with other templating concepts and
 extensions such as "Themes" or the "Bootstrap Package", it pursues a completely different philosophy:
 
-Threeme is aimed at experienced front-end developers who already know TYPO3, but also for those who want to become one.
+Threeme is aimed at experienced frontend developers who already know TYPO3, but also for those who want to become one.
 It offers a preconfigured TYPO3 distribution, which does not want to create universal requirements,
 but offers strong defaults in a flexible structure in order to efficiently implement complex individual programming.
 
@@ -20,39 +19,32 @@ However, it provides configurations and examples for the extensions Mask, News, 
 Hint
 ----
 **The version 3.0.0 will be the first for public usage**
-All versions **below** 3.0.0 are beta and strongly in development!
-
 
 ========================================================================================================================
 Target groups
 ========================================================================================================================
 
-Front-end developer
--------------------
+Frontend Developer
+------------------
 
-The front-end developer gets a unified, clear structure that provides orientation and quick access
+The frontend developer gets a unified, clear structure that provides orientation and quick access
 to the design of website and content as well as the configuration of TYPO3.
 
 If possible, only Fluid and SASS will be used, TypoScript will be avoided by a Constants set.
 Templates for "standard" extensions and examples for the integration of new elements and content complete the picture.
 These strong defaults avoid constantly reinventing the wheel, so that more time for the implementation of complex requirements remains.
 
-Aim: The developer should be able to concentrate on the implementation of the design and not on TYPO3.
-
-TYPO3 (certified) Integrator
-----------------------------
+TYPO3 Integrator
+----------------
 
 The Backend is optimized according to a well thought-out scheme: It is reduced to essential features and options.
 Instructions and examples for integrators, as well as a customer or editor, enable individual adaptations and targeted editorial work.
-
-Aim: The integrator always retains full control over the backend and provides work facilities for his client and editors.
 
 Editors
 -------
 
 The functions provided by the integrator focus on the daily work of the (chief) editors and their handling of TYPO3:
 Entry barriers are reduced, the learning curve flattened, the user experience with the CMS TYPO3 increased.
-
 
 ========================================================================================================================
 Installation
@@ -61,8 +53,8 @@ Installation
 Threeme is designed in such a way that it works without additional extensions.
 If you do not want to use the following extensions, some empty contents will remain in the page tree. This mainly refers to the extension Mask.
 
-Since Threeme is a TYPO3 distribution, it brings a preconfigured page tree, image and text files as well as some content of the extensions News, Mask and Powermail.
-Also for RealURL there is a minimal configuration, which can be used.
+Since Threeme is a TYPO3 distribution, it brings a preconfigured page tree, image and text files as well as
+some content of the extensions News, Mask and Powermail. For RealURL there is also a basic configuration.
 
 The distribution works with SASS instead of pure CSS, so the SCSS can be compiled directly on the server using the extension WS_SCSS.
 If you prefer to keep the full control, a config.rb can be used for compiling via SASS or Compass.
@@ -83,14 +75,12 @@ you should have these extensions loaded and installed via the TER:
 * Mask
 * Powermail
 
-For the following system extensions, Threeme also provides TypoScript, Fluid, and SASS configurations.
-Activate first, then install Threeme.
+Threeme uses the following system extensions:
 
 * Fluid Styled Content
-* Scheduler
 * Internal Notes
-* Frontend Login
-* Indexed Search
+* Indexed Search (optional, basic example)
+* Felogin (optional, basic example)
 
 Extension Mask
 --------------
@@ -101,8 +91,12 @@ The following paths have to be set:
 
 * Config: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Config/mask.json
 * Backend: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Backend/
+* Backend Layouts: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Backend/Layouts/
+* Backend Partials: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Backend/Partials/
 * Preview: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Preview/
 * Frontend: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Content/
+* Frontend Layouts: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Content/Layouts/
+* Frontend Partials: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Content/Partials/
 
 Extension RealURL
 -----------------
@@ -117,15 +111,13 @@ you can add the following in the Extension Manager to RealURL:
 Installation successful? I have a Threeme
 ========================================================================================================================
 
-threeme.de
-----------
-
-More resources and a complete documentation in german language under www.threeme.de
-
 Community
 ---------
 
 Be cordially invited to participate actively in the further development.
-Issues should be sent to the appropriate extension on github:
+Issues should be sent to the appropriate extension on GitHub.
 
-* `TYPO3-THREEME on Github <https://github.com/AstCommodore/threeme>`_
+* `A complete documentation in german language at <https://www.threeme.de>`_
+* `Threeme on GitHub <https://github.com/AstCommodore/threeme>`_
+* André on Slack: @commodore
+* Mail: andre@threeme.de
