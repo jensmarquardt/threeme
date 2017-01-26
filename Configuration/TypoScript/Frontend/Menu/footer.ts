@@ -7,8 +7,7 @@ menu.footer {
     1 = TMENU
     1 {
         expAll = 0
-        noBlur = 1
-        wrap = <ul class="list-inline">|</ul>
+        wrap = <ul class="navfooter">|</ul>
 
         NO {
             htmlSpecialChars = 1
