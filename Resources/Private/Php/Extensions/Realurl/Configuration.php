@@ -8,8 +8,8 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl'] = array (
             'enableUrlDecodeCache' => true,
             'enableUrlEncodeCache' => true,
 
-            // 404 Error Handling mit TYPO3 Seite:
-            // Be sure that you have not set postVarSet_failureMode OR set it to postVarSet_failureMode=''
+            # 404 Error Handling:
+            # Be sure that you have not set postVarSet_failureMode OR set it to postVarSet_failureMode=''
 //            'postVarSet_failureMode' => '',
         ),
         'pagePath' => array (
@@ -17,27 +17,31 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl'] = array (
             'userFunc' => 'EXT:realurl/class.tx_realurl_advanced.php:&tx_realurl_advanced->main',
             'spaceCharacter' => '-',
             'languageGetVar' => 'L',
+            'expireDays' => 7,
             'rootpage_id' => 2,
-            'dontResolveShortcuts' => 1,
+            'firstHitPathCache' => 1,
+            'autoUpdatePathCache' => '1',
         ),
         'fileName' => array(
             'defaultToHTMLsuffixOnPrev' => true,
             'index' => array(
-//                    'feed.xml' => array(
-//                        'keyValues' => array(
-//                            'type' => 100,
-//                        ),
-//                    ),
+/*
+                    'feed.xml' => array(
+                        'keyValues' => array(
+                            'type' => 100,
+                        ),
+                    ),
+*/
             ),
         ),
 
-        // 404 Error Handling mit TYPO3 Seite:
-        // Also be sure you have defined 'noMatch'=>'bypass' for every single preVars section!
-    /*
+        # 404 Error Handling:
+        # Also be sure you have defined 'noMatch'=>'bypass' for every single preVars section!
+/*
         'preVars' => array (
-            // Bei RealURL >>MUSS<< der L-Parameter auch fuer die default-Sprache definiert werden
-            // und am besten durch Setzen von >>valueDefault<< erzwungen werden, da es sonst zu cHash-Fehler kommt,
-            // was das Caching deaktiviert und bsp. der Crawler nicht mehr die default-Sprache durchsuchen kann!!!
+            // Bei RealURL >>MUSS<< der L-Parameter auch für die Default-Sprache definiert und
+            // am besten durch Setzen von >>valueDefault<< erzwungen werden, da es sonst zu cHash-Fehler kommt,
+            // was das Caching deaktiviert und bsp. der Crawler nicht mehr die Default-Sprache durchsuchen kann!!!
             array (
                 'GETvar' => 'L',
                 'valueMap' => array (
@@ -47,11 +51,11 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl'] = array (
                 'valueDefault' => 'de',
             ),
         ),
-    */
+*/
 
         'postVarSets' => array(
             '_DEFAULT' => array(
-                // EXT:news
+                # EXT:news
                 'artikel' => array(
                     array(
                         'GETvar' => 'tx_news_pi1[day]',
@@ -83,7 +87,7 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl'] = array (
                         ),
                     ),
                 ),
-                // EXT:news archive
+                # EXT:news archive
                 'archiv' => array(
                     array(
                         'GETvar' => 'tx_news_pi1[overwriteDemand][day]',
@@ -110,11 +114,10 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl'] = array (
                     ),
                 ),
             ),
-        ), // postVarSets
+        ), # postVarSets
     ),
 );
 
-// Alternative domains
+# Alternative domains
 //$TYPO3_CONF_VARS['EXTCONF']['realurl']['www.domain.tld'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'];
 //$TYPO3_CONF_VARS['EXTCONF']['realurl']['www.domain.tld']['pagePath']['rootpage_id'] = 2;
-?>
