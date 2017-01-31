@@ -23,21 +23,18 @@ $EM_CONF['threeme'] = array(
     'constraints' => array(
         'depends' => array(
             'typo3' => '7.6.0-7.6.999',
-            'fluid_styled_content' => '',
+            'fluid_styled_content' => '7.6',
         ),
         'conflicts' => array(
         ),
         'suggests' => array(
-            'sys_note' => '',
-            'scheduler' => '',
-            'recycler' => '',
-            'reports' => '',
-            'ws_scss' => '',
-            'be_secure_pw' => '7.1.0',
-            'mask' => '2.1.1',
-            'news' => '5.3.1',
-            'powermail' => '3.10.0',
-            'realurl' => '2.0.15',
+            'ws_scss' => '1.1',
+            'mask' => '2.1',
+            'news' => '5.3',
+            'powermail' => '3.10',
+            'be_secure_pw' => '7.1',
+            'realurl' => '2.1',
+            'dd_googlesitemap' => '2.0',
         ),
     ),
 );
