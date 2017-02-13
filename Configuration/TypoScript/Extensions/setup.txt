@@ -6,3 +6,4 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:threeme/Configuration/TypoScript/Extensions/Mask/setup.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:threeme/Configuration/TypoScript/Extensions/News/setup.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:threeme/Configuration/TypoScript/Extensions/Powermail/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:threeme/Configuration/TypoScript/Extensions/Min/setup.txt">
