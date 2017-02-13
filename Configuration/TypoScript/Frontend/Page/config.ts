@@ -42,6 +42,7 @@ config {
 
     disablePrefixComment = 1
     inlineStyle2TempFile = 1
+    removePageCss = {$threeme.enable.removePageCss}
     removeDefaultCss = {$threeme.enable.removeDefaultCss}
     removeDefaultJS = {$threeme.enable.removeDefaultJS}
     moveJsFromHeaderToFooter = {$threeme.enable.moveJsFromHeaderToFooter}
