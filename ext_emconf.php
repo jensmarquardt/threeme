@@ -35,6 +35,7 @@ $EM_CONF['threeme'] = array(
             'be_secure_pw' => '7.1',
             'realurl' => '2.1',
             'dd_googlesitemap' => '2.0',
+            'min' => '1.1',
         ),
     ),
 );
