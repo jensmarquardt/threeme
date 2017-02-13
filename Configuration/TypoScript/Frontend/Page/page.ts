@@ -18,11 +18,15 @@ page {
         print.media = print
     }
 
-    includeJSFooter {
-        jQuery = {$threeme.framework.jQuery.cdn}/{$threeme.framework.jQuery.version}/jquery.js
+    includeJSFooterlibs {
+        jQuery = {$threeme.framework.jQuery.cdn}/{$threeme.framework.jQuery.version}/jquery.min.js
         jQuery.external = 1
         jQuery.forceOnTop = 1
+        jQuery.disableCompression = 1
+        jQuery.excludeFromConcatenation = 1
+    }
 
+    includeJSFooter {
         bootstrapAffix = {$threeme.enable.publicBasePath}/JavaScript/Vendor/Bootstrap/affix.js
         bootstrapTransition = {$threeme.enable.publicBasePath}/JavaScript/Vendor/Bootstrap/transition.js
         bootstrapCollapse = {$threeme.enable.publicBasePath}/JavaScript/Vendor/Bootstrap/collapse.js
@@ -35,7 +39,7 @@ page {
 
         website = {$threeme.enable.publicBasePath}/JavaScript/Frontend/jquery.threeme.js
     }
-    
+
     20 < lib.threemeFluidTemplate
 }
 
