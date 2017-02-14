@@ -26,8 +26,9 @@ config {
     typolinkEnableLinksAcrossDomains = 1
     content_from_pid_allowOutsideDomain = 1
 
-    spamProtectEmailAddresses = 2
-    spamProtectEmailAddresses_atSubst = (at)
+    spamProtectEmailAddresses = {$threeme.enable.spamProtectEmailAddresses}
+    spamProtectEmailAddresses_atSubst = {$threeme.enable.spamProtectEmailAddresses_atSubst}
+    spamProtectEmailAddresses_lastDotSubst = {$threeme.enable.spamProtectEmailAddresses_lastDotSubst}
 
     # Disable Image Upscaling
     noScaleUp = 1

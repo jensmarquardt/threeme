@@ -21,6 +21,9 @@ threeme {
         # cat=Threeme/enable/140; type=string; label= generateRteCssFromSass: When compiling your CSS dynamically, only files in page.includeCSS are respected. For RTE usage there is a workarround - see TypoScript "page" for details.
         compileRteCssFromSass = 0
 
+        # cat=Threeme/enable/150; type=string; label= additionalBodyClass: Add a custom css class to the body tag.
+        additionalBodyClass =
+
         # cat=Threeme/enable/200; type=string; label= absRefPrefix: If this value is set, then all relative links in TypoScript are prepended with this string.
         absRefPrefix = auto
 
@@ -40,30 +43,36 @@ threeme {
         removeDefaultCss = 1
 
         # cat=Threeme/enable/260; type=string; label= removeDefaultJS: If set, the default JavaScript in the header will be removed.
-        removeDefaultJS = external
+        removeDefaultJS = 1
 
         # cat=Threeme/enable/270; type=string; label= moveJsFromHeaderToFooter: If set, all JavaScript (includes and inline) will be moved to the bottom of the HTML document.
         moveJsFromHeaderToFooter = 1
 
-        # cat=Threeme/enable/270; type=string; label= additionalBodyClass: Add a custom css class to the body tag.
-        additionalBodyClass =
+        # cat=Threeme/enable/280; type=string; label= spamProtectEmailAddresses: If set, then all email addresses in typolinks will be encrypted so spambots cannot detect them.
+        spamProtectEmailAddresses = ascii
 
-        # cat=Threeme/enable/300; type=boolean; label= realurlEnable: Enable extension reaurl.
+        # cat=Threeme/enable/290; type=string; label= spamProtectEmailAddresses_atSubst: Substitute label for the at-sign (@).
+        spamProtectEmailAddresses_atSubst =
+
+        # cat=Threeme/enable/300; type=string; label= spamProtectEmailAddresses_lastDotSubst: Substitute label for the last dot in the email address.
+        spamProtectEmailAddresses_lastDotSubst =
+
+        # cat=Threeme/enable/500; type=boolean; label= realurlEnable: Enable extension reaurl.
         realurlEnable = 1
 
-        # cat=Threeme/enable/310; type=boolean; label= index_enable: Enable extension indexed_search.
+        # cat=Threeme/enable/510; type=boolean; label= index_enable: Enable extension indexed_search.
         index_enable = 1
 
-        # cat=Threeme/enable/320; type=boolean; label= index_externals: Enable indexing external pages.
+        # cat=Threeme/enable/520; type=boolean; label= index_externals: Enable indexing external pages.
         index_externals = 0
 
-        # cat=Threeme/enable/330; type=boolean; label= index_metatags: Enable indexing meta tags.
+        # cat=Threeme/enable/530; type=boolean; label= index_metatags: Enable indexing meta tags.
         index_metatags = 1
 
-        # cat=Threeme/enable/400; type=boolean; label= websiteAnalytics: Enable website tracker/analytics service like Google Analytics (see page.ts for example).
+        # cat=Threeme/enable/600; type=boolean; label= websiteAnalytics: Enable website tracker/analytics service like Google Analytics (see page.ts for example).
         websiteAnalytics = 0
 
-        # cat=Threeme/enable/410; type=string; label= websiteAnalyticsCode: Website analytics account identification code.
+        # cat=Threeme/enable/610; type=string; label= websiteAnalyticsCode: Website analytics account identification code.
         websiteAnalyticsCode =
     }
 
