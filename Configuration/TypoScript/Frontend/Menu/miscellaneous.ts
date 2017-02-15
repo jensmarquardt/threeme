@@ -1,6 +1,6 @@
 lib.link-to-top = TEXT
 lib.link-to-top {
-    value = <a href="#threeme-top" class="threeme-ui-totop" title="{LLL:EXT:threeme/Resources/Private/Language/locallang.xml:totop.title}"><i class="icon fa" aria-hidden="true"></i></a>
+    value = <a href="#threeme-top" class="threeme-ui-totop threeme-ui-scroll" title="{LLL:EXT:threeme/Resources/Private/Language/locallang.xml:totop.title}"><i class="icon fa" aria-hidden="true"></i></a>
     insertData = 1
 }
 
@@ -25,13 +25,13 @@ lib.sitemap {
 menu.site-services = COA
 menu.site-services {
     wrap = <ul class="list-inline list-unstyled">|</ul>
-    
+
     10 < lib.link-to-top
     10.wrap = <li>|</li>
-    
+
     20 < lib.print
     20.wrap = <li>|</li>
-    
+
     30 < lib.sitemap
     30.wrap = <li>|</li>
 }

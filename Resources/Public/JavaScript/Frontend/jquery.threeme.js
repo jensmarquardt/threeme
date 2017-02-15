@@ -43,7 +43,7 @@ var tx_threeme = (function() {
 
         // Page scrolling feature with easing plugin
         jQuerySmoothScroll : function() {
-            $('.threeme-ui-totop').on('click', function(event) {
+            $('.threeme-ui-scroll').on('click', function(event) {
                 var $anchor = $(this);
                 $('html, body').stop().animate({
                     scrollTop: ($($anchor.attr('href')).offset().top)
