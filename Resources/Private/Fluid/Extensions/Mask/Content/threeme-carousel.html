@@ -1,3 +1,6 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
 <div id="c{data.uid}">
     <f:if condition="{data.header}">
         <f:switch expression="{data.header_layout}">
@@ -37,7 +40,7 @@
         <div class="carousel-inner" role="listbox">
             <f:for each="{data.tx_mask_item}" as="dataItem" key="dataKey" iteration="dataIterator">
                 <figure class="item {f:if(condition:'{dataIterator.isFirst}', then:'active')}">
-                    <f:image class="carousel-image" src="{dataItem.tx_mask_image.0.uid}" alt="{dataItem.tx_mask_image.0.alternative}" title="{dataItem.tx_mask_image.0.title}" treatIdAsReference="1" width="1600" />
+                    <f:image class="carousel-image" image="{dataItem.tx_mask_image.0}" alt="{dataItem.tx_mask_image.0.alternative}" title="{dataItem.tx_mask_image.0.title}" />
                     <figcaption class="carousel-caption">
                         <f:if condition="{dataItem.tx_mask_title}">
                             <h2 class="carousel-caption-title">
@@ -87,7 +90,7 @@
     <f:alias map="{dataItem: data.tx_mask_item.0}">
         <section role="complementary" class="carousel carousel-banner">
             <figure class="item">
-                <f:image class="carousel-image" src="{dataItem.tx_mask_image.0.uid}" alt="{dataItem.tx_mask_image.0.alternative}" title="{dataItem.tx_mask_image.0.title}" treatIdAsReference="1" width="1600" />
+                <f:image class="carousel-image" image="{dataItem.tx_mask_image.0}" alt="{dataItem.tx_mask_image.0.alternative}" title="{dataItem.tx_mask_image.0.title}" />
                 <figcaption class="carousel-caption">
                     <f:if condition="{dataItem.tx_mask_title}">
                         <h2 class="carousel-caption-title">
@@ -115,3 +118,4 @@
         </section>
     </f:alias>
 </f:section>
+</html>

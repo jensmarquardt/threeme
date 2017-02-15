@@ -1,4 +1,6 @@
-{namespace is=TYPO3\CMS\IndexedSearch\ViewHelpers}
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:is="http://typo3.org/ns/TYPO3/CMS/IndexedSearch/ViewHelpers">
 
 <f:alias map="{sword: searchParams.sword}">
     <f:render partial="Form" arguments="{_all}"/>
@@ -81,3 +83,4 @@
         </f:else>
     </f:if>
 </f:for>
+</html>
