@@ -10,7 +10,7 @@
     -webkit-flex-wrap: nowrap;
     flex-wrap: nowrap;
 
-    @media (min-width: $screen-sm-min) {
+    @media (min-width: $grid-float-breakpoint) {
         -webkit-flex-direction: row;
         flex-direction: row;
         -webkit-flex-wrap: wrap;
@@ -37,7 +37,7 @@
         flex-shrink: 1;
         flex-basis: auto;
 
-        @media (min-width: $screen-sm-min) {
+        @media (min-width: $grid-float-breakpoint) {
             &.tfb-column-2 {
                 -webkit-flex: 1 1 calc(50% - #{$grid-gutter-width});
                 flex-basis: calc(50% - #{$grid-gutter-width});
