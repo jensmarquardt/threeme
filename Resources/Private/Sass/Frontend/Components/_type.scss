@@ -72,28 +72,6 @@ h5, .h5 {
     }
 }
 
-// Reduce header sizes for small devices
-@media(max-width: $screen-xs-min) {
-    h1, .h1 {
-        margin-bottom: $padding-large-vertical;
-        font-size: ($font-size-h1 - 12);
-    }
-
-    h2, .h2 {
-        margin-bottom: $padding-large-vertical;
-        font-size: ($font-size-h2 - 6);
-    }
-
-    h3, .h3 {
-        margin-bottom: $padding-base-vertical;
-        font-size: ($font-size-h3 - 6);
-    }
-
-    h4, .h4 {
-        font-size: ($font-size-h4 - 4);
-    }
-}
-
 p {
     margin-bottom: ($padding-large-vertical * 2);
 }
@@ -149,4 +127,26 @@ hr {
 
 .threeme-align-103 {
     text-align: justify;
+}
+
+// Reduce font-size for small devices
+@media(max-width: $screen-xs-max) {
+    h1, .h1 {
+        margin-bottom: $padding-large-vertical;
+        font-size: ($font-size-h1 - 12);
+    }
+
+    h2, .h2 {
+        margin-bottom: $padding-large-vertical;
+        font-size: ($font-size-h2 - 6);
+    }
+
+    h3, .h3 {
+        margin-bottom: $padding-base-vertical;
+        font-size: ($font-size-h3 - 6);
+    }
+
+    h4, .h4 {
+        font-size: ($font-size-h4 - 4);
+    }
 }
