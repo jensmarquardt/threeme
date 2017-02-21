@@ -10,16 +10,21 @@ page {
         10.value = id="page-{TSFE:id}"
         10.insertData = 1
         10.noTrimWrap = || |
-        
-        # Data attributes for Grid displayer, http://alefeuvre.github.io/foundation-grid-displayer/
+
+        # Add data attributes for Grid displayer, http://alefeuvre.github.io/foundation-grid-displayer/
         20 = TEXT
         20.value = data-grid-framework="b3" data-grid-color="red" data-grid-opacity="0.5" data-grid-zindex="10" data-grid-gutterwidth="{$threeme.framework.bootstrap.gridGutterWidth}" data-grid-nbcols="{$threeme.framework.bootstrap.gridCols}"
         20.noTrimWrap = || |
-        
-        # Data attributes for Bootstrap
+
+        # Add data attributes for Bootstrap scrollspy
         30 = TEXT
         30.value = data-spy="scroll" data-target="{$threeme.framework.bootstrap.scrollspy.target}" data-offset="{$threeme.framework.bootstrap.scrollspy.offset}"
         30.noTrimWrap = || |
+
+        # Add additional body attribute
+        40 = TEXT
+        40.value = {$threeme.enable.additionalBodyAttribute}
+        40.noTrimWrap = || |
 
         # Body class
         100 = COA
@@ -41,7 +46,7 @@ page {
                 data = page:backend_layout
                 ifEmpty.data = levelfield:-2, backend_layout_next_level, slide
                 noTrimWrap = |backend-layout-| |
-                
+
                 stdWrap.replacement {
                     10 {
                       search = pagets__
@@ -79,7 +84,7 @@ page {
                     field = title
                     case = lower
                     noTrimWrap = |sys-cat-| |
-                    
+
                     stdWrap.replacement {
                         10 {
                           search.char = 32
@@ -88,7 +93,7 @@ page {
                     }
                 }
             }
-            
+
             # Get category from parent page
             # @TODO: Slide back the rootline!
             30.stdWrap.ifEmpty.cObject = CONTENT
@@ -107,7 +112,7 @@ page {
                     field = title
                     case = lower
                     noTrimWrap = |sys-cat-| |
-                    
+
                     stdWrap.replacement {
                         10 {
                           search.char = 32
@@ -117,7 +122,7 @@ page {
                 }
             }
 
-            # Static additional class
+            # Add additional body class
             40 = TEXT
             40.value = {$threeme.enable.additionalBodyClass}
             40.noTrimWrap = || |

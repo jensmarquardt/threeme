@@ -24,6 +24,9 @@ threeme {
         # cat=Threeme/enable/150; type=string; label= additionalBodyClass: Add a custom css class to the body tag.
         additionalBodyClass =
 
+        # cat=Threeme/enable/160; type=string; label= additionalBodyAttribute: Add a custom attribute to the body tag. ontouchstart is a transition hover event-hack for mobile devices (http://stackoverflow.com/questions/8330559/hover-effects-using-css3-touch-events).
+        additionalBodyAttribute = ontouchstart=""
+
         # cat=Threeme/enable/200; type=string; label= absRefPrefix: If this value is set, then all relative links in TypoScript are prepended with this string.
         absRefPrefix = auto
 
