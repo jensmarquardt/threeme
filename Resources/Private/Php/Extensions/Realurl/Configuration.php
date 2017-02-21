@@ -7,10 +7,6 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl'] = array (
             'adminJumpToBackend' => true,
             'enableUrlDecodeCache' => true,
             'enableUrlEncodeCache' => true,
-
-            # 404 Error Handling:
-            # Be sure that you have not set postVarSet_failureMode OR set it to postVarSet_failureMode=''
-//            'postVarSet_failureMode' => '',
         ),
         'pagePath' => array (
             'type' => 'user',
@@ -18,7 +14,7 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl'] = array (
             'spaceCharacter' => '-',
             'languageGetVar' => 'L',
             'expireDays' => 7,
-            'rootpage_id' => 2,
+            'rootpage_id' => 1,
             'firstHitPathCache' => 1,
             'autoUpdatePathCache' => '1',
         ),
@@ -26,7 +22,7 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl'] = array (
             'defaultToHTMLsuffixOnPrev' => true,
             'index' => array(
 /*
-                    'feed.xml' => array(
+                    'example-feed.xml' => array(
                         'keyValues' => array(
                             'type' => 100,
                         ),
@@ -34,25 +30,10 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl'] = array (
 */
             ),
         ),
-
-        # 404 Error Handling:
-        # Also be sure you have defined 'noMatch'=>'bypass' for every single preVars section!
-/*
-        'preVars' => array (
-            // Bei RealURL >>MUSS<< der L-Parameter auch für die Default-Sprache definiert und
-            // am besten durch Setzen von >>valueDefault<< erzwungen werden, da es sonst zu cHash-Fehler kommt,
-            // was das Caching deaktiviert und bsp. der Crawler nicht mehr die Default-Sprache durchsuchen kann!!!
-            array (
-                'GETvar' => 'L',
-                'valueMap' => array (
-                    'de' => 0,
-                    'en' => 1,
-                ),
-                'valueDefault' => 'de',
-            ),
+        'preVars' => array(
+            # Language configuration, see
+            # https://github.com/dmitryd/typo3-realurl/wiki/Notes-for-Integrators#configuring-languages
         ),
-*/
-
         'postVarSets' => array(
             '_DEFAULT' => array(
                 # EXT:news
@@ -114,10 +95,10 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl'] = array (
                     ),
                 ),
             ),
-        ), # postVarSets
+        ),
     ),
 );
 
-# Alternative domains
-//$TYPO3_CONF_VARS['EXTCONF']['realurl']['www.domain.tld'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'];
-//$TYPO3_CONF_VARS['EXTCONF']['realurl']['www.domain.tld']['pagePath']['rootpage_id'] = 2;
+# Multiple domain configuration
+# $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.domain.tld'] = $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'];
+# $TYPO3_CONF_VARS['EXTCONF']['realurl']['www.domain.tld']['pagePath']['rootpage_id'] = PID;

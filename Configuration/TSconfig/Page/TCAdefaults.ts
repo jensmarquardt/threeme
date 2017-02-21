@@ -24,9 +24,9 @@ TCAdefaults {
     }
 }
 
-# Special settings for sysfolders 16 = Lightbox-Seiten, 10 = Sonderseiten, 31 = Styleguide
+# Special settings for sysfolders 15 = Lightbox-Seiten, 9 = Sonderseiten, 30 = Styleguide
 # @TODO: Hardcoded UID
-[PIDinRootline = 16, 10, 31]
+[PIDinRootline = 15, 9, 30]
     TCAdefaults {
         pages {
             no_search = 1
