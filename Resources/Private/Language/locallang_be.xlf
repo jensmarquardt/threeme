@@ -5,6 +5,16 @@
             <trans-unit id="threeme-pagetree-sys-note">
                 <source>Threeme: Important note on page</source>
             </trans-unit>
+
+            <trans-unit id="imageManipulation.mobile">
+                <source>Mobile</source>
+            </trans-unit>
+            <trans-unit id="imageManipulation.tablet">
+                <source>Tablet</source>
+            </trans-unit>
+            <trans-unit id="imageManipulation.desktop">
+                <source>Desktop</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
