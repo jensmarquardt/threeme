@@ -8,7 +8,7 @@ TCEFORM {
         backend_layout_next_level {
             removeItems = -1
         }
-        
+
         layout {
             removeItems = 1,2,3
         }
@@ -23,7 +23,7 @@ TCEFORM {
             altLabels.3 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.header_layout.altLabels.3
             altLabels.4 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.header_layout.altLabels.4
             altLabels.5 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.header_layout.altLabels.5
-            
+
             types {
                 mask_threeme-carousel {
                     removeItems = 1,5
@@ -32,6 +32,11 @@ TCEFORM {
                     removeItems = 1,5
                 }
             }
+        }
+
+        tx_threeme_header_css {
+            addItems.200 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.threeme_header_css.addItems.200
+            addItems.201 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.threeme_header_css.addItems.201
         }
 
         # Content layout depending on CType

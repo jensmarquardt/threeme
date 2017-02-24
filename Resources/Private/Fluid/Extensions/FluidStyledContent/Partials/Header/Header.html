@@ -3,23 +3,34 @@
 
 <f:switch expression="{layout}">
         <f:case value="1">
-            <f:comment>@NOTE: Added custom layouts to cType header for text orientation</f:comment>
-            <h1 class="header{f:if(condition:'{threeme-layout}', then:' threeme-align-{threeme-layout}')}"><f:link.typolink parameter="{link}">{f:if(condition:'{subheader}', then:'<small>{subheader}</small>')}{header}</f:link.typolink></h1>
+            <h1 class="header{f:if(condition:'{threemeHeaderLayout}', then:' threeme-header-layout-{threemeHeaderLayout}')}{f:if(condition:'{threemeHeaderCss}', then:' threeme-header-css-{threemeHeaderCss}')}">
+                <f:link.typolink parameter="{link}">{f:if(condition:'{subheader}', then:'<small>{subheader}</small>')}{header}</f:link.typolink>
+            </h1>
         </f:case>
         <f:case value="2">
-            <h2 class="header{f:if(condition:'{threeme-layout}', then:' threeme-align-{threeme-layout}')}"><f:link.typolink parameter="{link}">{f:if(condition:'{subheader}', then:'<small>{subheader}</small>')}{header}</f:link.typolink></h2>
+            <h2 class="header{f:if(condition:'{threemeHeaderLayout}', then:' threeme-header-layout-{threemeHeaderLayout}')}{f:if(condition:'{threemeHeaderCss}', then:' threeme-header-css-{threemeHeaderCss}')}">
+                <f:link.typolink parameter="{link}">{f:if(condition:'{subheader}', then:'<small>{subheader}</small>')}{header}</f:link.typolink>
+            </h2>
         </f:case>
         <f:case value="3">
-            <h3 class="header{f:if(condition:'{threeme-layout}', then:' threeme-align-{threeme-layout}')}"><f:link.typolink parameter="{link}">{f:if(condition:'{subheader}', then:'<small>{subheader}</small>')}{header}</f:link.typolink></h3>
+            <h3 class="header{f:if(condition:'{threemeHeaderLayout}', then:' threeme-header-layout-{threemeHeaderLayout}')}{f:if(condition:'{threemeHeaderCss}', then:' threeme-header-css-{threemeHeaderCss}')}">
+                <f:link.typolink parameter="{link}">{f:if(condition:'{subheader}', then:'<small>{subheader}</small>')}{header}</f:link.typolink>
+            </h3>
         </f:case>
         <f:case value="4">
-            <h4 class="header{f:if(condition:'{threeme-layout}', then:' threeme-align-{threeme-layout}')}"><f:link.typolink parameter="{link}">{f:if(condition:'{subheader}', then:'<small>{subheader}</small>')}{header}</f:link.typolink></h4>
+            <h4 class="header{f:if(condition:'{threemeHeaderLayout}', then:' threeme-header-layout-{threemeHeaderLayout}')}{f:if(condition:'{threemeHeaderCss}', then:' threeme-header-css-{threemeHeaderCss}')}">
+                <f:link.typolink parameter="{link}">{f:if(condition:'{subheader}', then:'<small>{subheader}</small>')}{header}</f:link.typolink>
+            </h4>
         </f:case>
         <f:case value="5">
-            <h5 class="header{f:if(condition:'{threeme-layout}', then:' threeme-align-{threeme-layout}')}"><f:link.typolink parameter="{link}">{f:if(condition:'{subheader}', then:'<small>{subheader}</small>')}{header}</f:link.typolink></h5>
+            <h5 class="header{f:if(condition:'{threemeHeaderLayout}', then:' threeme-header-layout-{threemeHeaderLayout}')}{f:if(condition:'{threemeHeaderCss}', then:' threeme-header-css-{threemeHeaderCss}')}">
+                <f:link.typolink parameter="{link}">{f:if(condition:'{subheader}', then:'<small>{subheader}</small>')}{header}</f:link.typolink>
+            </h5>
         </f:case>
         <f:case value="6">
-            <h6 class="header{f:if(condition:'{threeme-layout}', then:' threeme-align-{threeme-layout}')}"><f:link.typolink parameter="{link}">{f:if(condition:'{subheader}', then:'<small>{subheader}</small>')}{header}</f:link.typolink></h6>
+            <h6 class="header{f:if(condition:'{threemeHeaderLayout}', then:' threeme-header-layout-{threemeHeaderLayout}')}{f:if(condition:'{threemeHeaderCss}', then:' threeme-header-css-{threemeHeaderCss}')}">
+                <f:link.typolink parameter="{link}">{f:if(condition:'{subheader}', then:'<small>{subheader}</small>')}{header}</f:link.typolink>
+            </h6>
         </f:case>
         <f:case value="100">
             <f:comment> -- do not show header -- </f:comment>
@@ -27,7 +38,8 @@
         <f:case default="true">
             <f:if condition="{default}">
                 <f:render partial="Header/Header" arguments="{
-                    threeme-layout: threeme-layout,
+                    threemeHeaderLayout: threemeHeaderLayout,
+                    threemeHeaderCss: threemeHeaderCss,
                     header: header,
                     subheader: subheader,
                     layout: default,

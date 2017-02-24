@@ -58,20 +58,6 @@ h5, .h5 {
     text-transform: uppercase;
 }
 
-// Execption for cType 'Header'
-.threeme-header {
-    .dateheader {
-        margin-bottom: $padding-small-vertical;
-    }
-
-    .header {
-        small {
-            display: block;
-            margin-bottom: $padding-small-vertical;
-        }
-    }
-}
-
 p {
     margin-bottom: ($padding-large-vertical * 2);
 }
@@ -113,20 +99,54 @@ hr {
     font-weight: 300;
 }
 
-.threeme-align-100 {
+// Examples for use of field 'Appearance > Layout' in case of cType 'Header'
+.threeme-header-layout-100 {
     text-align: left;
 }
 
-.threeme-align-101 {
+.threeme-header-layout-101 {
     text-align: center;
 }
 
-.threeme-align-102 {
+.threeme-header-layout-102 {
     text-align: right;
 }
 
-.threeme-align-103 {
+.threeme-header-layout-103 {
     text-align: justify;
+}
+
+// Examples for use of the additional field 'tx_threeme_header_css' in case of cType 'Header'
+.threeme-header-css-200 {
+    color: $brand-primary;
+}
+
+.threeme-header-css-201 {
+    color: $brand-danger;
+}
+
+// Exception for cType 'Header'
+.threeme-header {
+    .dateheader {
+        margin-bottom: $padding-small-vertical;
+    }
+
+    small {
+        display: block;
+        margin-bottom: $padding-small-vertical;
+    }
+
+    &.threeme-header-css-200 {
+        small {
+            color: lighten($brand-primary, 10%);
+        }
+    }
+
+    &.threeme-header-css-201 {
+        small {
+            color: lighten($brand-danger, 10%);
+        }
+    }
 }
 
 // Reduce font-size for small devices

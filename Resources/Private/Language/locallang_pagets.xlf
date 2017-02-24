@@ -24,7 +24,7 @@
             <trans-unit id="tt_content.colPos.altLabels.3">
                 <source>Content (Bottom)</source>
             </trans-unit>
-            
+
             <trans-unit id="tt_content.colPos.altLabels.100">
                 <source>Columns 100+ = header, 200+ = Content, 300+ = Footer</source>
             </trans-unit>
@@ -70,6 +70,13 @@
                 <source>Headline 5 (Subsection header)</source>
             </trans-unit>
 
+            <trans-unit id="tt_content.threeme_header_css.addItems.200">
+                <source>Color: Primary color I</source>
+            </trans-unit>
+            <trans-unit id="tt_content.threeme_header_css.addItems.201">
+                <source>Color: Primary color II</source>
+            </trans-unit>
+
             <trans-unit id="tt_content.layout.types.header.addItems.100">
                 <source>Orientation: Left</source>
             </trans-unit>
@@ -105,14 +112,14 @@
             <trans-unit id="tt_content.layout.types.table.addItems.203">
                 <source>Table: Condensed</source>
             </trans-unit>
-            
+
             <trans-unit id="tt_content.layout.types.bullets.addItems.200">
                 <source>List: Unstyled</source>
             </trans-unit>
             <trans-unit id="tt_content.layout.types.bullets.addItems.201">
                 <source>List: Inline</source>
             </trans-unit>
-            
+
             <trans-unit id="tx_powermail_domain_model_form.css.altLabels.nolabel">
                 <source>Hide label</source>
             </trans-unit>
@@ -122,7 +129,7 @@
             <trans-unit id="tx_powermail_domain_model_field.css.altLabels.nolabel">
                 <source>Hide label</source>
             </trans-unit>
-            
+
         </body>
     </file>
 </xliff>

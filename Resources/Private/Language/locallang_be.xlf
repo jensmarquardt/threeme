@@ -5,6 +5,13 @@
             <trans-unit id="threeme-pagetree-sys-note">
                 <source>Threeme: Important note on page</source>
             </trans-unit>
+
+            <trans-unit id="tt_content.threeme_header_css">
+                <source>Scheme</source>
+            </trans-unit>
+            <trans-unit id="tt_content.threeme_header_css.0">
+                <source>Default</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

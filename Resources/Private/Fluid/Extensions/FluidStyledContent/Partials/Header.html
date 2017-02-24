@@ -5,11 +5,11 @@
     <f:if condition="{data.header}">
         <f:if condition="{data.subheader}">
             <f:then>
-                <header class="threeme-header{f:if(condition:'{data.layout}', then:' threeme-align-{data.layout}')}">
+                <header class="threeme-header{f:if(condition:'{data.layout}', then:' threeme-header-layout-{data.layout}')}{f:if(condition:'{data.tx_threeme_header_css}', then:' threeme-header-css-{data.tx_threeme_header_css}')}">
             </f:then>
             <f:else>
                 <f:if condition="{data.date}">
-                    <header class="threeme-header{f:if(condition:'{data.layout}', then:' threeme-align-{data.layout}')}">
+                    <header class="threeme-header{f:if(condition:'{data.layout}', then:' threeme-header-layout-{data.layout}')}{f:if(condition:'{data.tx_threeme_header_css}', then:' threeme-header-css-{data.tx_threeme_header_css}')}">
                 </f:if>
             </f:else>
         </f:if>
@@ -17,7 +17,8 @@
         <f:render partial="Header/Date" arguments="{_all}" />
 
         <f:render partial="Header/Header" arguments="{
-            threeme-layout: data.layout,
+            threemeHeaderLayout: '{f:if(condition:\'{data.subheader}\', then:\'\', else:\'{data.layout}\')}',
+            threemeHeaderCss: '{f:if(condition:\'{data.subheader}\', then:\'\', else:\'{data.tx_threeme_header_css}\')}',
             header: data.header,
             subheader: data.subheader,
             layout: data.header_layout,
