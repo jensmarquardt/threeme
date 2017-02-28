@@ -74,13 +74,13 @@ you should have these extensions loaded and installed via the TER:
 * News
 * Mask
 * Powermail
+* Min
 
 Threeme uses the following system extensions:
 
 * Fluid Styled Content
-* Internal Notes
-* Indexed Search (optional, basic example)
-* Felogin (optional, basic example)
+* Indexed Search (optional, example configuration)
+* Felogin (optional, example configuration)
 
 Extension Mask
 --------------
