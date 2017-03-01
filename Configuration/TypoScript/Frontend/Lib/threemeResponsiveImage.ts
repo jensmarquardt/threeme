@@ -1,3 +1,14 @@
+/*
+Responsive images
+Alternative implementation for responsive image rendering
+
+Usage, see partial FSC > MediaGallery:
+<f:cObject
+    typoscriptObjectPath="lib.threemeResponsiveImage"
+    currentValueKey="uid"
+    data="{column.media.properties}"
+/>
+*/
 lib.threemeResponsiveImage = IMAGE
 lib.threemeResponsiveImage {
     file {

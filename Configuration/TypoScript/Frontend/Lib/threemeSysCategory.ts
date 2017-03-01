@@ -1,9 +1,12 @@
-# Ausgabe der Systemkategorien des aktuellen Inhaltelements per TS-Lib und Viewhelper
-#<f:alias map="{categories: '{f:cObject(typoscriptObjectPath:\'lib.threemeSysCategory\', data:\'{contentUid: data.uid}\')}'}">
-#    <f:for each="{threeme:decodeJson(json:'{categories}')}" as="category">
-#        {category.uid},{category.title}
-#    </f:for>
-#</f:alias>
+/*
+    Ausgabe der Systemkategorien des aktuellen Inhaltelements per TS-Lib und Viewhelper
+
+    <f:alias map="{categories: '{f:cObject(typoscriptObjectPath:\'lib.threemeSysCategory\', data:\'{contentUid: data.uid}\')}'}">
+        <f:for each="{threeme:decodeJson(json:'{categories}')}" as="category">
+            {category.uid},{category.title}
+        </f:for>
+    </f:alias>
+*/
 lib.threemeSysCategory = COA
 lib.threemeSysCategory {
     10 = LOAD_REGISTER
@@ -12,7 +15,7 @@ lib.threemeSysCategory {
         contentUid.cObject {
             field = contentUid
         }
-        
+
         contentTable.cObject = TEXT
         contentTable.cObject {
             field = contentTable
@@ -61,6 +64,6 @@ lib.threemeSysCategory {
           20.insertData = 1
         }
     }
-    
+
     100 = RESTORE_REGISTER
 }
