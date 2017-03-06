@@ -87,29 +87,41 @@ Extension Mask
 
 Before Threeme is installed, the paths to its Mask configuration must be known.
 This could be done in the Extension Manager or directly via the Backend module of Mask.
-The following paths have to be set:
+The following paths have to be set in each configuration tab / field:
 
-* Config: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Config/mask.json
-* Backend: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Backend/
-* Backend Layouts: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Backend/Layouts/
-* Backend Partials: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Backend/Partials/
-* Preview: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Preview/
-* Frontend: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Content/
-* Frontend Layouts: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Content/Layouts/
-* Frontend Partials: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Content/Partials/
+General:
+* general.json: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Config/mask.json
+
+Frontend:
+* frontend.content: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Content/
+* frontend.layouts: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Content/Layouts/
+* frontend.partials: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Content/Partials/
+
+Backend:
+* backend.backend: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Backend/
+* backend.layouts_backend: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Backend/Layouts/
+* backend.partials_backend: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Backend/Partials/
+* backend.preview: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Preview/
 
 Extension RealURL
 -----------------
 
 If you want to get your RealURL configuration from Threeme,
-you can add the following in the Extension Manager to RealURL:
+you can change the following fields in the RealURL configuration by the Extension Manager:
 
-* Configuration path: typo3conf/ext/threeme/Resources/Private/Php/Extensions/Realurl/Configuration.php
+* basic.configFile: typo3conf/ext/threeme/Resources/Private/Php/Extensions/Realurl/Configuration.php
+* basic.enableAutoConf: 0
 
 
 ========================================================================================================================
 Installation successful? I have a Threeme
 ========================================================================================================================
+
+Finally edit the following Install-Tool values:
+
+* BE|explicitADmode: explicitAllow
+* FE|pageNotFound_handling: /404.html
+
 
 Community
 ---------
