@@ -22,7 +22,7 @@ $EM_CONF['threeme'] = array(
     'CGLcompliance_note' => '',
     'constraints' => array(
         'depends' => array(
-            'typo3' => '7.6.0-7.6.999',
+            'typo3' => '7.6.0-7.6.99',
             'fluid_styled_content' => '7.6',
         ),
         'conflicts' => array(
