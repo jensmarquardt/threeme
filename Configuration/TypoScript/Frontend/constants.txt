@@ -146,13 +146,19 @@ threeme {
     }
 
     frontend {
-        # cat=Threeme/Frontend/100; type=text; label= Logo: Website logo
+        # cat=Threeme/Frontend/100; type=text; label= siteTitle : The sitetitle is set in the TypoScript root template.
+        siteTitle = Change sitetitle at TypoScript root template!
+
+        # cat=Threeme/Frontend/110; type=text; label= shortcutIcon: Favicon of the page.
+        shortcutIcon = EXT:threeme/Resources/Public/Images/Frontend/Favicon/favicon.ico
+
+        # cat=Threeme/Frontend/120; type=text; label= Logo: Website logo
         logo = EXT:threeme/Resources/Public/Images/Frontend/Logo/threeme.svg
 
-        # cat=Threeme/Frontend/110; type=text; label= enableCookiebar: Enable notification bar for the new EU cookielaw.
+        # cat=Threeme/Frontend/130; type=text; label= enableCookiebar: Enable notification bar for the new EU cookielaw.
         enableCookiebar = 0
 
-        # cat=Threeme/Frontend/120; type=text; label= enableMetaNavigation: Enable meta navigation bar as part of the footer.
+        # cat=Threeme/Frontend/140; type=text; label= enableMetaNavigation: Enable meta navigation bar as part of the footer.
         enableMetaNavigation = 0
 
         # cat=Threeme/Frontend/200; type=int+; label= pidRoot: PID website root.
@@ -179,7 +185,7 @@ threeme {
         # cat=Threeme/Frontend/300; type=int+; label= pidFeUser: PID sysfolder for frontend user and groups.
         pidFeUser = 5
 
-        # cat=Threeme/Frontend/300; type=int+; label= pidSysCategory: PID sysfolder for system categories.
+        # cat=Threeme/Frontend/310; type=int+; label= pidSysCategory: PID sysfolder for system categories.
         pidSysCategory = 4
     }
 
@@ -190,19 +196,19 @@ threeme {
         # cat=Threeme/Menu/110; type=string; label= navbar: Exclude UIDs from navbar menu.
         navbar.excludeUidList =
 
-        # cat=Threeme/Menu/120; type=int+; label= navlist: Entrylevel of navlist menu.
+        # cat=Threeme/Menu/200; type=int+; label= navlist: Entrylevel of navlist menu.
         navlist.entry = 1
 
-        # cat=Threeme/Menu/130; type=string; label= navlist: Exclude UIDs from navlist menu.
+        # cat=Threeme/Menu/210; type=string; label= navlist: Exclude UIDs from navlist menu.
         navlist.excludeUidList =
 
-        # cat=Threeme/Menu/140; type=int+; label= navtabs: Entrylevel of navtabs menu.
+        # cat=Threeme/Menu/300; type=int+; label= navtabs: Entrylevel of navtabs menu.
         navtabs.entry = 0
 
-        # cat=Threeme/Menu/150; type=string; label= navtabs: Exclude UIDs from navtabs menu.
+        # cat=Threeme/Menu/310; type=string; label= navtabs: Exclude UIDs from navtabs menu.
         navtabs.excludeUidList =
 
-        # cat=Threeme/Menu/200; type=int+; label= breadcrumb: Entrylevel of breadcrumb menu.
+        # cat=Threeme/Menu/400; type=int+; label= breadcrumb: Entrylevel of breadcrumb menu.
         breadcrumb.entry = 1
     }
 }

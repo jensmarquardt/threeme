@@ -1,7 +1,7 @@
 page = PAGE
 page {
     typeNum = 0
-    shortcutIcon = {$threeme.enable.publicBasePath}/Images/Frontend/Favicon/favicon.ico
+    shortcutIcon = {$threeme.frontend.shortcutIcon}
 
     # Disable global indexing, bind it to typeNum!
     config.index_enable = {$threeme.enable.index_enable}
