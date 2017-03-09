@@ -38,6 +38,7 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl'] = array (
             '_DEFAULT' => array(
                 # EXT:news
                 'artikel' => array(
+/*
                     array(
                         'GETvar' => 'tx_news_pi1[day]',
                     ),
@@ -47,6 +48,7 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl'] = array (
                     array(
                         'GETvar' => 'tx_news_pi1[year]',
                     ),
+*/
                     array(
                         'GETvar' => 'tx_news_pi1[news]',
                         'lookUpTable' => array(

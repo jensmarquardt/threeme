@@ -10,7 +10,7 @@ plugin.tx_news {
     view {
         widget.GeorgRinger\News\ViewHelpers\Widget\PaginateViewHelper.templateRootPath = {$plugin.tx_news.view.templateRootPath}
     }
-    
+
     _LOCAL_LANG {
         de {
             related-files = Weiterführende Downloads
@@ -31,7 +31,8 @@ plugin.tx_news {
         }
 
         link {
-            hrDate = 1
+            skipControllerAndAction = 0
+            hrDate = 0
             hrDate {
                 day = j
                 month = n
@@ -82,7 +83,7 @@ plugin.tx_news {
         }
 
         opengraph {
-            site_name = {$plugin.tx_news.opengraph.site_name}
+            site_name =
             type = article
             admins =
             email =
@@ -98,9 +99,10 @@ plugin.tx_news {
 
             twitter {
                 card = {$plugin.tx_news.opengraph.twitter.card}
-                site = {$plugin.tx_news.opengraph.twitter.site}
+                site =
                 creator = {$plugin.tx_news.opengraph.twitter.creator}
             }
         }
     }
 }
+
