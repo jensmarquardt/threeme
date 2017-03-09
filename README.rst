@@ -103,11 +103,13 @@ Backend:
 * backend.partials_backend: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Backend/Partials/
 * backend.preview: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Preview/
 
+Finally, perform a Database-Compare via Install-Tool!
+
 Extension RealURL
 -----------------
 
 If you want to get your RealURL configuration from Threeme,
-you can change the following fields in the RealURL configuration by the Extension Manager:
+you can change the following fields in the RealURL configuration via Extension Manager:
 
 * basic.configFile: typo3conf/ext/threeme/Resources/Private/Php/Extensions/Realurl/Configuration.php
 * basic.enableAutoConf: 0
