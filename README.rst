@@ -133,5 +133,5 @@ Issues should be sent to the appropriate extension on GitHub.
 
 * `A complete documentation in german language at <https://www.threeme.de>`_
 * `Threeme on GitHub <https://github.com/AstCommodore/threeme>`_
-* André on Slack: @commodore
+* André on Slack TYPO3 channel: @commodore
 * Mail: andre@threeme.de
