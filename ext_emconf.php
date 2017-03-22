@@ -31,11 +31,11 @@ $EM_CONF['threeme'] = array(
             'ws_scss' => '1.1',
             'mask' => '2.1',
             'news' => '5.3',
-            'powermail' => '3.10',
+            'powermail' => '3.15',
             'be_secure_pw' => '7.1',
             'realurl' => '2.1',
             'dd_googlesitemap' => '2.0',
-            'min' => '1.1',
+            'min' => '1.3',
         ),
     ),
 );
