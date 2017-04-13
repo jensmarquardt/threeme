@@ -11,7 +11,7 @@
         </div>
 
         <f:for each="{data.tx_mask_item}" as="dataItem" key="dataKey" iteration="dataIterator">
-            <f:if condition="{dataItem.hidden} != 1">
+            <f:if condition="{dataItem.properties.hidden} != 1">
                 <div class="col-sm-3">
                     <div class="panel panel-default">
                         <div class="panel-heading">
