@@ -42,3 +42,14 @@
 * [TASK] Used userFunc condition to auto-include TypoScript of 3rd party EXTs 
 * [FEATURE] Added new TypoScript lib 'threemeWatermarkedImage' as alternative image rendering option
 * [REFACTOR] Added wrapper classes for field 'layout' of cType image
+
+### 2017-04-13  Version 3.1.1
+* [FIX] Minor changes to news + realurl configuration, deactivated hrdate to respect news sitemap
+* [FEATURE] Added canonical tag to headerData.ts
+* [FEATURE] Added sitename and favicon to constants set
+* [DOC] Minor changes to the readme and comments in constants.txt and page.ts
+* [REFACTOR] Optimized file size for login background image by Guetzli
+* [DOC] Minor changes to doc and comments
+* [FEATURE] Updated EXT:Powermail to version 3.15.0
+* [FEATURE] Updated EXT:Min 1.3
+* [FIX] Added condition to hide hidden MASK records in BE
