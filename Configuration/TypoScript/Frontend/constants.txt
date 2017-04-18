@@ -165,7 +165,7 @@ threeme {
         pidRoot = 1
 
         # cat=Threeme/Frontend/210; type=int+; label= pidHome: PID website home.
-        pidHome = 52
+        pidHome = 53
 
         # cat=Threeme/Frontend/220; type=int+; label= pidLightbox: PID sysfolder for lightbox pages.
         pidLightbox = 15
