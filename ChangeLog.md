@@ -53,3 +53,9 @@
 * [FEATURE] Updated EXT:Powermail to version 3.15.0
 * [FEATURE] Updated EXT:Min 1.3
 * [FIX] Added condition to hide hidden MASK records in BE
+
+### 2017-04-18  Version 3.1.2
+* [STYLE] Added distribution preview images
+* [STYLE] Improved ext_icon.svg
+* [FIX] Improved ext_emconf.php
+* [DOC] Improved documentation pagetree in data.t3d
