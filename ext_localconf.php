@@ -1,5 +1,5 @@
 <?php
-defined('TYPO3_MODE') or die();
+if (!defined('TYPO3_MODE')) { die('Access denied.'); }
 
 // Add BackendLayout container
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="DIR:EXT:threeme/Configuration/TSconfig/BackendLayout" extensions="txt,ts">');
@@ -19,9 +19,10 @@ if (!is_array($TYPO3_CONF_VARS['SYS']['caching']['cacheConfigurations']['threeme
     $TYPO3_CONF_VARS['SYS']['caching']['cacheConfigurations']['threeme_cache']['options']['compression'] = 1;
 }
 
-// Register "Important note on page" icon
 if (TYPO3_MODE === 'BE')
 {
+    // Register sys_note icon
+    /** @var \TYPO3\CMS\Core\Imaging\IconRegistry $iconRegistry */
     $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
     $iconRegistry->registerIcon(
         'threeme-pagetree-sys-note',

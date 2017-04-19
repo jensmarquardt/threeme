@@ -1,5 +1,35 @@
 <?php
-defined('TYPO3_MODE') or die();
+defined('TYPO3_MODE') || die();
 
-// Add field 'layout' to GridElements content type
-$GLOBALS['TCA']['tt_content']['types']['gridelements_pi1']['showitem'] = str_replace(';frames,media,', ';frames,layout,media,', $GLOBALS['TCA']['tt_content']['types']['gridelements_pi1']['showitem']);
+$fields = array (
+    'tx_threeme_header_css' => array(
+        'exclude' => 1,
+        'label' => 'LLL:EXT:threeme/Resources/Private/Language/locallang_be.xlf:tt_content.threeme_header_css',
+        'config' => array(
+            'type' => 'select',
+            'items' => array(
+                array('LLL:EXT:threeme/Resources/Private/Language/locallang_be.xlf:tt_content.threeme_header_css.0', 0),
+            ),
+        ),
+    ),
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
+    'tt_content',
+    $fields,
+    true
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+    'tt_content',
+    'header',
+    'tx_threeme_header_css',
+    'after:header_layout'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+    'tt_content',
+    'headers',
+    'tx_threeme_header_css',
+    'after:header_layout'
+);

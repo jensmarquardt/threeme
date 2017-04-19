@@ -22,3 +22,7 @@ CREATE TABLE cf_threeme_cache_tags (
 	KEY cache_id (identifier),
 	KEY cache_tag (tag)
 ) ENGINE=InnoDB;
+
+CREATE TABLE tt_content (
+	tx_threeme_header_css VARCHAR(30) DEFAULT '' NOT NULL
+);

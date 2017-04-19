@@ -1,6 +1,6 @@
 # #################################################
 # Version note:
-# Copied TS and Fluid from EXT:news 5.2.0
+# Copied TS and Fluid from EXT:news 5.3.2
 # #################################################
 
 plugin.tx_news {
@@ -15,12 +15,9 @@ plugin.tx_news {
     }
 
     opengraph {
-        site_name =
-
         twitter {
             card = summary
-            site =
-            creator =
+            creator = {$threeme.meta.author}
         }
     }
 

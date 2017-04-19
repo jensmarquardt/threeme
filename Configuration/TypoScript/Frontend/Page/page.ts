@@ -1,9 +1,9 @@
 page = PAGE
 page {
     typeNum = 0
-    shortcutIcon = {$threeme.enable.publicBasePath}/Images/Frontend/Favicon/favicon.ico
+    shortcutIcon = {$threeme.frontend.shortcutIcon}
 
-    # Disable global indexing, bind it to typeNum!
+    # Disable global indexing, bind on typeNum!
     config.index_enable = {$threeme.enable.index_enable}
     config.index_externals = {$threeme.enable.index_externals}
     config.index_metatags = {$threeme.enable.index_metatags}
@@ -67,9 +67,16 @@ page {
 
 
 # RTE CSS
-# When compiling your CSS dynamically, only files in page.includeCSS are respected (see above).
+# When compiling your CSS by a third party extension like "ws_scss", only files in page.includeCSS are respected.
 # This workarround will add the RTE Sass file to page.includeCSS too, so it being compiled like any other file.
 # RTE.default.contentCSS includes the compiled Sass file from EXT:threeme/Resources/Public/Css/styles-rte.css.
+#
+# Hint:
+# If you have activated "compileRteCssFromSass", be sure your Frontend is uncached and the RTE CSS is included correctly.
+# In some cases third party compiler like "ws_scss" don't generate the "styles-rte.css" in EXT:threeme/Resources/Public/Css/ by default.
+# It's because there a no changes to the related SASS "_styles-rte.scss". Edit this file, write some garbage, save and reload the Frontend.
+# The SASS compiler will throw an error, so you know it's working right now. Remove your trash from "_styles-rte.scss" and
+# reload the Frontend again. Now everything is fine and the compiler will generate the "styles-rte.css".
 [globalVar = LIT:0 < {$threeme.enable.compileRteCssFromSass}]
     page {
         includeCSS {

@@ -74,42 +74,56 @@ you should have these extensions loaded and installed via the TER:
 * News
 * Mask
 * Powermail
+* Min
 
 Threeme uses the following system extensions:
 
 * Fluid Styled Content
-* Internal Notes
-* Indexed Search (optional, basic example)
-* Felogin (optional, basic example)
+* Indexed Search (optional, example configuration)
+* Felogin (optional, example configuration)
 
 Extension Mask
 --------------
 
 Before Threeme is installed, the paths to its Mask configuration must be known.
 This could be done in the Extension Manager or directly via the Backend module of Mask.
-The following paths have to be set:
+The following paths have to be set in each configuration tab / field:
 
-* Config: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Config/mask.json
-* Backend: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Backend/
-* Backend Layouts: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Backend/Layouts/
-* Backend Partials: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Backend/Partials/
-* Preview: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Preview/
-* Frontend: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Content/
-* Frontend Layouts: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Content/Layouts/
-* Frontend Partials: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Content/Partials/
+General:
+* general.json: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Config/mask.json
+
+Frontend:
+* frontend.content: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Content/
+* frontend.layouts: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Content/Layouts/
+* frontend.partials: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Content/Partials/
+
+Backend:
+* backend.backend: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Backend/
+* backend.layouts_backend: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Backend/Layouts/
+* backend.partials_backend: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Backend/Partials/
+* backend.preview: typo3conf/ext/threeme/Resources/Private/Fluid/Extensions/Mask/Preview/
+
+Finally, perform a Database-Compare via Install-Tool!
 
 Extension RealURL
 -----------------
 
 If you want to get your RealURL configuration from Threeme,
-you can add the following in the Extension Manager to RealURL:
+you can change the following fields in the RealURL configuration via Extension Manager:
 
-* Configuration path: typo3conf/ext/threeme/Resources/Private/Php/Extensions/Realurl/Configuration.php
+* basic.configFile: typo3conf/ext/threeme/Resources/Private/Php/Extensions/Realurl/Configuration.php
+* basic.enableAutoConf: 0
 
 
 ========================================================================================================================
 Installation successful? I have a Threeme
 ========================================================================================================================
+
+Finally edit the following Install-Tool values:
+
+* BE|explicitADmode: explicitAllow
+* FE|pageNotFound_handling: /404.html
+
 
 Community
 ---------
@@ -119,5 +133,5 @@ Issues should be sent to the appropriate extension on GitHub.
 
 * `A complete documentation in german language at <https://www.threeme.de>`_
 * `Threeme on GitHub <https://github.com/AstCommodore/threeme>`_
-* André on Slack: @commodore
+* André on Slack TYPO3 channel: @commodore
 * Mail: andre@threeme.de

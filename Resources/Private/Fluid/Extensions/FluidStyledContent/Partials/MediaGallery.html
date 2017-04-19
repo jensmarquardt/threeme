@@ -102,18 +102,50 @@
 </f:section>
 
 <f:section name="mediaImageType">
-    <f:media
-        file="{column.media}"
-        width="{f:if(condition:'{data.imagewidth} > 0', then:'{f:if(condition:\'{data.imagewidth} == {data.imageheight}\', then:\'{data.imagewidth}c\', else:\'{column.dimensions.width}\')}', else:'{column.dimensions.width}')}"
-        height="{f:if(condition:'{data.imageheight} > 0', then:'{f:if(condition:\'{data.imagewidth} == {data.imageheight}\', then:\'{data.imageheight}c\', else:\'{column.dimensions.height}\')}', else:'{column.dimensions.height}')}"
-        alt="{column.media.alternative}"
-        title="{column.media.title}"
-        class="img-responsive <f:switch expression=\"{data.layout}\"><f:case value=\"200\">img-rounded</f:case><f:case value=\"201\">img-circle</f:case><f:case value=\"202\">img-thumbnail</f:case></f:switch>"
-    />
+    <f:alias map="{
+            cropMediaWidth: '{f:if(condition:\'{data.imagewidth} == {data.imageheight}\', then:\'{data.imagewidth}c\', else:\'{column.dimensions.width}\')}',
+            cropMediaHeight: '{f:if(condition:\'{data.imagewidth} == {data.imageheight}\', then:\'{data.imageheight}c\', else:\'{column.dimensions.height}\')}'
+        }"
+    >
 
-    <f:comment>
-        Alternative implementation for responsive image rendering
-        <f:cObject typoscriptObjectPath="lib.threemeResponsiveImage" data="{column.media.properties}" currentValueKey="uid" />
-    </f:comment>
+        <f:media
+            file="{column.media}"
+            width="{f:if(condition:'{data.imagewidth} > 0', then:'{cropMediaWidth}', else:'{column.dimensions.width}')}"
+            height="{f:if(condition:'{data.imageheight} > 0', then:'{cropMediaHeight}', else:'{column.dimensions.height}')}"
+            alt="{column.media.alternative}"
+            title="{column.media.title}"
+            class="img-responsive{f:if(condition:'{data.layout}', then:' threeme-image-layout-{data.layout}')}"
+        />
+
+        <f:comment>
+            Alternative implementation for responsive image rendering
+            <f:cObject
+                typoscriptObjectPath="lib.threemeResponsiveImage"
+                currentValueKey="uid"
+                data="{column.media.properties}"
+            />
+        </f:comment>
+
+        <f:comment>
+            Watermarked images
+            Alternative implementation for watermarked image rendering.
+            Note: EXT 'filemetadata' has to be activated if you want to use additional media fields.
+
+            <f:cObject
+                typoscriptObjectPath="lib.threemeWatermarkedImage"
+                currentValueKey="uid"
+                data="{
+                    uid: column.media.uid,
+                    width: '{f:if(condition: \'{data.imagewidth} > 0\', then: \'{cropMediaWidth}\', else: \'{column.dimensions.width}\')}',
+                    height: '{f:if(condition: \'{data.imageheight} > 0\', then: \'{cropMediaHeight}\', else: \'{column.dimensions.height}\')}',
+                    alt: column.media.alternative,
+                    title: column.media.title,
+                    params: 'class=\"img-responsive{f:if(condition:\'{data.layout}\', then:\' threeme-image-layout-{data.layout}\')}\"',
+                    watermark: column.media.properties.copyright
+                }"
+            />
+        </f:comment>
+
+    </f:alias>
 </f:section>
 </html>

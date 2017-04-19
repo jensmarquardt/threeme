@@ -14,7 +14,7 @@
                 <source>404 Page</source>
                 <target>404 Seite</target>
             </trans-unit>
-            
+
             <trans-unit id="tt_content.colPos.altLabels.0">
                 <source>Inhalte (Mitte)</source>
                 <target>Inhalte (Mitte)</target>
@@ -91,6 +91,15 @@
                 <target>Überschrift 5. Ordnung (Absatzüberschrift)</target>
             </trans-unit>
 
+            <trans-unit id="tt_content.threeme_header_css.addItems.200">
+                <source>Color: Primary color I</source>
+                <target>Farbe: Primärfarbe I</target>
+            </trans-unit>
+            <trans-unit id="tt_content.threeme_header_css.addItems.201">
+                <source>Color: Primary color II</source>
+                <target>Farbe: Primärfarbe II</target>
+            </trans-unit>
+
             <trans-unit id="tt_content.layout.types.header.addItems.100">
                 <source>Orientation: Left</source>
                 <target>Ausrichtung: Linksbündig</target>
@@ -107,7 +116,7 @@
                 <source>Orientation: Justify</source>
                 <target>Ausrichtung: Blocksatz</target>
             </trans-unit>
-            
+
             <trans-unit id="tt_content.layout.types.textmedia.addItems.200">
                 <source>Image shapes: Rounded</source>
                 <target>Bilder mit runden Kanten</target>
@@ -120,7 +129,7 @@
                 <source>Image shapes: Thumbnail</source>
                 <target>Bilder als Thumbnail</target>
             </trans-unit>
-            
+
             <trans-unit id="tt_content.layout.types.table.addItems.200">
                 <source>Table: Striped rows</source>
                 <target>Tabelle gestreift</target>
@@ -137,7 +146,7 @@
                 <source>Table: Condensed</source>
                 <target>Tabelle kompakt</target>
             </trans-unit>
-            
+
             <trans-unit id="tt_content.layout.types.bullets.addItems.200">
                 <source>List: Unstyled</source>
                 <target>Punktliste ohne Auszeichnung</target>
@@ -146,7 +155,7 @@
                 <source>List: Inline</source>
                 <target>Punktliste in Reihe</target>
             </trans-unit>
-            
+
             <trans-unit id="tx_powermail_domain_model_form.css.altLabels.nolabel">
                 <source>Hide label</source>
                 <target>Bezeichnung ausblenden</target>

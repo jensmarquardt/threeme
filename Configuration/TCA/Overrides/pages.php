@@ -1,5 +1,5 @@
 <?php
-defined('TYPO3_MODE') or die();
+defined('TYPO3_MODE') || die();
 
 // Add uniqueInPid to eval to avoid duplicate page title on same treelevel
 $GLOBALS['TCA']['pages']['columns']['title']['config']['eval'] = 'trim,required,uniqueInPid';
