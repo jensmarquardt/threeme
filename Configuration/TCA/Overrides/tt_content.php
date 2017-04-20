@@ -7,6 +7,7 @@ $fields = array (
         'label' => 'LLL:EXT:threeme/Resources/Private/Language/locallang_be.xlf:tt_content.threeme_header_css',
         'config' => array(
             'type' => 'select',
+            'renderType' => 'selectSingle',
             'items' => array(
                 array('LLL:EXT:threeme/Resources/Private/Language/locallang_be.xlf:tt_content.threeme_header_css.0', 0),
             ),
