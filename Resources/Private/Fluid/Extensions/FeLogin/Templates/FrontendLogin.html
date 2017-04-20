@@ -48,7 +48,7 @@
 
 <!-- ###LOGIN_FORM### -->
 <form action="###ACTION_URI###" target="_top" method="post" onsubmit="###ON_SUBMIT###" class="form-horizontal">
-    <fieldset class="nolabel">
+    <fieldset>
         <legend>###LEGEND###</legend>
 
         <div class="form-group">
@@ -67,7 +67,8 @@
 
         <!--###PERMALOGIN_VALID###-->
             <div class="form-group">
-                <div class="col-sm-9 col-sm-offset-3">
+               <label class="control-label col-sm-3" for="permalogin">###PERMALOGIN###</label>
+                <div class="col-sm-9">
                     <input class="form-control" name="permalogin" value="0" type="hidden" ###PERMALOGIN_HIDDENFIELD_ATTRIBUTES### id="permaloginHiddenField">
                     <div class="checkbox">
                         <label for="permalogin">
@@ -108,7 +109,7 @@
 ###STATUS_MESSAGE###
 
 <form action="###ACTION_URI###" target="_top" method="post" class="form-horizontal">
-    <fieldset class="nolabel">
+    <fieldset>
         <legend>###LEGEND###</legend>
 
         <div class="form-group">
@@ -139,7 +140,7 @@
 
 <!-- ###FORGOT_FORM### -->
 <form action="###ACTION_URI###" method="post" class="form-horizontal">
-    <fieldset class="nolabel">
+    <fieldset>
         <legend>###LEGEND###</legend>
 
         <div class="form-group">
