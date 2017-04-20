@@ -1,6 +1,6 @@
 # #################################################
 # Version note:
-# Copied TS and Fluid from TYPO3 7.6.11
+# Copied TS and Fluid from TYPO3 8.7.0
 # #################################################
 
 plugin.tx_indexedsearch {
@@ -102,6 +102,7 @@ plugin.tx_indexedsearch {
             languageUid = -1
             sortDesc = 1
             searchType = 1
+            extResume = 1
         }
     }
 
