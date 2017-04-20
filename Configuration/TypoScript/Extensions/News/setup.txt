@@ -3,7 +3,7 @@
 # Copied TS and Fluid from EXT:news 5.3.2
 # #################################################
 
-# Include static from extenstion
+# Include static from extension
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:news/Configuration/TypoScript/setup.txt">
 
 plugin.tx_news {
