@@ -16,12 +16,12 @@ $EM_CONF['threeme'] = array(
         'conflicts' => array(),
         'suggests' => array(
             'ws_scss' => '1.1.0-0.0.0',
-            'mask' => '2.1.1-0.0.0',
+            'mask' => '3.0.0-0.0.0',
             'news' => '5.3.3-0.0.0',
             'powermail' => '3.15.0-0.0.0',
             'be_secure_pw' => '7.1.0-0.0.0',
-            'realurl' => '2.1.0-0.0.0',
-            'dd_googlesitemap' => '2.0.0-0.0.0',
+            'realurl' => '2.2.0-0.0.0',
+            'dd_googlesitemap' => '2.1.0-0.0.0',
             'min' => '1.3.0-0.0.0'
         ),
     ),
