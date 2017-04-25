@@ -187,6 +187,12 @@ threeme {
 
         # cat=Threeme/Frontend/310; type=int+; label= pidSysCategory: PID sysfolder for system categories.
         pidSysCategory = 4
+
+        # cat=Threeme/Frontend/400; type=int+; label= emailFromName: Default email name (e.g. used in felogin)
+        emailFromName = André Steiling
+
+        # cat=Threeme/Frontend/410; type=int+; label= emailFrom: Default email address (e.g. used in felogin)
+        emailFromAddress = andre@threeme.de
     }
 
     menu {
