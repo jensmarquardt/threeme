@@ -1,0 +1,68 @@
+# Load default processing options
+imports:
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+
+# Add configuration for the editor
+# For complete documentation see http://docs.ckeditor.com/#!/api/CKEDITOR.config
+editor:
+  config:
+    # the CSS file to be used inside the editor
+    contentsCss: "EXT:threeme/Resources/Public/Css/styles-rte.css"
+
+    stylesSet:
+      # block level styles
+      - { name: "Orange title H2", element: "h2", styles: { color: "orange", background: "blue" } }
+      - { name: "Orange title H3", element: "h3", styles: { color: "orange", background: "blue" } }
+      - { name: "Quote / Citation", element: "blockquote" }
+      - { name: "Code block", element: "code" }
+      # Inline styles
+      - { name: "Yellow marker", element: "span", styles: { background-color: "yellow" } }
+
+    # will be overridden by the record (if a language is set)
+    defaultContentLanguage: "de"
+    defaultLanguage: "de"
+
+    # Allow any class or any data attribute in any tag
+    extraAllowedContent: "*(*)[data-*]"
+    height: 500
+    width: "auto"
+    toolbar: "Basic"
+    uiColor: "#F8F8F8"
+
+    # Ensure that special characters are not converted to HTML entities
+    entities_latin: false
+    entities: false
+
+    removeDialogTabs: "image:advanced;link:advanced"
+
+    format_tags: "h1;h2;h3;h4;p"
+
+    toolbarGroups:
+      - { name: styles, groups: [ styles, format ] }
+      - { name: basicstyles, groups: [ basicstyles ] }
+      - { name: paragraph, groups: [ list, indent, blocks, align ] }
+      - { name: links, groups: [ links ] }
+      - { name: clipboard, groups: [ clipboard, cleanup, undo ] }
+      - { name: editing, groups: [ spellchecker ] }
+      - { name: insert, groups: [ insert ] }
+      - { name: tools, groups: [ table, specialchar ] }
+      - { name: document, groups: [ mode ] }
+
+    justifyClasses:
+      - text-left
+      - text-center
+      - text-right
+      - text-justify
+
+    extraPlugins:
+      - justify
+
+#    removePlugins:
+#      - image
+
+    removeButtons:
+      - Superscript
+      - Subscript
+      - Underline
+      - Strike

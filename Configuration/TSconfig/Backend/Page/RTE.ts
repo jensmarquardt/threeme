@@ -1,3 +1,5 @@
+RTE.default.preset = Threeme
+
 RTE {
     classes {
         text-left {
@@ -51,7 +53,7 @@ RTE {
         list-inline {
             name = LLL:EXT:threeme/Resources/Private/Language/locallang_rte.xlf:class.list-inline
         }
-        
+
         internal-link {
             name = LLL:EXT:threeme/Resources/Private/Language/locallang_rte.xlf:class.internal-link
         }
@@ -64,7 +66,7 @@ RTE {
         download {
             name = LLL:EXT:threeme/Resources/Private/Language/locallang_rte.xlf:class.download
         }
-        
+
         lightbox {
             selectable = 0
         }
