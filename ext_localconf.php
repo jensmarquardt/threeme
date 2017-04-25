@@ -13,6 +13,9 @@ if (!defined('TYPO3_MODE')) { die('Access denied.'); }
 // Add Extensions PageTs container
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="DIR:EXT:threeme/Configuration/TSconfig/Extensions" extensions="txt,ts">');
 
+// Register ckeditor config
+$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['Threeme'] = 'EXT:threeme/Configuration/RTE/Threeme.yaml';
+
 // Register cache
 if (!is_array($TYPO3_CONF_VARS['SYS']['caching']['cacheConfigurations']['threeme_cache']))
 {
@@ -31,5 +34,11 @@ if (TYPO3_MODE === 'BE')
         'threeme-pagetree-sys-note',
         \TYPO3\CMS\Core\Imaging\IconProvider\FontawesomeIconProvider::class,
         ['name' => 'info-circle']
+    );
+
+    $iconRegistry->registerIcon(
+        'threeme-tca-icon',
+        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+        ['source' => 'EXT:threeme/ext_icon.svg']
     );
 }

@@ -23,20 +23,14 @@ TCEFORM {
             altLabels.3 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.header_layout.altLabels.3
             altLabels.4 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.header_layout.altLabels.4
             altLabels.5 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.header_layout.altLabels.5
-
-            types {
-                mask_threeme-carousel {
-                    removeItems = 1,5
-                }
-                mask_threeme-panel {
-                    removeItems = 1,5
-                }
-            }
         }
 
+        # Header layout CSS
         tx_threeme_header_css {
             addItems.200 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.threeme_header_css.addItems.200
+            addItems.200.icon = threeme-tca-icon
             addItems.201 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.threeme_header_css.addItems.201
+            addItems.201.icon = threeme-tca-icon
         }
 
         # Content layout depending on CType
@@ -45,27 +39,40 @@ TCEFORM {
             types {
                 header {
                     addItems.100 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.layout.types.header.addItems.100
+                    addItems.100.icon = threeme-tca-icon
                     addItems.101 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.layout.types.header.addItems.101
+                    addItems.101.icon = threeme-tca-icon
                     addItems.102 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.layout.types.header.addItems.102
+                    addItems.102.icon = threeme-tca-icon
                     addItems.103 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.layout.types.header.addItems.103
+                    addItems.103.icon = threeme-tca-icon
                 }
                 textmedia {
                     removeItems = 1,2,3
                     addItems.200 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.layout.types.textmedia.addItems.200
+                    addItems.200.icon = threeme-tca-icon
                     addItems.201 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.layout.types.textmedia.addItems.201
+                    addItems.201.icon = threeme-tca-icon
                     addItems.202 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.layout.types.textmedia.addItems.202
+                    addItems.202.icon = threeme-tca-icon
                 }
                 table {
                     removeItems = 1,2,3
                     addItems.200 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.layout.types.table.addItems.200
+                    addItems.200.icon = threeme-tca-icon
                     addItems.201 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.layout.types.table.addItems.201
+                    addItems.201.icon = threeme-tca-icon
                     addItems.202 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.layout.types.table.addItems.202
+                    addItems.202.icon = threeme-tca-icon
                     addItems.203 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.layout.types.table.addItems.203
+                    addItems.203.icon = threeme-tca-icon
                 }
                 bullets {
                     removeItems = 1,2,3
                     addItems.200 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.layout.types.bullets.addItems.200
+                    addItems.200.icon = threeme-tca-icon
                     addItems.201 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.layout.types.bullets.addItems.201
+                    addItems.201.icon = threeme-tca-icon
                 }
             }
         }
@@ -78,9 +85,6 @@ TCEFORM {
         imageorient {
             removeItems = 8,9,10
         }
-#        imageheight.disabled = 1
-#        imagewidth.disabled = 1
-#        imageborder.disabled = 1
 
         # Bullets settings
         bullets_type {
@@ -88,6 +92,18 @@ TCEFORM {
         }
     }
 
+    # Image manipulation, override cropVariants
+#    sys_file_reference {
+#        crop {
+#            config {
+#                cropVariants {
+#
+#                }
+#            }
+#        }
+#    }
+
+    # EXT:Powermail settings
     tx_powermail_domain_model_form {
         css {
             removeItems = layout1,layout2,layout3

@@ -20,11 +20,15 @@ options {
     pageTree {
         # If set, the titles in the page navigation tree will have their ID numbers printed before the clickable title.
         showPageIdWithTitle = 1
-        
+
         # SEO settings: Use expanded page title for "speaking SEO title" and navTitle for menus / backend.
         # If set, the navigation title is displayed in the page navigation tree instead of the normal page title.
         # The page title is showed in a tooltip if the mouse hovers the navigation title.
         showNavTitle = 1
+    }
+
+    file_list {
+        filesPerPage = 50
     }
 }
 
