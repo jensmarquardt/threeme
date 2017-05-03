@@ -2,7 +2,7 @@
 <f:if condition="{data.header_layout} != 100">
     <f:if condition="{data.header} || {data.subheader} || {data.date}">
 
-        <header class="threeme-header {f:if(condition:'{data.tx_threeme_header_css}', then:' threeme-header-css-{data.tx_threeme_header_css}')}">
+        <header class="threeme-header{f:if(condition:'{data.tx_threeme_header_css}', then:' threeme-header-css-{data.tx_threeme_header_css}')}">
 
             <f:render partial="Header/Date" arguments="{
                 date: data.date,
