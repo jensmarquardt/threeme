@@ -50,7 +50,7 @@ page {
     page {
         includeCSS >
         includeCSS {
-            website = {$threeme.enable.privateBasePath}/Sass/styles-website.scss
+            website = {$threeme.enable.privateBasePath}/Sass/styles-frontend.scss
             website.outputdir = {$threeme.enable.publicBasePath}/Css
             # Output format: Expanded, Nested, Compressed, Compact, Crunched
             website.formatter = Leafo\ScssPhp\Formatter\Nested
