@@ -1,8 +1,6 @@
-<html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
-
-<f:layout name="HeaderContentFooter" />
-<f:section name="content">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Main">
     <f:if condition="{files}">
         <ul class="ce-uploads">
             <f:for each="{files}" as="file" iteration="fileIterator">
@@ -10,27 +8,27 @@
                     <div class="row">
                         <div class="col-xs-2 col-sm-2 col-md-1">
                             <f:if condition="{data.uploads_type} == 1">
-                                <f:render section="fileicon" arguments="{extension: file.extension}" />
+                                <f:render section="Fileicon" arguments="{extension: file.extension}" />
                             </f:if>
 
                             <f:if condition="{data.uploads_type} == 2">
                                 <f:if condition="{f:uri.image(src: 'file:{f:if(condition: file.originalFile, then: \'file:{file.originalFile.uid}\', else: \'file:{file.uid}\')}')} != '/'">
                                     <f:then>
-                                        <a href="{file.publicUrl}"{f:if(condition:data.target,then:' target="{data.target}"')}>
-                                            <f:media file="{file}" width="100" title="{file.properties.title}" alt="{file.properties.alternative}" />
+                                        <a href="{file.publicUrl}" {f:if(condition:data.target,then: ' target="{data.target}"')}>
+                                            <f:media file="{file}" width="150" alt="{file.properties.alternative}" />
                                         </a>
                                     </f:then>
                                     <f:else>
-                                        <f:render section="fileicon" arguments="{extension: file.extension}" />
+                                        <f:render section="Fileicon" arguments="{extension: file.extension}" />
                                     </f:else>
                                 </f:if>
                             </f:if>
                         </div>
 
                         <div class="col-xs-10 col-sm-7 col-md-9">
-                            <a href="{file.publicUrl}"{f:if(condition:data.target,then:' target="{data.target}"')}>
+                            <a href="{file.publicUrl}" {f:if(condition:data.target,then: ' target="{data.target}"')}>
                                 <span class="ce-uploads-fileName">
-                                    {f:if(condition:file.title, then:file.title, else:file.name)}
+                                    {f:if(condition: file.properties.title, then: file.properties.title, else: file.name) -> f:format.htmlspecialchars()}
                                 </span>
                             </a>
 
@@ -61,7 +59,7 @@
     </f:if>
 </f:section>
 
-<f:section name="fileicon">
+<f:section name="Fileicon">
     <f:switch expression="{extension}">
         <f:case value="xls">
             <i class="fa fa-3x fa-file-excel-o" aria-hidden="true"></i>
