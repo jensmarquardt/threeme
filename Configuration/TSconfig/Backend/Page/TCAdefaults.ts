@@ -3,10 +3,6 @@ TCAdefaults {
         showinpreview = 1
     }
 
-    pages {
-#        url_scheme = 2
-    }
-
     tt_content {
         imageborder = 0
         imagecols = 1
