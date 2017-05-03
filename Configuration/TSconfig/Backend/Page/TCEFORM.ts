@@ -25,6 +25,14 @@ TCEFORM {
             altLabels.5 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.header_layout.altLabels.5
         }
 
+        header_position {
+            altLabels.left = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.header_position.left
+            altLabels.center = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.header_position.center
+            altLabels.right = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.header_position.right
+            addItems.justify = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.header_position.justify
+            addItems.justify.icon = threeme-tca-icon
+        }
+
         # Header layout CSS
         tx_threeme_header_css {
             addItems.200 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.threeme_header_css.addItems.200
@@ -37,16 +45,6 @@ TCEFORM {
         layout {
             removeItems = 1,2,3
             types {
-                header {
-                    addItems.100 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.layout.types.header.addItems.100
-                    addItems.100.icon = threeme-tca-icon
-                    addItems.101 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.layout.types.header.addItems.101
-                    addItems.101.icon = threeme-tca-icon
-                    addItems.102 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.layout.types.header.addItems.102
-                    addItems.102.icon = threeme-tca-icon
-                    addItems.103 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.layout.types.header.addItems.103
-                    addItems.103.icon = threeme-tca-icon
-                }
                 textmedia {
                     removeItems = 1,2,3
                     addItems.200 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.layout.types.textmedia.addItems.200

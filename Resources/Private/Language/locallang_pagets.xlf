@@ -77,16 +77,16 @@
                 <source>Color: Primary color II</source>
             </trans-unit>
 
-            <trans-unit id="tt_content.layout.types.header.addItems.100">
+            <trans-unit id="tt_content.header_position.left">
                 <source>Orientation: Left</source>
             </trans-unit>
-            <trans-unit id="tt_content.layout.types.header.addItems.101">
+            <trans-unit id="tt_content.header_position.center">
                 <source>Orientation: Center</source>
             </trans-unit>
-            <trans-unit id="tt_content.layout.types.header.addItems.102">
+            <trans-unit id="tt_content.header_position.right">
                 <source>Orientation: Right</source>
             </trans-unit>
-            <trans-unit id="tt_content.layout.types.header.addItems.103">
+            <trans-unit id="tt_content.header_position.justify">
                 <source>Orientation: Justify</source>
             </trans-unit>
 

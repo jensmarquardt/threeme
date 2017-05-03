@@ -1,10 +1,8 @@
-<html data-namespace-typo3-fluid="true"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
-
-<f:if condition="{data.date}">
-    <p class="dateheader">
-        <time datetime="{data.date -> f:format.date(format: '%Y-%m-%d')}">
-            <f:format.date format="%e. %B %Y">{data.date}</f:format.date>
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{date}">
+    <p class="threeme-header-date {positionClass}">
+        <time datetime="{date -> f:format.date(format: '%Y-%m-%d')}">
+            <f:format.date format="%B %e, %Y">{date}</f:format.date>
         </time>
     </p>
 </f:if>

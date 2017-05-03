@@ -99,35 +99,9 @@ hr {
     font-weight: 300;
 }
 
-// Examples for use of field 'Appearance > Layout' in case of cType 'Header'
-.threeme-header-layout-100 {
-    text-align: left;
-}
-
-.threeme-header-layout-101 {
-    text-align: center;
-}
-
-.threeme-header-layout-102 {
-    text-align: right;
-}
-
-.threeme-header-layout-103 {
-    text-align: justify;
-}
-
-// Examples for use of the additional field 'tx_threeme_header_css' in case of cType 'Header'
-.threeme-header-css-200 {
-    color: $brand-primary;
-}
-
-.threeme-header-css-201 {
-    color: $brand-danger;
-}
-
 // Exception for cType 'Header'
 .threeme-header {
-    .dateheader {
+    .threeme-header-date {
         margin-bottom: $padding-small-vertical;
     }
 
@@ -136,13 +110,18 @@ hr {
         margin-bottom: $padding-small-vertical;
     }
 
+    // Examples for use of the additional header field 'Scheme'
     &.threeme-header-css-200 {
+        color: $brand-primary;
+
         small {
             color: lighten($brand-primary, 10%);
         }
     }
 
     &.threeme-header-css-201 {
+        color: $brand-danger;
+
         small {
             color: lighten($brand-danger, 10%);
         }

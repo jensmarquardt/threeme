@@ -100,19 +100,19 @@
                 <target>Farbe: Primärfarbe II</target>
             </trans-unit>
 
-            <trans-unit id="tt_content.layout.types.header.addItems.100">
+            <trans-unit id="tt_content.header_position.left">
                 <source>Orientation: Left</source>
                 <target>Ausrichtung: Linksbündig</target>
             </trans-unit>
-            <trans-unit id="tt_content.layout.types.header.addItems.101">
+            <trans-unit id="tt_content.header_position.center">
                 <source>Orientation: Center</source>
                 <target>Ausrichtung: Zentriert</target>
             </trans-unit>
-            <trans-unit id="tt_content.layout.types.header.addItems.102">
+            <trans-unit id="tt_content.header_position.right">
                 <source>Orientation: Right</source>
                 <target>Ausrichtung: Rechtsbündig</target>
             </trans-unit>
-            <trans-unit id="tt_content.layout.types.header.addItems.103">
+            <trans-unit id="tt_content.header_position.justify">
                 <source>Orientation: Justify</source>
                 <target>Ausrichtung: Blocksatz</target>
             </trans-unit>
