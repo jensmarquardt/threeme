@@ -1,6 +1,6 @@
 # #################################################
 # Version note:
-# Copied TS and Fluid from EXT:news 5.3.2
+# Copied TS and Fluid from EXT:news 6.0.0
 # #################################################
 
 plugin.tx_news {

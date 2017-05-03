@@ -4,33 +4,33 @@
             <f:translate key="related-files" />
         </h4>
         <ul class="ce-uploads">
-            <f:for each="{falRelatedFiles}" as="file" iteration="fileIterator">
+            <f:for each="{relatedFiles}" as="relatedFile">
                 <li>
                     <div class="row">
                         <div class="col-xs-2 col-sm-2 col-md-1">
-                            <f:render section="fileicon" arguments="{extension: file.originalResource.originalFile.properties.extension}" />
+                            <f:render section="Fileicon" arguments="{extension: relatedFile.originalResource.originalFile.properties.extension}" />
                         </div>
 
                         <div class="col-xs-10 col-sm-7 col-md-9">
-                            <a href="{file.originalResource.publicUrl -> f:format.htmlspecialchars()}" target="_blank">
+                            <a href="{relatedFile.originalResource.publicUrl -> f:format.htmlspecialchars()}" target="_blank">
                                 <span class="ce-uploads-fileName">
-                                    {f:if(condition:file.originalResource.title, then:file.originalResource.title, else:file.originalResource.name)}
+                                    {f:if(condition:relatedFile.originalResource.title, then:relatedFile.originalResource.title, else:relatedFile.originalResource.name)}
                                 </span>
                             </a>
 
                             <span class="ce-uploads-filesize">
-                                - {file.originalResource.size -> f:format.bytes()}
+                                - {relatedFile.originalResource.size -> f:format.bytes()}
                             </span>
 
-                            <f:if condition="{file.originalResource.originalFile.properties.description}">
+                            <f:if condition="{relatedFile.originalResource.originalFile.properties.description}">
                                 <span class="ce-uploads-description">
-                                    {file.properties.description}
+                                    {relatedFile.properties.description}
                                 </span>
                             </f:if>
                         </div>
 
                         <div class="col-xs-offset-2 col-xs-10 col-sm-offset-0 col-sm-3 col-md-2">
-                            <a href="{file.originalResource.publicUrl -> f:format.htmlspecialchars()}" class="download btn btn-primary" target="_blank">
+                            <a href="{relatedFile.originalResource.publicUrl -> f:format.htmlspecialchars()}" class="download btn btn-primary" target="_blank">
                                 <i class="fa fa-download" aria-hidden="true"></i> Download
                             </a>
                         </div>
@@ -40,7 +40,7 @@
         </ul>
     </div>
 
-    <f:section name="fileicon">
+    <f:section name="Fileicon">
         <f:switch expression="{extension}">
             <f:case value="xls">
                 <i class="fa fa-3x fa-file-excel-o" aria-hidden="true"></i>

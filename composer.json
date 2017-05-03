@@ -29,7 +29,7 @@
   "suggest": {
     "typo3-ter/ws-scss": "^1.1",
     "mask/mask": "^3.0",
-    "georgringer/news": "^5.3",
+    "georgringer/news": "^6.0",
     "in2code/powermail": "^3.15",
     "spooner-web/be_secure_pw": "^7.1",
     "dmitryd/typo3-realurl": "^2.2",
