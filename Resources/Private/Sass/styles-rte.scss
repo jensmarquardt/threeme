@@ -24,9 +24,8 @@
  * Library
  * -------------------------------------------------------------------------------------------------
  */
-@import "Frontend/Library/variables-custom";
+@import "Frontend/Library/variables-frontend";
 @import "Frontend/Library/variables-bootstrap";
-@import "Frontend/Library/variables-font-awesome";
 @import "Frontend/Library/mixins";
 @import "Frontend/Library/webfonts";
 
@@ -37,17 +36,14 @@
 @import "Vendor/Bootstrap/mixins";
 @import "Vendor/Bootstrap/normalize";
 @import "Vendor/Bootstrap/type";
-@import "Vendor/Bootstrap/code";
 @import "Vendor/Bootstrap/tables";
 @import "Vendor/Bootstrap/buttons";
-@import "Vendor/font-awesome";
 
 /*!
  * Components
  * -------------------------------------------------------------------------------------------------
  */
 @import "Frontend/Components/type";
-@import "Frontend/Components/ui-icons";
 @import "Frontend/Components/buttons";
 
 // Add RTE link classes to get them visible
@@ -61,8 +57,4 @@
 .fancybox.iframe,
 .fancybox.media {
     color: $link-color;
-}
-
-.htmlarea-content-body {
-    font-family: $font-family-sans-serif;
 }

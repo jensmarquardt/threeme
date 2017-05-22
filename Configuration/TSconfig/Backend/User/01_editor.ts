@@ -32,11 +32,11 @@ options {
     }
 }
 
-setup {
-    default {
-        # RTE default settings
-        rteWidth = 600px
-        rteResize = 1
-        rteCleanPasteBehaviour = plainText
-    }
-}
+#setup {
+#    default {
+#        # RTE default settings
+#        rteWidth = 600px
+#        rteResize = 1
+#        rteCleanPasteBehaviour = plainText
+#    }
+#}

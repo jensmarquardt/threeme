@@ -1,5 +1,6 @@
 RTE.default.preset = Threeme
 
+/*
 RTE {
     classes {
         text-left {
@@ -277,3 +278,5 @@ RTE {
         }
     }
 }
+
+*/
