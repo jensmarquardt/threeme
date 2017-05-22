@@ -24,7 +24,7 @@
             </trans-unit>
             <trans-unit id="class.lead">
                 <source>Text: Lead</source>
-                <target>Text: Hervorhebung</target>
+                <target>Text: Einleitung</target>
             </trans-unit>
             <trans-unit id="class.threeme-text-small">
                 <source>Text: Small</source>
