@@ -15,6 +15,11 @@ TCEFORM {
     }
 
     tt_content {
+        CType {
+            # Removed reintroduced "CSS Styled Content" content elements
+            removeItems := addToList(text,textpic,image)
+        }
+
         header_layout {
             removeItems = 5
             altLabels.0 = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.header_layout.altLabels.0
