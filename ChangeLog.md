@@ -59,3 +59,6 @@
 * [STYLE] Improved ext_icon.svg
 * [FIX] Improved ext_emconf.php
 * [DOC] Improved documentation pagetree in data.t3d
+
+### 2017-05-22  Version 3.1.3
+* [FIX] Improved carousel for Mask version 3.0.1+
