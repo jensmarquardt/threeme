@@ -5,7 +5,7 @@
 .powermail_form {
     &.nolabel {
         div + h3 {
-            display: none;
+            @extend .sr-only;
         }
     }
 
@@ -19,7 +19,7 @@
     fieldset {
         &.nolabel {
             legend {
-                display: none;
+                @extend .sr-only;
             }
         }
     }
