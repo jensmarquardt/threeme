@@ -87,7 +87,7 @@
 
 
 <f:section name="banner">
-    <f:alias map="{dataItem: data.tx_mask_item.0}">
+    <f:for each="{data.tx_mask_item}" as="dataItem" key="dataKey" iteration="dataIterator">
         <section role="complementary" class="carousel carousel-banner">
             <figure class="item">
                 <f:image class="carousel-image" image="{dataItem.tx_mask_image.0}" alt="{dataItem.tx_mask_image.0.alternative}" title="{dataItem.tx_mask_image.0.title}" />
@@ -116,6 +116,6 @@
                 </figcaption>
             </figure>
         </section>
-    </f:alias>
+    </f:for>
 </f:section>
 </html>
