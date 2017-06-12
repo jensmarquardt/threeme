@@ -19,7 +19,7 @@ However, it provides configurations and examples for the extensions Mask, News, 
 Hint
 ----
 **Version 3.0.0 is first one for public usage**
-**Version 4.0.0 is targeting TYPO3 8.7 (https://github.com/AstCommodore/threeme/tree/t3-8x)**
+**Version 4.0.0 is targeting TYPO3 8.7 `(currently beta branch https://github.com/AstCommodore/threeme/tree/t3-8x)`_**
 
 ========================================================================================================================
 Target groups
