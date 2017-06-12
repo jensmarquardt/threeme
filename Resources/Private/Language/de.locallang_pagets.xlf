@@ -156,6 +156,48 @@
                 <target>Punktliste in Reihe</target>
             </trans-unit>
 
+            <trans-unit id="tt_content.space_before_class.altLabels.extra-small">
+                <source>Extra small</source>
+                <target>Extra klein</target>
+            </trans-unit>
+            <trans-unit id="tt_content.space_before_class.altLabels.small">
+                <source>Small</source>
+                <target>Klein</target>
+            </trans-unit>
+            <trans-unit id="tt_content.space_before_class.altLabels.medium">
+                <source>Medium</source>
+                <target>Mittel</target>
+            </trans-unit>
+            <trans-unit id="tt_content.space_before_class.altLabels.large">
+                <source>Large</source>
+                <target>Groß</target>
+            </trans-unit>
+            <trans-unit id="tt_content.space_before_class.altLabels.extra-large">
+                <source>Extra large</source>
+                <target>Extra groß</target>
+            </trans-unit>
+
+            <trans-unit id="tt_content.space_after_class.altLabels.extra-small">
+                <source>Extra small</source>
+                <target>Extra klein</target>
+            </trans-unit>
+            <trans-unit id="tt_content.space_after_class.altLabels.small">
+                <source>Small</source>
+                <target>Klein</target>
+            </trans-unit>
+            <trans-unit id="tt_content.space_after_class.altLabels.medium">
+                <source>Medium</source>
+                <target>Medium</target>
+            </trans-unit>
+            <trans-unit id="tt_content.space_after_class.altLabels.large">
+                <source>Large</source>
+                <target>Groß</target>
+            </trans-unit>
+            <trans-unit id="tt_content.space_after_class.altLabels.extra-large">
+                <source>Extra large</source>
+                <target>Extra groß</target>
+            </trans-unit>
+
             <trans-unit id="tx_powermail_domain_model_form.css.altLabels.nolabel">
                 <source>Hide label</source>
                 <target>Bezeichnung ausblenden</target>

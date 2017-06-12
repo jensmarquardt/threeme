@@ -80,6 +80,24 @@ TCEFORM {
             }
         }
 
+        space_before_class {
+            removeItems = extra-small,small,large
+            altLabels.extra-small = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.space_before_class.altLabels.extra-small
+            altLabels.small = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.space_before_class.altLabels.small
+            altLabels.medium = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.space_before_class.altLabels.medium
+            altLabels.large = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.space_before_class.altLabels.large
+            altLabels.extra-large = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.space_before_class.altLabels.extra-large
+        }
+
+        space_after_class {
+            removeItems = extra-small,small,large
+            altLabels.extra-small = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.space_after_class.altLabels.extra-small
+            altLabels.small = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.space_after_class.altLabels.small
+            altLabels.medium = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.space_after_class.altLabels.medium
+            altLabels.large = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.space_after_class.altLabels.large
+            altLabels.extra-large = LLL:EXT:threeme/Resources/Private/Language/locallang_pagets.xlf:tt_content.space_after_class.altLabels.extra-large
+        }
+
         # Image settings
         # If you use responsive images by "lib.threemeResponsiveImage" or a thrid party extension, you might disable some image settings like "imagewidth".
         imagecols {

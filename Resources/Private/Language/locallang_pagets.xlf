@@ -120,6 +120,38 @@
                 <source>List: Inline</source>
             </trans-unit>
 
+            <trans-unit id="tt_content.space_before_class.altLabels.extra-small">
+                <source>Extra small</source>
+            </trans-unit>
+            <trans-unit id="tt_content.space_before_class.altLabels.small">
+                <source>Small</source>
+            </trans-unit>
+            <trans-unit id="tt_content.space_before_class.altLabels.medium">
+                <source>Medium</source>
+            </trans-unit>
+            <trans-unit id="tt_content.space_before_class.altLabels.large">
+                <source>Large</source>
+            </trans-unit>
+            <trans-unit id="tt_content.space_before_class.altLabels.extra-large">
+                <source>Extra large</source>
+            </trans-unit>
+
+            <trans-unit id="tt_content.space_after_class.altLabels.extra-small">
+                <source>Extra small</source>
+            </trans-unit>
+            <trans-unit id="tt_content.space_after_class.altLabels.small">
+                <source>Small</source>
+            </trans-unit>
+            <trans-unit id="tt_content.space_after_class.altLabels.medium">
+                <source>Medium</source>
+            </trans-unit>
+            <trans-unit id="tt_content.space_after_class.altLabels.large">
+                <source>Large</source>
+            </trans-unit>
+            <trans-unit id="tt_content.space_after_class.altLabels.extra-large">
+                <source>Extra large</source>
+            </trans-unit>
+
             <trans-unit id="tx_powermail_domain_model_form.css.altLabels.nolabel">
                 <source>Hide label</source>
             </trans-unit>
@@ -129,7 +161,6 @@
             <trans-unit id="tx_powermail_domain_model_field.css.altLabels.nolabel">
                 <source>Hide label</source>
             </trans-unit>
-
         </body>
     </file>
 </xliff>
