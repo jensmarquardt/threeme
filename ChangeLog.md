@@ -60,4 +60,20 @@
 * [FIX] Improved ext_emconf.php
 * [DOC] Improved documentation pagetree in data.t3d
 
-### 2017-0  Version 4.0.0
+### 2017-05-22  Version 3.1.3
+* [FIX] Improved carousel for Mask version 3.0.1+
+
+### 2017-0x-xx  Version 4.0.0
+* [TASK] Splitted TSconfig into Backend and Extensions subfolder
+* [TASK] Updated felogin TS to 8.7.0
+* [TASK] Updated indexed_search TS to 8.7.0
+* [TASK] Updated fluid_styled_content TS to 8.7.0
+* [TASK] Updated mask TS to 8.7.0
+* [FIX] Disabled EXT:min in environments other than production
+* [FIX] Migrated TCA to be compatible to 8.7
+* [TASK] Minor changes refer to 8.7 pageTS
+* [TASK] New mail constants in Threeme settings
+* [TASK] Updated to news to 6.0.0
+* [FEATURE] Implemented new cropVariant / responsive images for FSC
+* [FEATURE] Implemented CKEditor configuration
+* [TASK] Resolved issue https://github.com/AstCommodore/threeme/issues/7 
