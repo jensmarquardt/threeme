@@ -126,11 +126,11 @@ plugin.tx_powermail {
                 # cat=powermail_styles//0170; type=text; label= Framework classname(s) especially for checkboxes e.g. "check"
                 checkClasses = checkbox
 
-		# cat=powermail_styles//0180; type=text; label= Framework classname(s) for the submit button e.g. "btn btn-primary"
-		submitClasses = btn btn-primary
+                # cat=powermail_styles//0180; type=text; label= Framework classname(s) for the submit button e.g. "btn btn-primary"
+                submitClasses = btn btn-primary
 
-		# cat=powermail_styles//0190; type=text; label= Framework classname(s) for "create" message after submit
-		createClasses = btn btn-default
+                # cat=powermail_styles//0190; type=text; label= Framework classname(s) for "create" message after submit
+                createClasses = powermail_create
             }
         }
     }
