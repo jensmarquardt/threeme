@@ -11,12 +11,12 @@ $EM_CONF['threeme'] = array(
     'constraints' => array(
         'depends' => array(
             'typo3' => '8.7.0-8.7.99',
-            'fluid_styled_content' => '8.7'
+            'fluid_styled_content' => '8.7',
+            'ws_scss' => '1.1.0-0.0.0',
+            'mask' => '3.0.0-0.0.0',
         ),
         'conflicts' => array(),
         'suggests' => array(
-            'ws_scss' => '1.1.0-0.0.0',
-            'mask' => '3.0.0-0.0.0',
             'news' => '6.0.0-0.0.0',
             'powermail' => '3.15.0-0.0.0',
             'be_secure_pw' => '7.1.0-0.0.0',
