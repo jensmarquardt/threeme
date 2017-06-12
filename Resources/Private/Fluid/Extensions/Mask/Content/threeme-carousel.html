@@ -4,6 +4,9 @@
 <div id="c{data.uid}">
     <f:if condition="{data.header}">
         <f:switch expression="{data.header_layout}">
+            <f:case value="1">
+                <h1>{data.header}</h1>
+            </f:case>
             <f:case value="2">
                 <h2>{data.header}</h2>
             </f:case>
@@ -79,7 +82,7 @@
 
         <ol class="carousel-indicators">
             <f:for each="{data.tx_mask_item}" as="dataItem" key="dataKey" iteration="dataIterator">
-                <li data-target="#carousel-uid{data.uid}" data-slide-to="{dataKey}" {f:if(condition:'{dataIterator.isFirst}', then:'class="active"')}></li>
+                <li data-target="#carousel-uid{data.uid}" data-slide-to="{dataIterator.index}" {f:if(condition:'{dataIterator.isFirst}', then:'class="active"')}></li>
             </f:for>
         </ol>
     </section>

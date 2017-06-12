@@ -46,6 +46,7 @@
 }
 
 .carousel {
+    // Styles for banner mode only (in carousel mode, there is a .carousel-inner between .carousel and .item)
     > .item {
         overflow: hidden;
 
