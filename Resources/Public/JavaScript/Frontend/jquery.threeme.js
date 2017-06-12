@@ -73,6 +73,13 @@ var tx_threeme = (function() {
             ;
         },
 
+        /* Bootstrap Tooltip
+         * -------------------------------------------------------------------------------------------------
+         */
+        bootstrapTooltip : function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        },
+
         /* jQuery CookieBar
          * https://github.com/carlwoodhouse/jquery.cookieBar
          * -------------------------------------------------------------------------------------------------
