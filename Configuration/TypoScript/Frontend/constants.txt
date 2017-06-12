@@ -48,7 +48,7 @@ threeme {
         # cat=Threeme/enable/260; type=string; label= removeDefaultJS: If set, the default JavaScript in the header will be removed.
         removeDefaultJS = 1
 
-        # cat=Threeme/enable/270; type=string; label= moveJsFromHeaderToFooter: If set, all JavaScript (includes and inline) will be moved to the bottom of the HTML document.
+        # cat=Threeme/enable/270; type=boolean; label= moveJsFromHeaderToFooter: If set, all JavaScript (includes and inline) will be moved to the bottom of the HTML document.
         moveJsFromHeaderToFooter = 1
 
         # cat=Threeme/enable/280; type=string; label= spamProtectEmailAddresses: If set, then all email addresses in typolinks will be encrypted so spambots cannot detect them.
@@ -129,7 +129,7 @@ threeme {
         # cat=Threeme/Framework/Bootstrap/100; type=string; label= Grid displayer: gridGutterWidth - http://alefeuvre.github.io/foundation-grid-displayer
         bootstrap.gridGutterWidth = 30px
 
-        # cat=Threeme/Framework/Bootstrap/110; type=string; label= Grid displayer: gridCols - http://alefeuvre.github.io/foundation-grid-displayer
+        # cat=Threeme/Framework/Bootstrap/110; type=int+; label= Grid displayer: gridCols - http://alefeuvre.github.io/foundation-grid-displayer
         bootstrap.gridCols = 12
 
         # cat=Threeme/Framework/Bootstrap/120; type=string; label= Scrollspy: target - http://getbootstrap.com/javascript/#scrollspy
@@ -146,19 +146,19 @@ threeme {
     }
 
     frontend {
-        # cat=Threeme/Frontend/100; type=text; label= siteTitle : The sitetitle is set in the TypoScript root template.
+        # cat=Threeme/Frontend/100; type=string; label= siteTitle : The sitetitle is set in the TypoScript root template.
         siteTitle = Change sitetitle at TypoScript root template!
 
-        # cat=Threeme/Frontend/110; type=text; label= shortcutIcon: Favicon of the page.
+        # cat=Threeme/Frontend/110; type=string; label= shortcutIcon: Favicon of the page.
         shortcutIcon = EXT:threeme/Resources/Public/Images/Frontend/Favicon/favicon.ico
 
-        # cat=Threeme/Frontend/120; type=text; label= Logo: Website logo
+        # cat=Threeme/Frontend/120; type=string; label= Logo: Website logo
         logo = EXT:threeme/Resources/Public/Images/Frontend/Logo/threeme.svg
 
-        # cat=Threeme/Frontend/130; type=text; label= enableCookiebar: Enable notification bar for the new EU cookielaw.
+        # cat=Threeme/Frontend/130; type=boolean; label= enableCookiebar: Enable notification bar for the new EU cookielaw.
         enableCookiebar = 0
 
-        # cat=Threeme/Frontend/140; type=text; label= enableMetaNavigation: Enable meta navigation bar as part of the footer.
+        # cat=Threeme/Frontend/140; type=boolean; label= enableMetaNavigation: Enable meta navigation bar as part of the footer.
         enableMetaNavigation = 0
 
         # cat=Threeme/Frontend/200; type=int+; label= pidRoot: PID website root.
@@ -170,10 +170,10 @@ threeme {
         # cat=Threeme/Frontend/220; type=int+; label= pidLightbox: PID sysfolder for lightbox pages.
         pidLightbox = 15
 
-        # cat=Threeme/Frontend/230; type=string; label= pidImprint: PID imprint page.
+        # cat=Threeme/Frontend/230; type=int+; label= pidImprint: PID imprint page.
         pidImprint = 14
 
-        # cat=Threeme/Frontend/240; type=string; label= pidPrivacy: PID data privacy page.
+        # cat=Threeme/Frontend/240; type=int+; label= pidPrivacy: PID data privacy page.
         pidPrivacy = 13
 
         # cat=Threeme/Frontend/250; type=int+; label= pidSitemap: PID sitemap page.
@@ -188,10 +188,10 @@ threeme {
         # cat=Threeme/Frontend/310; type=int+; label= pidSysCategory: PID sysfolder for system categories.
         pidSysCategory = 4
 
-        # cat=Threeme/Frontend/400; type=int+; label= emailFromName: Default email name (e.g. used in felogin)
+        # cat=Threeme/Frontend/400; type=string; label= emailFromName: Default email name (e.g. used in felogin)
         emailFromName = André Steiling
 
-        # cat=Threeme/Frontend/410; type=int+; label= emailFrom: Default email address (e.g. used in felogin)
+        # cat=Threeme/Frontend/410; type=string; label= emailFrom: Default email address (e.g. used in felogin)
         emailFromAddress = andre@threeme.de
     }
 
